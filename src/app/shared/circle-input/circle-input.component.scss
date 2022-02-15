@@ -1,0 +1,33 @@
+.circle-input-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.circle {
+  border: 1px black solid;
+  width: 10px;
+  height: 10px;
+  border-radius: 100%;
+  cursor: pointer;
+  margin-left: 1px;
+}
+
+.circle.filled {
+  background-color: black;
+}
+
+.circle-input-values {
+  display: flex;
+}
+
+.circle-input-label {
+  white-space: nowrap;
+}
+
+.line {
+  border-bottom: 1px solid black;
+  top: 5px;
+  position: relative;
+  width: 100%;
+}

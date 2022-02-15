@@ -1,0 +1,44 @@
+<div class="player-data">
+  <div class="character-info">
+    <arm-text-input
+      [label]="'Nombre:'"
+      [value]="playerData.info.name"
+    ></arm-text-input>
+    <arm-text-input
+      [label]="'Jugador:'"
+      [value]="playerData.info.player"
+    ></arm-text-input>
+    <arm-text-input
+      [label]="'Crónica:'"
+      [value]="playerData.info.chronicle"
+    ></arm-text-input>
+  </div>
+  <div class="character-background">
+    <arm-text-input
+      [label]="'Naturaleza:'"
+      [value]="playerData.background.nature"
+    ></arm-text-input>
+    <arm-text-input
+      [label]="'Conducta:'"
+      [value]="playerData.background.demeanor"
+    ></arm-text-input>
+    <arm-text-input
+      [label]="'Clan:'"
+      [value]="playerData.background.clan"
+    ></arm-text-input>
+  </div>
+  <div class="character-concept">
+    <arm-text-input
+      [label]="'Generación:'"
+      [value]="playerData.concept.generation"
+    ></arm-text-input>
+    <arm-text-input
+      [label]="'Concepto:'"
+      [value]="playerData.concept.concept"
+    ></arm-text-input>
+    <arm-text-input
+      [label]="'Refugio:'"
+      [value]="playerData.concept.haven"
+    ></arm-text-input>
+  </div>
+</div>

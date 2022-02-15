@@ -1,0 +1,17 @@
+.text-input-container {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+
+  label {
+    margin-right: 8px;
+  }
+
+  input {
+    width: 100%;
+    border-bottom: 1px solid black;
+    border-top: 0px;
+    border-left: 0px;
+    border-right: 0px;
+  }
+}

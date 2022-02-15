@@ -1,1 +1,94 @@
-/* You can add global styles to this file, and also import other style files */
+.sheet-container {
+  padding: 25px 150px;
+}
+
+.logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  img {
+    width: 50%
+  }
+}
+
+.attributes-container, .abilities-container, .advantages-container, .player-data {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 30px;
+  grid-auto-rows: minmax(100px, auto);
+}
+
+.player-data {
+  font-size: 24px;
+}
+
+.attributes-container, .abilities-container, .advantages-container {
+  font-size: 18px;
+}
+
+.attributes-image-section, .abilities-image-section, .advantages-image-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+
+  img {
+    width: 75%
+  }
+}
+
+.attributes-title, .abilities-title, .advantages-title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &::after {
+    content: '';
+    border-bottom: 4px solid black;
+    top: 5px;
+    position: relative;
+    width: 100%;
+  }
+
+  &::before {
+    content: '';
+    border-bottom: 4px solid black;
+    top: 5px;
+    position: relative;
+    width: 100%;
+  }
+
+  h1 {
+    padding: 0 15px;
+  }
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  h2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 26px;
+    font-weight: 100;
+  }
+}
+
+.physical, .talents, .disciplines, .character-info {
+  grid-column: 1 / 2;
+  @extend .column;
+}
+
+.social, .skills, .backgrounds, .character-background {
+  grid-column: 2 / 3;
+  @extend .column;
+}
+
+.mental, .knowledges, .virtues, .character-concept {
+  grid-column: 3 / 4;
+  @extend .column;
+}

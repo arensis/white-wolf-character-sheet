@@ -1,0 +1,74 @@
+<div class="attributes-section">
+  <!-- <div class="attributes-title">
+    <h1>Atributos</h1>
+  </div> -->
+  <div class="attributes-image-section">
+    <img src="../../../../assets/images/vampire-dark-ages/sections/attributes.png">
+  </div>
+  <div class="attributes-container">
+    <div class="physical">
+      <h2>Físicos</h2>
+      <arm-circle-input
+        [circleAmount]="8"
+        [label]="'Fuerza'"
+        [(value)]="attributes.physical.strength"
+        [minValue]="1"
+      ></arm-circle-input>
+      <arm-circle-input
+        [circleAmount]="8"
+        [label]="'Destreza'"
+        [(value)]="attributes.physical.dexterity"
+        [minValue]="1"
+      ></arm-circle-input>
+      <arm-circle-input
+        [circleAmount]="8"
+        [label]="'Resistencia'"
+        [(value)]="attributes.physical.stamina"
+        [minValue]="1"
+      ></arm-circle-input>
+    </div>
+    <div class="social">
+      <h2>Sociales</h2>
+      <arm-circle-input
+        [circleAmount]="8"
+        [label]="'Carisma'"
+        [(value)]="attributes.social.charisma"
+        [minValue]="1"
+      ></arm-circle-input>
+      <arm-circle-input
+        [circleAmount]="8"
+        [label]="'Manipulación'"
+        [(value)]="attributes.social.manipulation"
+        [minValue]="1"
+      ></arm-circle-input>
+      <arm-circle-input
+        [circleAmount]="8"
+        [label]="'Apariencia'"
+        [(value)]="attributes.social.appearance"
+        [minValue]="1"
+      ></arm-circle-input>
+    </div>
+    <div class="mental">
+      <h2>Mentales</h2>
+      <arm-circle-input
+        [circleAmount]="8"
+        [label]="'Percepción'"
+        [(value)]="attributes.mental.perception"
+        [minValue]="1"
+      ></arm-circle-input>
+      <arm-circle-input
+        [circleAmount]="8"
+        [label]="'Inteligencia'"
+        [(value)]="attributes.mental.intelligence"
+        [minValue]="1"
+      ></arm-circle-input>
+      <arm-circle-input
+        [circleAmount]="8"
+        [label]="'Astucia'"
+        [(value)]="attributes.mental.wits"
+        [minValue]="1"
+      ></arm-circle-input>
+    </div>
+  </div>
+</div>
+

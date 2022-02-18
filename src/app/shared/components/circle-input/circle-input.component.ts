@@ -15,9 +15,13 @@ export class CircleInputComponent {
   value!: number;
   @Input()
   minValue: number = 0;
+  @Input()
+  isPermanent: boolean = true;
 
   @Output()
-  valueChange = new EventEmitter<number>()
+  valueChange = new EventEmitter<number>();
+  @Output()
+  onDelete = new EventEmitter<void>();
 
   circleArray: number[];
   inputValue: number;
@@ -51,5 +55,9 @@ export class CircleInputComponent {
 
   hasLabel(): boolean {
     return isNotBlankOrEmpty(this.label);
+  }
+
+  deleteProperty(): void {
+    this.onDelete.emit();
   }
 }

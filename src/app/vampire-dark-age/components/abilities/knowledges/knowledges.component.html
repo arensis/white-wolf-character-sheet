@@ -50,11 +50,20 @@
     [label]="'Teología'"
     [(value)]="knowledges.theology"
   ></arm-circle-input>
-  <arm-circle-input
-    *ngFor="let knowledge of knowledges.customKnowled; index as i; trackBy: trackByFn"
-    [circleAmount]="8"
-    [label]="knowledge.name"
-    [(value)]="knowledge.level"
-  ></arm-circle-input>
-  <mat-icon class="add-button"mat-raised-button (click)="addCustomKnowledge()" aria-hidden="false">add_circle_outline</mat-icon>
+  <div class="mierda" *ngFor="let knowledge of knowledges.customKnowledges; index as i; trackBy: trackByFn">
+    <arm-circle-input
+      [circleAmount]="8"
+      [label]="knowledge.name"
+      [(value)]="knowledge.level"
+      [isPermanent]="false"
+      (onDelete)="deleteCustomKnowledge(i)"
+    ></arm-circle-input>
+    <mat-icon class="delete-property-button" aria-hidden="false" (click)="deleteCustomKnowledge(i)">
+      highlight_off
+    </mat-icon>
+  </div>
+  <div class="add-property-container" mat-raised-button (click)="addCustomKnowledge()">
+    <mat-icon class="add-property-button" aria-hidden="false">add_circle_outline</mat-icon>
+    <span>Añadir conocimiento</span>
+  </div>
 </div>

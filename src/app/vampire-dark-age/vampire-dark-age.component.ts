@@ -71,7 +71,7 @@ export class VampireDarkAgeComponent implements OnInit {
           ride: 0,
           stealth: 0,
           survival: 0,
-          customTalents: []
+          customSkills: []
         },
         knowledges: {
           academics: 0,
@@ -84,7 +84,7 @@ export class VampireDarkAgeComponent implements OnInit {
           politics: 0,
           seneschal: 0,
           theology: 0,
-          customTalents: []
+          customKnowledges: []
         }
       },
       advantages: {

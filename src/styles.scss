@@ -95,6 +95,20 @@
   @extend .column;
 }
 
-.add-button {
-  cursor: pointer;
+.add-property-container {
+  display: flex;
+  align-items: center;
+  margin: 4px;
+  &:hover {
+    color: green;
+    cursor: pointer;
+  }
+
+  mat-icon.add-property-button {
+    cursor: pointer;
+  }
+  span {
+    margin-left: 2px;
+  }
 }
+

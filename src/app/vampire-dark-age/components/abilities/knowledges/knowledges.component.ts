@@ -21,6 +21,10 @@ export class KnowledgesComponent extends CustomProperties {
       this.knowledges.customKnowledges.push({ name: name, level: 0}));
   }
 
+  deleteCustomKnowledge(index: number): void {
+    this.knowledges.customKnowledges.pop(index);
+  }
+
   trackByFn(item: any, index: number): number {
     return index;
   }

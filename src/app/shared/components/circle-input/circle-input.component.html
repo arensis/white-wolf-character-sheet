@@ -1,8 +1,8 @@
 <div class="circle-input-container">
-  <span class="circle-input-label">
+  <span *ngIf="hasLabel()" class="circle-input-label">
     {{label}}
   </span>
-  <div class="line"></div>
+  <div *ngIf="hasLabel()" class="line"></div>
   <div class="circle-input-values">
     <ng-container *ngFor="let item of circleArray; index as i; trackBy: trackByFn">
       <div class="circle" [ngClass]="{ 'filled' : ((i+1) <= value) }" (click)="fillCircle(i)"></div>

@@ -1,3 +1,5 @@
+@import '~@angular/material/prebuilt-themes/deeppurple-amber.css';
+
 .sheet-container {
   padding: 25px 150px;
 }
@@ -91,4 +93,8 @@
 .mental, .knowledges, .virtues, .character-concept {
   grid-column: 3 / 4;
   @extend .column;
+}
+
+.add-button {
+  cursor: pointer;
 }

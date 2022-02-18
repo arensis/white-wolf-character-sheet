@@ -1,4 +1,5 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { isNotBlankOrEmpty } from 'src/app/utils/stringUtils';
 
 @Component({
   selector: 'arm-circle-input',
@@ -46,5 +47,9 @@ export class CircleInputComponent {
     } else {
       this.value = index + 1;
     }
+  }
+
+  hasLabel(): boolean {
+    return isNotBlankOrEmpty(this.label);
   }
 }

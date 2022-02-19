@@ -1,5 +1,4 @@
-import { CustomProperties } from 'src/app/shared/components/CustomProperties';
-import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { isNotBlankOrEmpty } from 'src/app/utils/stringUtils';
 import { DialogService } from '../../services/dialog.service';
 

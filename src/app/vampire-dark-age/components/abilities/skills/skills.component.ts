@@ -1,6 +1,4 @@
-import { DialogService } from './../../../../shared/services/dialog.service';
 import { Component, Input } from '@angular/core';
-import { CustomProperties } from 'src/app/shared/components/CustomProperties';
 
 @Component({
   selector: 'arm-skills',

@@ -6,7 +6,8 @@
     "start": "ng serve",
     "build": "ng build --configuration production --aot true --output-hashing all --optimization true --build-optimizer true --progress true",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "test": "ng test",
+    "deploy": "ng deploy --base-href=/white-wolf-character-sheet/"
   },
   "private": true,
   "dependencies": {

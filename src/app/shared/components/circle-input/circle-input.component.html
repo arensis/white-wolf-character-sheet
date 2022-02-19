@@ -8,4 +8,7 @@
       <div class="circle" [ngClass]="{ 'filled' : ((i+1) <= value) }" (click)="fillCircle(i)"></div>
     </ng-container>
   </div>
+  <mat-icon *ngIf="!isPermanent" class="delete-property-button" aria-hidden="false" (click)="deleteProperty()">
+    highlight_off
+  </mat-icon>
 </div>

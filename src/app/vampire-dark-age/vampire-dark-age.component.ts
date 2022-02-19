@@ -14,19 +14,19 @@ export class VampireDarkAgeComponent implements OnInit {
     this.characterSheet = {
       playerData: {
         info: {
-          name: "Merlín",
-          player: "Alfonso",
-          chronicle: "Alguna supongo"
+          name: "",
+          player: "",
+          chronicle: ""
         },
         background: {
-          nature: "Ecologista",
-          demeanor: "Luchador",
-          clan: "Gangrel"
+          nature: "",
+          demeanor: "",
+          clan: ""
         },
         concept: {
-          generation: "8",
-          concept: "Ni idea",
-          haven: "El mundo",
+          generation: 12,
+          concept: "",
+          haven: "",
         }
       },
       attributes: {

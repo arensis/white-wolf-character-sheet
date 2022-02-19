@@ -7,18 +7,14 @@ import { DialogService } from 'src/app/shared/services/dialog.service';
   templateUrl: './knowledges.component.html',
   styleUrls: ['./knowledges.component.scss']
 })
-export class KnowledgesComponent extends CustomProperties {
+export class KnowledgesComponent {
   @Input()
   knowledges: any;
 
-  constructor(dialogService: DialogService) {
-    super(dialogService);
-    this.propertyName = 'Nuevo conocimiento';
-  }
+  propertyType: string;
 
-  addCustomKnowledge() {
-    this.addCustomProperty((name) =>
-      this.knowledges.customKnowledges.push({ name: name, level: 0}));
+  constructor() {
+    this.propertyType = 'conocimiento';
   }
 
   deleteCustomKnowledge(index: number): void {

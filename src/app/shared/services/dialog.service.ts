@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { MatDialog, MatDialogRef } from '@angular/material/dialog';
+import { DialogPosition, MatDialog, MatDialogRef } from '@angular/material/dialog';
 import { DialogAddNewPropertyComponent } from '../components/dialog-add-new-property/dialog-add-new-property.component';
 
 @Injectable({
@@ -12,7 +12,7 @@ export class DialogService {
   openDialogWithInput(propertyName: string): MatDialogRef<DialogAddNewPropertyComponent, any> {
     return this.dialog.open(DialogAddNewPropertyComponent, {
       width: '279px',
-      data: {propertyName: propertyName, propertyValue: '' },
+      data: { propertyName: 'Nombre de ' + propertyName, propertyValue: '' }
     });
   }
 

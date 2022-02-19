@@ -11,14 +11,15 @@ export class TalentsComponent extends CustomProperties {
   @Input()
   talents: any;
 
+  propertyType: string;
+
   constructor(dialogService: DialogService) {
     super(dialogService);
-    this.propertyName = 'Nuevo conocimiento';
+    this.propertyType = 'talento';
   }
 
-  addCustomTalent() {
-    this.addCustomProperty((name) =>
-      this.talents.customTalents.push({ name: name, level: 0 }));
+  deleteCustomTalents(index: number): void {
+    this.talents.customTalents.pop(index);
   }
 
   trackByFn(item: any, index: number): number {

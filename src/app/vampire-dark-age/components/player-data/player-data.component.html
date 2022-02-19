@@ -1,44 +1,45 @@
 <div class="player-data">
   <div class="character-info">
-    <arm-text-input
+    <arm-input
       [label]="'Nombre:'"
       [value]="playerData.info.name"
-    ></arm-text-input>
-    <arm-text-input
+    ></arm-input>
+    <arm-input
       [label]="'Jugador:'"
       [value]="playerData.info.player"
-    ></arm-text-input>
-    <arm-text-input
+    ></arm-input>
+    <arm-input
       [label]="'Crónica:'"
       [value]="playerData.info.chronicle"
-    ></arm-text-input>
+    ></arm-input>
   </div>
   <div class="character-background">
-    <arm-text-input
+    <arm-input
       [label]="'Naturaleza:'"
       [value]="playerData.background.nature"
-    ></arm-text-input>
-    <arm-text-input
+    ></arm-input>
+    <arm-input
       [label]="'Conducta:'"
       [value]="playerData.background.demeanor"
-    ></arm-text-input>
-    <arm-text-input
+    ></arm-input>
+    <arm-input
       [label]="'Clan:'"
       [value]="playerData.background.clan"
-    ></arm-text-input>
+    ></arm-input>
   </div>
   <div class="character-concept">
-    <arm-text-input
+    <arm-input
       [label]="'Generación:'"
+      [type]="'number'"
       [value]="playerData.concept.generation"
-    ></arm-text-input>
-    <arm-text-input
+    ></arm-input>
+    <arm-input
       [label]="'Concepto:'"
       [value]="playerData.concept.concept"
-    ></arm-text-input>
-    <arm-text-input
+    ></arm-input>
+    <arm-input
       [label]="'Refugio:'"
       [value]="playerData.concept.haven"
-    ></arm-text-input>
+    ></arm-input>
   </div>
 </div>

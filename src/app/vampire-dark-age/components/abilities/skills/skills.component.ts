@@ -7,18 +7,18 @@ import { CustomProperties } from 'src/app/shared/components/CustomProperties';
   templateUrl: './skills.component.html',
   styleUrls: ['./skills.component.scss']
 })
-export class SkillsComponent extends CustomProperties {
+export class SkillsComponent {
   @Input()
   skills: any;
 
-  constructor(dialogService: DialogService) {
-    super(dialogService);
-    this.propertyName = 'Nueva técnica'
+  propertyType: string;
+
+  constructor() {
+    this.propertyType = 'técnica'
    }
 
-  addCustomSkill(): void {
-    this.addCustomProperty((name) =>
-      this.skills.customTalents.push({ name: name, level: 0 }));
+  deleteCustomSkill(index: number): void {
+    this.skills.customSkills.pop(index);
   }
 
   trackByFn(item: any, index: number): number {

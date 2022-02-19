@@ -4,6 +4,19 @@
   align-items: center;
 }
 
+.delete-property-button {
+  margin-right: -28px;
+  margin-left: 5px;
+  color: #c22626;
+  &:hover {
+    color: white;
+    background-color: #c22626;
+    border-radius: 12px;
+    opacity: 50;
+    cursor: pointer;
+  }
+}
+
 .circle {
   border: 1px black solid;
   width: 10px;

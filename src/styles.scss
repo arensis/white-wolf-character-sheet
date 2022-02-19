@@ -9,14 +9,14 @@
   justify-content: center;
   align-items: center;
   img {
-    width: 50%
+    width: 50vw;
   }
 }
 
 .attributes-container, .abilities-container, .advantages-container, .player-data {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-gap: 30px;
+  grid-gap: 60px;
   grid-auto-rows: minmax(100px, auto);
 }
 
@@ -35,7 +35,7 @@
   margin-top: 20px;
 
   img {
-    width: 75%
+    width: 75vw;
   }
 }
 
@@ -98,10 +98,17 @@
 .add-property-container {
   display: flex;
   align-items: center;
-  margin: 4px;
+  justify-content: center;
+  margin-top: 4px;
+  border: 2px solid green;
+  border-radius: 20px;
+  padding: 4px;
+  color: green;
   &:hover {
-    color: green;
+    color: white;
     cursor: pointer;
+    border-color: white;
+    background-color: green;
   }
 
   mat-icon.add-property-button {

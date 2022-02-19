@@ -58,12 +58,9 @@
       [isPermanent]="false"
       (onDelete)="deleteCustomKnowledge(i)"
     ></arm-circle-input>
-    <mat-icon class="delete-property-button" aria-hidden="false" (click)="deleteCustomKnowledge(i)">
-      highlight_off
-    </mat-icon>
   </div>
-  <div class="add-property-container" mat-raised-button (click)="addCustomKnowledge()">
-    <mat-icon class="add-property-button" aria-hidden="false">add_circle_outline</mat-icon>
-    <span>Añadir conocimiento</span>
-  </div>
+  <arm-add-custom-property-button
+    [propertyType]="propertyType"
+    [customPropertyList]="knowledges.customKnowledges"
+  ></arm-add-custom-property-button>
 </div>

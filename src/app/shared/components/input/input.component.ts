@@ -1,15 +1,17 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 
 @Component({
-  selector: 'arm-text-input',
-  templateUrl: './text-input.component.html',
-  styleUrls: ['./text-input.component.scss']
+  selector: 'arm-input',
+  templateUrl: './input.component.html',
+  styleUrls: ['./input.component.scss']
 })
-export class TextInputComponent implements OnInit {
+export class InputComponent {
   @Input()
   value: string;
   @Input()
   label: string = '';
+  @Input()
+  type: string = 'text';
 
   @Output()
   valueChange = new EventEmitter<string>();
@@ -17,8 +19,5 @@ export class TextInputComponent implements OnInit {
   constructor() {
     this.value = '';
     this.label = '';
-  }
-
-  ngOnInit(): void {
   }
 }

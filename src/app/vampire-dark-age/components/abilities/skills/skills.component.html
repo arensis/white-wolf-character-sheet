@@ -53,8 +53,13 @@
   <arm-circle-input
     *ngFor="let skill of skills.customSkills; index as i; trackBy: trackByFn"
     [circleAmount]="8"
+    [isPermanent]="false"
     [label]="skill.name"
     [(value)]="skill.level"
+    (onDelete)="deleteCustomSkill(i)"
   ></arm-circle-input>
-  <button mat-raised-button (click)="addCustomSkill()"></button>
+  <arm-add-custom-property-button
+    [propertyType]="propertyType"
+    [customPropertyList]="skills.customSkills"
+  ></arm-add-custom-property-button>
 </div>

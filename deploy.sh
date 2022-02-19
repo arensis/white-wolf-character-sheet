@@ -25,7 +25,7 @@ echo "Generating site"
 npm run build
 
 echo "Commiting changes in gh-pages branch"
-cd docs && git add --all
+cd docs && git add --all && git checkout gh-pages
 msg="Publishing to gh-pages `date`"
 if [ $# -eq 1 ]
   then msg="$1"

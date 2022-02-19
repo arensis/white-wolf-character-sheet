@@ -16,7 +16,7 @@ export class SkillsComponent {
    }
 
   deleteCustomSkill(index: number): void {
-    this.skills.customSkills.pop(index);
+    this.skills.customSkills.splice(index, 1);
   }
 
   trackByFn(item: any, index: number): number {

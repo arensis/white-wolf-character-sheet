@@ -16,7 +16,7 @@ export class TalentsComponent {
   }
 
   deleteCustomTalents(index: number): void {
-    this.talents.customTalents.pop(index);
+    this.talents.customTalents.splice(index, 1);
   }
 
   trackByFn(item: any, index: number): number {

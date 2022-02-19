@@ -16,7 +16,7 @@ export class KnowledgesComponent {
   }
 
   deleteCustomKnowledge(index: number): void {
-    this.knowledges.customKnowledges.pop(index);
+    this.knowledges.customKnowledges.splice(index, 1);
   }
 
   trackByFn(item: any, index: number): number {

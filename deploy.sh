@@ -7,16 +7,16 @@ then
 fi
 
 echo "Deleting old publication"
-rm -rf public
-mkdir public
+rm -rf docs
+mkdir docs
 git worktree prune
-rm -rf .git/worktrees/public/
+rm -rf .git/worktrees/docs/
 
-echo "Checking out gh-pages branch into public"
-git worktree add -B gh-pages public origin/gh-pages
+echo "Checking out gh-pages branch into docs"
+git worktree add -B gh-pages docs origin/gh-pages
 
 echo "Removing existing files"
-rm -rf public/*
+rm -rf docs/*
 
 echo "Installing all the dependencies"
 npm install
@@ -25,7 +25,7 @@ echo "Generating site"
 npm run build
 
 echo "Commiting changes in gh-pages branch"
-cd public && git add --all
+cd docs && git add --all
 msg="Publishing to gh-pages `date`"
 if [ $# -eq 1 ]
   then msg="$1"

@@ -8,7 +8,8 @@
     <button mat-icon-button (click)="clearSheet()">
       <mat-icon>restore_page_outlined</mat-icon>
     </button>
-    <button mat-icon-button (click)="uploadSheet()">
+    <input hidden type="file" (change)="uploadSheet($event)" #fileInput accept=".json">
+    <button mat-icon-button (click)="fileInput.click()">
       <mat-icon>upload_file</mat-icon>
     </button>
     <a mat-icon-button [href]="downloadFile.uri" [download]="downloadFile.name">

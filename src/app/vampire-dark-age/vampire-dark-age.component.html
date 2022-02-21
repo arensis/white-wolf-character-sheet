@@ -2,7 +2,7 @@
  [characterSheet]="getCharacterSheet()"
  [gameName]="'VAMPIRE_DARK_AGES'"
  (onClearSheet)="clearSheet()"
- (onUploadSheet)="uploadSheet()"
+ (onUploadSheet)="uploadSheet($event)"
 ></arm-header>
 <main>
   <div class="sheet-container">

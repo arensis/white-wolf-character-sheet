@@ -1,3 +1,4 @@
+import { FileService } from './../shared/services/file.service';
 import { CharacterSheetStoreService } from './services/character-sheet-store.service';
 import { DamageType } from './../shared/model/vampire-dark-ages/advantages/health/DamageType';
 import { Component, OnChanges, OnInit } from '@angular/core';
@@ -10,17 +11,20 @@ import { DomSanitizer } from '@angular/platform-browser';
   styleUrls: ['./vampire-dark-age.component.scss']
 })
 export class VampireDarkAgeComponent {
-
-
-  constructor(private characterSheetStoreService: CharacterSheetStoreService) {}
+  constructor(private characterSheetStoreService: CharacterSheetStoreService, private fileService: FileService) {}
 
   clearSheet(): void {
     console.log('player name in Main component', this.getCharacterSheet().playerData.info.name);
     this.characterSheetStoreService.clearCharacterSheet();
   }
 
-  uploadSheet(): void {
-
+  uploadSheet(event: any): void {
+    const fileLoaded = this.fileService.mapFileToVampireDarkAgesSheet(event);
+    if (fileLoaded) {
+      console.log('File loaded new sheet: ', this.characterSheetStoreService.getCharacterSheet());
+    } else {
+      console.log('File not loaded');
+    }
   }
 
   getCharacterSheet(): VampireDarkAgesSheet {

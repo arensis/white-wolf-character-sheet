@@ -17,7 +17,7 @@ export class HeaderComponent {
   @Output()
   onClearSheet = new EventEmitter<void>();
   @Output()
-  onUploadSheet = new EventEmitter<void>();
+  onUploadSheet = new EventEmitter<any>();
 
   downloadFile: DownloadFile;
 
@@ -34,8 +34,8 @@ export class HeaderComponent {
     this.onClearSheet.emit();
   }
 
-  uploadSheet(): void {
-    this.onUploadSheet.emit();
+  uploadSheet(file: any): void {
+    this.onUploadSheet.emit(file);
   }
 
   private buildDownloadResources(): void {

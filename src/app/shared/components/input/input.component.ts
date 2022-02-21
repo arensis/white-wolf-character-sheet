@@ -7,17 +7,24 @@ import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 })
 export class InputComponent {
   @Input()
-  value: string;
+  value: any;
   @Input()
   label: string = '';
   @Input()
   type: string = 'text';
 
   @Output()
-  valueChange = new EventEmitter<string>();
+  valueChange = new EventEmitter<any>();
+
+  @Output()
+  onBlur = new EventEmitter<any>();
 
   constructor() {
     this.value = '';
     this.label = '';
+  }
+
+  onBlurEmit(event: any) {
+    this.onBlur.emit(event);
   }
 }

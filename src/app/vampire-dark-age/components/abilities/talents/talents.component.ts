@@ -1,4 +1,6 @@
-import { Component, Input } from '@angular/core';
+import { CustomProperty } from './../../../../shared/model/vampire-dark-ages/CustomProperty';
+import { Talents } from './../../../../shared/model/vampire-dark-ages/abilities/Talents';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'arm-talents',
@@ -7,19 +9,23 @@ import { Component, Input } from '@angular/core';
 })
 export class TalentsComponent {
   @Input()
-  talents: any;
+  talents: Talents;
+
+  @Output()
+  talentsChange = new EventEmitter<Talents>();
 
   propertyType: string;
 
   constructor() {
     this.propertyType = 'talento';
+    this.talents = {} as Talents;
   }
 
   deleteCustomTalents(index: number): void {
     this.talents.customTalents.splice(index, 1);
   }
 
-  trackByFn(item: any, index: number): number {
+  trackByFn(index: number, item: CustomProperty): number {
     return index;
   }
 }

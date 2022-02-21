@@ -50,8 +50,9 @@
     [label]="'Teología'"
     [(value)]="knowledges.theology"
   ></arm-circle-input>
-  <div class="mierda" *ngFor="let knowledge of knowledges.customKnowledges; index as i; trackBy: trackByFn">
+  <div class="mierda" >
     <arm-circle-input
+      *ngFor="let knowledge of knowledges.customKnowledges; index as i; trackBy: trackByFn"
       [circleAmount]="8"
       [label]="knowledge.name"
       [(value)]="knowledge.level"

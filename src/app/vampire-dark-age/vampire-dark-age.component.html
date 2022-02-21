@@ -1,6 +1,17 @@
-<div class="logo">
-  <img src="assets/images/vampire-dark-ages/logo/vampireDarkAges.png">
-</div>
-<arm-player-data [playerData]="characterSheet.playerData"></arm-player-data>
-<arm-attributes [attributes]="characterSheet.attributes"></arm-attributes>
-<arm-abilities [abilities]="characterSheet.abilities"></arm-abilities>
+<arm-header
+ [characterSheet]="getCharacterSheet()"
+ [gameName]="'VAMPIRE_DARK_AGES'"
+ (onClearSheet)="clearSheet()"
+ (onUploadSheet)="uploadSheet()"
+></arm-header>
+<main>
+  <div class="sheet-container">
+    <div class="logo">
+      <img src="assets/images/vampire-dark-ages/logo/vampireDarkAges.png">
+    </div>
+    <arm-player-data [characterSheet]="getCharacterSheet()"></arm-player-data>
+    <arm-attributes [(attributes)]="getCharacterSheet().attributes"></arm-attributes>
+    <arm-abilities [(abilities)]="getCharacterSheet().abilities"></arm-abilities>
+  </div>
+</main>
+<arm-footer></arm-footer>

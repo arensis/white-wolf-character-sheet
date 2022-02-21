@@ -1,17 +1,19 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Attributes } from './../../../shared/model/vampire-dark-ages/attributes/Attributes';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 
 @Component({
   selector: 'arm-attributes',
   templateUrl: './attributes.component.html',
   styleUrls: ['./attributes.component.scss']
 })
-export class AttributesComponent implements OnInit {
+export class AttributesComponent {
   @Input()
-  attributes: any;
+  attributes: Attributes;
 
-  constructor() { }
+  @Output()
+  attributesChange = new EventEmitter<Attributes>();
 
-  ngOnInit(): void {
+  constructor() {
+    this.attributes = {} as Attributes;
   }
-
 }

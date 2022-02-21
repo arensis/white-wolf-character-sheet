@@ -6,13 +6,17 @@ import { CircleInputComponent } from './components/circle-input/circle-input.com
 import { InputComponent } from './components/input/input.component';
 import { FormsModule } from '@angular/forms';
 import { AngularMaterialModule } from './angular-material/angular-material.module';
+import { FooterComponent } from './layout/footer/footer.component';
+import { HeaderComponent } from './layout/header/header.component';
 
 @NgModule({
   declarations: [
     CircleInputComponent,
     InputComponent,
     DialogAddNewPropertyComponent,
-    AddCustomPropertyButtonComponent
+    AddCustomPropertyButtonComponent,
+    HeaderComponent,
+    FooterComponent
   ],
   imports: [
     CommonModule,
@@ -24,6 +28,8 @@ import { AngularMaterialModule } from './angular-material/angular-material.modul
     InputComponent,
     DialogAddNewPropertyComponent,
     AddCustomPropertyButtonComponent,
+    HeaderComponent,
+    FooterComponent,
     CommonModule,
     FormsModule,
     AngularMaterialModule

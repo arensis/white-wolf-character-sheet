@@ -5,29 +5,25 @@
 }
 
 .delete-property-button {
-  margin-right: -28px;
+  margin-right: -31px;
   margin-left: 5px;
   color: #c22626;
   &:hover {
     color: white;
     background-color: #c22626;
-    border-radius: 12px;
+    border-radius: 100%;
     opacity: 50;
     cursor: pointer;
   }
 }
 
 .circle {
-  border: 1px black solid;
+  border: 1px solid;
   width: 10px;
-  height: 10px;
+  height: 14px;
   border-radius: 100%;
   cursor: pointer;
-  margin-left: 1px;
-}
-
-.circle.filled {
-  background-color: black;
+  margin-left: 2px;
 }
 
 .circle-input-values {
@@ -38,9 +34,13 @@
   white-space: nowrap;
 }
 
+.circle.filled.temporal {
+  background-color: #ffe500;
+}
+
 .line {
-  border-bottom: 1px solid black;
-  top: 5px;
+  border-bottom: 1px solid;
+  top: 7px;
   position: relative;
   width: 100%;
 }

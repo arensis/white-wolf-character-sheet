@@ -15,5 +15,8 @@
     <a mat-icon-button [href]="downloadFile.uri" [download]="downloadFile.name">
       <mat-icon>save_outlined</mat-icon>
     </a>
+    <button mat-icon-button (click)="changeThemMode()">
+      <mat-icon>{{ darkMode ? "dark_mode" : "light_mode" }}</mat-icon>
+    </button>
   </mat-toolbar>
 </header>

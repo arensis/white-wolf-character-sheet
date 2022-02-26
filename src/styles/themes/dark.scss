@@ -1,0 +1,68 @@
+@use "sass:map";
+@use "@angular/material" as mat;
+
+@import "@angular/material/prebuilt-themes/deeppurple-amber.css";
+
+$my-app-dark-primary: mat.define-palette(mat.$blue-grey-palette);
+$my-app-dark-accent: mat.define-palette(mat.$amber-palette, A200, A100, A400);
+$my-app-dark-warn: mat.define-palette(mat.$deep-orange-palette);
+$my-app-dark-theme: mat.define-dark-theme(
+  (
+    color: (
+      primary: $my-app-dark-primary,
+      accent: $my-app-dark-accent,
+      warn: $my-app-dark-warn,
+    ),
+  )
+);
+
+$my-app-dark-success: mat.define-palette(mat.$light-green-palette);
+$my-app-dark-info: mat.define-palette(mat.$light-blue-palette);
+
+.dark-theme {
+  @include mat.core-color($my-app-dark-theme);
+  @include mat.button-color($my-app-dark-theme);
+}
+
+body.dark-theme {
+  .add-property-container {
+    border-color: #70ba70;
+    color: #70ba70;
+    &:hover {
+      color: #f5f5f5;
+      border-color: #f5f5f5;
+      background-color: #0a640a;
+    }
+  }
+
+  .attributes-title, .abilities-title, .advantages-title {
+    &::after, &::before {
+      border-bottom-color: #f5f5f5;
+    }
+  }
+
+  .circle {
+    border-color: #c7c7c7;
+
+    &.filled {
+      &.temporal {
+        border-color: #ffe500;
+      }
+
+      &:not(.temporal){
+        background-color: #f5f5f5;
+        border-color: #f5f5f5;
+      }
+    }
+  }
+  .line {
+      border-bottom-color: #f5f5f5;
+  }
+
+  footer {
+    background-color: #f5f5f5;
+    a {
+      color: black;
+    }
+  }
+}

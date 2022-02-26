@@ -1,3 +1,4 @@
+import { StyleManagerService } from './../../services/style-manager.service';
 import { SafeUrl } from '@angular/platform-browser';
 import { DownloadFile } from './../../model/DownloadFile';
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
@@ -19,11 +20,13 @@ export class HeaderComponent {
   @Output()
   onUploadSheet = new EventEmitter<any>();
 
+  darkMode = this.styleManagerService.isDark
   downloadFile: DownloadFile;
 
-  constructor(private sanitizer: DomSanitizer) {
+  constructor(private sanitizer: DomSanitizer, private styleManagerService: StyleManagerService) {
     this.downloadFile = {} as DownloadFile;
     this.gameName = '';
+    this.darkMode = this.styleManagerService.isDark;
   }
 
   ngOnChanges() {
@@ -36,6 +39,11 @@ export class HeaderComponent {
 
   uploadSheet(file: any): void {
     this.onUploadSheet.emit(file);
+  }
+
+  changeThemMode(): void {
+    this.styleManagerService.toggleDarkTheme();
+    this.darkMode = !this.darkMode;
   }
 
   private buildDownloadResources(): void {

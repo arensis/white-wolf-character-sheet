@@ -1,9 +1,7 @@
 import { VampireDarkAgesSheet } from 'src/app/shared/model/vampire-dark-ages/VampireDarkAgesSheet';
 import { Inject, Injectable } from '@angular/core';
 import { CharacterSheetStoreService } from 'src/app/vampire-dark-age/services/character-sheet-store.service';
-@Injectable({
-  providedIn: 'root'
-})
+@Injectable()
 export class FileService {
   constructor(private characterSheetStoreService: CharacterSheetStoreService) {}
 

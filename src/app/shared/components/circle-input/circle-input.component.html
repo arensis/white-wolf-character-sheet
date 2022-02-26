@@ -5,7 +5,7 @@
   <div *ngIf="hasLabel()" class="line"></div>
   <div class="circle-input-values">
     <ng-container *ngFor="let item of circleArray; index as i; trackBy: trackByFn">
-      <div class="circle" [ngClass]="{ 'filled' : ((i+1) <= value) }" (click)="fillCircle(i)"></div>
+      <div class="circle" [ngClass]="{ 'filled' : ((i+1) <= totalValue), 'temporal': ((i+1) > value) }" (click)="fillCircle(i)"></div>
     </ng-container>
   </div>
   <mat-icon *ngIf="!isPermanent" class="delete-property-button" aria-hidden="false" (click)="deleteProperty()">

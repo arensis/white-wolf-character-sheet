@@ -1,0 +1,63 @@
+@use "sass:map";
+@use "@angular/material" as mat;
+
+@import "@angular/material/prebuilt-themes/pink-bluegrey.css";
+
+$my-app-light-primary: mat.define-palette(mat.$purple-palette);
+$my-app-light-accent: mat.define-palette(mat.$green-palette, A200, A100, A400);
+
+$my-app-light-warn: mat.define-palette(mat.$red-palette);
+
+$my-app-light-theme: mat.define-light-theme(
+  (
+    color: (
+      primary: $my-app-light-primary,
+      accent: $my-app-light-accent,
+      warn: $my-app-light-warn,
+    ),
+  )
+);
+
+$my-app-light-success: mat.define-palette(mat.$green-palette);
+$my-app-light-info: mat.define-palette(mat.$blue-palette);
+
+body {
+  .add-property-container {
+    border-color: green;
+    color: green;
+    &:hover {
+      color: #f5f5f5;
+      border-color: #9acb9a;
+      background-color: green;
+    }
+  }
+
+  .attributes-title, .abilities-title, .advantages-title {
+    &::after, &::before {
+      border-bottom-color: black;
+    }
+  }
+
+  .circle {
+    border-color: black;
+
+    &.filled {
+      &.temporal {
+        border-color: black;
+      }
+      &:not(.temporal){
+        background-color: black;
+      }
+    }
+  }
+  .line {
+    border-bottom-color: black;
+  }
+
+  footer {
+    background-color: black;
+    a {
+      color: #f5f5f5;
+    }
+  }
+}

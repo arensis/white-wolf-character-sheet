@@ -2,9 +2,7 @@ import { Injectable } from '@angular/core';
 import { DialogPosition, MatDialog, MatDialogRef } from '@angular/material/dialog';
 import { DialogAddNewPropertyComponent } from '../components/dialog-add-new-property/dialog-add-new-property.component';
 
-@Injectable({
-  providedIn: 'root'
-})
+@Injectable()
 export class DialogService {
 
   constructor(public dialog: MatDialog) { }

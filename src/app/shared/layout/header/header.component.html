@@ -1,20 +1,37 @@
 <header>
   <mat-toolbar>
-    <button mat-icon-button>
+    <button class="menu-button" mat-icon-button [matMenuTriggerFor]="menu">
       <mat-icon>menu</mat-icon>
     </button>
+    <mat-menu #menu="matMenu">
+      <button mat-menu-item (click)="clearSheet()">
+        <mat-icon>restore_page_outlined</mat-icon>
+        <span>Reiniciar ficha</span>
+      </button>
+      <button mat-menu-item (click)="fileInput.click()">
+        <mat-icon>upload_file</mat-icon>
+        <span>Subir copia</span>
+        <input hidden type="file" (change)="uploadSheet($event)" #fileInput accept=".json">
+      </button>
+      <a mat-menu-item [href]="downloadFile.uri" [download]="downloadFile.name">
+        <mat-icon>save_outlined</mat-icon>
+        <span>Descargar copia</span>
+      </a>
+    </mat-menu>
     <span>Vampiro: Edad oscura</span>
     <span class="example-spacer"></span>
-    <button mat-icon-button (click)="clearSheet()">
-      <mat-icon>restore_page_outlined</mat-icon>
-    </button>
-    <input hidden type="file" (change)="uploadSheet($event)" #fileInput accept=".json">
-    <button mat-icon-button (click)="fileInput.click()">
-      <mat-icon>upload_file</mat-icon>
-    </button>
-    <a mat-icon-button [href]="downloadFile.uri" [download]="downloadFile.name">
-      <mat-icon>save_outlined</mat-icon>
-    </a>
+    <div class="header-buttons">
+      <button mat-icon-button (click)="clearSheet()">
+        <mat-icon>restore_page_outlined</mat-icon>
+      </button>
+      <input hidden type="file" (change)="uploadSheet($event)" #fileInput accept=".json">
+      <button mat-icon-button (click)="fileInput.click()">
+        <mat-icon>upload_file</mat-icon>
+      </button>
+      <a mat-icon-button [href]="downloadFile.uri" [download]="downloadFile.name">
+        <mat-icon>save_outlined</mat-icon>
+      </a>
+    </div>
     <button mat-icon-button (click)="changeThemMode()">
       <mat-icon>{{ darkMode ? "dark_mode" : "light_mode" }}</mat-icon>
     </button>

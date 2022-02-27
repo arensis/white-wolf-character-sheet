@@ -66,3 +66,14 @@ body.dark-theme {
     }
   }
 }
+
+input {
+  background-color: #303030;
+  color: #fafafa;
+}
+
+.text-input-container {
+  input {
+    border-bottom-color: #fafafa !important;
+  }
+}

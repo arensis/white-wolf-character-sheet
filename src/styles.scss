@@ -19,8 +19,11 @@ body {
 }
 
 .sheet-container {
-  padding: 5vh 6vw;
+  $sheet-max-width: 1080px;
+  $padding-side-sheet: max(calc((100% - $sheet-max-width) / 2), 35px);
+  padding: 5vh $padding-side-sheet;
   overflow-x: auto;
+  max-width: $sheet-max-width;
 }
 
 .logo {
@@ -29,6 +32,53 @@ body {
   align-items: center;
   img {
     width: 50vw;
+    min-width: 292px;
+    max-width: 800px;
+  }
+}
+
+.attributes-title, .abilities-title, .advantages-title {
+  display: flex;
+  align-items: center;
+  @include lg {
+    display: none;
+  }
+
+  @include xl {
+    display: none;
+  }
+
+  &::after, &::before {
+    content: '';
+    border-bottom: 4px;
+    border-bottom-style: double;
+    top: 5px;
+    position: relative;
+    width: 100%;
+  }
+
+  h1 {
+    padding: 0 15px;
+  }
+}
+
+.attributes-image-section, .abilities-image-section, .advantages-image-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  @include sm {
+    display: none;
+  }
+
+  @include md {
+    display: none;
+  }
+
+  img {
+    width: 75vw;
+    max-height: 70px;
+    max-width: 775px;
   }
 }
 
@@ -144,35 +194,6 @@ body {
   font-size: 18px;
 }
 
-.attributes-image-section, .abilities-image-section, .advantages-image-section {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 20px;
-
-  img {
-    width: 75vw;
-  }
-}
-
-.attributes-title, .abilities-title, .advantages-title {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  &::after, &::before {
-    content: '';
-    border-bottom: 4px solid;
-    top: 5px;
-    position: relative;
-    width: 100%;
-  }
-
-  h1 {
-    padding: 0 15px;
-  }
-}
-
 .add-property-container {
   display: flex;
   align-items: center;
@@ -201,6 +222,35 @@ header {
 
   mat-toolbar {
     margin-top: -10px !important;
+    @include xs {
+      .header-buttons {
+        display: none;
+      }
+    }
+
+    @include sm {
+      .menu-button {
+        display: none;
+      }
+    }
+
+    @include md {
+      .menu-button {
+        display: none;
+      }
+    }
+
+    @include lg {
+      .menu-button {
+        display: none;
+      }
+    }
+
+    @include xl {
+      .menu-button {
+        display: none;
+      }
+    }
   }
 }
 

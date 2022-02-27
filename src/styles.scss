@@ -1,7 +1,7 @@
 @use "@angular/material" as mat;
 
 @use "./styles/themes/light";
-@import "./styles//responsive/breakpoints";
+@import "./styles/responsive/breakpoints";
 @import url("https://fonts.googleapis.com/icon?family=Material+Icons");
 
 @include mat.core-theme(light.$my-app-light-theme);
@@ -15,7 +15,7 @@ body {
 body {
   margin: 0;
   font-family: Roboto, "Helvetica Neue", sans-serif;
-  overflow-x: clip;
+  overflow-x: hidden;
 }
 
 .sheet-container {
@@ -67,6 +67,11 @@ body {
   justify-content: center;
   align-items: center;
   margin-top: 20px;
+
+  @include xs {
+    display: none;
+  }
+
   @include sm {
     display: none;
   }
@@ -105,49 +110,55 @@ body {
 }
 
 .character-info, .character-background, .character-concept, .physical, .social, .mental, .talents, .skills, .knowledges {
+  @extend .column;
+  @include xs {
+    grid-column: 1 / 7;
+  }
   @include sm {
     grid-column: 1 / 7;
   }
 }
 
 .character-info, .character-background, .character-concept, .physical, .social, .mental {
+  @extend .column;
   @include md {
     grid-column: 1 / 7;
   }
 }
 
 .character-info, .physical {
+  @extend .column;
   @include lg {
     grid-column: 1 / 3;
   }
   @include xl {
     grid-column: 1 / 3;
   }
-  @extend .column;
 }
 
 .character-background, .social {
+  @extend .column;
   @include lg {
     grid-column: 3 / 5;
   }
   @include xl {
     grid-column: 3 / 5;
   }
-  @extend .column;
 }
 
 .character-concept, .mental {
+  @extend .column;
   @include lg {
     grid-column: 5 / 7;
   }
   @include xl {
     grid-column: 5 / 7;
   }
-  @extend .column;
 }
 
 
 .talents {
+  @extend .column;
   @include md {
     grid-column: 1 / 4;
   }
@@ -157,10 +168,10 @@ body {
   @include xl {
     grid-column: 1 / 3;
   }
-  @extend .column;
 }
 
 .skills {
+  @extend .column;
   @include md {
     grid-column: 4 / 7;
   }
@@ -170,10 +181,10 @@ body {
   @include xl {
     grid-column: 3 / 5;
   }
-  @extend .column;
 }
 
 .knowledges {
+  @extend .column;
   @include md {
     grid-column: 1 / 7;
   }
@@ -183,7 +194,6 @@ body {
   @include xl {
     grid-column: 5 / 7;
   }
-  @extend .column;
 }
 
 .player-data {

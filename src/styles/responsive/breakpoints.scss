@@ -5,31 +5,31 @@ $screen-md-max: 768px;
 $screen-lg-max: 888px;
 
 @mixin xs {
-  @media all and (max-width: #{$screen-xs-max}) {
+  @media (max-width: #{$screen-xs-max}) {
     @content;
   }
 }
 
 @mixin sm {
-  @media all and (min-width: #{$screen-xs-max}) and (max-width: #{$screen-sm-max}) {
+  @media (min-width: #{$screen-xs-max}) and (max-width: #{$screen-sm-max}) {
       @content;
   }
 }
 
 @mixin md {
-  @media all and (min-width: #{$screen-sm-max}) and (max-width: #{$screen-md-max}){
+  @media (min-width: #{$screen-sm-max}) and (max-width: #{$screen-md-max}){
       @content;
   }
 }
 
 @mixin lg {
-  @media all and (min-width: #{$screen-md-max}) and (max-width: #{$screen-lg-max}){
+  @media (min-width: #{$screen-md-max}) and (max-width: #{$screen-lg-max}){
       @content;
   }
 }
 
 @mixin xl {
-  @media all and (min-width: #{$screen-lg-max}) {
+  @media (min-width: #{$screen-lg-max}) {
       @content;
   }
 }

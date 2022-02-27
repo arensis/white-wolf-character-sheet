@@ -13,6 +13,6 @@ export class AppComponent {
   constructor(private matIconRegistry: MatIconRegistry, private domSanitizer: DomSanitizer){
     this.matIconRegistry.addSvgIcon(
       `github_icon`,
-      this.domSanitizer.bypassSecurityTrustResourceUrl("../assets/svgIcons/github-brands.svg"));
+      this.domSanitizer.bypassSecurityTrustResourceUrl("assets/svgIcons/github-brands.svg"));
   }
 }

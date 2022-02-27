@@ -14,17 +14,14 @@ export class InputComponent {
   type: string = 'text';
 
   @Output()
-  valueChange = new EventEmitter<any>();
-
-  @Output()
-  onBlur = new EventEmitter<any>();
+  onValueChange = new EventEmitter<any>();
 
   constructor() {
     this.value = '';
     this.label = '';
   }
 
-  onBlurEmit(event: any) {
-    this.onBlur.emit(event);
+  valueChange(event: any): void {
+    this.onValueChange.emit(event);
   }
 }

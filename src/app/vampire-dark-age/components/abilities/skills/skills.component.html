@@ -3,63 +3,74 @@
   <arm-circle-input
     [circleAmount]="8"
     [label]="'Armas C. C.'"
-    [(value)]="skills.melee"
+    [value]="characterSheet.abilities.skills.melee"
+    (onValueChange)="updateValueFromProperty($event, 'melee')"
   ></arm-circle-input>
   <arm-circle-input
     [circleAmount]="8"
     [label]="'Comercio'"
-    [(value)]="skills.commerce"
+    [value]="characterSheet.abilities.skills.commerce"
+    (onValueChange)="updateValueFromProperty($event, 'commerce')"
   ></arm-circle-input>
   <arm-circle-input
     [circleAmount]="8"
     [label]="'Equitación'"
-    [(value)]="skills.ride"
+    [value]="characterSheet.abilities.skills.ride"
+    (onValueChange)="updateValueFromProperty($event, 'ride')"
   ></arm-circle-input>
   <arm-circle-input
     [circleAmount]="8"
     [label]="'Etiqueta'"
-    [(value)]="skills.etiquette"
+    [value]="characterSheet.abilities.skills.etiquette"
+    (onValueChange)="updateValueFromProperty($event, 'etiquette')"
   ></arm-circle-input>
   <arm-circle-input
     [circleAmount]="8"
     [label]="'Interpretación'"
-    [(value)]="skills.performance"
+    [value]="characterSheet.abilities.skills.performance"
+    (onValueChange)="updateValueFromProperty($event, 'performance')"
   ></arm-circle-input>
   <arm-circle-input
     [circleAmount]="8"
     [label]="'Pericias'"
-    [(value)]="skills.crafts"
+    [value]="characterSheet.abilities.skills.crafts"
+    (onValueChange)="updateValueFromProperty($event, 'crafts')"
   ></arm-circle-input>
   <arm-circle-input
     [circleAmount]="8"
     [label]="'Sigilo'"
-    [(value)]="skills.stealth"
+    [value]="characterSheet.abilities.skills.stealth"
+    (onValueChange)="updateValueFromProperty($event, 'stealth')"
   ></arm-circle-input>
   <arm-circle-input
     [circleAmount]="8"
     [label]="'Supervivencia'"
-    [(value)]="skills.survival"
+    [value]="characterSheet.abilities.skills.survival"
+    (onValueChange)="updateValueFromProperty($event, 'survival')"
   ></arm-circle-input>
   <arm-circle-input
     [circleAmount]="8"
     [label]="'Trato con Animales'"
-    [(value)]="skills.animalKen"
+    [value]="characterSheet.abilities.skills.animalKen"
+    (onValueChange)="updateValueFromProperty($event, 'animalKen')"
   ></arm-circle-input>
   <arm-circle-input
     [circleAmount]="8"
     [label]="'Tiro con Arco'"
-    [(value)]="skills.archery"
+    [value]="characterSheet.abilities.skills.archery"
+    (onValueChange)="updateValueFromProperty($event, 'archery')"
   ></arm-circle-input>
   <arm-circle-input
-    *ngFor="let skill of skills.customSkills; index as i; trackBy: trackByFn"
+    *ngFor="let skill of characterSheet.abilities.skills.customSkills; index as i; trackBy: trackByFn"
     [circleAmount]="8"
     [isPermanent]="false"
     [label]="skill.name"
-    [(value)]="skill.level"
+    [value]="skill.level"
     (onDelete)="deleteCustomSkill(i)"
+    (onValueChange)="updateValuerFromCustomProperty($event, i)"
   ></arm-circle-input>
   <arm-add-custom-property-button
     [propertyType]="propertyType"
-    [customPropertyList]="skills.customSkills"
+    [customPropertyList]="characterSheet.abilities.skills.customSkills"
   ></arm-add-custom-property-button>
 </div>

@@ -2,53 +2,53 @@
   <div class="character-info">
     <arm-input
       [label]="'Nombre:'"
-      [(value)]="characterSheet.playerData.info.name"
-      (onBlur)="updateValueFromProperty($event, 'playerData.info.name')"
+      [value]="characterSheet.playerData.info.name"
+      (onValueChange)="updateInfoProperty($event, 'name')"
     ></arm-input>
     <arm-input
       [label]="'Jugador:'"
-      [(value)]="characterSheet.playerData.info.player"
-      (onBlur)="updateValueFromProperty($event, 'playerData.info.player')"
+      [value]="characterSheet.playerData.info.player"
+      (onValueChange)="updateInfoProperty($event, 'player')"
     ></arm-input>
     <arm-input
       [label]="'Crónica:'"
-      [(value)]="characterSheet.playerData.info.chronicle"
-      (onBlur)="updateValueFromProperty($event, 'playerData.info.chronicle')"
+      [value]="characterSheet.playerData.info.chronicle"
+      (onValueChange)="updateInfoProperty($event, 'chronicle')"
     ></arm-input>
   </div>
   <div class="character-background">
     <arm-input
       [label]="'Naturaleza:'"
-      [(value)]="characterSheet.playerData.background.nature"
-      (onBlur)="updateValueFromProperty($event, 'playerData.background.nature')"
+      [value]="characterSheet.playerData.background.nature"
+      (onValueChange)="updateBackgroundProperty($event, 'nature')"
     ></arm-input>
     <arm-input
       [label]="'Conducta:'"
-      [(value)]="characterSheet.playerData.background.demeanor"
-      (onBlur)="updateValueFromProperty($event, 'playerData.background.demeanor')"
+      [value]="characterSheet.playerData.background.demeanor"
+      (onValueChange)="updateBackgroundProperty($event, 'demeanor')"
     ></arm-input>
     <arm-input
       [label]="'Clan:'"
-      [(value)]="characterSheet.playerData.background.clan"
-      (onBlur)="updateValueFromProperty($event, 'playerData.background.clan')"
+      [value]="characterSheet.playerData.background.clan"
+      (onValueChange)="updateBackgroundProperty($event, 'clan')"
     ></arm-input>
   </div>
   <div class="character-concept">
     <arm-input
       [label]="'Generación:'"
       [type]="'number'"
-      [(value)]="characterSheet.playerData.concept.generation"
-      (onBlur)="updateValueFromProperty($event, 'playerData.concept.generation')"
+      [value]="characterSheet.playerData.concept.generation"
+      (onValueChange)="updateConceptProperty($event, 'generation')"
     ></arm-input>
     <arm-input
       [label]="'Concepto:'"
-      [(value)]="characterSheet.playerData.concept.concept"
-      (onBlur)="updateValueFromProperty($event, 'playerData.concept.concept')"
+      [value]="characterSheet.playerData.concept.concept"
+      (onValueChange)="updateConceptProperty($event, 'concept')"
     ></arm-input>
     <arm-input
       [label]="'Refugio:'"
-      [(value)]="characterSheet.playerData.concept.haven"
-      (onBlur)="updateValueFromProperty($event, 'playerData.concept.haven')"
+      [value]="characterSheet.playerData.concept.haven"
+      (onValueChange)="updateConceptProperty($event, 'haven')"
     ></arm-input>
   </div>
 </div>

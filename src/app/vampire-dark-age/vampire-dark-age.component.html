@@ -10,8 +10,8 @@
       <img src="assets/images/vampire-dark-ages/logo/vampireDarkAges.png">
     </div>
     <arm-player-data [characterSheet]="getCharacterSheet()"></arm-player-data>
-    <arm-attributes [(attributes)]="getCharacterSheet().attributes"></arm-attributes>
-    <arm-abilities [(abilities)]="getCharacterSheet().abilities"></arm-abilities>
+    <arm-attributes [characterSheet]="getCharacterSheet()"></arm-attributes>
+    <arm-abilities [characterSheet]="getCharacterSheet()"></arm-abilities>
   </div>
 </main>
 <arm-footer></arm-footer>

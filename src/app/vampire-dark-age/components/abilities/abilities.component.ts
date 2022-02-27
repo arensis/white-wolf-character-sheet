@@ -1,5 +1,5 @@
-import { Abilities } from './../../../shared/model/vampire-dark-ages/abilities/Abilities';
-import { Component, Input, OnInit, EventEmitter, Output } from '@angular/core';
+import { VampireDarkAgesSheet } from 'src/app/shared/model/vampire-dark-ages/VampireDarkAgesSheet';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'arm-abilities',
@@ -8,12 +8,5 @@ import { Component, Input, OnInit, EventEmitter, Output } from '@angular/core';
 })
 export class AbilitiesComponent {
   @Input()
-  abilities: Abilities;
-
-  @Output()
-  abilitiesChange = new EventEmitter<Abilities>();
-
-  constructor() {
-    this.abilities = {} as Abilities;
-  }
+  characterSheet!: VampireDarkAgesSheet;
 }

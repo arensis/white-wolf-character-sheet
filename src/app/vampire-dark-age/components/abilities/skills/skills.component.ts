@@ -1,6 +1,6 @@
-import { Skills } from './../../../../shared/model/vampire-dark-ages/abilities/Skills';
-import { Component, Input, Output, EventEmitter } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { CustomProperty } from 'src/app/shared/model/vampire-dark-ages/CustomProperty';
+import { CharacterSheetStoreService } from 'src/app/vampire-dark-age/services/character-sheet-store.service';
 
 @Component({
   selector: 'arm-skills',
@@ -9,23 +9,32 @@ import { CustomProperty } from 'src/app/shared/model/vampire-dark-ages/CustomPro
 })
 export class SkillsComponent {
   @Input()
-  skills: Skills;
+  characterSheet: any;
 
-  @Output()
-  skillsChange = new EventEmitter<Skills>();
+  propertyType: string = 'técnica';
+  skillsMainPath: string = 'abilities.skills';
 
-  propertyType: string;
-
-  constructor() {
-    this.propertyType = 'técnica'
-    this.skills = {} as Skills;
-   }
+  constructor(private characterSheetStoreService: CharacterSheetStoreService) {
+    this.characterSheet = this.characterSheetStoreService.getCharacterSheet();
+  }
 
   deleteCustomSkill(index: number): void {
-    this.skills.customSkills.splice(index, 1);
+    this.characterSheet.abilities.skills.customSkills.splice(index, 1);
   }
 
   trackByFn(index: number, item: CustomProperty): number {
     return index;
+  }
+
+  updateValueFromProperty(value: number, propertyName: string): void {
+    const routesSegments = [this.skillsMainPath, propertyName].join('.').split('.');
+    this.characterSheet[routesSegments[0]][routesSegments[1]][routesSegments[2]] = value;
+    this.characterSheetStoreService.updateCharacterSheet(this.characterSheet);
+  }
+
+  updateValuerFromCustomProperty(value: number, index: number) {
+    const routesSegments = [this.skillsMainPath, 'customSkills'].join('.').split('.');
+    this.characterSheet[routesSegments[0]][routesSegments[1]][routesSegments[2]][index].level = value;
+    this.characterSheetStoreService.updateCharacterSheet(this.characterSheet);
   }
 }

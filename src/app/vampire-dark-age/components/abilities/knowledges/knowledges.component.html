@@ -3,65 +3,76 @@
   <arm-circle-input
     [circleAmount]="8"
     [label]="'Academicismo'"
-    [(value)]="knowledges.academics"
+    [value]="characterSheet.abilities.knowledges.academics"
+    (onValueChange)="updateValueFromProperty($event, 'academics')"
   ></arm-circle-input>
   <arm-circle-input
     [circleAmount]="8"
     [label]="'Investigación'"
-    [(value)]="knowledges.investigation"
+    [value]="characterSheet.abilities.knowledges.investigation"
+    (onValueChange)="updateValueFromProperty($event, 'investigation')"
   ></arm-circle-input>
   <arm-circle-input
     [circleAmount]="8"
     [label]="'Leyes'"
-    [(value)]="knowledges.law"
+    [value]="characterSheet.abilities.knowledges.law"
+    (onValueChange)="updateValueFromProperty($event, 'law')"
   ></arm-circle-input>
   <arm-circle-input
     [circleAmount]="8"
     [label]="'Lingüística'"
-    [(value)]="knowledges.linguistics"
+    [value]="characterSheet.abilities.knowledges.linguistics"
+    (onValueChange)="updateValueFromProperty($event, 'linguistics')"
   ></arm-circle-input>
   <arm-circle-input
     [circleAmount]="8"
     [label]="'Medicina'"
-    [(value)]="knowledges.medicine"
+    [value]="characterSheet.abilities.knowledges.medicine"
+    (onValueChange)="updateValueFromProperty($event, 'medicine')"
   ></arm-circle-input>
   <arm-circle-input
     [circleAmount]="8"
     [label]="'Ocultismo'"
-    [(value)]="knowledges.occult"
+    [value]="characterSheet.abilities.knowledges.occult"
+    (onValueChange)="updateValueFromProperty($event, 'occult')"
   ></arm-circle-input>
   <arm-circle-input
     [circleAmount]="8"
     [label]="'Política'"
-    [(value)]="knowledges.politics"
+    [value]="characterSheet.abilities.knowledges.politics"
+    (onValueChange)="updateValueFromProperty($event, 'politics')"
   ></arm-circle-input>
   <arm-circle-input
     [circleAmount]="8"
     [label]="'Sabiduría popular'"
-    [(value)]="knowledges.hearthWisdom"
+    [value]="characterSheet.abilities.knowledges.hearthWisdom"
+    (onValueChange)="updateValueFromProperty($event, 'hearthWisdom')"
   ></arm-circle-input>
   <arm-circle-input
     [circleAmount]="8"
     [label]="'Senescal'"
-    [(value)]="knowledges.seneschal"
+    [value]="characterSheet.abilities.knowledges.seneschal"
+    (onValueChange)="updateValueFromProperty($event, 'seneschal')"
   ></arm-circle-input>
   <arm-circle-input
     [circleAmount]="8"
     [label]="'Teología'"
-    [(value)]="knowledges.theology"
+    [value]="characterSheet.abilities.knowledges.theology"
+    (onValueChange)="updateValueFromProperty($event, 'theology')"
   ></arm-circle-input>
   <div class="mierda" >
     <arm-circle-input
-      *ngFor="let knowledge of knowledges.customKnowledges; index as i; trackBy: trackByFn"
+      *ngFor="let knowledge of characterSheet.abilities.knowledges.customKnowledges; index as i; trackBy: trackByFn"
       [circleAmount]="8"
       [label]="knowledge.name"
-      [(value)]="knowledge.level"
+      [value]="knowledge.level"
       [isPermanent]="false"
       (onDelete)="deleteCustomKnowledge(i)"
+      (onValueChange)="updateValuerFromCustomProperty($event, i)"
     ></arm-circle-input>
   </div>
   <arm-add-custom-property-button
     [propertyType]="propertyType"
-    [customPropertyList]="knowledges.customKnowledges"
+    [customPropertyList]="characterSheet.abilities.knowledges.customKnowledges"
   ></arm-add-custom-property-button>
 </div>

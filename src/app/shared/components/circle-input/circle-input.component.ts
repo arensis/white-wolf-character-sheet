@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Input, Output, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, Output, OnInit, OnChanges } from '@angular/core';
 import { isNotBlankOrEmpty } from 'src/app/utils/stringUtils';
 
 @Component({
@@ -6,13 +6,13 @@ import { isNotBlankOrEmpty } from 'src/app/utils/stringUtils';
   templateUrl: './circle-input.component.html',
   styleUrls: ['./circle-input.component.scss']
 })
-export class CircleInputComponent implements OnInit {
+export class CircleInputComponent implements OnInit, OnChanges {
   @Input()
   circleAmount: number;
   @Input()
   label: string;
   @Input()
-  value!: number;
+  value: number = 0;
   @Input()
   temporaryValue: number = 0;
   @Input()
@@ -21,9 +21,9 @@ export class CircleInputComponent implements OnInit {
   isPermanent: boolean = true;
 
   @Output()
-  valueChange = new EventEmitter<number>();
+  onValueChange = new EventEmitter<number>();
   @Output()
-  temporaryValueChange = new EventEmitter<number>();
+  onTemporaryValueChange = new EventEmitter<number>();
   @Output()
   onDelete = new EventEmitter<void>();
 
@@ -39,6 +39,10 @@ export class CircleInputComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    this.totalValue = this.value + this.temporaryValue;
+  }
+
+  ngOnChanges(): void {
     this.totalValue = this.value + this.temporaryValue;
   }
 
@@ -81,6 +85,7 @@ export class CircleInputComponent implements OnInit {
   }
 
   updateTotalvalue(): void {
+    this.updateValue();
     this.totalValue = this.value + this.temporaryValue;
   }
 
@@ -90,5 +95,13 @@ export class CircleInputComponent implements OnInit {
 
   deleteProperty(): void {
     this.onDelete.emit();
+  }
+
+  private updateValue(): void {
+    this.onValueChange.emit(this.value);
+  }
+
+  temporaryValueChange(): void {
+    this.onTemporaryValueChange.emit(this.temporaryValue);
   }
 }

@@ -11,19 +11,22 @@
       <arm-circle-input
         [circleAmount]="8"
         [label]="'Fuerza'"
-        [(value)]="attributes.physical.strength"
+        [value]="characterSheet.attributes.physical.strength"
+        (onValueChange)="updatePhysicalValueProperty($event, 'strength')"
         [minValue]="1"
       ></arm-circle-input>
       <arm-circle-input
         [circleAmount]="8"
         [label]="'Destreza'"
-        [(value)]="attributes.physical.dexterity"
+        [value]="characterSheet.attributes.physical.dexterity"
+        (onValueChange)="updatePhysicalValueProperty($event, 'dexterity')"
         [minValue]="1"
       ></arm-circle-input>
       <arm-circle-input
         [circleAmount]="8"
         [label]="'Resistencia'"
-        [(value)]="attributes.physical.stamina"
+        [value]="characterSheet.attributes.physical.stamina"
+        (onValueChange)="updatePhysicalValueProperty($event, 'stamina')"
         [minValue]="1"
       ></arm-circle-input>
     </div>
@@ -32,19 +35,22 @@
       <arm-circle-input
         [circleAmount]="8"
         [label]="'Carisma'"
-        [(value)]="attributes.social.charisma"
+        [value]="characterSheet.attributes.social.charisma"
+        (onValueChange)="updateSocialValueProperty($event, 'charisma')"
         [minValue]="1"
       ></arm-circle-input>
       <arm-circle-input
         [circleAmount]="8"
         [label]="'Manipulación'"
-        [(value)]="attributes.social.manipulation"
+        [value]="characterSheet.attributes.social.manipulation"
+        (onValueChange)="updateSocialValueProperty($event, 'manipulation')"
         [minValue]="1"
       ></arm-circle-input>
       <arm-circle-input
         [circleAmount]="8"
         [label]="'Apariencia'"
-        [(value)]="attributes.social.appearance"
+        [value]="characterSheet.attributes.social.appearance"
+        (onValueChange)="updateSocialValueProperty($event, 'appearance')"
         [minValue]="1"
       ></arm-circle-input>
     </div>
@@ -53,19 +59,22 @@
       <arm-circle-input
         [circleAmount]="8"
         [label]="'Percepción'"
-        [(value)]="attributes.mental.perception"
+        [value]="characterSheet.attributes.mental.perception"
+        (onValueChange)="updateMentalValueProperty($event, 'perception')"
         [minValue]="1"
       ></arm-circle-input>
       <arm-circle-input
         [circleAmount]="8"
         [label]="'Inteligencia'"
-        [(value)]="attributes.mental.intelligence"
+        [value]="characterSheet.attributes.mental.intelligence"
+        (onValueChange)="updateMentalValueProperty($event, 'intelligence')"
         [minValue]="1"
       ></arm-circle-input>
       <arm-circle-input
         [circleAmount]="8"
         [label]="'Astucia'"
-        [(value)]="attributes.mental.wits"
+        [value]="characterSheet.attributes.mental.wits"
+        (onValueChange)="updateMentalValueProperty($event, 'wits')"
         [minValue]="1"
       ></arm-circle-input>
     </div>

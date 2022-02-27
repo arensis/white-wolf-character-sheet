@@ -1,5 +1,5 @@
 <div class="text-input-container">
   <label>{{ label }}</label>
-  <input [type]="type" [(ngModel)]="value" (blur)="onBlurEmit($event)">
+  <input [type]="type" [(ngModel)]="value" (ngModelChange)="valueChange($event)">
 </div>
 

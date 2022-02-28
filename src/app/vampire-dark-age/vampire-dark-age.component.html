@@ -1,8 +1,10 @@
 <arm-header
  [characterSheet]="getCharacterSheet()"
  [gameName]="'VAMPIRE_DARK_AGES'"
+ [isEditable]="getCharacterSheet().isEditable"
  (onClearSheet)="clearSheet()"
  (onUploadSheet)="uploadSheet($event)"
+ (onToggleLockEdition)="toggleLockEdition()"
 ></arm-header>
 <main>
   <div class="sheet-container">

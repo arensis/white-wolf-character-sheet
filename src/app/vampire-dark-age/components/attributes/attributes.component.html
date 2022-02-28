@@ -12,6 +12,7 @@
         [circleAmount]="8"
         [label]="'Fuerza'"
         [value]="characterSheet.attributes.physical.strength"
+        [isEditable]="characterSheet.isEditable"
         (onValueChange)="updatePhysicalValueProperty($event, 'strength')"
         [minValue]="1"
       ></arm-circle-input>
@@ -19,6 +20,7 @@
         [circleAmount]="8"
         [label]="'Destreza'"
         [value]="characterSheet.attributes.physical.dexterity"
+        [isEditable]="characterSheet.isEditable"
         (onValueChange)="updatePhysicalValueProperty($event, 'dexterity')"
         [minValue]="1"
       ></arm-circle-input>
@@ -26,6 +28,7 @@
         [circleAmount]="8"
         [label]="'Resistencia'"
         [value]="characterSheet.attributes.physical.stamina"
+        [isEditable]="characterSheet.isEditable"
         (onValueChange)="updatePhysicalValueProperty($event, 'stamina')"
         [minValue]="1"
       ></arm-circle-input>
@@ -36,6 +39,7 @@
         [circleAmount]="8"
         [label]="'Carisma'"
         [value]="characterSheet.attributes.social.charisma"
+        [isEditable]="characterSheet.isEditable"
         (onValueChange)="updateSocialValueProperty($event, 'charisma')"
         [minValue]="1"
       ></arm-circle-input>
@@ -43,6 +47,7 @@
         [circleAmount]="8"
         [label]="'Manipulación'"
         [value]="characterSheet.attributes.social.manipulation"
+        [isEditable]="characterSheet.isEditable"
         (onValueChange)="updateSocialValueProperty($event, 'manipulation')"
         [minValue]="1"
       ></arm-circle-input>
@@ -50,6 +55,7 @@
         [circleAmount]="8"
         [label]="'Apariencia'"
         [value]="characterSheet.attributes.social.appearance"
+        [isEditable]="characterSheet.isEditable"
         (onValueChange)="updateSocialValueProperty($event, 'appearance')"
         [minValue]="1"
       ></arm-circle-input>
@@ -60,6 +66,7 @@
         [circleAmount]="8"
         [label]="'Percepción'"
         [value]="characterSheet.attributes.mental.perception"
+        [isEditable]="characterSheet.isEditable"
         (onValueChange)="updateMentalValueProperty($event, 'perception')"
         [minValue]="1"
       ></arm-circle-input>
@@ -67,6 +74,7 @@
         [circleAmount]="8"
         [label]="'Inteligencia'"
         [value]="characterSheet.attributes.mental.intelligence"
+        [isEditable]="characterSheet.isEditable"
         (onValueChange)="updateMentalValueProperty($event, 'intelligence')"
         [minValue]="1"
       ></arm-circle-input>
@@ -74,6 +82,7 @@
         [circleAmount]="8"
         [label]="'Astucia'"
         [value]="characterSheet.attributes.mental.wits"
+        [isEditable]="characterSheet.isEditable"
         (onValueChange)="updateMentalValueProperty($event, 'wits')"
         [minValue]="1"
       ></arm-circle-input>

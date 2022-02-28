@@ -15,7 +15,7 @@ body {
 body {
   margin: 0;
   font-family: Roboto, "Helvetica Neue", sans-serif;
-  overflow-x: hidden;
+  overflow-x: clip;
 }
 
 .sheet-container {
@@ -97,7 +97,7 @@ body {
 .column {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
 
   h2 {
     display: flex;
@@ -262,5 +262,34 @@ header {
       }
     }
   }
+}
+
+.sheet-title {
+  @include xs {
+    display: none;
+  }
+  @include sm {
+    display: none;
+  }
+}
+
+.sheet-reduced-title {
+  @include md {
+    display: none;
+  }
+  @include lg {
+    display: none;
+  }
+  @include xl {
+    display: none;
+  }
+}
+
+.locked, .unlocked {
+  margin-bottom: 2px;
+}
+
+.sheet-title, .sheet-reduced-title {
+  padding-top: 2px;
 }
 

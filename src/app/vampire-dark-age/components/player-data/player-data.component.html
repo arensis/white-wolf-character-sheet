@@ -3,16 +3,19 @@
     <arm-input
       [label]="'Nombre:'"
       [value]="characterSheet.playerData.info.name"
+      [isReadOnly]="!characterSheet.isEditable"
       (onValueChange)="updateInfoProperty($event, 'name')"
     ></arm-input>
     <arm-input
       [label]="'Jugador:'"
       [value]="characterSheet.playerData.info.player"
+      [isReadOnly]="!characterSheet.isEditable"
       (onValueChange)="updateInfoProperty($event, 'player')"
     ></arm-input>
     <arm-input
       [label]="'Crónica:'"
       [value]="characterSheet.playerData.info.chronicle"
+      [isReadOnly]="!characterSheet.isEditable"
       (onValueChange)="updateInfoProperty($event, 'chronicle')"
     ></arm-input>
   </div>
@@ -20,16 +23,19 @@
     <arm-input
       [label]="'Naturaleza:'"
       [value]="characterSheet.playerData.background.nature"
+      [isReadOnly]="!characterSheet.isEditable"
       (onValueChange)="updateBackgroundProperty($event, 'nature')"
     ></arm-input>
     <arm-input
       [label]="'Conducta:'"
       [value]="characterSheet.playerData.background.demeanor"
+      [isReadOnly]="!characterSheet.isEditable"
       (onValueChange)="updateBackgroundProperty($event, 'demeanor')"
     ></arm-input>
     <arm-input
       [label]="'Clan:'"
       [value]="characterSheet.playerData.background.clan"
+      [isReadOnly]="!characterSheet.isEditable"
       (onValueChange)="updateBackgroundProperty($event, 'clan')"
     ></arm-input>
   </div>
@@ -38,16 +44,19 @@
       [label]="'Generación:'"
       [type]="'number'"
       [value]="characterSheet.playerData.concept.generation"
+      [isReadOnly]="!characterSheet.isEditable"
       (onValueChange)="updateConceptProperty($event, 'generation')"
     ></arm-input>
     <arm-input
       [label]="'Concepto:'"
       [value]="characterSheet.playerData.concept.concept"
+      [isReadOnly]="!characterSheet.isEditable"
       (onValueChange)="updateConceptProperty($event, 'concept')"
     ></arm-input>
     <arm-input
       [label]="'Refugio:'"
       [value]="characterSheet.playerData.concept.haven"
+      [isReadOnly]="!characterSheet.isEditable"
       (onValueChange)="updateConceptProperty($event, 'haven')"
     ></arm-input>
   </div>

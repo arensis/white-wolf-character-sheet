@@ -4,60 +4,70 @@
     [circleAmount]="8"
     [label]="'Academicismo'"
     [value]="characterSheet.abilities.knowledges.academics"
+    [isEditable]="characterSheet.isEditable"
     (onValueChange)="updateValueFromProperty($event, 'academics')"
   ></arm-circle-input>
   <arm-circle-input
     [circleAmount]="8"
     [label]="'Investigación'"
     [value]="characterSheet.abilities.knowledges.investigation"
+    [isEditable]="characterSheet.isEditable"
     (onValueChange)="updateValueFromProperty($event, 'investigation')"
   ></arm-circle-input>
   <arm-circle-input
     [circleAmount]="8"
     [label]="'Leyes'"
     [value]="characterSheet.abilities.knowledges.law"
+    [isEditable]="characterSheet.isEditable"
     (onValueChange)="updateValueFromProperty($event, 'law')"
   ></arm-circle-input>
   <arm-circle-input
     [circleAmount]="8"
     [label]="'Lingüística'"
     [value]="characterSheet.abilities.knowledges.linguistics"
+    [isEditable]="characterSheet.isEditable"
     (onValueChange)="updateValueFromProperty($event, 'linguistics')"
   ></arm-circle-input>
   <arm-circle-input
     [circleAmount]="8"
     [label]="'Medicina'"
     [value]="characterSheet.abilities.knowledges.medicine"
+    [isEditable]="characterSheet.isEditable"
     (onValueChange)="updateValueFromProperty($event, 'medicine')"
   ></arm-circle-input>
   <arm-circle-input
     [circleAmount]="8"
     [label]="'Ocultismo'"
     [value]="characterSheet.abilities.knowledges.occult"
+    [isEditable]="characterSheet.isEditable"
     (onValueChange)="updateValueFromProperty($event, 'occult')"
   ></arm-circle-input>
   <arm-circle-input
     [circleAmount]="8"
     [label]="'Política'"
     [value]="characterSheet.abilities.knowledges.politics"
+    [isEditable]="characterSheet.isEditable"
     (onValueChange)="updateValueFromProperty($event, 'politics')"
   ></arm-circle-input>
   <arm-circle-input
     [circleAmount]="8"
     [label]="'Sabiduría popular'"
     [value]="characterSheet.abilities.knowledges.hearthWisdom"
+    [isEditable]="characterSheet.isEditable"
     (onValueChange)="updateValueFromProperty($event, 'hearthWisdom')"
   ></arm-circle-input>
   <arm-circle-input
     [circleAmount]="8"
     [label]="'Senescal'"
     [value]="characterSheet.abilities.knowledges.seneschal"
+    [isEditable]="characterSheet.isEditable"
     (onValueChange)="updateValueFromProperty($event, 'seneschal')"
   ></arm-circle-input>
   <arm-circle-input
     [circleAmount]="8"
     [label]="'Teología'"
     [value]="characterSheet.abilities.knowledges.theology"
+    [isEditable]="characterSheet.isEditable"
     (onValueChange)="updateValueFromProperty($event, 'theology')"
   ></arm-circle-input>
   <div class="mierda" >
@@ -67,11 +77,13 @@
       [label]="knowledge.name"
       [value]="knowledge.level"
       [isPermanent]="false"
+      [isEditable]="characterSheet.isEditable"
       (onDelete)="deleteCustomKnowledge(i)"
       (onValueChange)="updateValuerFromCustomProperty($event, i)"
     ></arm-circle-input>
   </div>
   <arm-add-custom-property-button
+    *ngIf="characterSheet.isEditable"
     [propertyType]="propertyType"
     [customPropertyList]="characterSheet.abilities.knowledges.customKnowledges"
   ></arm-add-custom-property-button>

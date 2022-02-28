@@ -299,7 +299,8 @@ export class CharacterSheetStoreService {
           class: "",
           protection: 0
         }
-      }
+      },
+      isEditable: true
     } as VampireDarkAgesSheet;
   }
 }

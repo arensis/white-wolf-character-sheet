@@ -18,18 +18,22 @@
         <span>Descargar copia</span>
       </a>
     </mat-menu>
-    <span>Vampiro: Edad oscura</span>
-    <span class="example-spacer"></span>
+    <span class="sheet-title">Vampiro: Edad oscura</span>
+    <span class="sheet-reduced-title">Vampiro: EO</span>
+    <button mat-icon-button (click)="toggleLockEdition()">
+      <mat-icon [ngClass]="{ 'unlocked' : isEditable, 'locked': !isEditable}">{{ isEditable ? "lock_open" : "lock" }}</mat-icon>
+    </button>
+    <span class="title-spacer"></span>
     <div class="header-buttons">
       <button mat-icon-button (click)="clearSheet()">
-        <mat-icon>restore_page_outlined</mat-icon>
+        <mat-icon class="reset-sheet">restore_page_outlined</mat-icon>
       </button>
       <input hidden type="file" (change)="uploadSheet($event)" #fileInput accept=".json">
       <button mat-icon-button (click)="fileInput.click()">
-        <mat-icon>upload_file</mat-icon>
+        <mat-icon class="upload-sheet">upload_file</mat-icon>
       </button>
       <a mat-icon-button [href]="downloadFile.uri" [download]="downloadFile.name">
-        <mat-icon>save_outlined</mat-icon>
+        <mat-icon class="save-sheet">save_outlined</mat-icon>
       </a>
     </div>
     <button mat-icon-button (click)="changeThemMode()">

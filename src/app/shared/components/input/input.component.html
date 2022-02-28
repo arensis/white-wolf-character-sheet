@@ -1,5 +1,5 @@
 <div class="text-input-container">
   <label>{{ label }}</label>
-  <input [type]="type" [(ngModel)]="value" (ngModelChange)="valueChange($event)">
+  <input [type]="type" [ngClass]="{ 'read-only': isReadOnly }" [(ngModel)]="value" (ngModelChange)="valueChange($event)" [readonly]="isReadOnly">
 </div>
 

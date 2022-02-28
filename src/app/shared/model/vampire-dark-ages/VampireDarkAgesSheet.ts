@@ -12,4 +12,5 @@ export interface VampireDarkAgesSheet {
   advantages: Advantages;
   disciplines: Disciplines;
   equipment: Equipment;
+  isEditable: boolean;
 }

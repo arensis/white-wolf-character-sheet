@@ -19,6 +19,8 @@ export class CircleInputComponent implements OnInit, OnChanges {
   minValue: number = 0;
   @Input()
   isPermanent: boolean = true;
+  @Input()
+  isEditable: boolean = true;
 
   @Output()
   onValueChange = new EventEmitter<number>();
@@ -35,11 +37,12 @@ export class CircleInputComponent implements OnInit, OnChanges {
     this.circleAmount = 5;
     this.label = '';
     this.inputValue = 0;
-    this.circleArray = Array.from(Array(this.circleAmount),(x,i)=>i);
+    this.circleArray = [1,2,3,4,5];
   }
 
   ngOnInit(): void {
     this.totalValue = this.value + this.temporaryValue;
+    this.circleArray = Array.from(Array(this.circleAmount),(x,i)=>i);
   }
 
   ngOnChanges(): void {
@@ -50,45 +53,6 @@ export class CircleInputComponent implements OnInit, OnChanges {
     return index;
   }
 
-  fillCircle(index: number): void {
-    const editionIsLocked = false;
-    if (editionIsLocked) {
-      this.calculateTemporaryValue(index);
-    } else {
-      this.calculateValue(index);
-    }
-  }
-
-  calculateValue(circleIndex: number) {
-    if (circleIndex === 0 && this.value > 1) {
-      this.value = 1;
-      this.updateTotalvalue();
-    } else if (circleIndex === 0 && this.value === 1) {
-      if (this.value <= this.minValue) {
-        this.value = this.minValue;
-        this.updateTotalvalue();
-      } else {
-        this.value = 0;
-        this.updateTotalvalue();
-      }
-    } else if (this.value === (circleIndex + 1)) {
-      this.value = circleIndex;
-      this.updateTotalvalue();
-    } else {
-      this.value = circleIndex + 1;
-      this.updateTotalvalue();
-    }
-  }
-
-  calculateTemporaryValue(circleIndex: number) {
-
-  }
-
-  updateTotalvalue(): void {
-    this.updateValue();
-    this.totalValue = this.value + this.temporaryValue;
-  }
-
   hasLabel(): boolean {
     return isNotBlankOrEmpty(this.label);
   }
@@ -97,11 +61,111 @@ export class CircleInputComponent implements OnInit, OnChanges {
     this.onDelete.emit();
   }
 
+  fillCircle(index: number): void {
+    if (this.isEditable) {
+      this.calculateValue(index);
+    } else {
+      this.calculateTemporaryValue(index);
+    }
+  }
+
+  private calculateValue(circleIndex: number) {
+    if (this.isSettingToLevelOne(circleIndex)) {
+      this.setLevelToOne();
+    } else if (this.isRemovingAllLevels(circleIndex)) {
+      this.removeAllLevels();
+    } else if (this.isRemovingCurrentLevel(circleIndex)) {
+      this.removeCurrentLevel();
+    } else {
+      this.updateLevel(circleIndex);
+    }
+  }
+
+  private isSettingToLevelOne(circleIndex: number): boolean {
+    return circleIndex === 0 && this.value > 1;
+  }
+
+  private isRemovingAllLevels(circleIndex: number): boolean {
+    return circleIndex === 0 && this.value === 1;
+  }
+
+  private isRemovingCurrentLevel(circleIndex: number): boolean {
+    return this.value === (circleIndex + 1);
+  }
+
+  private setLevelToOne(): void {
+    this.value = 1;
+    this.updateTotalvalue();
+    this.updateValue();
+  }
+
+  private removeAllLevels(): void {
+    if (this.value <= this.minValue) {
+      this.value = this.minValue;
+    } else {
+      this.value = 0;
+    }
+
+    this.updateTotalvalue();
+    this.updateValue();
+  }
+
+  private removeCurrentLevel(): void {
+    this.value = this.value - 1;
+    this.updateTotalvalue();
+    this.updateValue();
+  }
+
+  private updateLevel(circleIndex: number): void {
+    const requestedTotalValue = (circleIndex +1) + this.temporaryValue;
+    if(requestedTotalValue > this.circleAmount) {
+      const difference = requestedTotalValue - this.circleAmount;
+      this.temporaryValue = this.temporaryValue - difference;
+      this.updateTemporaryValue();
+    }
+    this.value = circleIndex + 1;
+    this.updateTotalvalue();
+    this.updateValue();
+  }
+
+  private calculateTemporaryValue(circleIndex: number) {
+    if (this.isSettingTemporaryValue(circleIndex)) {
+      this.setTemporaryValue(circleIndex);
+    } else {
+      this.temporaryValue = 0;
+      this.updateTotalvalue();
+      this.updateTemporaryValue();
+    }
+  }
+
+  private isSettingTemporaryValue(circleIndex: number): boolean {
+    return (circleIndex + 1) > this.value;
+  }
+
+  private isRemovingCurentTemporaryLevel(circleIndex: number): boolean {
+    return (circleIndex +1) === (this.value + this.temporaryValue);
+  }
+
+  private setTemporaryValue(circleIndex: number): void {
+    if (this.isRemovingCurentTemporaryLevel(circleIndex)) {
+      this.temporaryValue = this.temporaryValue - 1;
+    } else {
+      this.temporaryValue = (circleIndex + 1) - this.value;
+    }
+
+    this.updateTotalvalue();
+    this.updateTemporaryValue();
+  }
+
+  private updateTotalvalue(): void {
+    this.totalValue = this.value + this.temporaryValue;
+  }
+
   private updateValue(): void {
     this.onValueChange.emit(this.value);
   }
 
-  temporaryValueChange(): void {
+  private updateTemporaryValue(): void {
     this.onTemporaryValueChange.emit(this.temporaryValue);
   }
 }

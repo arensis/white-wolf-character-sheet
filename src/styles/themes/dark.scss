@@ -24,56 +24,82 @@ $my-app-dark-info: mat.define-palette(mat.$light-blue-palette);
   @include mat.button-color($my-app-dark-theme);
 }
 
-body.dark-theme {
-  .add-property-container {
-    border-color: #70ba70;
-    color: #70ba70;
-    &:hover {
-      color: #f5f5f5;
+.add-property-container {
+  border-color: #70ba70;
+  color: #70ba70;
+  &:hover {
+    color: #f5f5f5;
+    border-color: #f5f5f5;
+    background-color: #0a640a;
+  }
+}
+
+.attributes-title, .abilities-title, .advantages-title {
+  &::after, &::before {
+    border-bottom-color: #f5f5f5;
+  }
+}
+
+.circle {
+  border-color: #c7c7c7;
+
+  &.filled {
+    &.temporal {
+      border-color: #ffe500;
+    }
+
+    &:not(.temporal){
+      background-color: #f5f5f5;
       border-color: #f5f5f5;
-      background-color: #0a640a;
     }
   }
+}
+.line {
+    border-bottom-color: #f5f5f5;
+}
 
-  .attributes-title, .abilities-title, .advantages-title {
-    &::after, &::before {
-      border-bottom-color: #f5f5f5;
-    }
-  }
-
-  .circle {
-    border-color: #c7c7c7;
-
-    &.filled {
-      &.temporal {
-        border-color: #ffe500;
-      }
-
-      &:not(.temporal){
-        background-color: #f5f5f5;
-        border-color: #f5f5f5;
-      }
-    }
-  }
-  .line {
-      border-bottom-color: #f5f5f5;
-  }
-
-  footer {
-    background-color: #f5f5f5;
-    a {
-      color: black;
-    }
+footer {
+  background-color: #f5f5f5;
+  a {
+    color: black;
   }
 }
 
 input {
+  font-size: 14px;
   background-color: #303030;
   color: #fafafa;
+  &.read-only {
+    color: #c8c8c8;
+  }
 }
 
 .text-input-container {
   input {
     border-bottom-color: #fafafa !important;
+    &.read-only {
+      padding-top: 8px;
+      border-bottom-color: #303030 !important;
+    }
   }
+}
+
+.locked {
+  color: #da1d1d;
+}
+
+.unlocked {
+  color: #50a90e;
+}
+
+.reset-sheet {
+  color: #d08639;
+}
+
+.upload-sheet {
+  color: #c353bf;
+}
+
+.save-sheet {
+  color: #02a7df;
 }

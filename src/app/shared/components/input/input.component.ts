@@ -12,6 +12,8 @@ export class InputComponent {
   label: string = '';
   @Input()
   type: string = 'text';
+  @Input()
+  isReadOnly: boolean = false;
 
   @Output()
   onValueChange = new EventEmitter<any>();

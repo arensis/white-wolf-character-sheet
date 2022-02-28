@@ -2,10 +2,11 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  height: 24px;
 }
 
 .delete-property-button {
-  margin-right: -31px;
+  margin-right: -29px;
   margin-left: 5px;
   color: #c22626;
   &:hover {

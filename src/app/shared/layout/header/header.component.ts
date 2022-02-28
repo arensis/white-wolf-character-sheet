@@ -1,7 +1,7 @@
 import { StyleManagerService } from './../../services/style-manager.service';
 import { SafeUrl } from '@angular/platform-browser';
 import { DownloadFile } from './../../model/DownloadFile';
-import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { DomSanitizer } from '@angular/platform-browser';
 
 @Component({
@@ -14,11 +14,15 @@ export class HeaderComponent {
   characterSheet: any;
   @Input()
   gameName: string;
+  @Input()
+  isEditable: boolean = true;
 
   @Output()
   onClearSheet = new EventEmitter<void>();
   @Output()
   onUploadSheet = new EventEmitter<any>();
+  @Output()
+  onToggleLockEdition = new EventEmitter<void>();
 
   darkMode = this.styleManagerService.isDark
   downloadFile: DownloadFile;
@@ -26,7 +30,6 @@ export class HeaderComponent {
   constructor(private sanitizer: DomSanitizer, private styleManagerService: StyleManagerService) {
     this.downloadFile = {} as DownloadFile;
     this.gameName = '';
-    this.darkMode = this.styleManagerService.isDark;
   }
 
   ngOnChanges() {
@@ -39,6 +42,10 @@ export class HeaderComponent {
 
   uploadSheet(file: any): void {
     this.onUploadSheet.emit(file);
+  }
+
+  toggleLockEdition(): void {
+    this.onToggleLockEdition.emit();
   }
 
   changeThemMode(): void {

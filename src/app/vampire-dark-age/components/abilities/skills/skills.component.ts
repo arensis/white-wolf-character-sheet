@@ -11,7 +11,7 @@ export class SkillsComponent {
   @Input()
   characterSheet: any;
 
-  propertyType: string = 'técnica';
+  propertyType: string = 'skill';
   skillsMainPath: string = 'abilities.skills';
 
   constructor(private characterSheetStoreService: CharacterSheetStoreService) {

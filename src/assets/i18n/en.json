@@ -1,0 +1,111 @@
+{
+  "vampire-eo-title": "Vampire: Dark Ages",
+  "vampire-eo-reduced-title": "Vampire: DA",
+  "menu-buttons": {
+    "reset-sheet": "Reset sheet",
+    "upload-sheet": "Upload backup",
+    "download-sheet": "Download backup"
+  },
+  "custom-property-button": {
+    "title" : "Custom property",
+    "required": "Required field",
+    "add": "Add",
+    "cancel": "Cancel",
+    "input-label": {
+      "talent": "Talent name",
+      "skill": "Skill name",
+      "knowledge": "Knowledge name"
+    },
+    "talent": {
+      "add": "Add talent"
+    },
+    "skill": {
+      "add": "Add skill"
+    },
+    "knowledge": {
+      "add": "Add knowledge"
+    }
+  },
+  "sheet": {
+    "player-data": {
+      "info": {
+        "name": "Name",
+        "player": "Player",
+        "chronicle": "Chronicle"
+      },
+      "background": {
+        "nature": "Nature",
+        "demeanor": "Demeanor",
+        "clan": "Clan"
+      },
+      "concept": {
+        "generation": "Generation",
+        "concept": "Concept",
+        "haven": "Haven"
+      }
+    },
+    "attributes": {
+      "title": "Attributes",
+      "physical": {
+        "title": "Physical",
+        "strength": "Strength",
+        "dexterity": "Dexterity",
+        "stamina": "Stamina"
+      },
+      "social": {
+        "title": "Social",
+        "charisma": "Charisma",
+        "manipulation": "Manipulation",
+        "appearance": "Appearance"
+      },
+      "mental": {
+        "title": "Mental",
+        "perception": "Perception",
+        "intelligence": "Intelligence",
+        "wits": "Wits"
+      }
+    },
+    "abilities": {
+      "title": "Abilities",
+      "talents": {
+        "title": "Talents",
+        "alertness": "Alertness",
+        "athletics": "Athletics",
+        "brawl": "Brawl",
+        "dodge": "Dodge",
+        "emptahy": "Emptahy",
+        "expression": "Expression",
+        "intimidation": "Intimidation",
+        "leadership": "Leadership",
+        "legerdemain": "Legerdemain",
+        "subterfuge": "Subterfuge"
+      },
+      "skills": {
+        "title": "Skills",
+        "animalKen": "AnimalKen",
+        "archery": "Archery",
+        "commerce": "Commerce",
+        "crafts": "Crafts",
+        "etiquette": "Etiquette",
+        "melee": "Melee",
+        "performance": "Performance",
+        "ride": "Ride",
+        "stealth": "Stealth",
+        "survival": "Survival"
+      },
+      "knowledges": {
+        "title": "Knowledges",
+        "academics": "Academics",
+        "hearthWisdom": "HearthWisdom",
+        "investigation": "Investigation",
+        "law": "Law",
+        "linguistics": "Linguistics",
+        "medicine": "Medicine",
+        "occult": "Occult",
+        "politics": "Politics",
+        "seneschal": "Seneschal",
+        "theology": "Theology"
+      }
+    }
+  }
+}

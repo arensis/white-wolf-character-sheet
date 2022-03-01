@@ -88,13 +88,26 @@ input {
 }
 
 .reset-sheet {
-  color: #e1a15e;
+  color: #e1a15e !important;
 }
 
 .upload-sheet {
-  color: orchid;
+  color: orchid !important;
 }
 
 .save-sheet {
-  color: deepskyblue;
+  color: deepskyblue !important;
+}
+
+header {
+  button {
+    &:hover {
+      background-color: #3e3e3e !important;
+    }
+  }
+  .header-buttons {
+    a:hover {
+      background-color: #3e3e3e !important;
+    }
+  }
 }

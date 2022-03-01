@@ -1,19 +1,19 @@
 <div class="player-data">
   <div class="character-info">
     <arm-input
-      [label]="'Nombre:'"
+      [label]="'sheet.player-data.info.name'"
       [value]="characterSheet.playerData.info.name"
       [isReadOnly]="!characterSheet.isEditable"
       (onValueChange)="updateInfoProperty($event, 'name')"
     ></arm-input>
     <arm-input
-      [label]="'Jugador:'"
+      [label]="'sheet.player-data.info.player'"
       [value]="characterSheet.playerData.info.player"
       [isReadOnly]="!characterSheet.isEditable"
       (onValueChange)="updateInfoProperty($event, 'player')"
     ></arm-input>
     <arm-input
-      [label]="'Crónica:'"
+      [label]="'sheet.player-data.info.chronicle'"
       [value]="characterSheet.playerData.info.chronicle"
       [isReadOnly]="!characterSheet.isEditable"
       (onValueChange)="updateInfoProperty($event, 'chronicle')"
@@ -21,19 +21,19 @@
   </div>
   <div class="character-background">
     <arm-input
-      [label]="'Naturaleza:'"
+      [label]="'sheet.player-data.background.nature'"
       [value]="characterSheet.playerData.background.nature"
       [isReadOnly]="!characterSheet.isEditable"
       (onValueChange)="updateBackgroundProperty($event, 'nature')"
     ></arm-input>
     <arm-input
-      [label]="'Conducta:'"
+      [label]="'sheet.player-data.background.demeanor'"
       [value]="characterSheet.playerData.background.demeanor"
       [isReadOnly]="!characterSheet.isEditable"
       (onValueChange)="updateBackgroundProperty($event, 'demeanor')"
     ></arm-input>
     <arm-input
-      [label]="'Clan:'"
+      [label]="'sheet.player-data.background.clan'"
       [value]="characterSheet.playerData.background.clan"
       [isReadOnly]="!characterSheet.isEditable"
       (onValueChange)="updateBackgroundProperty($event, 'clan')"
@@ -41,20 +41,20 @@
   </div>
   <div class="character-concept">
     <arm-input
-      [label]="'Generación:'"
+      [label]="'sheet.player-data.concept.generation'"
       [type]="'number'"
       [value]="characterSheet.playerData.concept.generation"
       [isReadOnly]="!characterSheet.isEditable"
       (onValueChange)="updateConceptProperty($event, 'generation')"
     ></arm-input>
     <arm-input
-      [label]="'Concepto:'"
+      [label]="'sheet.player-data.concept.concept'"
       [value]="characterSheet.playerData.concept.concept"
       [isReadOnly]="!characterSheet.isEditable"
       (onValueChange)="updateConceptProperty($event, 'concept')"
     ></arm-input>
     <arm-input
-      [label]="'Refugio:'"
+      [label]="'sheet.player-data.concept.haven'"
       [value]="characterSheet.playerData.concept.haven"
       [isReadOnly]="!characterSheet.isEditable"
       (onValueChange)="updateConceptProperty($event, 'haven')"

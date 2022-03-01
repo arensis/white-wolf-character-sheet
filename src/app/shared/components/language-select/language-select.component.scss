@@ -1,0 +1,11 @@
+.language-button {
+  display: flex;
+  align-items: center;
+  mat-icon {
+    margin-right: 4px;
+    border-radius: 0;
+  }
+  &:hover {
+    color:cornflowerblue;
+  }
+}

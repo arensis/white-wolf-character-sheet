@@ -7,6 +7,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatRippleModule } from '@angular/material/core';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatMenuModule } from '@angular/material/menu';
+import { MatSelectModule } from '@angular/material/select';
 
 @NgModule({
   exports: [
@@ -17,7 +18,8 @@ import { MatMenuModule } from '@angular/material/menu';
     MatIconModule,
     MatRippleModule,
     MatToolbarModule,
-    MatMenuModule
+    MatMenuModule,
+    MatSelectModule
   ],
 })
 export class AngularMaterialModule {}

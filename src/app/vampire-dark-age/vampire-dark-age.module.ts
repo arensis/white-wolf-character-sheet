@@ -1,3 +1,4 @@
+import { TranslateModule } from '@ngx-translate/core';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
@@ -48,7 +49,8 @@ import * as EquipementComponents from './components/equipment'
   imports: [
     CommonModule,
     VampireDarkAgeRoutingModule,
-    SharedModule
+    SharedModule,
+    TranslateModule.forChild()
   ]
 })
 export class VampireDarkAgeModule { }

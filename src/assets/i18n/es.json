@@ -1,0 +1,111 @@
+{
+  "vampire-eo-title": "Vampiro: Edad Oscura",
+  "vampire-eo-reduced-title": "Vampiro: EO",
+  "menu-buttons": {
+    "reset-sheet": "Reiniciar ficha",
+    "upload-sheet": "Subir copia",
+    "download-sheet": "Descargar copia"
+  },
+  "custom-property-button": {
+    "title" : "Propiedad personalizada",
+    "required": "El campo es obligatorio",
+    "add": "Añadir",
+    "cancel": "Cancelar",
+    "input-label": {
+      "talent": "Nombre de talento",
+      "skill": "Nombre de técnica",
+      "knowledge": "Nombre de conocimiento"
+    },
+    "talent": {
+      "add": "Añadir talento"
+    },
+    "skill": {
+      "add": "Añadir técnica"
+    },
+    "knowledge": {
+      "add": "Añadir conocmiento"
+    }
+  },
+  "sheet": {
+    "player-data": {
+      "info": {
+        "name": "Nombre",
+        "player": "Jugador",
+        "chronicle": "Crónica"
+      },
+      "background": {
+        "nature": "Naturaleza",
+        "demeanor": "Conducta",
+        "clan": "Clan"
+      },
+      "concept": {
+        "generation": "Generación",
+        "concept": "Concepto",
+        "haven": "Refugio"
+      }
+    },
+    "attributes": {
+      "title": "Atributos",
+      "physical": {
+        "title": "Físicos",
+        "strength": "Fuerza",
+        "dexterity": "Destreza",
+        "stamina": "Resistencia"
+      },
+      "social": {
+        "title": "Sociales",
+        "charisma": "Carisma",
+        "manipulation": "Manipulación",
+        "appearance": "Apariencia"
+      },
+      "mental": {
+        "title": "Mentales",
+        "perception": "Percepción",
+        "intelligence": "Inteligencia",
+        "wits": "Astucia"
+      }
+    },
+    "abilities": {
+      "title": "Habilidades",
+      "talents": {
+        "title": "Talentos",
+        "alertness": "Alerta",
+        "athletics": "Atletismo",
+        "brawl": "Pelea",
+        "dodge": "Esquivar",
+        "emptahy": "Empatía",
+        "expression": "Expresión",
+        "intimidation": "Intimidación",
+        "leadership": "Liderazgo",
+        "legerdemain": "Prestidigitación",
+        "subterfuge": "Subterfugio"
+      },
+      "skills": {
+        "title": "Técnicas",
+        "animalKen": "Trato con Animales",
+        "archery": "Tiro con Arco",
+        "commerce": "Comercio",
+        "crafts": "Pericias",
+        "etiquette": "Etiqueta",
+        "melee": "Armas C. C.",
+        "performance": "Interpretación",
+        "ride": "Equitación",
+        "stealth": "Sigilo",
+        "survival": "Supervivencia"
+      },
+      "knowledges": {
+        "title": "Conocimientos",
+        "academics": "Academicismo",
+        "hearthWisdom": "Sabiduría popular",
+        "investigation": "Investigación",
+        "law": "Leyes",
+        "linguistics": "Lingüística",
+        "medicine": "Medicina",
+        "occult": "Ocultismo",
+        "politics": "Política",
+        "seneschal": "Senescal",
+        "theology": "Teología"
+      }
+    }
+  }
+}

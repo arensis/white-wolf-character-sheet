@@ -1,18 +1,18 @@
 <div class="modal-container">
-  <h1 mat-dialog-title>Propiedad personalizada</h1>
+  <h1 mat-dialog-title>{{ 'custom-property-button.title' | translate }}</h1>
   <ng-form name="customPropertyForm">
     <div mat-dialog-content>
       <mat-form-field appearance="fill">
         <mat-label>{{data.propertyName}}</mat-label>
         <input matInput name="propertyValue" [(ngModel)]="data.propertyValue" [ngModelOptions]="{standalone: true}" required>
         <mat-error ng-show="customPropertyForm.propertyValue.$error.required">
-          El campo es obligatorio
+          {{ 'custom-property-button.required' | translate }}
         </mat-error>
       </mat-form-field>
     </div>
     <div mat-dialog-actions>
-      <button mat-button (click)="onNoClick()">Cancelar</button>
-      <button mat-button [disabled]="isDisabled()" [mat-dialog-close]="data.propertyValue" cdkFocusInitial>Añadir</button>
+      <button mat-button (click)="onNoClick()">{{ 'custom-property-button.cancel' | translate }}</button>
+      <button mat-button [disabled]="isDisabled()" [mat-dialog-close]="data.propertyValue" cdkFocusInitial>{{ 'custom-property-button.add' | translate }}</button>
     </div>
   </ng-form>
 </div>

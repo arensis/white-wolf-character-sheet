@@ -7,10 +7,10 @@
   </div>
   <div class="attributes-container">
     <div class="physical">
-      <h2>Físicos</h2>
+      <h2>{{ 'sheet.attributes.title' | translate }}</h2>
       <arm-circle-input
         [circleAmount]="8"
-        [label]="'Fuerza'"
+        [label]="'sheet.attributes.physical.strength'"
         [value]="characterSheet.attributes.physical.strength"
         [isEditable]="characterSheet.isEditable"
         (onValueChange)="updatePhysicalValueProperty($event, 'strength')"
@@ -18,7 +18,7 @@
       ></arm-circle-input>
       <arm-circle-input
         [circleAmount]="8"
-        [label]="'Destreza'"
+        [label]="'sheet.attributes.physical.dexterity'"
         [value]="characterSheet.attributes.physical.dexterity"
         [isEditable]="characterSheet.isEditable"
         (onValueChange)="updatePhysicalValueProperty($event, 'dexterity')"
@@ -26,7 +26,7 @@
       ></arm-circle-input>
       <arm-circle-input
         [circleAmount]="8"
-        [label]="'Resistencia'"
+        [label]="'sheet.attributes.physical.stamina'"
         [value]="characterSheet.attributes.physical.stamina"
         [isEditable]="characterSheet.isEditable"
         (onValueChange)="updatePhysicalValueProperty($event, 'stamina')"
@@ -34,10 +34,10 @@
       ></arm-circle-input>
     </div>
     <div class="social">
-      <h2>Sociales</h2>
+      <h2>{{ 'sheet.attributes.social.title' | translate }}</h2>
       <arm-circle-input
         [circleAmount]="8"
-        [label]="'Carisma'"
+        [label]="'sheet.attributes.social.charisma'"
         [value]="characterSheet.attributes.social.charisma"
         [isEditable]="characterSheet.isEditable"
         (onValueChange)="updateSocialValueProperty($event, 'charisma')"
@@ -45,7 +45,7 @@
       ></arm-circle-input>
       <arm-circle-input
         [circleAmount]="8"
-        [label]="'Manipulación'"
+        [label]="'sheet.attributes.social.manipulation'"
         [value]="characterSheet.attributes.social.manipulation"
         [isEditable]="characterSheet.isEditable"
         (onValueChange)="updateSocialValueProperty($event, 'manipulation')"
@@ -53,7 +53,7 @@
       ></arm-circle-input>
       <arm-circle-input
         [circleAmount]="8"
-        [label]="'Apariencia'"
+        [label]="'sheet.attributes.social.appearance'"
         [value]="characterSheet.attributes.social.appearance"
         [isEditable]="characterSheet.isEditable"
         (onValueChange)="updateSocialValueProperty($event, 'appearance')"
@@ -61,10 +61,10 @@
       ></arm-circle-input>
     </div>
     <div class="mental">
-      <h2>Mentales</h2>
+      <h2>{{ 'sheet.attributes.mental.title' | translate }}</h2>
       <arm-circle-input
         [circleAmount]="8"
-        [label]="'Percepción'"
+        [label]="'sheet.attributes.mental.perception'"
         [value]="characterSheet.attributes.mental.perception"
         [isEditable]="characterSheet.isEditable"
         (onValueChange)="updateMentalValueProperty($event, 'perception')"
@@ -72,7 +72,7 @@
       ></arm-circle-input>
       <arm-circle-input
         [circleAmount]="8"
-        [label]="'Inteligencia'"
+        [label]="'sheet.attributes.mental.intelligence'"
         [value]="characterSheet.attributes.mental.intelligence"
         [isEditable]="characterSheet.isEditable"
         (onValueChange)="updateMentalValueProperty($event, 'intelligence')"
@@ -80,7 +80,7 @@
       ></arm-circle-input>
       <arm-circle-input
         [circleAmount]="8"
-        [label]="'Astucia'"
+        [label]="'sheet.attributes.mental.wits'"
         [value]="characterSheet.attributes.mental.wits"
         [isEditable]="characterSheet.isEditable"
         (onValueChange)="updateMentalValueProperty($event, 'wits')"

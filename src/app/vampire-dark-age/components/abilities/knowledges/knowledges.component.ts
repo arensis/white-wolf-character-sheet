@@ -11,7 +11,7 @@ export class KnowledgesComponent {
   @Input()
   characterSheet: any;
 
-  propertyType: string = 'conocimiento';
+  propertyType: string = 'knowledge';
   knowledgesMainPath: string = 'abilities.knowledges';
 
   constructor(private characterSheetStoreService: CharacterSheetStoreService) {

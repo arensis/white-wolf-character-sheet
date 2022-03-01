@@ -12,7 +12,7 @@ export class TalentsComponent {
   @Input()
   characterSheet: any;
 
-  propertyType: string = 'talento';
+  propertyType: string = 'talent';
   talentsMainPath: string = 'abilities.talents';
 
   constructor(private characterSheetStoreService: CharacterSheetStoreService) {

@@ -1,3 +1,4 @@
+import { TranslateService } from '@ngx-translate/core';
 import { StyleManagerService } from './../../services/style-manager.service';
 import { SafeUrl } from '@angular/platform-browser';
 import { DownloadFile } from './../../model/DownloadFile';
@@ -27,7 +28,7 @@ export class HeaderComponent {
   darkMode = this.styleManagerService.isDark
   downloadFile: DownloadFile;
 
-  constructor(private sanitizer: DomSanitizer, private styleManagerService: StyleManagerService) {
+  constructor(private sanitizer: DomSanitizer, private styleManagerService: StyleManagerService, private translate: TranslateService) {
     this.downloadFile = {} as DownloadFile;
     this.gameName = '';
   }

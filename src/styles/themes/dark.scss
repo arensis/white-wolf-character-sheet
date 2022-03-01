@@ -103,3 +103,16 @@ input {
 .save-sheet {
   color: #02a7df;
 }
+
+header {
+  button {
+    &:hover {
+      background-color: #b4b0b042 !important;
+    }
+  }
+  .header-buttons {
+    a:hover {
+      background-color: #b4b0b042 !important;
+    }
+  }
+}

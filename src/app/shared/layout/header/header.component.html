@@ -5,25 +5,27 @@
     </button>
     <mat-menu #menu="matMenu">
       <button mat-menu-item (click)="clearSheet()">
-        <mat-icon>restore_page_outlined</mat-icon>
-        <span>Reiniciar ficha</span>
+        <mat-icon class="reset-sheet">restore_page_outlined</mat-icon>
+        <span>{{ 'menu-buttons.reset-sheet' | translate }}</span>
       </button>
       <button mat-menu-item (click)="fileInput.click()">
-        <mat-icon>upload_file</mat-icon>
-        <span>Subir copia</span>
+        <mat-icon class="upload-sheet">upload_file</mat-icon>
+        <span>{{ 'menu-buttons.upload-sheet' | translate }}</span>
         <input hidden type="file" (change)="uploadSheet($event)" #fileInput accept=".json">
       </button>
       <a mat-menu-item [href]="downloadFile.uri" [download]="downloadFile.name">
-        <mat-icon>save_outlined</mat-icon>
-        <span>Descargar copia</span>
+        <mat-icon class="save-sheet">save_outlined</mat-icon>
+        <span>{{ 'menu-buttons.download-sheet' | translate }}</span>
       </a>
     </mat-menu>
-    <span class="sheet-title">Vampiro: Edad oscura</span>
-    <span class="sheet-reduced-title">Vampiro: EO</span>
+    <span class="sheet-title">{{ 'vampire-eo-title' | translate }}</span>
+    <span class="sheet-reduced-title">{{ 'vampire-eo-reduced-title' | translate }}</span>
     <button mat-icon-button (click)="toggleLockEdition()">
       <mat-icon [ngClass]="{ 'unlocked' : isEditable, 'locked': !isEditable}">{{ isEditable ? "lock_open" : "lock" }}</mat-icon>
     </button>
-    <span class="title-spacer"></span>
+    <span class="title-spacer">
+      <arm-language-select></arm-language-select>
+    </span>
     <div class="header-buttons">
       <button mat-icon-button (click)="clearSheet()">
         <mat-icon class="reset-sheet">restore_page_outlined</mat-icon>

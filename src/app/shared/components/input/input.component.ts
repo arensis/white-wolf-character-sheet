@@ -1,3 +1,4 @@
+import { TranslateService } from '@ngx-translate/core';
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 
 @Component({
@@ -18,7 +19,7 @@ export class InputComponent {
   @Output()
   onValueChange = new EventEmitter<any>();
 
-  constructor() {
+  constructor(private translate: TranslateService) {
     this.value = '';
     this.label = '';
   }

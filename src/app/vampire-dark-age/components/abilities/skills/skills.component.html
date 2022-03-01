@@ -1,71 +1,71 @@
 <div>
-  <h2>Técnicas</h2>
+  <h2>{{ 'sheet.abilities.skills.title' | translate }}</h2>
   <arm-circle-input
     [circleAmount]="8"
-    [label]="'Armas C. C.'"
+    [label]="'sheet.abilities.skills.melee'"
     [value]="characterSheet.abilities.skills.melee"
     [isEditable]="characterSheet.isEditable"
     (onValueChange)="updateValueFromProperty($event, 'melee')"
   ></arm-circle-input>
   <arm-circle-input
     [circleAmount]="8"
-    [label]="'Comercio'"
+    [label]="'sheet.abilities.skills.commerce'"
     [value]="characterSheet.abilities.skills.commerce"
     [isEditable]="characterSheet.isEditable"
     (onValueChange)="updateValueFromProperty($event, 'commerce')"
   ></arm-circle-input>
   <arm-circle-input
     [circleAmount]="8"
-    [label]="'Equitación'"
+    [label]="'sheet.abilities.skills.ride'"
     [value]="characterSheet.abilities.skills.ride"
     [isEditable]="characterSheet.isEditable"
     (onValueChange)="updateValueFromProperty($event, 'ride')"
   ></arm-circle-input>
   <arm-circle-input
     [circleAmount]="8"
-    [label]="'Etiqueta'"
+    [label]="'sheet.abilities.skills.etiquette'"
     [value]="characterSheet.abilities.skills.etiquette"
     [isEditable]="characterSheet.isEditable"
     (onValueChange)="updateValueFromProperty($event, 'etiquette')"
   ></arm-circle-input>
   <arm-circle-input
     [circleAmount]="8"
-    [label]="'Interpretación'"
+    [label]="'sheet.abilities.skills.performance'"
     [value]="characterSheet.abilities.skills.performance"
     [isEditable]="characterSheet.isEditable"
     (onValueChange)="updateValueFromProperty($event, 'performance')"
   ></arm-circle-input>
   <arm-circle-input
     [circleAmount]="8"
-    [label]="'Pericias'"
+    [label]="'sheet.abilities.skills.crafts'"
     [value]="characterSheet.abilities.skills.crafts"
     [isEditable]="characterSheet.isEditable"
     (onValueChange)="updateValueFromProperty($event, 'crafts')"
   ></arm-circle-input>
   <arm-circle-input
     [circleAmount]="8"
-    [label]="'Sigilo'"
+    [label]="'sheet.abilities.skills.stealth'"
     [value]="characterSheet.abilities.skills.stealth"
     [isEditable]="characterSheet.isEditable"
     (onValueChange)="updateValueFromProperty($event, 'stealth')"
   ></arm-circle-input>
   <arm-circle-input
     [circleAmount]="8"
-    [label]="'Supervivencia'"
+    [label]="'sheet.abilities.skills.survival'"
     [value]="characterSheet.abilities.skills.survival"
     [isEditable]="characterSheet.isEditable"
     (onValueChange)="updateValueFromProperty($event, 'survival')"
   ></arm-circle-input>
   <arm-circle-input
     [circleAmount]="8"
-    [label]="'Trato con Animales'"
+    [label]="'sheet.abilities.skills.animalKen'"
     [value]="characterSheet.abilities.skills.animalKen"
     [isEditable]="characterSheet.isEditable"
     (onValueChange)="updateValueFromProperty($event, 'animalKen')"
   ></arm-circle-input>
   <arm-circle-input
     [circleAmount]="8"
-    [label]="'Tiro con Arco'"
+    [label]="'sheet.abilities.skills.archery'"
     [value]="characterSheet.abilities.skills.archery"
     [isEditable]="characterSheet.isEditable"
     (onValueChange)="updateValueFromProperty($event, 'archery')"

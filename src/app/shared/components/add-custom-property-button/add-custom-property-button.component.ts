@@ -1,3 +1,4 @@
+import { TranslateService } from '@ngx-translate/core';
 import { Component, Input } from '@angular/core';
 import { isNotBlankOrEmpty } from 'src/app/utils/stringUtils';
 import { DialogService } from '../../services/dialog.service';
@@ -13,7 +14,7 @@ export class AddCustomPropertyButtonComponent {
   @Input()
   propertyType: string = '';
 
-  constructor(private dialogService: DialogService) {}
+  constructor(private dialogService: DialogService, private translate: TranslateService) {}
 
   addCustomProperty(): void {
     this.dialogService.openDialogWithInput(this.propertyType).afterClosed()

@@ -1,3 +1,4 @@
+import { I18nService } from './services/i18n.service';
 import { FileService } from './services/file.service';
 import { DialogService } from './services/dialog.service';
 import { AddCustomPropertyButtonComponent } from './components/add-custom-property-button/add-custom-property-button.component';
@@ -28,7 +29,7 @@ import { TranslateModule } from '@ngx-translate/core';
     CommonModule,
     FormsModule,
     AngularMaterialModule,
-    TranslateModule.forChild()
+    TranslateModule
   ],
   exports: [
     CircleInputComponent,
@@ -45,7 +46,8 @@ import { TranslateModule } from '@ngx-translate/core';
   providers: [
     StyleManagerService,
     DialogService,
-    FileService
+    FileService,
+    I18nService
   ]
 })
 export class SharedModule { }

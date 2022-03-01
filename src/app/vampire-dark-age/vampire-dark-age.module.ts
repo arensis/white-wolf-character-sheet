@@ -50,7 +50,7 @@ import * as EquipementComponents from './components/equipment'
     CommonModule,
     VampireDarkAgeRoutingModule,
     SharedModule,
-    TranslateModule.forChild()
+    TranslateModule
   ]
 })
 export class VampireDarkAgeModule { }

@@ -1,3 +1,4 @@
+import { I18nService } from './shared/services/i18n.service';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { APP_INITIALIZER, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
@@ -8,28 +9,6 @@ import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { SharedModule } from './shared/shared.module';
-
-export function onAppInit(translate: TranslateService) {
-  return () => {
-    const browserLang = translate.getBrowserLang() || '';
-    let storedLang = localStorage.getItem('LANG');
-    translate.addLangs(['es', 'en']);
-
-    if(storedLang) {
-      translate.setDefaultLang(storedLang);
-    } else {
-      const defaultLang = browserLang.match(/es|en/) ? browserLang : 'es';
-
-      localStorage.setItem('LANG', defaultLang);
-      document.documentElement.setAttribute("lang", defaultLang);
-      translate.setDefaultLang(defaultLang);
-    }
-  }
-}
-
-export function HttpLoaderFactory(http: HttpClient) {
-return new TranslateHttpLoader(http);
-}
 
 @NgModule({
   declarations: [
@@ -42,22 +21,11 @@ return new TranslateHttpLoader(http);
     BrowserAnimationsModule,
     NoopAnimationsModule,
     HttpClientModule,
-    TranslateModule.forRoot({
-      loader: {
-          provide: TranslateLoader,
-          useFactory: HttpLoaderFactory,
-          deps: [HttpClient]
-      },
-      defaultLanguage: 'es'
-  })
+    TranslateModule,
+    TranslateModule.forRoot()
   ],
   providers: [
-    {
-      provide: APP_INITIALIZER,
-      useFactory: onAppInit,
-      deps: [TranslateService],
-      multi: true
-    }
+    I18nService
   ],
   bootstrap: [AppComponent]
 })

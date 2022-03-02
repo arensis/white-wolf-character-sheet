@@ -37,19 +37,12 @@ export class I18nService {
       language = this.defaultLanguage;
     }
 
+    localStorage.setItem(languageKey, language);
+    document.documentElement.setAttribute("lang", language);
     this.translateService.use(language);
   }
 
   get language() {
     return this.translateService.currentLang;
-  }
-
-  public getStoredLang(): string {
-    return localStorage.getItem(languageKey) || '';
-  }
-
-  public setStoredLang(lang: string): void {
-    localStorage.setItem(languageKey, lang);
-    this.language = lang;
   }
 }

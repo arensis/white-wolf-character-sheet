@@ -17,9 +17,10 @@ export class AppComponent implements OnInit {
     this.matIconRegistry.addSvgIcon(
       `github_icon`,
       this.domSanitizer.bypassSecurityTrustResourceUrl("assets/svgIcons/github-brands.svg"));
+    this.i18nService.init('es', ['es', 'en']);
   }
 
   ngOnInit(): void {
-    this.i18nService.init('es', ['es', 'en']);
+
   }
 }

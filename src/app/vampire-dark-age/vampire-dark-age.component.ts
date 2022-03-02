@@ -27,13 +27,12 @@ export class VampireDarkAgeComponent {
 
   toggleLockEdition(): void {
     const characterSheet = this.getCharacterSheet();
-    console.log('isEditable in current character sheet', characterSheet.isEditable);
+
     const characterSheetUpdated = {
       ...characterSheet,
       ...{ isEditable: !characterSheet.isEditable}
      } as VampireDarkAgesSheet;
-     console.log('isEditable in character sheet updated', characterSheetUpdated.isEditable);
+
     this.characterSheetStoreService.updateCharacterSheet(characterSheetUpdated);
-    console.log('stored characterSheet, isEditable: ', this.getCharacterSheet().isEditable)
   }
 }

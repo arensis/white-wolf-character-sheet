@@ -1,3 +1,4 @@
+import { I18nService } from './../../services/i18n.service';
 import { TranslateService } from '@ngx-translate/core';
 import { Component, OnInit } from '@angular/core';
 
@@ -12,13 +13,12 @@ export class LanguageSelectComponent implements OnInit {
   constructor(private translateService: TranslateService) { }
 
   ngOnInit() {
-    this.selectedLanguage = localStorage.getItem('LANG') || '';
-    console.log('onInit: selectedLanguage', this.selectedLanguage);
+    this.selectedLanguage = localStorage.getItem('lang') || '';
   }
 
   valueChange(selectedLanguage: string) {
     this.selectedLanguage = selectedLanguage;
-    localStorage.setItem('LANG', selectedLanguage);
+    localStorage.setItem('lang', selectedLanguage);
     document.documentElement.setAttribute("lang", selectedLanguage);
     this.translateService.use(selectedLanguage);
   }

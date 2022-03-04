@@ -2,6 +2,7 @@
 
 @use "./styles/themes/light";
 @import "./styles/responsive/breakpoints";
+@import "assets/fonts/fonts.scss";
 @import url("https://fonts.googleapis.com/icon?family=Material+Icons");
 
 @include mat.core-theme(light.$my-app-light-theme);
@@ -34,56 +35,109 @@ body {
     width: 50vw;
     min-width: 292px;
     max-width: 800px;
-  }
-}
-
-.attributes-title, .abilities-title, .advantages-title {
-  display: flex;
-  align-items: center;
-  @include lg {
-    display: none;
-  }
-
-  @include xl {
-    display: none;
-  }
-
-  &::after, &::before {
-    content: '';
-    border-bottom: 4px;
-    border-bottom-style: double;
-    top: 5px;
-    position: relative;
-    width: 100%;
-  }
-
-  h1 {
-    padding: 0 15px;
+    padding-bottom: 24px;
   }
 }
 
 .attributes-image-section, .abilities-image-section, .advantages-image-section {
   display: flex;
-  justify-content: center;
   align-items: center;
-  margin-top: 20px;
+  justify-content: center;
+  font-family: "Section font";
 
   @include xs {
-    display: none;
+    justify-content: center;
+    margin-top: 20px;
+
+    img {
+      display: none;
+    }
+
+    &::after, &::before {
+      content: '';
+      border-bottom: 4px;
+      border-bottom-style: solid;
+      top: 5px;
+      position: relative;
+      width: 100%;
+    }
+
+    h1 {
+      padding: 0 15px;
+      font-size: 3rem;
+    }
   }
 
   @include sm {
-    display: none;
+    justify-content: center;
+    margin-top: 20px;
+
+    img {
+      display: none;
+    }
+    &::after, &::before {
+      content: '';
+      border-bottom: 4px;
+      border-bottom-style: solid;
+      top: 5px;
+      position: relative;
+      width: 100%;
+    }
+
+    h1 {
+      padding: 0 15px;
+      font-size: 3rem;
+    }
   }
 
   @include md {
-    display: none;
+    justify-content: center;
+    margin-top: 20px;
+
+    img {
+      display: none;
+    }
+    &::after, &::before {
+      content: '';
+      border-bottom: 4px;
+      border-bottom-style: solid;
+      top: 5px;
+      position: relative;
+      width: 100%;
+    }
+
+    h1 {
+      padding: 0 15px;
+      font-size: 3rem;
+    }
   }
 
-  img {
-    width: 75vw;
-    max-height: 70px;
-    max-width: 775px;
+  @include lg {
+    img {
+      width: 75vw;
+      max-height: 86px;
+      max-width: 700px;
+    }
+
+    h1 {
+      position: absolute;
+      font-size: 28px;
+      padding-top: 0.4rem;
+    }
+  }
+
+  @include xl {
+    img {
+      width: 75vw;
+      max-height: 86px;
+      max-width: 700px;
+    }
+
+    h1 {
+      position: absolute;
+      font-size: 28px;
+      padding-top: 0.4rem;
+    }
   }
 }
 
@@ -100,16 +154,41 @@ body {
   justify-content: flex-start;
 
   h2 {
+    &.sub-category {
+      font-family: "Titles font";
+
+      span {
+        padding: 0 8px;
+      }
+      &::after, &.sub-category::before {
+        content: '';
+        border-bottom: 4px;
+        border-bottom-style: double;
+        top: 5px;
+        position: relative;
+        width: 100%;
+      }
+    }
+
     display: flex;
     justify-content: center;
     align-items: center;
 
     font-size: 26px;
     font-weight: 200;
+    white-space: nowrap;
   }
 }
 
-.character-info, .character-background, .character-concept, .physical, .social, .mental, .talents, .skills, .knowledges {
+.sub-title {
+  font-family: "Titles font";
+  font-size: 26px;
+}
+
+.character-info, .character-background, .character-concept,
+.physical, .social, .mental,
+.talents, .skills, .knowledges,
+.backgrounds-experience, .road-willpower-bloodpool, .virtues-health-weakness {
   @extend .column;
   @include xs {
     grid-column: 1 / 7;
@@ -119,7 +198,8 @@ body {
   }
 }
 
-.character-info, .character-background, .character-concept, .physical, .social, .mental {
+.character-info, .character-background, .character-concept,
+.physical, .social, .mental {
   @extend .column;
   @include md {
     grid-column: 1 / 7;
@@ -157,7 +237,7 @@ body {
 }
 
 
-.talents {
+.talents, .backgrounds-experience {
   @extend .column;
   @include md {
     grid-column: 1 / 4;
@@ -170,7 +250,7 @@ body {
   }
 }
 
-.skills {
+.skills, .road-willpower-bloodpool {
   @extend .column;
   @include md {
     grid-column: 4 / 7;
@@ -183,7 +263,7 @@ body {
   }
 }
 
-.knowledges {
+.knowledges, .virtues-health-weakness {
   @extend .column;
   @include md {
     grid-column: 1 / 7;
@@ -198,6 +278,7 @@ body {
 
 .player-data {
   font-size: 24px;
+  font-family: "Main data font";
 }
 
 .attributes-container, .abilities-container, .advantages-container {

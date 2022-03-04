@@ -1,3 +1,22 @@
-<p>
-  advantages works!
-</p>
+<div class="abilities-image-section">
+  <img src="assets/images/vampire-dark-ages/sections/sheetBaseSection.png">
+  <h1>{{ 'sheet.advantages.title' | translate }}</h1>
+</div>
+<div class="advantages-container">
+  <div class="backgrounds-experience">
+    <arm-backgrounds [characterSheet]="characterSheet"></arm-backgrounds>
+    <arm-experience [characterSheet]="characterSheet"></arm-experience>
+  </div>
+
+  <div class="road-willpower-bloodpool">
+    <arm-road [characterSheet]="characterSheet"></arm-road>
+    <arm-willpower [characterSheet]="characterSheet"></arm-willpower>
+    <arm-blood-pool [characterSheet]="characterSheet"></arm-blood-pool>
+  </div>
+
+  <div class="virtues-health-weakness">
+    <arm-virtues [characterSheet]="characterSheet"></arm-virtues>
+    <arm-health [characterSheet]="characterSheet"></arm-health>
+    <arm-weakness [characterSheet]="characterSheet"></arm-weakness>
+  </div>
+</div>

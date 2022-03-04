@@ -1,3 +1,5 @@
+export { WeaknessComponent } from './weakness/weakness.component';
+export { HealthComponent } from './health/health.component';
 export { WillpowerComponent } from './willpower/willpower.component';
 export { VirtuesComponent } from './virtues/virtues.component';
 export { RoadComponent } from './road/road.component';

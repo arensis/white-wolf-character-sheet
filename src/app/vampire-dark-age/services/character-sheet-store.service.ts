@@ -1,6 +1,6 @@
-import { VampireDarkAgesSheet } from './../../shared/model/vampire-dark-ages/VampireDarkAgesSheet';
+import { VampireDarkAgesSheet } from '../model/vampire-dark-ages/VampireDarkAgesSheet';
 import { Injectable } from '@angular/core';
-import { DamageType } from 'src/app/shared/model/vampire-dark-ages/advantages/health/DamageType';
+import { DamageType } from 'src/app/vampire-dark-age/model/vampire-dark-ages/advantages/health/DamageType';
 
 @Injectable({
   providedIn: 'root'

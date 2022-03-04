@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'arm-willpower',
@@ -6,6 +6,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./willpower.component.scss']
 })
 export class WillpowerComponent implements OnInit {
+  @Input()
+  characterSheet: any;
 
   constructor() { }
 

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'arm-blood-pool',
@@ -6,6 +6,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./blood-pool.component.scss']
 })
 export class BloodPoolComponent implements OnInit {
+  @Input()
+  characterSheet: any;
 
   constructor() { }
 

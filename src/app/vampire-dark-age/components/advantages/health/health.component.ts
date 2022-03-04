@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'arm-health',
@@ -6,6 +6,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./health.component.scss']
 })
 export class HealthComponent implements OnInit {
+  @Input()
+  characterSheet: any;
 
   constructor() { }
 

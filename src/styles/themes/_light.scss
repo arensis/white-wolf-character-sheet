@@ -1,6 +1,7 @@
 @use "sass:map";
 @use "@angular/material" as mat;
 
+@import "../responsive/breakpoints.scss";
 @import "@angular/material/prebuilt-themes/pink-bluegrey.css";
 
 $my-app-light-primary: mat.define-palette(mat.$purple-palette);
@@ -34,6 +35,34 @@ $my-app-light-info: mat.define-palette(mat.$blue-palette);
 .attributes-title, .abilities-title, .advantages-title {
   &::after, &::before {
     border-bottom-color: black;
+  }
+}
+
+.attributes-image-section, .abilities-image-section, .advantages-image-section {
+  @include xs {
+    h1 {
+      color: black;
+    }
+  }
+  @include sm {
+    h1 {
+      color: black;
+    }
+  }
+  @include md {
+    h1 {
+      color: black;
+    }
+  }
+  @include lg {
+    h1 {
+      color: white;
+    }
+  }
+  @include xl {
+    h1 {
+      color: white;
+    }
   }
 }
 

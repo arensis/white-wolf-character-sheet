@@ -34,6 +34,8 @@ import * as EquipementComponents from './components/equipment'
     AdvantageComponents.RoadComponent,
     AdvantageComponents.VirtuesComponent,
     AdvantageComponents.WillpowerComponent,
+    AdvantageComponents.WeaknessComponent,
+    AdvantageComponents.HealthComponent,
 
     DisciplineComponents.DisciplinesComponent,
     DisciplineComponents.MortisRitualsComponent,

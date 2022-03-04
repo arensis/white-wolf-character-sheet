@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'arm-advantages',
@@ -6,6 +6,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./advantages.component.scss']
 })
 export class AdvantagesComponent implements OnInit {
+  @Input()
+  characterSheet: any;
 
   constructor() { }
 

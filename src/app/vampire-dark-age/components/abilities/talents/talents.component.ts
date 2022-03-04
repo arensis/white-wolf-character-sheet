@@ -1,5 +1,5 @@
-import { CustomProperty } from './../../../../shared/model/vampire-dark-ages/CustomProperty';
-import { Talents } from './../../../../shared/model/vampire-dark-ages/abilities/Talents';
+import { CustomProperty } from '../../../../shared/model/CustomProperty';
+import { Talents } from '../../../model/vampire-dark-ages/abilities/Talents';
 import { Component, Input, Output, EventEmitter } from '@angular/core';
 import { CharacterSheetStoreService } from 'src/app/vampire-dark-age/services/character-sheet-store.service';
 

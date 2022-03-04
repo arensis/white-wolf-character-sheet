@@ -1,13 +1,11 @@
 <div class="attributes-section">
-  <div class="attributes-title">
-    <h1>Atributos</h1>
-  </div>
-  <div class="attributes-image-section">
-    <img src="assets/images/vampire-dark-ages/sections/attributes.png">
+    <div class="abilities-image-section">
+    <img src="assets/images/vampire-dark-ages/sections/sheetBaseSection.png">
+    <h1>{{ 'sheet.attributes.title' | translate }}</h1>
   </div>
   <div class="attributes-container">
     <div class="physical">
-      <h2>{{ 'sheet.attributes.title' | translate }}</h2>
+      <h2 class="sub-title">{{ 'sheet.attributes.physical.title' | translate }}</h2>
       <arm-circle-input
         [circleAmount]="8"
         [label]="'sheet.attributes.physical.strength'"
@@ -34,7 +32,7 @@
       ></arm-circle-input>
     </div>
     <div class="social">
-      <h2>{{ 'sheet.attributes.social.title' | translate }}</h2>
+      <h2 class="sub-title">{{ 'sheet.attributes.social.title' | translate }}</h2>
       <arm-circle-input
         [circleAmount]="8"
         [label]="'sheet.attributes.social.charisma'"
@@ -61,7 +59,7 @@
       ></arm-circle-input>
     </div>
     <div class="mental">
-      <h2>{{ 'sheet.attributes.mental.title' | translate }}</h2>
+      <h2 class="sub-title">{{ 'sheet.attributes.mental.title' | translate }}</h2>
       <arm-circle-input
         [circleAmount]="8"
         [label]="'sheet.attributes.mental.perception'"

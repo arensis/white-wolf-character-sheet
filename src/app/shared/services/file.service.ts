@@ -1,9 +1,7 @@
-import { VampireDarkAgesSheet } from 'src/app/shared/model/vampire-dark-ages/VampireDarkAgesSheet';
-import { Inject, Injectable } from '@angular/core';
-import { CharacterSheetStoreService } from 'src/app/vampire-dark-age/services/character-sheet-store.service';
+import { Injectable } from '@angular/core';
+
 @Injectable()
 export class FileService {
-  constructor() {}
 
   mapFileToSheetObject(event: any, callback: (object: any) => void): boolean {
     let fileProcessed = false;
@@ -16,6 +14,7 @@ export class FileService {
       callback(fileObject);
       fileProcessed = true;
     }
+
     fileReader.onerror = (error) => {
       console.error(error);
       fileProcessed = false;

@@ -1,5 +1,5 @@
-import { VampireDarkAgesSheet } from 'src/app/shared/model/vampire-dark-ages/VampireDarkAgesSheet';
-import { Attributes } from './../../../shared/model/vampire-dark-ages/attributes/Attributes';
+import { VampireDarkAgesSheet } from 'src/app/vampire-dark-age/model/vampire-dark-ages/VampireDarkAgesSheet';
+import { Attributes } from '../../model/vampire-dark-ages/attributes/Attributes';
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { CharacterSheetStoreService } from '../../services/character-sheet-store.service';
 

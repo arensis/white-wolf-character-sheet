@@ -1,4 +1,4 @@
-import { CustomProperty } from "../CustomProperty";
+import { CustomProperty } from "../../../../shared/model/CustomProperty";
 
 export interface Knowledges {
   academics: number;

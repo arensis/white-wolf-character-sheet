@@ -1,39 +1,39 @@
-import { Component, Input } from '@angular/core';
-import { CustomProperty } from 'src/app/shared/model/CustomProperty';
-import { CharacterSheetStoreService } from 'src/app/vampire-dark-age/services/character-sheet-store.service';
+import { Component, Input } from "@angular/core";
+import { CharacterSheetStoreService } from "src/app/vampire-dark-age/services/character-sheet-store.service";
+import { CustomProperty } from "./CustomProperty";
 
 @Component({
-  selector: 'arm-skills',
-  templateUrl: './skills.component.html',
-  styleUrls: ['./skills.component.scss']
+  template: '',
+  selector: 'abstract-custom-property-management'
 })
-export class SkillsComponent {
+export abstract class CustomPropertyManagement {
   @Input()
   characterSheet: any;
 
-  propertyType: string = 'skill';
-  skillsMainPath: string = 'abilities.skills';
+  abstract propertyType: string;
+  abstract customPropertyType: string;
+  abstract propertiesMainPath: string;
 
   constructor(private characterSheetStoreService: CharacterSheetStoreService) {
     this.characterSheet = this.characterSheetStoreService.getCharacterSheet();
-  }
-
-  deleteCustomSkill(index: number): void {
-    this.characterSheet.abilities.skills.customSkills.splice(index, 1);
   }
 
   trackByFn(index: number, item: CustomProperty): number {
     return index;
   }
 
+  deleteCustomKnowledge(index: number): void {
+    this.characterSheet.abilities.knowledges.customKnowledges.splice(index, 1);
+  }
+
   updateValueFromProperty(value: number, propertyName: string): void {
-    const routesSegments = [this.skillsMainPath, propertyName].join('.').split('.');
+    const routesSegments = [this.propertiesMainPath, propertyName].join('.').split('.');
     this.characterSheet[routesSegments[0]][routesSegments[1]][routesSegments[2]] = value;
     this.characterSheetStoreService.updateCharacterSheet(this.characterSheet);
   }
 
   updateValuerFromCustomProperty(value: number, index: number) {
-    const routesSegments = [this.skillsMainPath, 'customSkills'].join('.').split('.');
+    const routesSegments = [this.propertiesMainPath, this.customPropertyType].join('.').split('.');
     this.characterSheet[routesSegments[0]][routesSegments[1]][routesSegments[2]][index].level = value;
     this.characterSheetStoreService.updateCharacterSheet(this.characterSheet);
   }

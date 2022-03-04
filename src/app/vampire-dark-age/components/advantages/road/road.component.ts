@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'arm-road',
@@ -6,6 +6,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./road.component.scss']
 })
 export class RoadComponent implements OnInit {
+  @Input()
+  characterSheet: any;
 
   constructor() { }
 

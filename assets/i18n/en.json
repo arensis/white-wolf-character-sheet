@@ -14,7 +14,8 @@
     "input-label": {
       "talent": "Talent name",
       "skill": "Skill name",
-      "knowledge": "Knowledge name"
+      "knowledge": "Knowledge name",
+      "background": "Background name"
     },
     "talent": {
       "add": "Add talent"
@@ -24,6 +25,9 @@
     },
     "knowledge": {
       "add": "Add knowledge"
+    },
+    "background": {
+      "add": "Add background"
     }
   },
   "sheet": {
@@ -110,7 +114,17 @@
     "advantages": {
       "title": "Advantages",
       "backgrounds": {
-        "title": "Backgrounds"
+        "title": "Backgrounds",
+        "allies": "Allies",
+        "contacts": "Contacts",
+        "domain": "Domain",
+        "generation": "Generation",
+        "herd": "Herd",
+        "influence": "Influence",
+        "mentor": "Mentor",
+        "resources": "Resources",
+        "retainers": "Retainers",
+        "status": "Status"
       },
       "virtues": {
         "title": "Virtues"

@@ -22,8 +22,9 @@ export abstract class CustomPropertyManagement {
     return index;
   }
 
-  deleteCustomKnowledge(index: number): void {
-    this.characterSheet.abilities.knowledges.customKnowledges.splice(index, 1);
+  deleteCustomProperty(index: number): void {
+    const routesSegments = [this.propertiesMainPath, this.customPropertyType].join('.').split('.');
+    this.characterSheet[routesSegments[0]][routesSegments[1]][routesSegments[2]].splice(index, 1);
   }
 
   updateValueFromProperty(value: number, propertyName: string): void {

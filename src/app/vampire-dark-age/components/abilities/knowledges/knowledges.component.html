@@ -70,18 +70,16 @@
     [isEditable]="characterSheet.isEditable"
     (onValueChange)="updateValueFromProperty($event, 'theology')"
   ></arm-circle-input>
-  <div class="mierda" >
-    <arm-circle-input
-      *ngFor="let knowledge of characterSheet.abilities.knowledges.customKnowledges; index as i; trackBy: trackByFn"
-      [circleAmount]="8"
-      [label]="knowledge.name"
-      [value]="knowledge.level"
-      [isPermanent]="false"
-      [isEditable]="characterSheet.isEditable"
-      (onDelete)="deleteCustomKnowledge(i)"
-      (onValueChange)="updateValuerFromCustomProperty($event, i)"
-    ></arm-circle-input>
-  </div>
+  <arm-circle-input
+    *ngFor="let knowledge of characterSheet.abilities.knowledges.customKnowledges; index as i; trackBy: trackByFn"
+    [circleAmount]="8"
+    [label]="knowledge.name"
+    [value]="knowledge.level"
+    [isPermanent]="false"
+    [isEditable]="characterSheet.isEditable"
+    (onDelete)="deleteCustomProperty(i)"
+    (onValueChange)="updateValuerFromCustomProperty($event, i)"
+  ></arm-circle-input>
   <arm-add-custom-property-button
     *ngIf="characterSheet.isEditable"
     [propertyType]="propertyType"

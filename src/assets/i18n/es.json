@@ -14,7 +14,8 @@
     "input-label": {
       "talent": "Nombre de talento",
       "skill": "Nombre de técnica",
-      "knowledge": "Nombre de conocimiento"
+      "knowledge": "Nombre de conocimiento",
+      "background": "Nombre de trasfondo"
     },
     "talent": {
       "add": "Añadir talento"
@@ -24,6 +25,9 @@
     },
     "knowledge": {
       "add": "Añadir conocmiento"
+    },
+    "background": {
+      "add": "Añadir trasfondo"
     }
   },
   "sheet": {
@@ -110,7 +114,17 @@
     "advantages": {
       "title": "Ventajas",
       "backgrounds": {
-        "title": "Trasfondos"
+        "title": "Trasfondos",
+        "allies": "Aliados",
+        "contacts": "Contactos",
+        "domain": "Dominio",
+        "generation": "Generación",
+        "herd": "Rebaño",
+        "influence": "Influencia",
+        "mentor": "Mentor",
+        "resources": "Recursos",
+        "retainers": "Criados",
+        "status": "Posición"
       },
       "virtues": {
         "title": "Virtudes"

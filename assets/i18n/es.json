@@ -106,6 +106,45 @@
         "seneschal": "Senescal",
         "theology": "Teología"
       }
+    },
+    "advantages": {
+      "title": "Ventajas",
+      "backgrounds": {
+        "title": "Trasfondos"
+      },
+      "virtues": {
+        "title": "Virtudes"
+      },
+      "road": {
+        "title": "Camino"
+      },
+      "aura": {
+        "title": "Aura"
+      },
+      "willpower": {
+        "title": "Fuerza de Voluntad"
+      },
+      "bloodPool": {
+        "title": "Reserva de Sangre"
+      },
+      "experience": {
+        "title": "Experiencia"
+      },
+      "health": {
+        "title": "Salud"
+      },
+      "weakness": {
+        "title": "Debilidad de Clan"
+      },
+      "languages": {
+        "title": "Idiomas"
+      },
+      "merits": {
+        "title": "Méritos"
+      },
+      "flaws": {
+        "title": "Defectos"
+      }
     }
   }
 }

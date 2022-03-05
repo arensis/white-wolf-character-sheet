@@ -1,5 +1,5 @@
 <div class="text-input-container">
-  <label>{{ label | translate }}: </label>
+  <label *ngIf="hasLabel()">{{ label | translate }}: </label>
   <input [type]="type" [ngClass]="{ 'read-only': isReadOnly }" [(ngModel)]="value" (ngModelChange)="valueChange($event)" [readonly]="isReadOnly">
 </div>
 

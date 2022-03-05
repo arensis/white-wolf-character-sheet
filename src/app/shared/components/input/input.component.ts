@@ -1,5 +1,6 @@
 import { TranslateService } from '@ngx-translate/core';
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { isNotBlankOrEmpty } from 'src/app/utils/stringUtils';
 
 @Component({
   selector: 'arm-input',
@@ -26,5 +27,9 @@ export class InputComponent {
 
   valueChange(event: any): void {
     this.onValueChange.emit(event);
+  }
+
+  hasLabel(): boolean {
+    return isNotBlankOrEmpty(this.label);
   }
 }

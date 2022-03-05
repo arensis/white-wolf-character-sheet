@@ -127,7 +127,10 @@
         "status": "Status"
       },
       "virtues": {
-        "title": "Virtues"
+        "title": "Virtues",
+        "conscienceConviction": "Conscience/Conviction",
+        "selfControlInstint": "Self-Control/Instint",
+        "courage": "Courage"
       },
       "road": {
         "title": "Road"

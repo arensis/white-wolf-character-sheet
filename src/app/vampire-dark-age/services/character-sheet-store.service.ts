@@ -123,8 +123,7 @@ export class CharacterSheetStoreService {
         road: {
           name: "",
           level: {
-            value: 0,
-            meaning: ""
+            value: 0
           },
           aura: {
             type: "",

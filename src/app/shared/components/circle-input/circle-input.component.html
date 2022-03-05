@@ -1,11 +1,11 @@
-<div class="circle-input-container">
+<div class="circle-input-container" [ngClass]="{ 'no-label': !hasLabel()}">
   <span *ngIf="hasLabel()" class="circle-input-label">
     {{ label | translate }}
   </span>
   <div *ngIf="hasLabel()" class="line"></div>
   <div class="circle-input-values">
     <ng-container *ngFor="let item of circleArray; index as i; trackBy: trackByFn">
-      <div class="circle" [ngClass]="{ 'filled' : ((i+1) <= totalValue), 'temporal': ((i+1) > value) }" (click)="fillCircle(i)"></div>
+      <div class="circle" [ngClass]="{ 'filled' : ((i+1) <= totalValue), 'temporal': ((i+1) > value), 'expand': !hasLabel() }" (click)="fillCircle(i)"></div>
     </ng-container>
   </div>
   <mat-icon *ngIf="!isPermanent && isEditable" class="delete-property-button" aria-hidden="false" (click)="deleteProperty()">

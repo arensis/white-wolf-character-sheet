@@ -1,8 +1,12 @@
 <h2 class="sub-category">
   <span>{{ 'sheet.advantages.road.title' | translate }}</span>
 </h2>
-<!-- <arm-circle-input
-  [circleAmount]="8"
-  [label]="'sheet.abilities.talents.alertness'"
-  [value]="characterSheet.abilities.talents.alertness"
-></arm-circle-input> -->
+<arm-input
+[value]="characterSheet.advantages.road.name"
+[isReadOnly]="!characterSheet.isEditable"
+(onValueChange)="updateValueFromProperty($event, 'name')"
+></arm-input>
+<arm-circle-input
+  [circleAmount]="10"
+  [value]="characterSheet.advantages.road.name"
+></arm-circle-input>

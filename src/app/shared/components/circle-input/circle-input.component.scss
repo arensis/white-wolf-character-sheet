@@ -3,6 +3,9 @@
   justify-content: space-between;
   align-items: center;
   height: 24px;
+  &.no-label {
+    justify-content: space-around;
+  }
 }
 
 .delete-property-button {
@@ -25,6 +28,10 @@
   border-radius: 100%;
   cursor: pointer;
   margin-left: 2px;
+
+  &.expand {
+    margin: 0.4rem;
+  }
 }
 
 .circle-input-values {
@@ -36,6 +43,7 @@
   font-family: "Property names font";
   font-size: 1.3rem;
   letter-spacing: -1px;
+  line-height: 23px;
 }
 
 .circle.filled.temporal {

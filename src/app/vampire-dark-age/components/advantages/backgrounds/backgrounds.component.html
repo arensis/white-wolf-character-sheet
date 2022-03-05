@@ -5,51 +5,61 @@
   [circleAmount]="8"
   [label]="'sheet.advantages.backgrounds.allies'"
   [value]="characterSheet.advantages.backgrounds.allies"
+  (onValueChange)="updateValueFromProperty($event, 'allies')"
 ></arm-circle-input>
 <arm-circle-input
   [circleAmount]="8"
   [label]="'sheet.advantages.backgrounds.contacts'"
   [value]="characterSheet.advantages.backgrounds.contacts"
+  (onValueChange)="updateValueFromProperty($event, 'contacts')"
 ></arm-circle-input>
 <arm-circle-input
   [circleAmount]="8"
   [label]="'sheet.advantages.backgrounds.retainers'"
   [value]="characterSheet.advantages.backgrounds.retainers"
+  (onValueChange)="updateValueFromProperty($event, 'retainers')"
 ></arm-circle-input>
 <arm-circle-input
   [circleAmount]="8"
   [label]="'sheet.advantages.backgrounds.domain'"
   [value]="characterSheet.advantages.backgrounds.domain"
+  (onValueChange)="updateValueFromProperty($event, 'domain')"
 ></arm-circle-input>
 <arm-circle-input
   [circleAmount]="8"
   [label]="'sheet.advantages.backgrounds.generation'"
   [value]="characterSheet.advantages.backgrounds.generation"
+  (onValueChange)="updateValueFromProperty($event, 'generation')"
 ></arm-circle-input>
 <arm-circle-input
   [circleAmount]="8"
   [label]="'sheet.advantages.backgrounds.influence'"
   [value]="characterSheet.advantages.backgrounds.influence"
+  (onValueChange)="updateValueFromProperty($event, 'influence')"
 ></arm-circle-input>
 <arm-circle-input
   [circleAmount]="8"
   [label]="'sheet.advantages.backgrounds.mentor'"
   [value]="characterSheet.advantages.backgrounds.mentor"
+  (onValueChange)="updateValueFromProperty($event, 'mentor')"
 ></arm-circle-input>
 <arm-circle-input
   [circleAmount]="8"
   [label]="'sheet.advantages.backgrounds.status'"
   [value]="characterSheet.advantages.backgrounds.status"
+  (onValueChange)="updateValueFromProperty($event, 'status')"
 ></arm-circle-input>
 <arm-circle-input
   [circleAmount]="8"
   [label]="'sheet.advantages.backgrounds.herd'"
   [value]="characterSheet.advantages.backgrounds.herd"
+  (onValueChange)="updateValueFromProperty($event, 'herd')"
 ></arm-circle-input>
 <arm-circle-input
   [circleAmount]="8"
   [label]="'sheet.advantages.backgrounds.resources'"
   [value]="characterSheet.advantages.backgrounds.resources"
+  (onValueChange)="updateValueFromProperty($event, 'resources')"
 ></arm-circle-input>
 <arm-circle-input
   *ngFor="let background of characterSheet.advantages.backgrounds.customBackgrounds; index as i; trackBy: trackByFn"

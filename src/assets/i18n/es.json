@@ -127,7 +127,11 @@
         "status": "Posición"
       },
       "virtues": {
-        "title": "Virtudes"
+        "title": "Virtudes",
+        "conscienceConviction": "Conciencia/Convicción",
+        "selfControlInstint": "Autocontrol/Instinto",
+        "courage": "Coraje"
+
       },
       "road": {
         "title": "Camino"

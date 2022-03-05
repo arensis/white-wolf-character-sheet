@@ -3,6 +3,6 @@ import { Level } from "./Level";
 
 export interface Road {
   name: string;
-  level: Level;
+  level: number;
   aura: Aura;
 }

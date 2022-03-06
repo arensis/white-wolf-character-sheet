@@ -1,6 +1,12 @@
 {
   "vampire-eo-title": "Vampire: Dark Ages",
   "vampire-eo-reduced-title": "Vampire: DA",
+  "vampire-sheet-title": {
+    "start": "D",
+    "end": "S",
+    "middle-top": "ark age",
+    "middle-bottom": "VAMPIRE"
+  },
   "menu-buttons": {
     "reset-sheet": "Reset sheet",
     "upload-sheet": "Upload backup",
@@ -169,7 +175,7 @@
         "title": "Languages"
       },
       "merits": {
-        "title": "mMrits"
+        "title": "Merits"
       },
       "flaws": {
         "title": "Flaws"

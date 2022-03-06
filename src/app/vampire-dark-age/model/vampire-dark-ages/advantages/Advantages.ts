@@ -1,3 +1,4 @@
+import { CustomProperty } from "src/app/shared/model/CustomProperty";
 import { Backgrounds } from "./Backgrounds";
 import { BloodPool } from "./BloodPool";
 import { Experience } from "./Experience";
@@ -14,7 +15,7 @@ export interface Advantages {
   bloodPool: BloodPool;
   experience: Experience;
   health: Health;
-  languages: string[];
-  merits: string[];
-  flaws: string[];
+  languages: CustomProperty[];
+  merits: CustomProperty[];
+  flaws: CustomProperty[];
 }

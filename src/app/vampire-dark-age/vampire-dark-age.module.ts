@@ -11,6 +11,7 @@ import * as AbilitiesComponents from './components/abilities';
 import * as AdvantageComponents from './components/advantages';
 import * as DisciplineComponents from './components/disciplines';
 import * as EquipementComponents from './components/equipment'
+import * as OtherAdvantages from './components/advantages/other-advantages';
 
 
 @NgModule({
@@ -36,6 +37,10 @@ import * as EquipementComponents from './components/equipment'
     AdvantageComponents.WillpowerComponent,
     AdvantageComponents.WeaknessComponent,
     AdvantageComponents.HealthComponent,
+    OtherAdvantages.FlawsComponent,
+    OtherAdvantages.LanguagesComponent,
+    OtherAdvantages.MeritsComponent,
+    OtherAdvantages.OtherAdvantagesComponent,
 
     DisciplineComponents.DisciplinesComponent,
     DisciplineComponents.MortisRitualsComponent,

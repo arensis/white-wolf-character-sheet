@@ -1,17 +1,12 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { VampireDarkAgesSheet } from './../../../model/vampire-dark-ages/VampireDarkAgesSheet';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'arm-experience',
   templateUrl: './experience.component.html',
   styleUrls: ['./experience.component.scss']
 })
-export class ExperienceComponent implements OnInit {
+export class ExperienceComponent {
   @Input()
-  characterSheet: any;
-
-  constructor() { }
-
-  ngOnInit() {
-  }
-
+  characterSheet!: VampireDarkAgesSheet;
 }

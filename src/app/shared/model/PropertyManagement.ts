@@ -1,5 +1,7 @@
 import { Component, Input } from "@angular/core";
+import { VampireDarkAgesSheet } from "src/app/vampire-dark-age/model/vampire-dark-ages/VampireDarkAgesSheet";
 import { CharacterSheetStoreService } from "src/app/vampire-dark-age/services/character-sheet-store.service";
+import * as _ from 'lodash';
 
 @Component({
   template: '',
@@ -7,7 +9,7 @@ import { CharacterSheetStoreService } from "src/app/vampire-dark-age/services/ch
 })
 export abstract class PropertyManagement {
   @Input()
-  characterSheet: any;
+  characterSheet: VampireDarkAgesSheet;
 
   abstract propertiesMainPath: string;
 
@@ -16,8 +18,8 @@ export abstract class PropertyManagement {
   }
 
   updateValueFromProperty(value: number, propertyName: string): void {
-    const routesSegments = [this.propertiesMainPath, propertyName].join('.').split('.');
-    this.characterSheet[routesSegments[0]][routesSegments[1]][routesSegments[2]] = value;
+    const propertyPath = [this.propertiesMainPath, propertyName].join('.');
+    _.set(this.characterSheet, propertyPath, value);
     this.characterSheetStoreService.updateCharacterSheet(this.characterSheet);
   }
 }

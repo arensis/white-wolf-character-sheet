@@ -141,7 +141,8 @@ body {
   }
 }
 
-.attributes-container, .abilities-container, .advantages-container, .player-data {
+.player-data, .attributes-container, .abilities-container,
+.advantages-container, .other-advantages-container {
   display: grid;
   grid-template-columns: repeat(6, 1fr);
   grid-gap: 5vw;
@@ -188,7 +189,8 @@ body {
 .character-info, .character-background, .character-concept,
 .physical, .social, .mental,
 .talents, .skills, .knowledges,
-.backgrounds-experience, .road-willpower-bloodpool, .virtues-health-weakness {
+.backgrounds-experience, .road-willpower-bloodpool, .virtues-health-weakness,
+.advantages-languages, .advantages-merits, .advantages-flaws {
   @extend .column;
   @include xs {
     grid-column: 1 / 7;
@@ -237,7 +239,7 @@ body {
 }
 
 
-.talents, .backgrounds-experience {
+.talents, .backgrounds-experience, .advantages-languages {
   @extend .column;
   @include md {
     grid-column: 1 / 4;
@@ -250,7 +252,7 @@ body {
   }
 }
 
-.skills, .road-willpower-bloodpool {
+.skills, .road-willpower-bloodpool, .advantages-merits {
   @extend .column;
   @include md {
     grid-column: 4 / 7;
@@ -263,7 +265,7 @@ body {
   }
 }
 
-.knowledges, .virtues-health-weakness {
+.knowledges, .virtues-health-weakness, .advantages-flaws {
   @extend .column;
   @include md {
     grid-column: 1 / 7;
@@ -281,7 +283,8 @@ body {
   font-family: "Main data font";
 }
 
-.attributes-container, .abilities-container, .advantages-container {
+.attributes-container, .abilities-container,
+.advantages-container, .other-advantages-container {
   font-size: 18px;
 }
 
@@ -373,4 +376,3 @@ header {
 .sheet-title, .sheet-reduced-title {
   padding-top: 2px;
 }
-

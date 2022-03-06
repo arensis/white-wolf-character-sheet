@@ -2,11 +2,11 @@ import { Component, Input } from '@angular/core';
 import { VampireDarkAgesSheet } from 'src/app/vampire-dark-age/model/vampire-dark-ages/VampireDarkAgesSheet';
 
 @Component({
-  selector: 'arm-willpower',
-  templateUrl: './willpower.component.html',
-  styleUrls: ['./willpower.component.scss']
+  selector: 'arm-other-advantages',
+  templateUrl: './other-advantages.component.html',
+  styleUrls: ['./other-advantages.component.scss']
 })
-export class WillpowerComponent {
+export class OtherAdvantagesComponent {
   @Input()
   characterSheet!: VampireDarkAgesSheet;
 }

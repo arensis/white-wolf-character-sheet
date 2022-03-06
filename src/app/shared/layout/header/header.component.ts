@@ -1,3 +1,4 @@
+import { VampireDarkAgesSheet } from './../../../vampire-dark-age/model/vampire-dark-ages/VampireDarkAgesSheet';
 import { TranslateService } from '@ngx-translate/core';
 import { StyleManagerService } from './../../services/style-manager.service';
 import { SafeUrl } from '@angular/platform-browser';
@@ -12,7 +13,7 @@ import { DomSanitizer } from '@angular/platform-browser';
 })
 export class HeaderComponent {
   @Input()
-  characterSheet: any;
+  characterSheet!: VampireDarkAgesSheet;
   @Input()
   gameName: string;
   @Input()

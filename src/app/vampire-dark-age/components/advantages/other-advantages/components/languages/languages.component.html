@@ -1,0 +1,18 @@
+<h2 class="sub-category">
+  <span>{{ 'sheet.advantages.languages.title' | translate }}</span>
+</h2>
+<arm-circle-input
+  *ngFor="let language of characterSheet.advantages.languages; index as i; trackBy: trackByFn"
+  [circleAmount]="8"
+  [label]="language.name"
+  [value]="language.level"
+  [isPermanent]="false"
+  [isEditable]="characterSheet.isEditable"
+  (onDelete)="deleteCustomProperty(i)"
+  (onValueChange)="updateValuerFromCustomProperty($event, i)"
+></arm-circle-input>
+<arm-add-custom-property-button
+  *ngIf="characterSheet.isEditable"
+  [propertyType]="propertyType"
+  [customPropertyList]="characterSheet.advantages.languages"
+></arm-add-custom-property-button>

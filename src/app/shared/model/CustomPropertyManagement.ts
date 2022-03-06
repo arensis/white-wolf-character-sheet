@@ -1,13 +1,14 @@
-import { Component, Input } from "@angular/core";
+import { Component } from "@angular/core";
 import { CharacterSheetStoreService } from "src/app/vampire-dark-age/services/character-sheet-store.service";
 import { CustomProperty } from "./CustomProperty";
 import { PropertyManagement } from "./PropertyManagement";
+import * as _ from 'lodash';
 
 @Component({
   template: '',
   selector: 'abstract-custom-property-management'
 })
-export abstract class CustomPropertyManagement extends PropertyManagement{
+export abstract class CustomPropertyManagement extends PropertyManagement {
   abstract propertyType: string;
   abstract customPropertyType: string;
 
@@ -20,13 +21,16 @@ export abstract class CustomPropertyManagement extends PropertyManagement{
   }
 
   deleteCustomProperty(index: number): void {
-    const routesSegments = [this.propertiesMainPath, this.customPropertyType].join('.').split('.');
-    this.characterSheet[routesSegments[0]][routesSegments[1]][routesSegments[2]].splice(index, 1);
+    const propertyPath = [this.propertiesMainPath, this.customPropertyType].join('.');
+    const customProperties = _.get(this.characterSheet, propertyPath) as CustomProperty[];
+    customProperties.splice(index, 1);
+    _.set(this.characterSheet, propertyPath, customProperties)
+    this.characterSheetStoreService.updateCharacterSheet(this.characterSheet);
   }
 
   updateValuerFromCustomProperty(value: number, index: number) {
-    const routesSegments = [this.propertiesMainPath, this.customPropertyType].join('.').split('.');
-    this.characterSheet[routesSegments[0]][routesSegments[1]][routesSegments[2]][index].level = value;
+    const propertyPath = [this.propertiesMainPath, this.customPropertyType].join('.').concat(`[${index}]`);
+    _.set(this.characterSheet, propertyPath, value);
     this.characterSheetStoreService.updateCharacterSheet(this.characterSheet);
   }
 }

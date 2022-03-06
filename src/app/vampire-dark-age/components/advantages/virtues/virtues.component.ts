@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { PropertyManagement } from 'src/app/shared/model/PropertyManagement';
 import { CharacterSheetStoreService } from 'src/app/vampire-dark-age/services/character-sheet-store.service';
 

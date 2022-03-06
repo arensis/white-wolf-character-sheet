@@ -1,6 +1,5 @@
-import { CustomProperty } from '../../../../shared/model/CustomProperty';
-import { Talents } from '../../../model/vampire-dark-ages/abilities/Talents';
-import { Component, Input, Output, EventEmitter } from '@angular/core';
+import { CustomPropertyManagement } from 'src/app/shared/model/CustomPropertyManagement';
+import { Component } from '@angular/core';
 import { CharacterSheetStoreService } from 'src/app/vampire-dark-age/services/character-sheet-store.service';
 
 @Component({
@@ -8,34 +7,13 @@ import { CharacterSheetStoreService } from 'src/app/vampire-dark-age/services/ch
   templateUrl: './talents.component.html',
   styleUrls: ['./talents.component.scss']
 })
-export class TalentsComponent {
-  @Input()
-  characterSheet: any;
-
+export class TalentsComponent extends CustomPropertyManagement {
   propertyType: string = 'talent';
-  talentsMainPath: string = 'abilities.talents';
+  customPropertyType: string = 'customTalents';
+  propertiesMainPath: string = 'abilities.talents';
 
-  constructor(private characterSheetStoreService: CharacterSheetStoreService) {
-    this.characterSheet = this.characterSheetStoreService.getCharacterSheet();
-  }
 
-  deleteCustomTalents(index: number): void {
-    this.characterSheet.abilities.talents.customTalents.splice(index, 1);
-  }
-
-  trackByFn(index: number, item: CustomProperty): number {
-    return index;
-  }
-
-  updateValueFromProperty(value: number, propertyName: string): void {
-    const routesSegments = [this.talentsMainPath, propertyName].join('.').split('.');
-    this.characterSheet[routesSegments[0]][routesSegments[1]][routesSegments[2]] = value;
-    this.characterSheetStoreService.updateCharacterSheet(this.characterSheet);
-  }
-
-  updateValuerFromCustomProperty(value: number, index: number) {
-    const routesSegments = [this.talentsMainPath, 'customTalents'].join('.').split('.');
-    this.characterSheet[routesSegments[0]][routesSegments[1]][routesSegments[2]][index].level = value;
-    this.characterSheetStoreService.updateCharacterSheet(this.characterSheet);
+  constructor(characterSheetStoreService: CharacterSheetStoreService) {
+    super(characterSheetStoreService);
   }
 }

@@ -5,11 +5,5 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './armors.component.html',
   styleUrls: ['./armors.component.scss']
 })
-export class ArmorsComponent implements OnInit {
-
-  constructor() { }
-
-  ngOnInit() {
-  }
-
+export class ArmorsComponent {
 }

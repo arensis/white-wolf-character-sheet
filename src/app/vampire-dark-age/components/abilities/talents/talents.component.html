@@ -77,7 +77,7 @@
     [label]="talent.name"
     [value]="talent.level"
     [isEditable]="characterSheet.isEditable"
-    (onDelete)="deleteCustomTalents(i)"
+    (onDelete)="deleteCustomProperty(i)"
     (onValueChange)="updateValuerFromCustomProperty($event, i)"
   ></arm-circle-input>
   <arm-add-custom-property-button

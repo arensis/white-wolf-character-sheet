@@ -15,7 +15,10 @@
       "talent": "Talent name",
       "skill": "Skill name",
       "knowledge": "Knowledge name",
-      "background": "Background name"
+      "background": "Background name",
+      "language": "Language name",
+      "merit": "Merit name",
+      "flaw": "Flaw name"
     },
     "talent": {
       "add": "Add talent"
@@ -28,6 +31,15 @@
     },
     "background": {
       "add": "Add background"
+    },
+    "language": {
+      "add": "Add language"
+    },
+    "merit": {
+      "add": "Add merit"
+    },
+    "flaw": {
+      "add": "Add flaw"
     }
   },
   "sheet": {

@@ -12,10 +12,13 @@
     "add": "Añadir",
     "cancel": "Cancelar",
     "input-label": {
-      "talent": "Nombre de talento",
-      "skill": "Nombre de técnica",
-      "knowledge": "Nombre de conocimiento",
-      "background": "Nombre de trasfondo"
+      "talent": "Nombre del talento",
+      "skill": "Nombre de la técnica",
+      "knowledge": "Nombre del conocimiento",
+      "background": "Nombre del trasfondo",
+      "language": "Nombre del idioma",
+      "merit": "Nombre del mérito",
+      "flaw": "Nombre del defecto"
     },
     "talent": {
       "add": "Añadir talento"
@@ -28,6 +31,15 @@
     },
     "background": {
       "add": "Añadir trasfondo"
+    },
+    "language": {
+      "add": "Añadir idioma"
+    },
+    "merit": {
+      "add": "Añadir mérito"
+    },
+    "flaw": {
+      "add": "Añadir defecto"
     }
   },
   "sheet": {

@@ -1,6 +1,12 @@
 {
   "vampire-eo-title": "Vampiro: Edad Oscura",
   "vampire-eo-reduced-title": "Vampiro: EO",
+  "vampire-sheet-title": {
+    "start": "E",
+    "end": "A",
+    "middle-top": "dad oscur",
+    "middle-bottom": "VAMPIRO"
+  },
   "menu-buttons": {
     "reset-sheet": "Reiniciar ficha",
     "upload-sheet": "Subir copia",

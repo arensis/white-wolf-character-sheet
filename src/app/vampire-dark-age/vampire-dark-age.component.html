@@ -8,8 +8,13 @@
 ></arm-header>
 <main>
   <div class="sheet-container">
-    <div class="logo">
-      <img src="assets/images/vampire-dark-ages/logo/gameLogo.png">
+    <div class="main-title">
+      <span>{{ 'vampire-sheet-title.start' | translate }}</span>
+      <div>
+        <span>{{ 'vampire-sheet-title.middle-top' | translate }}</span>
+        <span>{{ 'vampire-sheet-title.middle-bottom' | translate }}</span>
+      </div>
+      <span>{{ 'vampire-sheet-title.end' | translate }}</span>
     </div>
     <arm-player-data [characterSheet]="getCharacterSheet()"></arm-player-data>
     <arm-attributes [characterSheet]="getCharacterSheet()"></arm-attributes>

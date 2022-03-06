@@ -22,6 +22,10 @@ $my-app-light-theme: mat.define-light-theme(
 $my-app-light-success: mat.define-palette(mat.$green-palette);
 $my-app-light-info: mat.define-palette(mat.$blue-palette);
 
+.main-title {
+  text-shadow: 1px 1px #b82727;
+}
+
 .add-property-container {
   border-color: green;
   color: green;
@@ -90,7 +94,7 @@ footer {
 }
 
 input {
-  background-color: #fafafa;
+  background-color: transparent;
   font-size: 14px;
   padding-top: 8px;
   color: black;

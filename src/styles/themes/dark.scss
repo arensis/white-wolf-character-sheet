@@ -25,6 +25,10 @@ $my-app-dark-info: mat.define-palette(mat.$light-blue-palette);
   @include mat.button-color($my-app-dark-theme);
 }
 
+.main-title {
+  text-shadow: 1px 1px 9px #b82727;
+}
+
 .add-property-container {
   border-color: #70ba70;
   color: #70ba70;
@@ -59,7 +63,7 @@ $my-app-dark-info: mat.define-palette(mat.$light-blue-palette);
   }
   @include lg {
     h1 {
-      color: black;
+      color: white;
     }
   }
   @include xl {
@@ -96,7 +100,7 @@ footer {
 
 input {
   font-size: 14px;
-  background-color: #303030;
+  background-color: transparent;
   color: #fafafa;
   &.read-only {
     color: #c8c8c8;

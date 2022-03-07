@@ -233,7 +233,7 @@ export class CharacterSheetStoreService {
           level: 0,
           inBlood: false
         },
-        ogham: {
+        obtenebration: {
           level: 0,
           inBlood: false
         },

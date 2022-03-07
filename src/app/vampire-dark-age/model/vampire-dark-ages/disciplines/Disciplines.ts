@@ -11,7 +11,7 @@ export interface Disciplines {
 
   fortitude: DisciplineLevel;
   mortis: MagicDisciplineLevel;
-  ogham: DisciplineLevel;
+  obtenebration: DisciplineLevel;
   obfuscate: DisciplineLevel;
   potence: DisciplineLevel;
   presence: DisciplineLevel;

@@ -21,7 +21,7 @@ export abstract class CustomPropertyManagement extends PropertyManagement {
   }
 
   deleteCustomProperty(index: number): void {
-    const propertyPath = [this.propertiesMainPath, this.customPropertyType].join('.');
+    const propertyPath = [this.propertiesMainPath, ...this.customPropertyType.split('.')].join('.');
     const customProperties = _.get(this.characterSheet, propertyPath) as CustomProperty[];
     customProperties.splice(index, 1);
     _.set(this.characterSheet, propertyPath, customProperties)
@@ -29,7 +29,13 @@ export abstract class CustomPropertyManagement extends PropertyManagement {
   }
 
   updateValuerFromCustomProperty(value: number, index: number) {
-    const propertyPath = [this.propertiesMainPath, this.customPropertyType].join('.').concat(`[${index}]`);
+    const propertyPath = [this.propertiesMainPath, ...this.customPropertyType.split('.')].join('.').concat(`[${index}]`);
+    _.set(this.characterSheet, propertyPath, value);
+    this.characterSheetStoreService.updateCharacterSheet(this.characterSheet);
+  }
+
+  updateCheckboxValueFromCustomProperty(value: boolean, index: number) {
+    const propertyPath = [this.propertiesMainPath, ...this.customPropertyType.split('.')].join('.').concat(`[${index}]`);
     _.set(this.characterSheet, propertyPath, value);
     this.characterSheetStoreService.updateCharacterSheet(this.characterSheet);
   }

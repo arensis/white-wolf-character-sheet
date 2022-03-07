@@ -1,4 +1,5 @@
 import { Component, EventEmitter, Input, Output, OnInit, OnChanges } from '@angular/core';
+import { MatCheckboxChange } from '@angular/material/checkbox';
 import { isNotBlankOrEmpty } from 'src/app/utils/stringUtils';
 
 @Component({
@@ -8,9 +9,13 @@ import { isNotBlankOrEmpty } from 'src/app/utils/stringUtils';
 })
 export class CircleInputComponent implements OnInit, OnChanges {
   @Input()
+  showCheckbox: boolean = false;
+  @Input()
   circleAmount: number;
   @Input()
   label: string;
+  @Input()
+  checkboxValue: boolean = false;
   @Input()
   value: number = 0;
   @Input()
@@ -22,6 +27,8 @@ export class CircleInputComponent implements OnInit, OnChanges {
   @Input()
   isEditable: boolean = true;
 
+  @Output()
+  onCheckboxValueChange = new EventEmitter<boolean>();
   @Output()
   onValueChange = new EventEmitter<number>();
   @Output()
@@ -67,6 +74,11 @@ export class CircleInputComponent implements OnInit, OnChanges {
     } else {
       this.calculateTemporaryValue(index);
     }
+  }
+
+  checkBoxChange(event: MatCheckboxChange) {
+    console.log('[circle input] event: ', event);
+    this.onCheckboxValueChange.emit(event.checked);
   }
 
   private calculateValue(circleIndex: number) {

@@ -2,9 +2,9 @@
   <span>{{ 'sheet.advantages.road.title' | translate }}</span>
 </h2>
 <arm-input
-[value]="characterSheet.advantages.road.name"
-[isReadOnly]="!characterSheet.isEditable"
-(onValueChange)="updateValueFromProperty($event, 'name')"
+  [value]="characterSheet.advantages.road.name"
+  [isReadOnly]="!characterSheet.isEditable"
+  (onValueChange)="updateValueFromProperty($event, 'name')"
 ></arm-input>
 <arm-circle-input
   [circleAmount]="10"

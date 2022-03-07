@@ -1,3 +1,4 @@
+import { NotesComponent } from './components/notes/notes.component';
 import { TranslateModule } from '@ngx-translate/core';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
@@ -51,7 +52,9 @@ import * as OtherAdvantages from './components/advantages/other-advantages';
     EquipementComponents.ArmorsComponent,
     EquipementComponents.EquipmentComponent,
     EquipementComponents.TravelEquipmentComponent,
-    EquipementComponents.WeaponsComponent
+    EquipementComponents.WeaponsComponent,
+
+    NotesComponent
   ],
   imports: [
     CommonModule,

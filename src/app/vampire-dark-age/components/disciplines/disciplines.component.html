@@ -1,3 +1,183 @@
-<p>
-  disciplines works!
-</p>
+<!-- Completar con level los updates de las propiedades y añadir el bindeo de los valores de los checkbox -->
+<!-- Hacerlo también para las sendas y rituales si procede -->
+<div class="disciplines-section">
+  <div class="disciplines-image-section">
+    <img src="assets/images/vampire-dark-ages/sections/sheetSectionSeparator.png">
+    <h1>{{ 'sheet.disciplines.title' | translate }}</h1>
+  </div>
+  <div class="disciplines-container">
+    <div class="disciplines-first-column">
+      <arm-circle-input
+        [showCheckbox]="true"
+        [circleAmount]="8"
+        [label]="'sheet.disciplines.animalism'"
+        [value]="characterSheet.disciplines.animalism.level"
+        [checkboxValue]="characterSheet.disciplines.animalism.inBlood"
+        [isEditable]="characterSheet.isEditable"
+        (onValueChange)="updateValueFromProperty($event, 'animalism.level')"
+      ></arm-circle-input>
+      <arm-circle-input
+        [showCheckbox]="true"
+        [circleAmount]="8"
+        [label]="'sheet.disciplines.auspex'"
+        [value]="characterSheet.disciplines.auspex.level"
+        [checkboxValue]="characterSheet.disciplines.auspex.inBlood"
+        [isEditable]="characterSheet.isEditable"
+        (onValueChange)="updateValueFromProperty($event, 'auspex.level')"
+      ></arm-circle-input>
+      <arm-circle-input
+        [showCheckbox]="true"
+        [circleAmount]="8"
+        [label]="'sheet.disciplines.celerity'"
+        [value]="characterSheet.disciplines.celerity.level"
+        [checkboxValue]="characterSheet.disciplines.celerity.inBlood"
+        [isEditable]="characterSheet.isEditable"
+        (onValueChange)="updateValueFromProperty($event, 'celerity.level')"
+        (onCheckboxValueChange)="updatedCheckboxValueFromProperty($event, 'celerity.inBlood')"
+      ></arm-circle-input>
+      <arm-circle-input
+        [showCheckbox]="true"
+        [circleAmount]="8"
+        [label]="'sheet.disciplines.dementation'"
+        [value]="characterSheet.disciplines.dementation.level"
+        [checkboxValue]="characterSheet.disciplines.dementation.inBlood"
+        [isEditable]="characterSheet.isEditable"
+        (onValueChange)="updateValueFromProperty($event, 'dementation')"
+      ></arm-circle-input>
+      <arm-circle-input
+        [showCheckbox]="true"
+        [circleAmount]="8"
+        [label]="'sheet.disciplines.dominate'"
+        [value]="characterSheet.disciplines.dominate.level"
+        [checkboxValue]="characterSheet.disciplines.dominate.inBlood"
+        [isEditable]="characterSheet.isEditable"
+        (onValueChange)="updateValueFromProperty($event, 'dominate')"
+      ></arm-circle-input>
+      <arm-circle-input
+        [showCheckbox]="true"
+        [circleAmount]="8"
+        [label]="'sheet.disciplines.extinct'"
+        [value]="characterSheet.disciplines.extinct.level"
+        [checkboxValue]="characterSheet.disciplines.extinct.inBlood"
+        [isEditable]="characterSheet.isEditable"
+        (onValueChange)="updateValueFromProperty($event, 'extinct')"
+      ></arm-circle-input>
+    </div>
+    <div class="disciplines-second-column">
+      <arm-circle-input
+        [showCheckbox]="true"
+        [circleAmount]="8"
+        [label]="'sheet.disciplines.fortitude'"
+        [value]="characterSheet.disciplines.animalism.level"
+        [checkboxValue]="characterSheet.disciplines.fortitude.inBlood"
+        [isEditable]="characterSheet.isEditable"
+        (onValueChange)="updateValueFromProperty($event, 'fortitude')"
+      ></arm-circle-input>
+      <arm-circle-input
+        [showCheckbox]="true"
+        [circleAmount]="8"
+        [label]="'sheet.disciplines.mortis.title'"
+        [value]="characterSheet.disciplines.mortis.level"
+        [checkboxValue]="characterSheet.disciplines.mortis.inBlood"
+        [isEditable]="characterSheet.isEditable"
+        (onValueChange)="updateValueFromProperty($event, 'mortis')"
+      ></arm-circle-input>
+      <arm-circle-input
+        [showCheckbox]="true"
+        [circleAmount]="8"
+        [label]="'sheet.disciplines.ogham'"
+        [value]="characterSheet.disciplines.ogham.level"
+        [checkboxValue]="characterSheet.disciplines.ogham.inBlood"
+        [isEditable]="characterSheet.isEditable"
+        (onValueChange)="updateValueFromProperty($event, 'ogham')"
+      ></arm-circle-input>
+      <arm-circle-input
+        [showCheckbox]="true"
+        [circleAmount]="8"
+        [label]="'sheet.disciplines.obfuscate'"
+        [value]="characterSheet.disciplines.obfuscate.level"
+        [checkboxValue]="characterSheet.disciplines.obfuscate.inBlood"
+        [isEditable]="characterSheet.isEditable"
+        (onValueChange)="updateValueFromProperty($event, 'obfuscate')"
+      ></arm-circle-input>
+      <arm-circle-input
+        [showCheckbox]="true"
+        [circleAmount]="8"
+        [label]="'sheet.disciplines.potence'"
+        [value]="characterSheet.disciplines.potence.level"
+        [checkboxValue]="characterSheet.disciplines.potence.inBlood"
+        [isEditable]="characterSheet.isEditable"
+        (onValueChange)="updateValueFromProperty($event, 'potence')"
+      ></arm-circle-input>
+      <arm-circle-input
+        [showCheckbox]="true"
+        [circleAmount]="8"
+        [label]="'sheet.disciplines.presence'"
+        [value]="characterSheet.disciplines.presence.level"
+        [checkboxValue]="characterSheet.disciplines.presence.inBlood"
+        [isEditable]="characterSheet.isEditable"
+        (onValueChange)="updateValueFromProperty($event, 'presence')"
+      ></arm-circle-input>
+    </div>
+    <div class="disciplines-third-column">
+      <arm-circle-input
+        [showCheckbox]="true"
+        [circleAmount]="8"
+        [label]="'sheet.disciplines.protean'"
+        [value]="characterSheet.disciplines.protean.level"
+        [checkboxValue]="characterSheet.disciplines.protean.inBlood"
+        [isEditable]="characterSheet.isEditable"
+        (onValueChange)="updateValueFromProperty($event, 'protean')"
+      ></arm-circle-input>
+      <arm-circle-input
+        [showCheckbox]="true"
+        [circleAmount]="8"
+        [label]="'sheet.disciplines.chimerstry'"
+        [value]="characterSheet.disciplines.chimerstry.level"
+        [checkboxValue]="characterSheet.disciplines.chimerstry.inBlood"
+        [isEditable]="characterSheet.isEditable"
+        (onValueChange)="updateValueFromProperty($event, 'chimerstry')"
+      ></arm-circle-input>
+      <arm-circle-input
+        [showCheckbox]="true"
+        [circleAmount]="8"
+        [label]="'sheet.disciplines.serpentis'"
+        [value]="characterSheet.disciplines.serpentis.level"
+        [checkboxValue]="characterSheet.disciplines.serpentis.inBlood"
+        [isEditable]="characterSheet.isEditable"
+        (onValueChange)="updateValueFromProperty($event, 'serpentis')"
+      ></arm-circle-input>
+      <arm-circle-input
+        [showCheckbox]="true"
+        [circleAmount]="8"
+        [label]="'sheet.disciplines.thaumaturgy.title'"
+        [value]="characterSheet.disciplines.thaumaturgy.level"
+        [checkboxValue]="characterSheet.disciplines.thaumaturgy.inBlood"
+        [isEditable]="characterSheet.isEditable"
+        (onValueChange)="updateValueFromProperty($event, 'thaumaturgy')"
+      ></arm-circle-input>
+      <arm-circle-input
+        [showCheckbox]="true"
+        [circleAmount]="8"
+        [label]="'sheet.disciplines.vicissitude'"
+        [value]="characterSheet.disciplines.vicissitude.level"
+        [checkboxValue]="characterSheet.disciplines.vicissitude.inBlood"
+        [isEditable]="characterSheet.isEditable"
+        (onValueChange)="updateValueFromProperty($event, 'vicissitude')"
+      ></arm-circle-input>
+    </div>
+  </div>
+  <hr>
+  <div class="disciplines-container">
+    <div class="disciplines-first-column">
+      <arm-thaumaturgy-roads [characterSheet]="characterSheet"></arm-thaumaturgy-roads>
+    </div>
+    <div class="disciplines-second-column">
+      <arm-thaumaturgy-rituals [characterSheet]="characterSheet"></arm-thaumaturgy-rituals>
+    </div>
+    <div class="disciplines-third-column">
+      <arm-mortis-roads [characterSheet]="characterSheet"></arm-mortis-roads>
+      <arm-mortis-rituals [characterSheet]="characterSheet"></arm-mortis-rituals>
+    </div>
+  </div>
+</div>

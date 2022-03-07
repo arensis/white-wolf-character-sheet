@@ -175,7 +175,7 @@ export class CharacterSheetStoreService {
         flaws: []
       },
       disciplines: {
-        abombwe: {
+        extinct: {
           level: 0,
           inBlood: false
         },

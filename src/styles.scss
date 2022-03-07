@@ -190,7 +190,8 @@ main {
   }
 }
 
-.attributes-image-section, .abilities-image-section, .advantages-image-section {
+.attributes-image-section, .abilities-image-section, .advantages-image-section,
+.disciplines-image-section, .equipment-image-section, .notes-image-section {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -293,7 +294,8 @@ main {
 }
 
 .player-data, .attributes-container, .abilities-container,
-.advantages-container, .other-advantages-container {
+.advantages-container, .other-advantages-container,
+.disciplines-container, .equipment-container, .notes-container {
   display: grid;
   grid-template-columns: repeat(6, 1fr);
   grid-gap: 5vw;
@@ -341,7 +343,9 @@ main {
 .physical, .social, .mental,
 .talents, .skills, .knowledges,
 .backgrounds-experience, .road-willpower-bloodpool, .virtues-health-weakness,
-.advantages-languages, .advantages-merits, .advantages-flaws {
+.advantages-languages, .advantages-merits, .advantages-flaws,
+.disciplines-first-column, .disciplines-second-column, .disciplines-third-column,
+.gear-carried, .combat-table, .notes {
   @extend .column;
   @include xs {
     grid-column: 1 / 7;
@@ -352,12 +356,44 @@ main {
 }
 
 .character-info, .character-background, .character-concept,
-.physical, .social, .mental {
+.physical, .social, .mental, .gear-carried, .combat-table, .notes {
   @extend .column;
   @include md {
     grid-column: 1 / 7;
   }
 }
+
+.gear-carried {
+  @include lg {
+    grid-column: 1 / 3;
+  }
+
+  @include xl {
+    grid-column: 1 / 3;
+  }
+}
+
+.combat-table {
+  @include lg {
+    grid-column: 3 / 7;
+  }
+
+  @include xl {
+    grid-column: 3 / 7;
+  }
+}
+
+.notes {
+  @include lg {
+    grid-column: 1 / 7;
+  }
+
+  @include xl {
+    grid-column: 1 / 7;
+  }
+}
+
+
 
 .character-info, .physical {
   @extend .column;
@@ -390,7 +426,7 @@ main {
 }
 
 
-.talents, .backgrounds-experience, .advantages-languages {
+.talents, .backgrounds-experience, .advantages-languages, .disciplines-first-column {
   @extend .column;
   @include md {
     grid-column: 1 / 4;
@@ -403,7 +439,7 @@ main {
   }
 }
 
-.skills, .road-willpower-bloodpool, .advantages-merits {
+.skills, .road-willpower-bloodpool, .advantages-merits, .disciplines-second-column {
   @extend .column;
   @include md {
     grid-column: 4 / 7;
@@ -416,7 +452,7 @@ main {
   }
 }
 
-.knowledges, .virtues-health-weakness, .advantages-flaws {
+.knowledges, .virtues-health-weakness, .advantages-flaws, .disciplines-third-column {
   @extend .column;
   @include md {
     grid-column: 1 / 7;
@@ -435,7 +471,8 @@ main {
 }
 
 .attributes-container, .abilities-container,
-.advantages-container, .other-advantages-container {
+.advantages-container, .other-advantages-container,
+.disciplines-container, .equipment-container, .notes-container {
   font-size: 18px;
 }
 
@@ -466,4 +503,9 @@ main {
 
 .sheet-title, .sheet-reduced-title {
   padding-top: 2px;
+}
+
+hr {
+  border-style: double;
+  border-width: 4px;
 }

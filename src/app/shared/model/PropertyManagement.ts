@@ -18,7 +18,13 @@ export abstract class PropertyManagement {
   }
 
   updateValueFromProperty(value: number, propertyName: string): void {
-    const propertyPath = [this.propertiesMainPath, propertyName].join('.');
+    const propertyPath = [this.propertiesMainPath, ...propertyName.split('.')].join('.');
+    _.set(this.characterSheet, propertyPath, value);
+    this.characterSheetStoreService.updateCharacterSheet(this.characterSheet);
+  }
+
+  updatedCheckboxValueFromProperty(value: boolean, propertyName: string): void {
+    const propertyPath = [this.propertiesMainPath, ...propertyName.split('.')].join('.');
     _.set(this.characterSheet, propertyPath, value);
     this.characterSheetStoreService.updateCharacterSheet(this.characterSheet);
   }

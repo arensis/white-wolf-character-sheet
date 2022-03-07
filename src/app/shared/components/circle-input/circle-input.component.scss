@@ -6,6 +6,11 @@
   &.no-label {
     justify-content: space-around;
   }
+
+  mat-checkbox {
+    margin-right: 4px;
+    margin-bottom: 4px;
+  }
 }
 
 .delete-property-button {

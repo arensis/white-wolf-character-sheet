@@ -1,4 +1,5 @@
 <div class="circle-input-container" [ngClass]="{ 'no-label': !hasLabel()}">
+  <mat-checkbox *ngIf="showCheckbox" [color]="'warn'"(change)="checkBoxChange($event)"></mat-checkbox>
   <span *ngIf="hasLabel()" class="circle-input-label">
     {{ label | translate }}
   </span>

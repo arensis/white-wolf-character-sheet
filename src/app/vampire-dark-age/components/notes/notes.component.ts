@@ -2,11 +2,11 @@ import { Component, Input } from '@angular/core';
 import { VampireDarkAgesSheet } from '../../model/vampire-dark-ages/VampireDarkAgesSheet';
 
 @Component({
-  selector: 'arm-equipment',
-  templateUrl: './equipment.component.html',
-  styleUrls: ['./equipment.component.scss']
+  selector: 'arm-notes',
+  templateUrl: './notes.component.html',
+  styleUrls: ['./notes.component.scss']
 })
-export class EquipmentComponent {
+export class NotesComponent {
   @Input()
   characterSheet!: VampireDarkAgesSheet;
 }

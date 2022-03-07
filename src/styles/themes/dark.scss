@@ -39,13 +39,12 @@ $my-app-dark-info: mat.define-palette(mat.$light-blue-palette);
   }
 }
 
-.attributes-title, .abilities-title, .advantages-title {
-  &::after, &::before {
-    border-bottom-color: #f5f5f5;
-  }
+.mat-checkbox-frame {
+  border-color: white;
 }
 
-.attributes-image-section, .abilities-image-section, .advantages-image-section {
+.attributes-image-section, .abilities-image-section, .advantages-image-section,
+.disciplines-image-section, .equipment-image-section, .notes-image-section {
   @include xs {
     h1 {
       color: white;

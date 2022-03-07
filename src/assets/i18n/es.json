@@ -24,7 +24,9 @@
       "background": "Nombre del trasfondo",
       "language": "Nombre del idioma",
       "merit": "Nombre del mérito",
-      "flaw": "Nombre del defecto"
+      "flaw": "Nombre del defecto",
+      "path": "Nombre de la senda",
+      "ritual": "Nombre del ritual"
     },
     "talent": {
       "add": "Añadir talento"
@@ -46,6 +48,12 @@
     },
     "flaw": {
       "add": "Añadir defecto"
+    },
+    "path": {
+      "add": "Añadir senda"
+    },
+    "ritual": {
+      "add": "Añadir ritual"
     }
   },
   "sheet": {
@@ -181,6 +189,43 @@
       "flaws": {
         "title": "Defectos"
       }
+    },
+    "disciplines": {
+      "title": "Disciplinas",
+      "animalism": "Animalismo",
+      "auspex": "Ausxpex",
+      "celerity": "Celeridad",
+      "dementation": "Dementación",
+      "dominate": "Dominación",
+      "extinct": "Extinción",
+      "fortitude": "Fortaleza",
+      "mortis": {
+        "title": "Mortis",
+        "paths": "Sendas Mortis",
+        "rituals": "Rituales de Mortis"
+      },
+      "ogham": "Obtenebración",
+      "obfuscate": "Ofuscación",
+      "potence": "Potencia",
+      "presence": "Presencia",
+      "protean": "Protean",
+      "chimerstry": "Quimerismo",
+      "serpentis": "Serpentis",
+      "thaumaturgy": {
+        "title": "Taumaturgia",
+        "paths": "Sendas Taumaturgia",
+        "rituals": "Rituales de Taumaturgia"
+      },
+      "vicissitude": "Visicitud"
+    },
+    "equipment": {
+      "title": "Equipo",
+      "carried": {
+        "title": "Transportado"
+      }
+    },
+    "notes": {
+      "title": "Notas"
     }
   }
 }

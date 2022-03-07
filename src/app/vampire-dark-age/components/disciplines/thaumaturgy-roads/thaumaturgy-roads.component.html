@@ -1,3 +1,19 @@
-<p>
-  thaumaturgy-roads works!
-</p>
+<h2 class="sub-category">
+  <span>{{ 'sheet.disciplines.thaumaturgy.paths' | translate }}</span>
+</h2>
+<arm-circle-input
+  *ngFor="let path of characterSheet.disciplines.thaumaturgy.paths; index as i; trackBy: trackByFn"
+  [showCheckbox]="true"
+  [circleAmount]="8"
+  [label]="path.name"
+  [value]="path.level"
+  [isPermanent]="false"
+  [isEditable]="characterSheet.isEditable"
+  (onDelete)="deleteCustomProperty(i)"
+  (onValueChange)="updateValuerFromCustomProperty($event, i)"
+></arm-circle-input>
+<arm-add-custom-property-button
+  *ngIf="characterSheet.isEditable"
+  [propertyType]="propertyType"
+  [customPropertyList]="characterSheet.disciplines.thaumaturgy.paths"
+></arm-add-custom-property-button>

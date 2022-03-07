@@ -1,0 +1,8 @@
+@import '../../../../../styles/responsive/breakpoints.scss';
+.sub-category {
+  font-size: 1.2rem;
+
+  @include xs {
+    font-size: 1.4rem;
+  }
+}

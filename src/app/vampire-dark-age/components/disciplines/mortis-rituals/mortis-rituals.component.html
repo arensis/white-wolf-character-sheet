@@ -1,3 +1,20 @@
-<p>
-  mortis-rituals works!
-</p>
+<div>
+  <h2 class="sub-category">
+    <span>{{ 'sheet.disciplines.mortis.rituals' | translate }}</span>
+  </h2>
+</div>
+<arm-circle-input
+  *ngFor="let ritual of characterSheet.disciplines.mortis.rituals; index as i; trackBy: trackByFn"
+  [circleAmount]="8"
+  [label]="ritual.name"
+  [value]="ritual.level"
+  [isPermanent]="false"
+  [isEditable]="characterSheet.isEditable"
+  (onDelete)="deleteCustomProperty(i)"
+  (onValueChange)="updateValuerFromCustomProperty($event, i)"
+></arm-circle-input>
+<arm-add-custom-property-button
+  *ngIf="characterSheet.isEditable"
+  [propertyType]="propertyType"
+  [customPropertyList]="characterSheet.disciplines.mortis.rituals"
+></arm-add-custom-property-button>

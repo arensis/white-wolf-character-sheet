@@ -14,6 +14,6 @@ export class DisciplinesComponent extends CustomPropertyManagement {
   propertiesMainPath: string = 'disciplines';
 
   constructor(characterSheetStoreService: CharacterSheetStoreService) {
-    super(characterSheetStoreService)
+    super(characterSheetStoreService);
   }
 }

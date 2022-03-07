@@ -77,7 +77,6 @@ export class CircleInputComponent implements OnInit, OnChanges {
   }
 
   checkBoxChange(event: MatCheckboxChange) {
-    console.log('[circle input] event: ', event);
     this.onCheckboxValueChange.emit(event.checked);
   }
 

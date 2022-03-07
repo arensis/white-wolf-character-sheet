@@ -3,6 +3,7 @@ import { CharacterSheetStoreService } from "src/app/vampire-dark-age/services/ch
 import { CustomProperty } from "./CustomProperty";
 import { PropertyManagement } from "./PropertyManagement";
 import * as _ from 'lodash';
+import { values } from "lodash";
 
 @Component({
   template: '',
@@ -11,6 +12,8 @@ import * as _ from 'lodash';
 export abstract class CustomPropertyManagement extends PropertyManagement {
   abstract propertyType: string;
   abstract customPropertyType: string;
+  valuePropertyName = 'value'
+  checkBoxPropertyName = 'checkbox';
 
   constructor(characterSheetStoreService: CharacterSheetStoreService) {
     super(characterSheetStoreService);
@@ -28,15 +31,21 @@ export abstract class CustomPropertyManagement extends PropertyManagement {
     this.characterSheetStoreService.updateCharacterSheet(this.characterSheet);
   }
 
-  updateValuerFromCustomProperty(value: number, index: number) {
-    const propertyPath = [this.propertiesMainPath, ...this.customPropertyType.split('.')].join('.').concat(`[${index}]`);
+  updateValueFromCustomProperty(value: number, index: number) {
+    const propertyPath = [this.propertiesMainPath, ...this.customPropertyType.split('.')]
+      .join('.')
+      .concat(`[${index}]`)
+      .concat(this.valuePropertyName);
     _.set(this.characterSheet, propertyPath, value);
     this.characterSheetStoreService.updateCharacterSheet(this.characterSheet);
   }
 
   updateCheckboxValueFromCustomProperty(value: boolean, index: number) {
-    const propertyPath = [this.propertiesMainPath, ...this.customPropertyType.split('.')].join('.').concat(`[${index}]`);
-    _.set(this.characterSheet, propertyPath, value);
+    const propertyPath = [this.propertiesMainPath, ...this.customPropertyType.split('.')]
+      .join('.')
+      .concat(`[${index}]`)
+      .concat(this.checkBoxPropertyName);
+    _.set(this.characterSheet, propertyPath.concat(''), value);
     this.characterSheetStoreService.updateCharacterSheet(this.characterSheet);
   }
 }

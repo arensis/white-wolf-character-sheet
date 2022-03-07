@@ -13,6 +13,7 @@ export class LanguagesComponent extends CustomPropertyManagement {
   propertiesMainPath: string = 'advantages'
 
   constructor(characterSheetStoreService: CharacterSheetStoreService) {
-    super(characterSheetStoreService)
+    super(characterSheetStoreService);
+    this.valuePropertyName = 'level';
   }
 }

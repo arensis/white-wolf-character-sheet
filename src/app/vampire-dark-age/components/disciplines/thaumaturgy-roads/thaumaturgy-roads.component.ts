@@ -13,6 +13,8 @@ export class ThaumaturgyRoadsComponent extends CustomPropertyManagement {
   propertiesMainPath: string = 'disciplines.thaumaturgy'
 
   constructor(characterSheetStoreService: CharacterSheetStoreService) {
-    super(characterSheetStoreService)
+    super(characterSheetStoreService);
+    this.valuePropertyName = 'level';
+    this.checkBoxPropertyName = 'inBlood';
   }
 }

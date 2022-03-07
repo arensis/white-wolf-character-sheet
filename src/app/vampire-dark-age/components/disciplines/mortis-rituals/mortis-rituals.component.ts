@@ -13,6 +13,7 @@ export class MortisRitualsComponent extends CustomPropertyManagement {
   propertiesMainPath: string = 'disciplines.mortis'
 
   constructor(characterSheetStoreService: CharacterSheetStoreService) {
-    super(characterSheetStoreService)
+    super(characterSheetStoreService);
+    this.valuePropertyName = 'level';
   }
 }

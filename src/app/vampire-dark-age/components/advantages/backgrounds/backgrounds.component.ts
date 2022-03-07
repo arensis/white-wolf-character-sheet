@@ -13,6 +13,7 @@ export class BackgroundsComponent extends CustomPropertyManagement {
   propertiesMainPath: string = 'advantages.backgrounds'
 
   constructor(characterSheetStoreService: CharacterSheetStoreService) {
-    super(characterSheetStoreService)
+    super(characterSheetStoreService);
+    this.valuePropertyName = 'level';
   }
 }

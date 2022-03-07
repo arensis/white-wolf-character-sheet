@@ -13,6 +13,8 @@ export class MortisRoadsComponent extends CustomPropertyManagement {
   propertiesMainPath: string = 'disciplines.mortis'
 
   constructor(characterSheetStoreService: CharacterSheetStoreService) {
-    super(characterSheetStoreService)
+    super(characterSheetStoreService);
+    this.valuePropertyName = 'level';
+    this.checkBoxPropertyName = 'inBlood';
   }
 }

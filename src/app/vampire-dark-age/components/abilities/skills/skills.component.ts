@@ -14,5 +14,6 @@ export class SkillsComponent extends CustomPropertyManagement {
 
   constructor(characterSheetStoreService: CharacterSheetStoreService) {
     super(characterSheetStoreService);
+    this.valuePropertyName = 'level';
   }
 }

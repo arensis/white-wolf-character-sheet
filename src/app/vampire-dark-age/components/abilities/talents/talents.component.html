@@ -78,7 +78,7 @@
     [value]="talent.level"
     [isEditable]="characterSheet.isEditable"
     (onDelete)="deleteCustomProperty(i)"
-    (onValueChange)="updateValuerFromCustomProperty($event, i)"
+    (onValueChange)="updateValueFromCustomProperty($event, i)"
   ></arm-circle-input>
   <arm-add-custom-property-button
     *ngIf="characterSheet.isEditable"

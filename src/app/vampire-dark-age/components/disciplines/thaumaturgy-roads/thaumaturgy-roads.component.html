@@ -7,10 +7,12 @@
   [circleAmount]="8"
   [label]="path.name"
   [value]="path.level"
+  [checkboxValue]="path.inBlood"
   [isPermanent]="false"
   [isEditable]="characterSheet.isEditable"
   (onDelete)="deleteCustomProperty(i)"
-  (onValueChange)="updateValuerFromCustomProperty($event, i)"
+  (onValueChange)="updateValueFromCustomProperty($event, i)"
+  (onCheckboxValueChange)="updateCheckboxValueFromCustomProperty($event, i)"
 ></arm-circle-input>
 <arm-add-custom-property-button
   *ngIf="characterSheet.isEditable"

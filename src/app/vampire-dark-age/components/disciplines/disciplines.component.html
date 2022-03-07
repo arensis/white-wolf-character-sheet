@@ -58,12 +58,12 @@
       <arm-circle-input
         [showCheckbox]="true"
         [circleAmount]="8"
-        [label]="'sheet.disciplines.extinct'"
-        [value]="characterSheet.disciplines.extinct.level"
-        [checkboxValue]="characterSheet.disciplines.extinct.inBlood"
+        [label]="'sheet.disciplines.quietus'"
+        [value]="characterSheet.disciplines.quietus.level"
+        [checkboxValue]="characterSheet.disciplines.quietus.inBlood"
         [isEditable]="characterSheet.isEditable"
-        (onValueChange)="updateValueFromProperty($event, 'extinct.level')"
-        (onCheckboxValueChange)="updatedCheckboxValueFromProperty($event, 'extinct.inBlood')"
+        (onValueChange)="updateValueFromProperty($event, 'quietus.level')"
+        (onCheckboxValueChange)="updatedCheckboxValueFromProperty($event, 'quietus.inBlood')"
       ></arm-circle-input>
     </div>
     <div class="disciplines-second-column">

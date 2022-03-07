@@ -7,7 +7,7 @@ export interface Disciplines {
   celerity: DisciplineLevel;
   dementation: DisciplineLevel;
   dominate: DisciplineLevel;
-  extinct: DisciplineLevel
+  quietus: DisciplineLevel
 
   fortitude: DisciplineLevel;
   mortis: MagicDisciplineLevel;

@@ -180,6 +180,43 @@
       "flaws": {
         "title": "Flaws"
       }
+    },
+    "disciplines": {
+      "title": "Disciplines",
+      "animalism": "Animalism",
+      "auspex": "Auspex",
+      "celerity": "Celerity",
+      "dementation": "Dementation",
+      "dominate": "Dominate",
+      "extinct": "Extinct",
+      "fortitude": "Fortitude",
+      "mortis": {
+        "title": "Mortis",
+        "roads": "Mortis roads",
+        "rituals": "Mortis rituals"
+      },
+      "ogham": "Ogham",
+      "obfuscate": "Obfuscate",
+      "potence": "Potence",
+      "presence": "Presence",
+      "protean": "Protean",
+      "chimerstry": "Chimerstry",
+      "serpentis": "Serpentis",
+      "thaumaturgy": {
+        "title": "Thaumaturgy",
+        "roads": "Thaumaturgy roads",
+        "rituals": "Thaumaturgy rituals"
+      },
+      "vicissitude": "Vicissitude"
+    },
+    "equipment": {
+      "title": "Gear",
+      "carried": {
+        "title": "Carried"
+      }
+    },
+    "notes": {
+      "title": "Notes"
     }
   }
 }

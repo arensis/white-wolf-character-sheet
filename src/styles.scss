@@ -20,6 +20,72 @@ body {
   overflow-x: clip;
 }
 
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1;
+
+  mat-toolbar {
+    margin-top: -10px !important;
+    @include xs {
+      .header-buttons {
+        display: none;
+      }
+    }
+
+    @include sm {
+      .menu-button {
+        display: none;
+      }
+    }
+
+    @include md {
+      .menu-button {
+        display: none;
+      }
+    }
+
+    @include lg {
+      .menu-button {
+        display: none;
+      }
+    }
+
+    @include xl {
+      .menu-button {
+        display: none;
+      }
+    }
+  }
+}
+
+main {
+  position: relative;
+  top: 50px;
+}
+
+.sheet-title {
+  @include xs {
+    display: none;
+  }
+  @include sm {
+    display: none;
+  }
+}
+
+.sheet-reduced-title {
+  @include md {
+    display: none;
+  }
+  @include lg {
+    display: none;
+  }
+  @include xl {
+    display: none;
+  }
+}
+
 .sheet-container {
   $sheet-max-width: 1080px;
   $padding-side-sheet: max(calc((100% - $sheet-max-width) / 2), 35px);
@@ -391,66 +457,6 @@ body {
   }
   span {
     margin-left: 2px;
-  }
-}
-
-header {
-  position: sticky;
-  top: 0;
-  z-index: 1;
-
-  mat-toolbar {
-    margin-top: -10px !important;
-    @include xs {
-      .header-buttons {
-        display: none;
-      }
-    }
-
-    @include sm {
-      .menu-button {
-        display: none;
-      }
-    }
-
-    @include md {
-      .menu-button {
-        display: none;
-      }
-    }
-
-    @include lg {
-      .menu-button {
-        display: none;
-      }
-    }
-
-    @include xl {
-      .menu-button {
-        display: none;
-      }
-    }
-  }
-}
-
-.sheet-title {
-  @include xs {
-    display: none;
-  }
-  @include sm {
-    display: none;
-  }
-}
-
-.sheet-reduced-title {
-  @include md {
-    display: none;
-  }
-  @include lg {
-    display: none;
-  }
-  @include xl {
-    display: none;
   }
 }
 

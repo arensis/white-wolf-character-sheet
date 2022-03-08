@@ -27,7 +27,6 @@ header {
   z-index: 1;
 
   mat-toolbar {
-    margin-top: -10px !important;
     @include xs {
       .header-buttons {
         display: none;

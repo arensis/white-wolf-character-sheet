@@ -249,10 +249,6 @@ export class CharacterSheetStoreService {
           level: 0,
           inBlood: false
         },
-        quietus: {
-          level: 0,
-          inBlood: false
-        },
         serpentis: {
           level: 0,
           inBlood: false

@@ -166,7 +166,19 @@
         "title": "Experience"
       },
       "health": {
-        "title": "Health"
+        "title": "Health",
+        "bruised": "Bruised",
+        "hurt": "Hurt",
+        "injured": "Injured",
+        "wounded": "Wounded",
+        "mauled": "Mauled",
+        "crippled": "Crippled",
+        "incapacitated": "Incapacitated",
+        "levels": {
+          "empty": "No damaged",
+          "lethal": "Lethal damage",
+          "aggravated": "Aggravated damage"
+        }
       },
       "weakness": {
         "title": "Weakness"

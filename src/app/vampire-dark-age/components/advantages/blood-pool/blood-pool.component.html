@@ -1,8 +1,10 @@
 <h2 class="sub-category">
   <span>{{ 'sheet.advantages.bloodPool.title' | translate }}</span>
 </h2>
-<!-- <arm-circle-input
-  [circleAmount]="8"
-  [label]="'sheet.abilities.talents.alertness'"
-  [value]="characterSheet.abilities.talents.alertness"
-></arm-circle-input> -->
+<arm-square-input
+  [itemsAmount]="characterSheet.advantages.bloodPool.max"
+  [isEditable]="true"
+  [maxValue]="characterSheet.advantages.bloodPool.max"
+  [value]="characterSheet.advantages.bloodPool.pool"
+  (onValueChange)="updateValueFromProperty($event, 'pool')"
+></arm-square-input>

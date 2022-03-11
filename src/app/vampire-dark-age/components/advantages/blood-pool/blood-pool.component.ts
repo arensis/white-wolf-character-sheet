@@ -1,3 +1,4 @@
+import { PropertyManagement } from 'src/app/shared/model/PropertyManagement';
 import { VampireDarkAgesSheet } from './../../../model/vampire-dark-ages/VampireDarkAgesSheet';
 import { Component, Input } from '@angular/core';
 
@@ -6,7 +7,6 @@ import { Component, Input } from '@angular/core';
   templateUrl: './blood-pool.component.html',
   styleUrls: ['./blood-pool.component.scss']
 })
-export class BloodPoolComponent {
-  @Input()
-  characterSheet!: VampireDarkAgesSheet;
+export class BloodPoolComponent extends PropertyManagement {
+  propertiesMainPath: string = 'advantages.bloodPool'
 }

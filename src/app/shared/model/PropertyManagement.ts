@@ -17,9 +17,11 @@ export abstract class PropertyManagement {
     this.characterSheet = this.characterSheetStoreService.getCharacterSheet();
   }
 
-  updateValueFromProperty(value: number, propertyName: string): void {
+  updateValueFromProperty(value: any, propertyName: string): void {
     const propertyPath = [this.propertiesMainPath, ...propertyName.split('.')].join('.');
     _.set(this.characterSheet, propertyPath, value);
+    console.log('propertyPath', propertyPath);
+    console.log('updated character sheet', this.characterSheet);
     this.characterSheetStoreService.updateCharacterSheet(this.characterSheet);
   }
 

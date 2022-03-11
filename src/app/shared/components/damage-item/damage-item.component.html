@@ -1,0 +1,21 @@
+<div class="damage-container">
+  <span>{{ name | translate }}</span>
+  <span>{{ penalty === 0 ? '' : penalty}}</span>
+  <button [matMenuTriggerFor]="menu" class="damage-value">
+    <span [class]="{'no-damaged': isNoDamaged(), 'lethal-damage': isLethalDamage(), 'aggravated-damage': isAggravatedDamage()}"></span>
+  </button>
+  <mat-menu #menu="matMenu">
+    <button mat-menu-item (click)="setDamage('EMPTY')">
+      <span class="no-damaged-menu"></span>
+      <span class="damage-name">{{ 'sheet.advantages.health.levels.empty' | translate }}</span>
+    </button>
+    <button mat-menu-item (click)="setDamage('LETHAL')">
+      <span class="lethal-damage-menu"></span>
+      <span class="damage-name">{{ 'sheet.advantages.health.levels.lethal' | translate }}</span>
+    </button>
+    <button mat-menu-item (click)="setDamage('AGGRAVATED')">
+      <span class="aggravated-damage-menu"></span>
+      <span class="damage-name">{{ 'sheet.advantages.health.levels.aggravated' | translate }}</span>
+    </button>
+  </mat-menu>
+</div>

@@ -5,14 +5,17 @@
   [circleAmount]="5"
   [label]="'sheet.advantages.virtues.conscienceConviction'"
   [value]="characterSheet.advantages.virtues.conscienceConviction"
+  (onValueChange)="updateValueFromProperty($event, 'conscienceConviction')"
 ></arm-circle-input>
 <arm-circle-input
   [circleAmount]="5"
   [label]="'sheet.advantages.virtues.selfControlInstint'"
   [value]="characterSheet.advantages.virtues.selfControlInstint"
+  (onValueChange)="updateValueFromProperty($event, 'selfControlInstint')"
 ></arm-circle-input>
 <arm-circle-input
   [circleAmount]="5"
   [label]="'sheet.advantages.virtues.courage'"
   [value]="characterSheet.advantages.virtues.courage"
+  (onValueChange)="updateValueFromProperty($event, 'courage')"
 ></arm-circle-input>

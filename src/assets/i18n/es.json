@@ -160,10 +160,10 @@
 
       },
       "road": {
-        "title": "Camino"
-      },
-      "aura": {
-        "title": "Aura"
+        "title": "Camino",
+        "aura": {
+          "title": "Aura"
+        }
       },
       "willpower": {
         "title": "Fuerza de Voluntad"
@@ -175,7 +175,19 @@
         "title": "Experiencia"
       },
       "health": {
-        "title": "Salud"
+        "title": "Salud",
+        "bruised": "Magullado",
+        "hurt": "Lastimado",
+        "injured": "Lesionado",
+        "wounded": "Herido",
+        "mauled": "Malherido",
+        "crippled": "Tullido",
+        "incapacitated": "Incapacitado",
+        "levels": {
+          "empty": "Sin daño",
+          "lethal": "Daño letal",
+          "aggravated": "Daño agravado"
+        }
       },
       "weakness": {
         "title": "Debilidad de Clan"

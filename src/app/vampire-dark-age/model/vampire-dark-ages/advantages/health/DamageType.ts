@@ -1,6 +1,5 @@
 export enum DamageType {
-  EMPTY,
-  BASHING,
-  LETHAL,
-  AGGRAVATED
+  EMPTY = 'EMPTY',
+  LETHAL = 'LETHAL',
+  AGGRAVATED = 'AGGRAVATED'
 }

@@ -69,6 +69,69 @@ $my-app-light-info: mat.define-palette(mat.$blue-palette);
   }
 }
 
+.square {
+  border-color: black;
+  &:not(.filled)::after {
+    content: "\2610";
+    color: black;
+  }
+
+  &.filled::after {
+    content: "\2612";
+    color: black;
+  }
+}
+
+.no-damaged {
+  &::after {
+    content: '\2610';
+    color: black;
+    font-size: 2rem;
+  }
+}
+
+.no-damaged-menu {
+  &::after {
+    content: '\2610';
+    color: white;
+    font-size: 2rem;
+  }
+}
+
+.lethal-damage {
+  &::after {
+    content: '\25EA';
+    color: black;
+    font-size: 2rem;
+  }
+}
+
+.lethal-damage-menu {
+  &::after {
+    content: '\25EA';
+    color: white;
+    font-size: 2rem;
+    margin-left: 3px;
+    margin-right: 4px;
+  }
+}
+
+.aggravated-damage {
+  &::after {
+    content: '\2612';
+    color: black;
+    font-size: 2rem;
+  }
+}
+
+.aggravated-damage-menu {
+  &::after {
+    content: '\2612';
+    color: white;
+    font-size: 2rem;
+  }
+}
+
 .circle {
   border-color: black;
 

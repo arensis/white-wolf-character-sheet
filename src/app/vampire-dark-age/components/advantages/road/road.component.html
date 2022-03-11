@@ -9,4 +9,19 @@
 <arm-circle-input
   [circleAmount]="10"
   [value]="characterSheet.advantages.road.level"
+  (onValueChange)="updateValueFromProperty($event, 'level')"
 ></arm-circle-input>
+<div class="aura">
+  <arm-input
+    [label]="'sheet.advantages.road.aura.title'"
+    [value]="characterSheet.advantages.road.aura.type"
+    [isReadOnly]="!characterSheet.isEditable"
+    (onValueChange)="updateValueFromProperty($event, 'aura.type')"
+  ></arm-input>
+  <arm-input
+    [value]="characterSheet.advantages.road.aura.value"
+    [isReadOnly]="!characterSheet.isEditable"
+    (onValueChange)="updateValueFromProperty($event, 'aura.value')"
+  ></arm-input>
+</div>
+

@@ -1,10 +1,17 @@
 <h2 class="sub-category">
   <span>{{ 'sheet.advantages.willpower.title' | translate }}</span>
 </h2>
-<!--
-  <arm-circle-input
-    [circleAmount]="8"
-    [label]="'sheet.abilities.talents.alertness'"
-    [value]="characterSheet.abilities.talents.alertness"
-  ></arm-circle-input>
--->
+<arm-circle-input
+  [circleAmount]="10"
+  [isEditable]="characterSheet.isEditable"
+  [value]="characterSheet.advantages.willpower.permanent"
+  (onValueChange)="updateValueFromProperty($event, 'permanent')"
+></arm-circle-input>
+<arm-square-input
+  [itemsAmount]="10"
+  [isEditable]="true"
+  [maxValue]="characterSheet.advantages.willpower.permanent"
+  [value]="characterSheet.advantages.willpower.temporal"
+  (onValueChange)="updateValueFromProperty($event, 'temporal')"
+></arm-square-input>
+

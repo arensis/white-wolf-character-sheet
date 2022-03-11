@@ -508,3 +508,29 @@ hr {
   border-style: double;
   border-width: 4px;
 }
+
+.health-container {
+  @include xs {
+    padding: 0;
+  }
+
+  @include sm {
+    padding: 0 4.5rem;
+  }
+
+  @include md {
+    padding: 0 9rem;
+  }
+
+  @include lg {
+    padding: 0 15rem;
+  }
+
+  @include xl {
+    padding: 0 2rem;
+  }
+}
+
+arm-road .aura arm-input .text-input-container {
+  align-items: flex-end;
+}

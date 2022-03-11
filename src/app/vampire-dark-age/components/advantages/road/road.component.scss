@@ -1,0 +1,36 @@
+.aura {
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  justify-content: flex-end;
+  margin: 0 1.5rem;
+  margin-top: 1rem;
+  width: 80%;
+  font-family: "Titles font";
+  font-weight: 500;
+
+  arm-road .aura arm-input .text-input-container {
+    align-items: flex-end;
+  }
+
+  > arm-input {
+    width: 80%
+  }
+
+  arm-input:last-child {
+    display: flex;
+    width: 20%;
+    &::before {
+      content: '(';
+      margin-left: 0.2rem;
+      margin-top: 8px;
+    }
+
+    &::after {
+      content: ')';
+      margin-top: 8px;
+    }
+  }
+}
+
+

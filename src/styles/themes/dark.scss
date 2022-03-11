@@ -72,6 +72,70 @@ $my-app-dark-info: mat.define-palette(mat.$light-blue-palette);
   }
 }
 
+.square {
+  border-color: #c7c7c7;
+
+  &:not(.filled) {
+    &::after {
+      content: '\2610';
+      color: white;
+    }
+  }
+
+  &.filled::after {
+    content: "\2612";
+    color: #f5f5f5;
+    border-color: #f5f5f5;
+  }
+}
+
+.no-damaged {
+  &::after {
+    content: '\2610';
+    color: #f5f5f5;
+  }
+}
+
+.no-damaged-menu {
+  &::after {
+    content: '\2610';
+    color: black;
+    font-size: 2rem;
+  }
+}
+
+.lethal-damage {
+  &::after {
+    content: '\25EA';
+    color: #f5f5f5;
+  }
+}
+
+.lethal-damage-menu {
+  &::after {
+    content: '\25EA';
+    color: black;
+    font-size: 2rem;
+    margin-left: 3px;
+    margin-right: 4px;
+  }
+}
+
+.aggravated-damage {
+  &::after {
+    content: '\2612';
+    color: #f5f5f5;
+  }
+}
+
+.aggravated-damage-menu {
+  &::after {
+    content: '\2612';
+    color: black;
+    font-size: 2rem;
+  }
+}
+
 .circle {
   border-color: #c7c7c7;
 

@@ -129,12 +129,12 @@ export class CharacterSheetStoreService {
           }
         },
         willpower: {
-          permanent: 5,
-          temporal: 3
+          permanent: 0,
+          temporal: 0
         },
         bloodPool: {
-          max: 10,
-          pool: 8
+          max: 20,
+          pool: 0
         },
         experience: {
           total: 0,

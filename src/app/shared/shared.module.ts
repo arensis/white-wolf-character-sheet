@@ -1,3 +1,5 @@
+import { DamageItemComponent } from './components/damage-item/damage-item.component';
+import { SquareInputComponent } from './components/square-input/square-input.component';
 import { I18nService } from './services/i18n.service';
 import { FileService } from './services/file.service';
 import { DialogService } from './services/dialog.service';
@@ -24,7 +26,9 @@ import { AngularMaterialModule } from './modules/angular-material.module';
     AddCustomPropertyButtonComponent,
     HeaderComponent,
     FooterComponent,
-    LanguageSelectComponent
+    LanguageSelectComponent,
+    SquareInputComponent,
+    DamageItemComponent
   ],
   imports: [
     CommonModule,
@@ -42,7 +46,9 @@ import { AngularMaterialModule } from './modules/angular-material.module';
     LanguageSelectComponent,
     CommonModule,
     FormsModule,
-    AngularMaterialModule
+    AngularMaterialModule,
+    SquareInputComponent,
+    DamageItemComponent
   ],
   providers: [
     StyleManagerService,

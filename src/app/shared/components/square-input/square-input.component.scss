@@ -1,0 +1,14 @@
+.square-input-values {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.square {
+  font-size: 27px;
+  margin-left: 0.16rem;
+  cursor: pointer;
+  &.no-selectable {
+    cursor: not-allowed;
+  }
+}

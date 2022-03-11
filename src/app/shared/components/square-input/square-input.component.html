@@ -1,0 +1,6 @@
+<div class="square-input-values">
+  <ng-container *ngFor="let item of itemsArray; index as i; trackBy: trackByFn">
+    <div class="square expand" *ngIf="isEditablePoint(i)" [ngClass]="{ 'filled' : ((i+1) <= value) }" (click)="fillSquare(i)"></div>
+    <div class="square expand no-selectable" *ngIf="!isEditablePoint(i)"></div>
+  </ng-container>
+</div>

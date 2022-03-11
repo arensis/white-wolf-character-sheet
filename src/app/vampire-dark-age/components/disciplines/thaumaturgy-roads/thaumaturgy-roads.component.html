@@ -15,7 +15,7 @@
   (onCheckboxValueChange)="updateCheckboxValueFromCustomProperty($event, i)"
 ></arm-circle-input>
 <arm-add-custom-property-button
-  *ngIf="characterSheet.isEditable"
+  [isEditable]="characterSheet.isEditable"
   [propertyType]="propertyType"
   [customPropertyList]="characterSheet.disciplines.thaumaturgy.paths"
 ></arm-add-custom-property-button>

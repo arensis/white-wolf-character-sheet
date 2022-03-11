@@ -34,6 +34,17 @@ $my-app-light-info: mat.define-palette(mat.$blue-palette);
     border-color: #9acb9a;
     background-color: green;
   }
+
+  &.element-locked {
+    border-color: grey;
+    color: grey;
+    pointer-events: none;
+    &:hover {
+      border-color: grey;
+      color: grey;
+      background-color: transparent;
+    }
+  }
 }
 
 .mat-checkbox-frame {

@@ -13,15 +13,19 @@ export class AddCustomPropertyButtonComponent {
   customPropertyList: any[] = [];
   @Input()
   propertyType: string = '';
+  @Input()
+  isEditable: boolean = true;
 
   constructor(private dialogService: DialogService, private translate: TranslateService) {}
 
   addCustomProperty(): void {
-    this.dialogService.openDialogWithInput(this.propertyType).afterClosed()
+    if (this.isEditable) {
+      this.dialogService.openDialogWithInput(this.propertyType).afterClosed()
       .subscribe(name => {
         if(isNotBlankOrEmpty(name)) {
           this.customPropertyList.push({ name: name, level: 0 })
         }
       });
+    }
   }
 }

@@ -81,7 +81,7 @@
     (onValueChange)="updateValueFromCustomProperty($event, i)"
   ></arm-circle-input>
   <arm-add-custom-property-button
-    *ngIf="characterSheet.isEditable"
+    [isEditable]="characterSheet.isEditable"
     [propertyType]="propertyType"
     [customPropertyList]="characterSheet.abilities.knowledges.customKnowledges"
   ></arm-add-custom-property-button>

@@ -1,7 +1,7 @@
 import { FileService } from './../shared/services/file.service';
 import { CharacterSheetStoreService } from './services/character-sheet-store.service';
 import { Component } from '@angular/core';
-import { VampireDarkAgesSheet } from './model/vampire-dark-ages/VampireDarkAgesSheet';
+import { VampireDarkAgesSheet } from './model/dark-ages-sheet/vampire-dark-ages/VampireDarkAgesSheet';
 
 @Component({
   selector: 'arm-vampire-dark-age',

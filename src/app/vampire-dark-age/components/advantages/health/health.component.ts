@@ -1,6 +1,5 @@
 import { PropertyManagement } from 'src/app/shared/model/PropertyManagement';
-import { Component, Input } from '@angular/core';
-import { VampireDarkAgesSheet } from 'src/app/vampire-dark-age/model/vampire-dark-ages/VampireDarkAgesSheet';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'arm-health',

@@ -1,5 +1,5 @@
-import { DamageType } from 'src/app/vampire-dark-age/model/vampire-dark-ages/advantages/health/DamageType';
-import { Component, Input, OnInit, Output, EventEmitter, OnChanges, SimpleChanges } from '@angular/core';
+import { Component, Input, Output, EventEmitter, OnChanges, SimpleChanges } from '@angular/core';
+import { DamageType } from '../../model/dark-ages-sheet/advantages/health/DamageType';
 
 @Component({
   selector: 'arm-damage-item',

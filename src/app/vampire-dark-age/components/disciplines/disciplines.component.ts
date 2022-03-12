@@ -1,6 +1,6 @@
 import { Component, Input } from '@angular/core';
 import { CustomPropertyManagement } from 'src/app/shared/model/CustomPropertyManagement';
-import { VampireDarkAgesSheet } from '../../model/vampire-dark-ages/VampireDarkAgesSheet';
+import { VampireDarkAgesSheet } from '../../model/dark-ages-sheet/vampire-dark-ages/VampireDarkAgesSheet';
 import { CharacterSheetStoreService } from '../../services/character-sheet-store.service';
 
 @Component({

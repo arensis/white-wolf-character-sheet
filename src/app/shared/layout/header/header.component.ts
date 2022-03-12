@@ -1,4 +1,4 @@
-import { VampireDarkAgesSheet } from './../../../vampire-dark-age/model/vampire-dark-ages/VampireDarkAgesSheet';
+import { VampireDarkAgesSheet } from '../../../vampire-dark-age/model/dark-ages-sheet/vampire-dark-ages/VampireDarkAgesSheet';
 import { TranslateService } from '@ngx-translate/core';
 import { StyleManagerService } from './../../services/style-manager.service';
 import { SafeUrl } from '@angular/platform-browser';

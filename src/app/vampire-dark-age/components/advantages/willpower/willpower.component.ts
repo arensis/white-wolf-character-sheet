@@ -1,6 +1,5 @@
 import { PropertyManagement } from 'src/app/shared/model/PropertyManagement';
-import { Component, Input, OnChanges, SimpleChanges } from '@angular/core';
-import { VampireDarkAgesSheet } from 'src/app/vampire-dark-age/model/vampire-dark-ages/VampireDarkAgesSheet';
+import { Component, OnChanges, SimpleChanges } from '@angular/core';
 
 @Component({
   selector: 'arm-willpower',

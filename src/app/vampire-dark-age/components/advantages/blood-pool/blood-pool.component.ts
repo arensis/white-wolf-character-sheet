@@ -1,4 +1,4 @@
-import { PropertyManagement } from 'src/app/shared/model/PropertyManagement';
+import { PropertyManagement } from 'src/app/shared/components/PropertyManagement';
 import { VampireDarkAgesSheet } from '../../../model/dark-ages-sheet/vampire-dark-ages/VampireDarkAgesSheet';
 import { Component, Input } from '@angular/core';
 

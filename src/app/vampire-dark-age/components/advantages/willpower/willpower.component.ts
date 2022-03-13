@@ -1,4 +1,4 @@
-import { PropertyManagement } from 'src/app/shared/model/PropertyManagement';
+import { PropertyManagement } from 'src/app/shared/components/PropertyManagement';
 import { Component, OnChanges, SimpleChanges } from '@angular/core';
 
 @Component({

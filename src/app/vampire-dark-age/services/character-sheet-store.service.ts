@@ -1,6 +1,6 @@
 import { VampireDarkAgesSheet } from '../model/dark-ages-sheet/vampire-dark-ages/VampireDarkAgesSheet';
 import { Injectable } from '@angular/core';
-import { DamageType } from 'src/app/shared/model/dark-ages-sheet/advantages/health/DamageType';
+import { DarkAgesDamageType } from 'src/app/shared/model/dark-ages-sheet/advantages/health/DarkAgesDamageType';
 
 @Injectable({
   providedIn: 'root'
@@ -143,31 +143,31 @@ export class CharacterSheetStoreService {
         health: {
           bruised: {
             penalty: 0,
-            value: DamageType.EMPTY
+            value: DarkAgesDamageType.EMPTY
           },
           hurt: {
             penalty: -1,
-            value: DamageType.EMPTY
+            value: DarkAgesDamageType.EMPTY
           },
           injured: {
             penalty: -1,
-            value: DamageType.EMPTY
+            value: DarkAgesDamageType.EMPTY
           },
           wounded: {
             penalty: -2,
-            value: DamageType.EMPTY
+            value: DarkAgesDamageType.EMPTY
           },
           mauled: {
             penalty: -2,
-            value: DamageType.EMPTY
+            value: DarkAgesDamageType.EMPTY
           },
           crippled: {
             penalty: -5,
-            value: DamageType.EMPTY
+            value: DarkAgesDamageType.EMPTY
           },
           incapacitated: {
             penalty: 0,
-            value: DamageType.EMPTY
+            value: DarkAgesDamageType.EMPTY
           }
         },
         languages: [],

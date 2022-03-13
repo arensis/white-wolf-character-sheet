@@ -1,4 +1,4 @@
-import { CustomPropertyManagement } from 'src/app/shared/model/CustomPropertyManagement';
+import { CustomPropertyManagement } from 'src/app/shared/components/CustomPropertyManagement';
 import { Component } from '@angular/core';
 import { CharacterSheetStoreService } from 'src/app/vampire-dark-age/services/character-sheet-store.service';
 

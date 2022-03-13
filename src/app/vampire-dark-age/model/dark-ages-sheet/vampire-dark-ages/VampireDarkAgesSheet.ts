@@ -1,17 +1,17 @@
 import { DarkAgesSheet } from "../../../../shared/model/dark-ages-sheet/DarkAgesSheet";
-import { Abilities } from "./abilities/Abilities";
-import { Advantages } from "./advantages/Advantages";
-import { Attributes } from "./attributes/Attributes";
-import { Disciplines } from "./disciplines/Disciplines";
-import { Equipment } from "./equipment/Equipment";
-import { PlayerData } from "./player-data/PlayerData";
+import { VampireDAAbilities } from "./abilities/VampireDAAbilities";
+import { VampireDAAdvantages } from "./advantages/VampireDAAdvantages";
+import { Attributes } from "./attributes/VampireDAAttributes";
+import { VampireDADisciplines } from "./disciplines/VampireDADisciplines";
+import { VampireDAGear } from "./equipment/VampireDAGear";
+import { VampireDAPlayerData } from "./player-data/VampireDAPlayerData";
 
 export interface VampireDarkAgesSheet extends DarkAgesSheet {
-  playerData: PlayerData;
+  playerData: VampireDAPlayerData;
   attributes: Attributes;
-  abilities: Abilities;
-  advantages: Advantages;
-  disciplines: Disciplines;
-  equipment: Equipment;
+  abilities: VampireDAAbilities;
+  advantages: VampireDAAdvantages;
+  disciplines: VampireDADisciplines;
+  equipment: VampireDAGear;
   isEditable: boolean;
 }

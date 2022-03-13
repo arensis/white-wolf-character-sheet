@@ -1,5 +1,5 @@
 import { Component, Input, Output, EventEmitter, OnChanges, SimpleChanges } from '@angular/core';
-import { DamageType } from '../../model/dark-ages-sheet/advantages/health/DamageType';
+import { DarkAgesDamageType } from '../../model/dark-ages-sheet/advantages/health/DarkAgesDamageType';
 
 @Component({
   selector: 'arm-damage-item',
@@ -12,9 +12,9 @@ export class DamageItemComponent implements OnChanges {
   @Input()
   penalty!: number;
   @Input()
-  value: DamageType = DamageType.EMPTY;
+  value: DarkAgesDamageType = DarkAgesDamageType.EMPTY;
   @Output()
-  onValueChange = new EventEmitter<DamageType>();
+  onValueChange = new EventEmitter<DarkAgesDamageType>();
 
   ngOnChanges(changes: SimpleChanges): void {
     console.log('damage value', this.value)
@@ -23,28 +23,28 @@ export class DamageItemComponent implements OnChanges {
   setDamage(damageType: string) {
     switch(damageType) {
       case 'EMPTY':
-        this.onValueChange.emit(DamageType.EMPTY);
+        this.onValueChange.emit(DarkAgesDamageType.EMPTY);
         break;
       case 'LETHAL':
-        this.onValueChange.emit(DamageType.LETHAL);
+        this.onValueChange.emit(DarkAgesDamageType.LETHAL);
         break;
       case 'AGGRAVATED':
-        this.onValueChange.emit(DamageType.AGGRAVATED);
+        this.onValueChange.emit(DarkAgesDamageType.AGGRAVATED);
         break;
       default:
-        this.onValueChange.emit(DamageType.EMPTY);
+        this.onValueChange.emit(DarkAgesDamageType.EMPTY);
     }
   }
 
   isNoDamaged(): boolean {
-    return this.value === DamageType.EMPTY.toString();
+    return this.value === DarkAgesDamageType.EMPTY.toString();
   }
 
   isLethalDamage(): boolean {
-    return this.value === DamageType.LETHAL.toString();
+    return this.value === DarkAgesDamageType.LETHAL.toString();
   }
 
   isAggravatedDamage(): boolean {
-    return this.value === DamageType.AGGRAVATED.toString();
+    return this.value === DarkAgesDamageType.AGGRAVATED.toString();
   }
 }

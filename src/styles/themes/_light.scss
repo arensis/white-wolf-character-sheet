@@ -173,7 +173,7 @@ input {
   color: black;
 
   &.read-only {
-    color: transparent;
+    opacity: 60%;
   }
 }
 

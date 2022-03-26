@@ -1,7 +1,6 @@
 .circle-input-container {
   display: flex;
   justify-content: space-between;
-  align-items: center;
   height: 24px;
   &.no-label {
     justify-content: space-around;
@@ -41,6 +40,7 @@
 
 .circle-input-values {
   display: flex;
+  align-items: center;
 }
 
 .circle-input-label {
@@ -57,7 +57,7 @@
 
 .line {
   border-bottom: 1px solid;
-  top: 7px;
+  top: -5px;
   position: relative;
   width: 100%;
 }

@@ -1,5 +1,5 @@
 <div class="damage-container">
-  <span>{{ name | translate }}</span>
+  <span class="damage-name">{{ name | translate }}</span>
   <span>{{ penalty === 0 ? '' : penalty}}</span>
   <button [matMenuTriggerFor]="menu" class="damage-value">
     <span [class]="{'no-damaged': isNoDamaged(), 'lethal-damage': isLethalDamage(), 'aggravated-damage': isAggravatedDamage()}"></span>

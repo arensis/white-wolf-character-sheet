@@ -110,10 +110,14 @@ $my-app-light-info: mat.define-palette(mat.$blue-palette);
 }
 
 .lethal-damage {
+  display: flex;
+  align-items: flex-start;
+  padding-bottom: 3px;
   &::after {
     content: '\25EA';
     color: black;
-    font-size: 2rem;
+    font-size: 1.7rem;
+    margin: 0 5px;
   }
 }
 

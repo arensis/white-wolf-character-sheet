@@ -120,6 +120,8 @@ $my-app-dark-info: mat.define-palette(mat.$light-blue-palette);
   &::after {
     content: '\25EA';
     color: #f5f5f5;
+    font-size: 1.7rem;
+    margin: 0 5px;
   }
 }
 

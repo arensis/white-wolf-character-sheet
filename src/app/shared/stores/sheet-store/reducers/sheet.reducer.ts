@@ -1,16 +1,13 @@
-import { Action, createReducer, on } from "@ngrx/store";
+import { SheetState } from "../states/sheet.state";
+import { SheetActionTypes } from "../actions/SheetActionTypes";
+import * as State from "../states/sheet.state";
 import * as fromActions from '../actions/sheet.actions';
-import * as SheetState from '../states/sheet.state';
 
-
-const _counterReducer = createReducer(
-  SheetState.initialState,
-  on(fromActions.LoadSheetSuccessAction, (state, { action }) => ({
-    ...state,
-    ...action.payload
-  }))
-);
-
-export function counterReducer(state: any, action: Action) {
-  return _counterReducer(state, action);
+export function sheetAppReducer(state: SheetState = State.initialState, action: fromActions.SheetActions): SheetState {
+  switch (action.type) {
+    case SheetActionTypes.LOAD_SHEET_SUCCESS:
+      return { ...state, ...action.payload }
+    default:
+      return state;
+  }
 }

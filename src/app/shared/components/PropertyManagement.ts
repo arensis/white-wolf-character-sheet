@@ -1,7 +1,7 @@
 import { Component, Input } from "@angular/core";
-import { VampireDarkAgesSheet } from "src/app/vampire-dark-age/model/dark-ages-sheet/vampire-dark-ages/VampireDarkAgesSheet";
 import { CharacterSheetStoreService } from "src/app/vampire-dark-age/services/character-sheet-store.service";
 import * as _ from 'lodash';
+import { VampireDarkAgesSheet } from "src/app/vampire-dark-age/model/dark-ages-sheet/vampire-dark-ages/VampireDarkAgesSheet";
 
 @Component({
   template: '',

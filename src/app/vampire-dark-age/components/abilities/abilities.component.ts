@@ -1,5 +1,5 @@
-import { VampireDarkAgesSheet } from 'src/app/vampire-dark-age/model/dark-ages-sheet/vampire-dark-ages/VampireDarkAgesSheet';
 import { Component, Input } from '@angular/core';
+import { VampireDarkAgesSheet } from '../../model/dark-ages-sheet/vampire-dark-ages/VampireDarkAgesSheet';
 
 @Component({
   selector: 'arm-abilities',

@@ -1,10 +1,10 @@
-import { VampireDarkAgesSheet } from '../../../vampire-dark-age/model/dark-ages-sheet/vampire-dark-ages/VampireDarkAgesSheet';
 import { TranslateService } from '@ngx-translate/core';
 import { StyleManagerService } from './../../services/style-manager.service';
 import { SafeUrl } from '@angular/platform-browser';
 import { DownloadFile } from './../../model/DownloadFile';
 import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { DomSanitizer } from '@angular/platform-browser';
+import { VampireDarkAgesSheet } from 'src/app/vampire-dark-age/model/dark-ages-sheet/vampire-dark-ages/VampireDarkAgesSheet';
 
 @Component({
   selector: 'arm-header',

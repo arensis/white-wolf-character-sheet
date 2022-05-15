@@ -1,4 +1,4 @@
-import { DarkAgesAbilities } from '../../../../../shared/model/dark-ages-sheet/abilities/DarkAgesAbilities';
+import { DarkAgesAbilities } from "src/app/shared/model/dark-ages-sheet/abilities/DarkAgesAbilities";
 import { VampireDAKnowledges } from "./VampireDAKnowledges";
 import { VampireDASkills } from "./VampireDASkills";
 import { VampireDATalents } from "./VampireDATalents";

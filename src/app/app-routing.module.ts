@@ -1,5 +1,8 @@
+import { vampireDAsheetFeatureKey } from './vampire-dark-age/stores/sheet-store/states/vampire-da-sheet.state';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { StoreModule } from '@ngrx/store';
+import { vampireDASheetAppReducer } from './vampire-dark-age/stores/sheet-store/reducers/vampire-da-sheet.reducer';
 
 const routes: Routes = [
   {
@@ -13,7 +16,11 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [
+    RouterModule.forRoot(routes),
+    StoreModule.forRoot({}),
+    StoreModule.forFeature(vampireDAsheetFeatureKey, vampireDASheetAppReducer),
+  ],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }

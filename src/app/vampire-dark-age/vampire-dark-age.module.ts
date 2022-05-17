@@ -1,3 +1,4 @@
+import { VampireDASheetStoreModule } from './stores/sheet-store/vampire-da-sheet-store.module';
 import { NotesComponent } from './components/notes/notes.component';
 import { TranslateModule } from '@ngx-translate/core';
 import { NgModule } from '@angular/core';
@@ -59,6 +60,7 @@ import * as OtherAdvantages from './components/advantages/other-advantages';
   imports: [
     CommonModule,
     VampireDarkAgeRoutingModule,
+    VampireDASheetStoreModule,
     SharedModule,
     TranslateModule
   ]

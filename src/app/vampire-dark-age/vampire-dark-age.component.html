@@ -1,7 +1,7 @@
 <arm-header
- [characterSheet]="getCharacterSheet()"
+ [characterSheet]="characterSheet"
  [gameName]="'VAMPIRE_DARK_AGES'"
- [isEditable]="getCharacterSheet().isEditable"
+ [isEditable]="characterSheet.isEditable"
  (onClearSheet)="clearSheet()"
  (onUploadSheet)="uploadSheet($event)"
  (onToggleLockEdition)="toggleLockEdition()"
@@ -16,14 +16,14 @@
       </div>
       <span>{{ 'vampire-sheet-title.end' | translate }}</span>
     </div>
-    <arm-player-data [characterSheet]="getCharacterSheet()"></arm-player-data>
-    <arm-attributes [characterSheet]="getCharacterSheet()"></arm-attributes>
-    <arm-abilities [characterSheet]="getCharacterSheet()"></arm-abilities>
-    <arm-advantages [characterSheet]="getCharacterSheet()"></arm-advantages>
-    <arm-other-advantages [characterSheet]="getCharacterSheet()"></arm-other-advantages>
-    <arm-disciplines [characterSheet]="getCharacterSheet()"></arm-disciplines>
-    <arm-equipment [characterSheet]="getCharacterSheet()"></arm-equipment>
-    <arm-notes [characterSheet]="getCharacterSheet()"></arm-notes>
+    <arm-player-data [characterSheet]="characterSheet"></arm-player-data>
+    <arm-attributes [characterSheet]="characterSheet"></arm-attributes>
+    <arm-abilities [characterSheet]="characterSheet"></arm-abilities>
+    <arm-advantages [characterSheet]="characterSheet"></arm-advantages>
+    <arm-other-advantages [characterSheet]="characterSheet"></arm-other-advantages>
+    <arm-disciplines [characterSheet]="characterSheet"></arm-disciplines>
+    <arm-equipment [characterSheet]="characterSheet"></arm-equipment>
+    <arm-notes [characterSheet]="characterSheet"></arm-notes>
   </div>
 </main>
 <arm-footer></arm-footer>

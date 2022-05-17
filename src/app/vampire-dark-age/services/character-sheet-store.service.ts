@@ -24,7 +24,7 @@ export class CharacterSheetStoreService {
     this.characterSheet = this.buildEmptyCharacterSheet();
   }
 
-  private buildEmptyCharacterSheet(): VampireDarkAgesSheet {
+  buildEmptyCharacterSheet(): VampireDarkAgesSheet {
     return {
       playerData: {
         info: {

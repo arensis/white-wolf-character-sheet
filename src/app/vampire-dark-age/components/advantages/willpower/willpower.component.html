@@ -5,13 +5,13 @@
   [circleAmount]="10"
   [isEditable]="characterSheet.isEditable"
   [value]="characterSheet.advantages.willpower.permanent"
-  (onValueChange)="updateValueFromProperty($event, 'permanent')"
+  (onValueChange)="updateProperty($event, 'permanent')"
 ></arm-circle-input>
 <arm-square-input
   [itemsAmount]="10"
   [isEditable]="true"
   [maxValue]="characterSheet.advantages.willpower.permanent"
   [value]="characterSheet.advantages.willpower.temporal"
-  (onValueChange)="updateValueFromProperty($event, 'temporal')"
+  (onValueChange)="updateProperty($event, 'temporal')"
 ></arm-square-input>
 

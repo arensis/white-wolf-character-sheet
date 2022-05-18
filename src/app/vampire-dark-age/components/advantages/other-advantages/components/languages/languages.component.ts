@@ -1,6 +1,5 @@
 import { CustomPropertyManagement } from 'src/app/shared/components/CustomPropertyManagement';
 import { Component } from '@angular/core';
-import { CharacterSheetStoreService } from 'src/app/vampire-dark-age/services/character-sheet-store.service';
 import { VampireDarkAgesSheetStoreService } from 'src/app/shared/services/vampire-dark-ages-sheet-store.service';
 
 @Component({
@@ -13,8 +12,8 @@ export class LanguagesComponent extends CustomPropertyManagement {
   customPropertyType: string = 'languages';
   propertiesMainPath: string = 'advantages'
 
-  constructor(characterSheetStoreService: CharacterSheetStoreService, vampireDASheetStoreService: VampireDarkAgesSheetStoreService) {
-    super(characterSheetStoreService, vampireDASheetStoreService);
+  constructor(vampireDASheetStoreService: VampireDarkAgesSheetStoreService) {
+    super(vampireDASheetStoreService);
     this.valuePropertyName = 'level';
   }
 

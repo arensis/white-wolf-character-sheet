@@ -1,6 +1,5 @@
 
 import { Component } from '@angular/core';
-import { CharacterSheetStoreService } from 'src/app/vampire-dark-age/services/character-sheet-store.service';
 import { CustomPropertyManagement } from 'src/app/shared/components/CustomPropertyManagement';
 import { VampireDarkAgesSheetStoreService } from 'src/app/shared/services/vampire-dark-ages-sheet-store.service';
 
@@ -15,9 +14,13 @@ export class KnowledgesComponent extends CustomPropertyManagement {
   propertiesMainPath: string = 'abilities.knowledges';
 
 
-  constructor(characterSheetStoreService: CharacterSheetStoreService, vampireDASheetStoreService: VampireDarkAgesSheetStoreService) {
-    super(characterSheetStoreService, vampireDASheetStoreService);
+  constructor(vampireDASheetStoreService: VampireDarkAgesSheetStoreService) {
+    super(vampireDASheetStoreService);
     this.valuePropertyName = 'level'
+  }
+
+  updateProperty(event: any, propertyName: string): void {
+    this.updateValueFromProperty(event, propertyName, this.vampireDASheetStoreService.loadVampireDASheet);
   }
 
   deleteEntireCustomProperty(index: number) {

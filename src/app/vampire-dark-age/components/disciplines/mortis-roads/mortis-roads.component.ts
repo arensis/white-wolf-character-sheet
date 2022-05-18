@@ -1,7 +1,6 @@
 import { Component } from '@angular/core';
 import { CustomPropertyManagement } from 'src/app/shared/components/CustomPropertyManagement';
 import { VampireDarkAgesSheetStoreService } from 'src/app/shared/services/vampire-dark-ages-sheet-store.service';
-import { CharacterSheetStoreService } from 'src/app/vampire-dark-age/services/character-sheet-store.service';
 
 @Component({
   selector: 'arm-mortis-roads',
@@ -13,8 +12,8 @@ export class MortisRoadsComponent extends CustomPropertyManagement {
   customPropertyType: string = 'paths';
   propertiesMainPath: string = 'disciplines.mortis'
 
-  constructor(characterSheetStoreService: CharacterSheetStoreService, vampireDASheetStoreService: VampireDarkAgesSheetStoreService) {
-    super(characterSheetStoreService, vampireDASheetStoreService);
+  constructor(vampireDASheetStoreService: VampireDarkAgesSheetStoreService) {
+    super(vampireDASheetStoreService);
     this.valuePropertyName = 'level';
     this.checkBoxPropertyName = 'inBlood';
   }

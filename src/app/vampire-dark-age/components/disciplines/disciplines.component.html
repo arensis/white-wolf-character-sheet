@@ -12,8 +12,8 @@
         [value]="characterSheet.disciplines.animalism.level"
         [checkboxValue]="characterSheet.disciplines.animalism.inBlood"
         [isEditable]="characterSheet.isEditable"
-        (onValueChange)="updateValueFromProperty($event, 'animalism.level')"
-        (onCheckboxValueChange)="updatedCheckboxValueFromProperty($event, 'animalism.inBlood')"
+        (onValueChange)="updateProperty($event, 'animalism.level')"
+        (onCheckboxValueChange)="updateCheckboxProperty($event, 'animalism.inBlood')"
       ></arm-circle-input>
       <arm-circle-input
         [showCheckbox]="true"
@@ -22,8 +22,8 @@
         [value]="characterSheet.disciplines.auspex.level"
         [checkboxValue]="characterSheet.disciplines.auspex.inBlood"
         [isEditable]="characterSheet.isEditable"
-        (onValueChange)="updateValueFromProperty($event, 'auspex.level')"
-        (onCheckboxValueChange)="updatedCheckboxValueFromProperty($event, 'auspex.inBlood')"
+        (onValueChange)="updateProperty($event, 'auspex.level')"
+        (onCheckboxValueChange)="updateCheckboxProperty($event, 'auspex.inBlood')"
       ></arm-circle-input>
       <arm-circle-input
         [showCheckbox]="true"
@@ -32,8 +32,8 @@
         [value]="characterSheet.disciplines.celerity.level"
         [checkboxValue]="characterSheet.disciplines.celerity.inBlood"
         [isEditable]="characterSheet.isEditable"
-        (onValueChange)="updateValueFromProperty($event, 'celerity.level')"
-        (onCheckboxValueChange)="updatedCheckboxValueFromProperty($event, 'celerity.inBlood')"
+        (onValueChange)="updateProperty($event, 'celerity.level')"
+        (onCheckboxValueChange)="updateCheckboxProperty($event, 'celerity.inBlood')"
       ></arm-circle-input>
       <arm-circle-input
         [showCheckbox]="true"
@@ -42,8 +42,8 @@
         [value]="characterSheet.disciplines.dementation.level"
         [checkboxValue]="characterSheet.disciplines.dementation.inBlood"
         [isEditable]="characterSheet.isEditable"
-        (onValueChange)="updateValueFromProperty($event, 'dementation.level')"
-        (onCheckboxValueChange)="updatedCheckboxValueFromProperty($event, 'dementation.inBlood')"
+        (onValueChange)="updateProperty($event, 'dementation.level')"
+        (onCheckboxValueChange)="updateCheckboxProperty($event, 'dementation.inBlood')"
       ></arm-circle-input>
       <arm-circle-input
         [showCheckbox]="true"
@@ -52,8 +52,8 @@
         [value]="characterSheet.disciplines.dominate.level"
         [checkboxValue]="characterSheet.disciplines.dominate.inBlood"
         [isEditable]="characterSheet.isEditable"
-        (onValueChange)="updateValueFromProperty($event, 'dominate.level')"
-        (onCheckboxValueChange)="updatedCheckboxValueFromProperty($event, 'dominate.inBlood')"
+        (onValueChange)="updateProperty($event, 'dominate.level')"
+        (onCheckboxValueChange)="updateCheckboxProperty($event, 'dominate.inBlood')"
       ></arm-circle-input>
       <arm-circle-input
         [showCheckbox]="true"
@@ -62,8 +62,8 @@
         [value]="characterSheet.disciplines.quietus.level"
         [checkboxValue]="characterSheet.disciplines.quietus.inBlood"
         [isEditable]="characterSheet.isEditable"
-        (onValueChange)="updateValueFromProperty($event, 'quietus.level')"
-        (onCheckboxValueChange)="updatedCheckboxValueFromProperty($event, 'quietus.inBlood')"
+        (onValueChange)="updateProperty($event, 'quietus.level')"
+        (onCheckboxValueChange)="updateCheckboxProperty($event, 'quietus.inBlood')"
       ></arm-circle-input>
     </div>
     <div class="disciplines-second-column">
@@ -74,8 +74,8 @@
         [value]="characterSheet.disciplines.fortitude.level"
         [checkboxValue]="characterSheet.disciplines.fortitude.inBlood"
         [isEditable]="characterSheet.isEditable"
-        (onValueChange)="updateValueFromProperty($event, 'fortitude.level')"
-        (onCheckboxValueChange)="updatedCheckboxValueFromProperty($event, 'fortitude.inBlood')"
+        (onValueChange)="updateProperty($event, 'fortitude.level')"
+        (onCheckboxValueChange)="updateCheckboxProperty($event, 'fortitude.inBlood')"
       ></arm-circle-input>
       <arm-circle-input
         [showCheckbox]="true"
@@ -84,8 +84,8 @@
         [value]="characterSheet.disciplines.mortis.level"
         [checkboxValue]="characterSheet.disciplines.mortis.inBlood"
         [isEditable]="characterSheet.isEditable"
-        (onValueChange)="updateValueFromProperty($event, 'mortis.level')"
-        (onCheckboxValueChange)="updatedCheckboxValueFromProperty($event, 'mortis.inBlood')"
+        (onValueChange)="updateProperty($event, 'mortis.level')"
+        (onCheckboxValueChange)="updateCheckboxProperty($event, 'mortis.inBlood')"
       ></arm-circle-input>
       <arm-circle-input
         [showCheckbox]="true"
@@ -94,8 +94,8 @@
         [value]="characterSheet.disciplines.obtenebration.level"
         [checkboxValue]="characterSheet.disciplines.obtenebration.inBlood"
         [isEditable]="characterSheet.isEditable"
-        (onValueChange)="updateValueFromProperty($event, 'obtenebration.level')"
-        (onCheckboxValueChange)="updatedCheckboxValueFromProperty($event, 'obtenebration.inBlood')"
+        (onValueChange)="updateProperty($event, 'obtenebration.level')"
+        (onCheckboxValueChange)="updateCheckboxProperty($event, 'obtenebration.inBlood')"
       ></arm-circle-input>
       <arm-circle-input
         [showCheckbox]="true"
@@ -104,8 +104,8 @@
         [value]="characterSheet.disciplines.obfuscate.level"
         [checkboxValue]="characterSheet.disciplines.obfuscate.inBlood"
         [isEditable]="characterSheet.isEditable"
-        (onValueChange)="updateValueFromProperty($event, 'obfuscate.level')"
-        (onCheckboxValueChange)="updatedCheckboxValueFromProperty($event, 'obfuscate.inBlood')"
+        (onValueChange)="updateProperty($event, 'obfuscate.level')"
+        (onCheckboxValueChange)="updateCheckboxProperty($event, 'obfuscate.inBlood')"
       ></arm-circle-input>
       <arm-circle-input
         [showCheckbox]="true"
@@ -114,8 +114,8 @@
         [value]="characterSheet.disciplines.potence.level"
         [checkboxValue]="characterSheet.disciplines.potence.inBlood"
         [isEditable]="characterSheet.isEditable"
-        (onValueChange)="updateValueFromProperty($event, 'potence.level')"
-        (onCheckboxValueChange)="updatedCheckboxValueFromProperty($event, 'potence.inBlood')"
+        (onValueChange)="updateProperty($event, 'potence.level')"
+        (onCheckboxValueChange)="updateCheckboxProperty($event, 'potence.inBlood')"
       ></arm-circle-input>
       <arm-circle-input
         [showCheckbox]="true"
@@ -124,8 +124,8 @@
         [value]="characterSheet.disciplines.presence.level"
         [checkboxValue]="characterSheet.disciplines.presence.inBlood"
         [isEditable]="characterSheet.isEditable"
-        (onValueChange)="updateValueFromProperty($event, 'presence.level')"
-        (onCheckboxValueChange)="updatedCheckboxValueFromProperty($event, 'presence.inBlood')"
+        (onValueChange)="updateProperty($event, 'presence.level')"
+        (onCheckboxValueChange)="updateCheckboxProperty($event, 'presence.inBlood')"
       ></arm-circle-input>
     </div>
     <div class="disciplines-third-column">
@@ -136,8 +136,8 @@
         [value]="characterSheet.disciplines.protean.level"
         [checkboxValue]="characterSheet.disciplines.protean.inBlood"
         [isEditable]="characterSheet.isEditable"
-        (onValueChange)="updateValueFromProperty($event, 'protean.level')"
-        (onCheckboxValueChange)="updatedCheckboxValueFromProperty($event, 'protean.inBlood')"
+        (onValueChange)="updateProperty($event, 'protean.level')"
+        (onCheckboxValueChange)="updateCheckboxProperty($event, 'protean.inBlood')"
       ></arm-circle-input>
       <arm-circle-input
         [showCheckbox]="true"
@@ -146,8 +146,8 @@
         [value]="characterSheet.disciplines.chimerstry.level"
         [checkboxValue]="characterSheet.disciplines.chimerstry.inBlood"
         [isEditable]="characterSheet.isEditable"
-        (onValueChange)="updateValueFromProperty($event, 'chimerstry.level')"
-        (onCheckboxValueChange)="updatedCheckboxValueFromProperty($event, 'chimerstry.inBlood')"
+        (onValueChange)="updateProperty($event, 'chimerstry.level')"
+        (onCheckboxValueChange)="updateCheckboxProperty($event, 'chimerstry.inBlood')"
       ></arm-circle-input>
       <arm-circle-input
         [showCheckbox]="true"
@@ -156,8 +156,8 @@
         [value]="characterSheet.disciplines.serpentis.level"
         [checkboxValue]="characterSheet.disciplines.serpentis.inBlood"
         [isEditable]="characterSheet.isEditable"
-        (onValueChange)="updateValueFromProperty($event, 'serpentis.level')"
-        (onCheckboxValueChange)="updatedCheckboxValueFromProperty($event, 'serpentis.inBlood')"
+        (onValueChange)="updateProperty($event, 'serpentis.level')"
+        (onCheckboxValueChange)="updateCheckboxProperty($event, 'serpentis.inBlood')"
       ></arm-circle-input>
       <arm-circle-input
         [showCheckbox]="true"
@@ -166,8 +166,8 @@
         [value]="characterSheet.disciplines.thaumaturgy.level"
         [checkboxValue]="characterSheet.disciplines.thaumaturgy.inBlood"
         [isEditable]="characterSheet.isEditable"
-        (onValueChange)="updateValueFromProperty($event, 'thaumaturgy.level')"
-        (onCheckboxValueChange)="updatedCheckboxValueFromProperty($event, 'thaumaturgy.inBlood')"
+        (onValueChange)="updateProperty($event, 'thaumaturgy.level')"
+        (onCheckboxValueChange)="updateCheckboxProperty($event, 'thaumaturgy.inBlood')"
       ></arm-circle-input>
       <arm-circle-input
         [showCheckbox]="true"
@@ -176,8 +176,8 @@
         [value]="characterSheet.disciplines.vicissitude.level"
         [checkboxValue]="characterSheet.disciplines.vicissitude.inBlood"
         [isEditable]="characterSheet.isEditable"
-        (onValueChange)="updateValueFromProperty($event, 'vicissitude.level')"
-        (onCheckboxValueChange)="updatedCheckboxValueFromProperty($event, 'vicissitude.inBlood')"
+        (onValueChange)="updateProperty($event, 'vicissitude.level')"
+        (onCheckboxValueChange)="updateCheckboxProperty($event, 'vicissitude.inBlood')"
       ></arm-circle-input>
     </div>
   </div>

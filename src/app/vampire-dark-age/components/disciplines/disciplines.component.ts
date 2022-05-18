@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
 import { CustomPropertyManagement } from 'src/app/shared/components/CustomPropertyManagement';
-import { CharacterSheetStoreService } from '../../services/character-sheet-store.service';
 import { VampireDarkAgesSheetStoreService } from '../../../shared/services/vampire-dark-ages-sheet-store.service';
 
 @Component({
@@ -13,7 +12,15 @@ export class DisciplinesComponent extends CustomPropertyManagement {
   customPropertyType: string = 'customDisciplines'
   propertiesMainPath: string = 'disciplines';
 
-  constructor(characterSheetStoreService: CharacterSheetStoreService, vampireDASheetStoreService: VampireDarkAgesSheetStoreService) {
-    super(characterSheetStoreService, vampireDASheetStoreService);
+  constructor(vampireDASheetStoreService: VampireDarkAgesSheetStoreService) {
+    super(vampireDASheetStoreService);
+  }
+
+  updateProperty(event: any, propertyName: string): void {
+    this.updateValueFromProperty(event, propertyName, this.vampireDASheetStoreService.loadVampireDASheet);
+  }
+
+  updateCheckboxProperty(event: boolean, propertyName: string): void {
+    this.updatedCheckboxValueFromProperty(event, propertyName, this.vampireDASheetStoreService.loadVampireDASheet);
   }
 }

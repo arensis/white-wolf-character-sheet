@@ -7,7 +7,7 @@
     "build": "ng build --configuration production",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "deploy": "npm i && ng deploy --base-href=https://vampire-eo-sheet.alfonsomadrid.net/"
+    "deploy": "npm i && ng deploy --cname==https://vampire-eo-sheet.alfonsomadrid.net/"
   },
   "private": true,
   "dependencies": {

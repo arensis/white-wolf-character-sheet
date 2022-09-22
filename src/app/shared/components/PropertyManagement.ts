@@ -13,12 +13,7 @@ export abstract class PropertyManagement implements OnInit {
 
   abstract propertiesMainPath: string;
 
-  constructor(
-    // protected characterSheetStoreService: CharacterSheetStoreService,
-    protected vampireDASheetStoreService: VampireDarkAgesSheetStoreService
-  ) {
-    // this.characterSheet = this.characterSheetStoreService.getCharacterSheet();
-  }
+  constructor(protected vampireDASheetStoreService: VampireDarkAgesSheetStoreService) {}
 
   ngOnInit(): void {
     this.vampireDASheetStoreService.selectVampireDASheet().subscribe((sheet: VampireDarkAgesSheet) => {
@@ -28,17 +23,18 @@ export abstract class PropertyManagement implements OnInit {
 
   updateValueFromProperty(value: any, propertyName: string, dispatchCallback: (sheet: any) => void): void {
     const propertyPath = [this.propertiesMainPath, ...propertyName.split('.')].join('.');
-    _.set(this.characterSheet, propertyPath, value);
+    console.log(propertyPath);
+    let characterSheet = _.cloneDeep(this.characterSheet);
+    _.set(characterSheet, propertyPath, value);
 
-    dispatchCallback(this.characterSheet);
-    // this.characterSheetStoreService.updateCharacterSheet(this.characterSheet);
+    dispatchCallback(characterSheet);
   }
 
   updatedCheckboxValueFromProperty(value: boolean, propertyName: string, dispatchCallback: (sheet: any) => void): void {
     const propertyPath = [this.propertiesMainPath, ...propertyName.split('.')].join('.');
-    _.set(this.characterSheet, propertyPath, value);
+    let characterSheet = _.cloneDeep(this.characterSheet);
+    _.set(characterSheet, propertyPath, value);
 
-    dispatchCallback(this.characterSheet);
-    // this.characterSheetStoreService.updateCharacterSheet(this.characterSheet);
+    dispatchCallback(characterSheet);
   }
 }

@@ -1,8 +1,9 @@
+import { VampireDarkAgesSheetStoreService } from './../../services/vampire-dark-ages-sheet-store.service';
 import { TranslateService } from '@ngx-translate/core';
 import { StyleManagerService } from './../../services/style-manager.service';
 import { SafeUrl } from '@angular/platform-browser';
 import { DownloadFile } from './../../model/DownloadFile';
-import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { Component, EventEmitter, Input, Output, OnInit, OnChanges } from '@angular/core';
 import { DomSanitizer } from '@angular/platform-browser';
 import { VampireDarkAgesSheet } from 'src/app/vampire-dark-age/model/dark-ages-sheet/vampire-dark-ages/VampireDarkAgesSheet';
 
@@ -11,7 +12,7 @@ import { VampireDarkAgesSheet } from 'src/app/vampire-dark-age/model/dark-ages-s
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.scss']
 })
-export class HeaderComponent {
+export class HeaderComponent implements OnChanges, OnInit{
   @Input()
   characterSheet!: VampireDarkAgesSheet;
   @Input()
@@ -29,9 +30,16 @@ export class HeaderComponent {
   darkMode = this.styleManagerService.isDark
   downloadFile: DownloadFile;
 
-  constructor(private sanitizer: DomSanitizer, private styleManagerService: StyleManagerService, private translate: TranslateService) {
+  constructor(private sanitizer: DomSanitizer, private styleManagerService: StyleManagerService, private translate: TranslateService, private sheetStoreService: VampireDarkAgesSheetStoreService) {
     this.downloadFile = {} as DownloadFile;
     this.gameName = '';
+  }
+
+  ngOnInit(): void {
+    this.sheetStoreService.selectVampireDASheet().subscribe((sheet: VampireDarkAgesSheet) => {
+      console.log('mierda');
+      this.characterSheet = sheet;
+    })
   }
 
   ngOnChanges() {

@@ -1,3 +1,5 @@
+import { EmptySheetService } from './../shared/services/empty-sheet.service';
+import { VampireDarkAgesSheetBuilder } from './model/dark-ages-sheet/vampire-dark-ages/VampireDarkAgesSheetBuilder';
 import { VampireDarkAgesSheetStoreService } from '../shared/services/vampire-dark-ages-sheet-store.service';
 import { FileService } from './../shared/services/file.service';
 import { Component, OnInit } from '@angular/core';
@@ -12,6 +14,7 @@ export class VampireDarkAgeComponent implements OnInit {
   characterSheet: VampireDarkAgesSheet = {} as VampireDarkAgesSheet;
 
   constructor(
+    private emptySheetService: EmptySheetService,
     private sheetStoreService: VampireDarkAgesSheetStoreService,
     private fileService: FileService
   ) {}
@@ -23,7 +26,7 @@ export class VampireDarkAgeComponent implements OnInit {
   }
 
   clearSheet(): void {
-    this.sheetStoreService.loadVampireDASheet({} as VampireDarkAgesSheet);
+    this.sheetStoreService.loadVampireDASheet(new VampireDarkAgesSheetBuilder().build());
   }
 
   uploadSheet(event: any): void {

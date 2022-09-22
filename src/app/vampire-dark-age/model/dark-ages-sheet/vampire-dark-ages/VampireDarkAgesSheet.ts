@@ -12,6 +12,6 @@ export interface VampireDarkAgesSheet extends DarkAgesSheet {
   abilities: VampireDAAbilities;
   advantages: VampireDAAdvantages;
   disciplines: VampireDADisciplines;
-  equipment: VampireDAGear;
+  gear: VampireDAGear;
   isEditable: boolean;
 }

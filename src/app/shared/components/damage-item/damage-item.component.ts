@@ -6,7 +6,7 @@ import { DarkAgesDamageType } from '../../model/dark-ages-sheet/advantages/healt
   templateUrl: './damage-item.component.html',
   styleUrls: ['./damage-item.component.scss']
 })
-export class DamageItemComponent implements OnChanges {
+export class DamageItemComponent {
   @Input()
   name: string = '';
   @Input()
@@ -15,10 +15,6 @@ export class DamageItemComponent implements OnChanges {
   value: DarkAgesDamageType = DarkAgesDamageType.EMPTY;
   @Output()
   onValueChange = new EventEmitter<DarkAgesDamageType>();
-
-  ngOnChanges(changes: SimpleChanges): void {
-    console.log('damage value', this.value)
-  }
 
   setDamage(damageType: string) {
     switch(damageType) {

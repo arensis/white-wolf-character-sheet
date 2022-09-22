@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import * as _ from 'lodash';
 import { VampireDarkAgesSheetStoreService } from 'src/app/shared/services/vampire-dark-ages-sheet-store.service';
 
 @Component({
@@ -39,7 +40,9 @@ export class AttributesComponent implements OnInit {
 
   private updateValueFromProperty(value: number, completePath: string): void {
     const routesSegments = completePath.split('.');
-    this.characterSheet[routesSegments[0]][routesSegments[1]][routesSegments[2]] = value;
+    let sheetClone = _.cloneDeep(this.characterSheet);
+    _.set(sheetClone, completePath, value);
+    // this.characterSheet[routesSegments[0]][routesSegments[1]][routesSegments[2]] = value;
     this.sheetStore.loadVampireDASheet(this.characterSheet);
   }
 }

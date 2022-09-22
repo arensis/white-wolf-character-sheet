@@ -26,9 +26,10 @@ export abstract class CustomPropertyManagement extends PropertyManagement {
     const propertyPath = [this.propertiesMainPath, ...this.customPropertyType.split('.')].join('.');
     const customProperties = _.get(this.characterSheet, propertyPath) as CustomProperty[];
     customProperties.splice(index, 1);
-    _.set(this.characterSheet, propertyPath, customProperties);
+    let characterSheet = _.cloneDeep(this.characterSheet);
+    _.set(characterSheet, propertyPath, customProperties);
 
-    dispatchCallback(this.characterSheet);
+    dispatchCallback(characterSheet);
   }
 
   updateValueFromCustomProperty(value: number, index: number, dispatchCallback: (sheet: any) => void) {
@@ -36,9 +37,11 @@ export abstract class CustomPropertyManagement extends PropertyManagement {
       .join('.')
       .concat(`[${index}]`)
       .concat(this.valuePropertyName);
-    _.set(this.characterSheet, propertyPath, value);
 
-    dispatchCallback(this.characterSheet);
+    let characterSheet = _.cloneDeep(this.characterSheet);
+    _.set(characterSheet, propertyPath, value);
+
+    dispatchCallback(characterSheet);
   }
 
   updateCheckboxValueFromCustomProperty(value: boolean, index: number, dispatchCallback: (sheet: any) => void) {
@@ -46,8 +49,9 @@ export abstract class CustomPropertyManagement extends PropertyManagement {
       .join('.')
       .concat(`[${index}]`)
       .concat(this.checkBoxPropertyName);
-      _.set(this.characterSheet, propertyPath.concat(''), value);
+      let characterSheet = _.cloneDeep(this.characterSheet);
+      _.set(characterSheet, propertyPath.concat(''), value);
 
-    dispatchCallback(this.characterSheet);
+    dispatchCallback(characterSheet);
   }
 }

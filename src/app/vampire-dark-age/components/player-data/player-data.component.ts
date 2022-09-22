@@ -1,5 +1,6 @@
 import { VampireDarkAgesSheetStoreService } from './../../../shared/services/vampire-dark-ages-sheet-store.service';
 import { Component, Input, OnInit } from '@angular/core';
+import * as _ from 'lodash';
 
 @Component({
   selector: 'arm-player-data',
@@ -38,8 +39,9 @@ export class PlayerDataComponent implements OnInit {
   }
 
   private updateValueFromProperty(event: any, routePath: string) {
-    const routeSegments = routePath.split('.');
-    this.characterSheet[routeSegments[0]][routeSegments[1]][routeSegments[2]] = event;
-    this.sheetStore.loadVampireDASheet(this.characterSheet);
+    let characterSheet = _.cloneDeep(this.characterSheet);
+    _.set(characterSheet, routePath, event);
+
+    this.sheetStore.loadVampireDASheet(characterSheet);
   }
 }

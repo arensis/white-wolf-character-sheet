@@ -9,7 +9,7 @@ import * as sheetSelectors from "../../vampire-dark-age/stores/sheet-store/selec
 export class VampireDarkAgesSheetStoreService {
   constructor(private store: Store<VampireDarkAgesSheet>) {}
 
-  public loadVampireDASheet(params: any): void {
+  public loadVampireDASheet = (params: any): void => {
     this.store.dispatch(new fromActions.LoadVampireDASheetAction(params));
   }
 

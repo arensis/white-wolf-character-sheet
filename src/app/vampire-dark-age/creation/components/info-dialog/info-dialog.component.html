@@ -1,0 +1,101 @@
+<div class="info-dialog">
+  <div class="dialog-head">
+    <h2>{{ data.title }}</h2>
+    <button type="button" class="close" (click)="close()" aria-label="close">
+      <mat-icon>close</mat-icon>
+    </button>
+  </div>
+
+  <div mat-dialog-content class="dialog-body">
+  <p class="body" *ngIf="data.body">{{ data.body }}</p>
+
+  <div class="rules" *ngFor="let section of data.sections">
+    <h3>{{ section.name }}</h3>
+    <p class="body">{{ section.text }}</p>
+  </div>
+
+  <div class="rules" *ngIf="data.rules">
+    <h3>{{ 'creation.dialog.howItWorks' | translate }}</h3>
+    <p class="body">{{ data.rules }}</p>
+  </div>
+
+  <ul class="levels" *ngIf="data.levels?.length">
+    <li *ngFor="let level of data.levels">
+      <span class="dots">{{ level.dots }}</span>
+      <span class="level-text">
+        <strong *ngIf="level.name">{{ level.name }}</strong>
+        {{ level.text }}
+      </span>
+    </li>
+  </ul>
+
+  <div class="paths" *ngIf="data.paths?.length">
+    <h3>{{ 'creation.dialog.paths' | translate }}</h3>
+    <p class="section-note" *ngIf="data.pathsNote">{{ data.pathsNote }}</p>
+    <div class="path" *ngFor="let path of data.paths">
+      <strong>{{ path.name }}</strong>
+      <span class="path-intro" *ngIf="path.text">{{ path.text }}</span>
+      <ul class="levels" *ngIf="path.levels?.length">
+        <li *ngFor="let level of path.levels">
+          <span class="dots">{{ level.dots }}</span>
+          <span class="level-text">
+            <strong *ngIf="level.name">{{ level.name }}</strong>
+            {{ level.text }}
+          </span>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="rituals" *ngIf="data.rituals?.length">
+    <h3>{{ 'creation.dialog.rituals' | translate }}</h3>
+    <p class="section-note" *ngIf="data.ritualsNote">{{ data.ritualsNote }}</p>
+    <ul class="levels">
+      <li *ngFor="let ritual of data.rituals">
+        <span class="dots">{{ ritual.dots }}</span>
+        <span class="level-text">
+          <strong *ngIf="ritual.name">{{ ritual.name }}</strong>
+          {{ ritual.text }}
+        </span>
+      </li>
+    </ul>
+  </div>
+
+  <ul class="picker" *ngIf="hasItems">
+    <li
+      *ngFor="let item of data.items"
+      class="picker-item"
+      [class.selectable]="selectable || data.multiSelect"
+      [class.selected]="isSelected(item.id)"
+    >
+      <div class="picker-head" (click)="choose(item.id)">
+        <mat-icon *ngIf="data.multiSelect" class="check">
+          {{ isSelected(item.id) ? 'check_box' : 'check_box_outline_blank' }}
+        </mat-icon>
+        <span class="picker-text">
+          <strong>{{ item.name }}</strong>
+          <span *ngIf="item.text">{{ item.text }}</span>
+        </span>
+        <button
+          *ngIf="item.levels?.length"
+          type="button"
+          class="expand-toggle"
+          (click)="toggleExpand(item.id, $event)"
+          [attr.aria-label]="expandedId === item.id ? 'collapse' : 'expand'"
+        >
+          <mat-icon>{{ expandedId === item.id ? 'expand_less' : 'expand_more' }}</mat-icon>
+        </button>
+      </div>
+      <ul class="levels" *ngIf="expandedId === item.id && item.levels?.length">
+        <li *ngFor="let level of item.levels">
+          <span class="dots">{{ level.dots }}</span>
+          <span class="level-text">
+            <strong *ngIf="level.name">{{ level.name }}</strong>
+            {{ level.text }}
+          </span>
+        </li>
+      </ul>
+    </li>
+  </ul>
+  </div>
+</div>

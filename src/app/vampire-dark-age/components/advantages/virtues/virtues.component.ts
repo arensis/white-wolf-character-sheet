@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import { PropertyManagement } from 'src/app/shared/model/PropertyManagement';
-import { CharacterSheetStoreService } from 'src/app/vampire-dark-age/services/character-sheet-store.service';
+import { PropertyManagement } from 'src/app/shared/components/PropertyManagement';
+import { VampireDarkAgesSheetStoreService } from 'src/app/shared/services/vampire-dark-ages-sheet-store.service';
 
 @Component({
   selector: 'arm-virtues',
@@ -10,7 +10,11 @@ import { CharacterSheetStoreService } from 'src/app/vampire-dark-age/services/ch
 export class VirtuesComponent extends PropertyManagement {
   propertiesMainPath: string = 'advantages.virtues'
 
-  constructor(characterSheetStoreService: CharacterSheetStoreService) {
-    super(characterSheetStoreService);
+  constructor(vampireDASheetStoreService: VampireDarkAgesSheetStoreService) {
+    super(vampireDASheetStoreService);
+  }
+
+  updateProperty(event: any, propertyName: string): void {
+    this.updateValueFromProperty(event, propertyName, this.vampireDASheetStoreService.loadVampireDASheet);
   }
 }

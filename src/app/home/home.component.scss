@@ -1,0 +1,94 @@
+.home-page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.home-toolbar {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 16px;
+}
+
+.home-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 24px 16px 48px;
+  text-align: center;
+}
+
+.home-title {
+  font-family: "Titles font";
+  font-size: clamp(2rem, 6vw, 3.2rem);
+  font-weight: 200;
+  margin: 0 0 8px;
+}
+
+.home-subtitle {
+  font-family: "Property names font";
+  font-size: 1.2rem;
+  opacity: 0.6;
+  margin: 0 0 40px;
+}
+
+.game-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  justify-content: center;
+}
+
+.game-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  width: min(320px, 80vw);
+  padding: 32px 24px;
+  border: 2px solid;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.03);
+  color: inherit;
+  cursor: pointer;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+
+  &:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.35);
+  }
+}
+
+.game-name {
+  font-family: "Titles font";
+  font-size: 1.8rem;
+  line-height: 1.2;
+}
+
+.game-tagline {
+  font-family: "Property names font";
+  font-size: 1.05rem;
+  opacity: 0.6;
+  min-height: 2.4em;
+}
+
+.game-open {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-family: "Property names font";
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  opacity: 0.8;
+
+  mat-icon {
+    font-size: 18px;
+    width: 18px;
+    height: 18px;
+  }
+}

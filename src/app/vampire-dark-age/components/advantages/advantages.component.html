@@ -3,9 +3,8 @@
   <h1>{{ 'sheet.advantages.title' | translate }}</h1>
 </div>
 <div class="advantages-container">
-  <div class="backgrounds-experience">
+  <div class="backgrounds">
     <arm-backgrounds [characterSheet]="characterSheet"></arm-backgrounds>
-    <arm-experience [characterSheet]="characterSheet"></arm-experience>
   </div>
 
   <div class="road-willpower-bloodpool">
@@ -14,9 +13,16 @@
     <arm-blood-pool [characterSheet]="characterSheet"></arm-blood-pool>
   </div>
 
-  <div class="virtues-health-weakness">
+  <div class="virtues-health">
     <arm-virtues [characterSheet]="characterSheet"></arm-virtues>
     <arm-health [characterSheet]="characterSheet"></arm-health>
+  </div>
+
+  <div class="experience-column">
+    <arm-experience [characterSheet]="characterSheet"></arm-experience>
+  </div>
+
+  <div class="weakness-column">
     <arm-weakness [characterSheet]="characterSheet"></arm-weakness>
   </div>
 </div>

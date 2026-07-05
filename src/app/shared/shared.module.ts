@@ -17,6 +17,7 @@ import { StyleManagerService } from './services/style-manager.service';
 import { LanguageSelectComponent } from './components/language-select/language-select.component';
 import { TranslateModule } from '@ngx-translate/core';
 import { AngularMaterialModule } from './modules/angular-material.module';
+import { VampireDarkAgesSheetStoreService } from './services/vampire-dark-ages-sheet-store.service';
 
 @NgModule({
   declarations: [
@@ -54,7 +55,8 @@ import { AngularMaterialModule } from './modules/angular-material.module';
     StyleManagerService,
     DialogService,
     FileService,
-    I18nService
+    I18nService,
+    VampireDarkAgesSheetStoreService
   ]
 })
 export class SharedModule { }

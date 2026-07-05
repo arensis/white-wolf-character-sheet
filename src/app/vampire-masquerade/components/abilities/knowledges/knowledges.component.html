@@ -1,0 +1,38 @@
+<div>
+  <h2 class="sub-title">{{ 'sheet.abilities.knowledges.title' | translate }}</h2>
+  <div class="ability-row" *ngFor="let key of keys">
+    <arm-circle-input
+      [circleAmount]="8"
+      [label]="labelBase + key"
+      [specialties]="characterSheet.specialties"
+      [experiences]="characterSheet.experiences"
+      (onSpecialtyClick)="specialty.showChosenFor($event, characterSheet.specialties)"
+      [value]="$any(characterSheet.abilities.knowledges)[key]"
+      [isEditable]="characterSheet.isEditable"
+      (onValueChange)="updateProperty($event, key)"
+    ></arm-circle-input>
+    <button
+      *ngIf="ability.has(key)"
+      class="info-btn"
+      type="button"
+      (click)="ability.open(labelBase + key, key)"
+    >
+      <mat-icon>info_outline</mat-icon>
+    </button>
+  </div>
+  <arm-circle-input
+    *ngFor="let item of characterSheet.abilities.knowledges.customKnowledges; index as i; trackBy: trackByFn"
+    [circleAmount]="8"
+    [isPermanent]="false"
+    [label]="item.name"
+    [value]="item.level"
+    [isEditable]="characterSheet.isEditable"
+    (onDelete)="deleteEntireCustomProperty(i)"
+    (onValueChange)="updateCustomProperty($event, i)"
+  ></arm-circle-input>
+  <arm-add-custom-property-button
+    (nameAdded)="addItemToCustomProperties($event)"
+    [isEditable]="characterSheet.isEditable"
+    [propertyType]="propertyType"
+  ></arm-add-custom-property-button>
+</div>

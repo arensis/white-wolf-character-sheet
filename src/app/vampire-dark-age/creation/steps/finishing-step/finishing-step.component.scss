@@ -1,0 +1,135 @@
+@import '../step.shared';
+
+.step-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.columns {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 16px;
+  align-items: start;
+}
+
+.side-column {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.legend {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 0;
+  font-size: 0.8rem;
+  opacity: 0.8;
+}
+
+.legend-dot {
+  width: 10px;
+  height: 14px;
+  border-radius: 100%;
+  background: #c22626;
+  border: 1px solid #c22626;
+  flex-shrink: 0;
+}
+
+// ── Méritos y Defectos ────────────────────────────────────────────────────────
+
+.merits-flaws-section {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.mf-categories {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 16px;
+  align-items: start;
+}
+
+.mf-category {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.mf-cat-desc {
+  margin: 0 0 6px;
+}
+
+.mf-entry {
+  padding: 8px 10px;
+  border: 1px solid currentColor;
+  border-radius: 6px;
+  cursor: pointer;
+  opacity: 0.65;
+  transition: opacity 0.15s, background 0.15s;
+  margin-bottom: 4px;
+
+  &:hover {
+    opacity: 1;
+  }
+
+  &.mf-selected {
+    opacity: 1;
+
+    &.mf-merit {
+      background: rgba(212, 160, 42, 0.15);
+      border-color: #d4a02a;
+    }
+
+    &.mf-flaw {
+      background: rgba(184, 48, 42, 0.12);
+      border-color: #b8302a;
+    }
+  }
+}
+
+.mf-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 8px;
+}
+
+.mf-name {
+  font-family: 'Property names font', serif;
+  font-size: 1rem;
+  line-height: 1.2;
+}
+
+.mf-cost {
+  font-weight: bold;
+  font-size: 0.9rem;
+  white-space: nowrap;
+  flex-shrink: 0;
+
+  &.mf-cost-merit {
+    color: #d4a02a;
+  }
+
+  &.mf-cost-flaw {
+    color: #b8302a;
+  }
+}
+
+.mf-desc {
+  font-size: 0.82rem;
+  opacity: 0.85;
+  margin: 4px 0 0;
+  line-height: 1.4;
+}
+
+.mf-note {
+  font-size: 0.78rem;
+  font-style: italic;
+  opacity: 0.7;
+  margin: 4px 0 0;
+}

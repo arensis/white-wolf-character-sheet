@@ -4,6 +4,14 @@
       <mat-icon>menu</mat-icon>
     </button>
     <mat-menu #menu="matMenu">
+      <button mat-menu-item (click)="goHome()">
+        <mat-icon class="change-game">swap_horiz</mat-icon>
+        <span>{{ 'menu-buttons.change-game' | translate }}</span>
+      </button>
+      <button mat-menu-item *ngIf="hasCreator" (click)="goToCreator()">
+        <mat-icon class="create-sheet">person_add</mat-icon>
+        <span>{{ 'menu-buttons.create-sheet' | translate }}</span>
+      </button>
       <button mat-menu-item (click)="clearSheet()">
         <mat-icon class="reset-sheet">restore_page_outlined</mat-icon>
         <span>{{ 'menu-buttons.reset-sheet' | translate }}</span>
@@ -18,8 +26,8 @@
         <span>{{ 'menu-buttons.download-sheet' | translate }}</span>
       </a>
     </mat-menu>
-    <span class="sheet-title">{{ 'vampire-eo-title' | translate }}</span>
-    <span class="sheet-reduced-title">{{ 'vampire-eo-reduced-title' | translate }}</span>
+    <span class="sheet-title">{{ 'game-title.' + gameName | translate }}</span>
+    <span class="sheet-reduced-title">{{ 'game-reduced-title.' + gameName | translate }}</span>
     <button mat-icon-button (click)="toggleLockEdition()">
       <mat-icon [ngClass]="{ 'unlocked' : isEditable, 'locked': !isEditable}">{{ isEditable ? "lock_open" : "lock" }}</mat-icon>
     </button>
@@ -27,6 +35,12 @@
       <arm-language-select></arm-language-select>
     </span>
     <div class="header-buttons">
+      <button mat-icon-button (click)="goHome()" [title]="'menu-buttons.change-game' | translate">
+        <mat-icon class="change-game">swap_horiz</mat-icon>
+      </button>
+      <button mat-icon-button *ngIf="hasCreator" (click)="goToCreator()" [title]="'menu-buttons.create-sheet' | translate">
+        <mat-icon class="create-sheet">person_add</mat-icon>
+      </button>
       <button mat-icon-button (click)="clearSheet()">
         <mat-icon class="reset-sheet">restore_page_outlined</mat-icon>
       </button>

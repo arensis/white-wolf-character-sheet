@@ -1,20 +1,18 @@
-<div>
-  <h2 class="sub-category">
-    <span>{{ 'sheet.disciplines.mortis.rituals' | translate }}</span>
-  </h2>
-</div>
+<h2 class="sub-category">
+  <span>{{ 'sheet.disciplines.mortis.rituals' | translate }}</span>
+</h2>
 <arm-circle-input
   *ngFor="let ritual of characterSheet.disciplines.mortis.rituals; index as i; trackBy: trackByFn"
-  [circleAmount]="8"
+  [circleAmount]="mortisLevel || 1"
   [label]="ritual.name"
   [value]="ritual.level"
   [isPermanent]="false"
   [isEditable]="characterSheet.isEditable"
-  (onDelete)="deleteCustomProperty(i)"
-  (onValueChange)="updateValueFromCustomProperty($event, i)"
+  (onDelete)="deleteEntireCustomProperty(i)"
+  (onValueChange)="updateCustomProperty($event, i)"
 ></arm-circle-input>
 <arm-add-custom-property-button
+  (nameAdded)="addItemToCustomProperties($event)"
   [isEditable]="characterSheet.isEditable"
   [propertyType]="propertyType"
-  [customPropertyList]="characterSheet.disciplines.mortis.rituals"
 ></arm-add-custom-property-button>

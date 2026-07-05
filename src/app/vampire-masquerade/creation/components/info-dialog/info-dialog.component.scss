@@ -1,0 +1,180 @@
+.info-dialog {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+// The scrollable body (Material's mat-dialog-content). Keeps the header fixed
+// while the rest scrolls, so long path/ritual lists stay readable.
+.dialog-body {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  max-height: 70vh;
+  overflow-y: auto;
+  margin: 0;
+  padding: 4px 2px 0;
+}
+
+.rules {
+  h3 {
+    margin: 4px 0;
+    font-family: 'Section font', serif;
+  }
+}
+
+.dialog-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 12px;
+
+  h2 {
+    margin: 0;
+    font-family: 'Titles font', serif;
+  }
+
+  .close {
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    color: inherit;
+    padding: 0;
+    line-height: 1;
+  }
+}
+
+.body {
+  margin: 0;
+  line-height: 1.45;
+  white-space: pre-line;
+}
+
+.levels {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+
+  li {
+    display: flex;
+    gap: 10px;
+    line-height: 1.4;
+  }
+
+  .dots {
+    flex-shrink: 0;
+    min-width: 44px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    color: #b8302a;
+  }
+
+  .level-text strong {
+    display: block;
+  }
+}
+
+.section-note {
+  margin: 0 0 8px;
+  font-style: italic;
+  opacity: 0.8;
+  line-height: 1.4;
+}
+
+.paths,
+.rituals {
+  h3 {
+    margin: 8px 0 4px;
+    font-family: 'Section font', serif;
+  }
+}
+
+.paths {
+  .path {
+    margin-bottom: 12px;
+    line-height: 1.4;
+
+    > strong {
+      display: block;
+      color: #b8302a;
+    }
+
+    .path-intro {
+      display: block;
+      font-style: italic;
+      opacity: 0.85;
+      margin-bottom: 4px;
+    }
+  }
+}
+
+.picker {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.picker-item {
+  border: 1px solid rgba(128, 128, 128, 0.4);
+  border-radius: 6px;
+  line-height: 1.35;
+  overflow: hidden;
+
+  .picker-head {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    padding: 8px 10px;
+
+    .check {
+      flex-shrink: 0;
+      color: #b8302a;
+    }
+
+    .picker-text {
+      flex: 1;
+
+      strong {
+        display: block;
+      }
+    }
+  }
+
+  &.selectable .picker-head {
+    cursor: pointer;
+  }
+
+  &.selectable:hover {
+    border-color: #b8302a;
+  }
+
+  &.selected {
+    background: rgba(184, 48, 42, 0.12);
+    border-color: #b8302a;
+  }
+
+  .expand-toggle {
+    flex-shrink: 0;
+    border: none;
+    background: transparent;
+    color: inherit;
+    cursor: pointer;
+    padding: 0;
+    opacity: 0.7;
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+
+  .levels {
+    margin: 0;
+    padding: 0 10px 10px;
+  }
+}

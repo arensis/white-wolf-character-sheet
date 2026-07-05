@@ -1,27 +1,34 @@
 <h2 class="sub-category">
   <span>{{ 'sheet.advantages.road.title' | translate }}</span>
 </h2>
-<arm-input
-  [value]="characterSheet.advantages.road.name"
-  [isReadOnly]="!characterSheet.isEditable"
-  (onValueChange)="updateValueFromProperty($event, 'name')"
-></arm-input>
+
+<div class="road-name-row">
+  <arm-input
+    [value]="characterSheet.advantages.road.name | creationLabel: 'path'"
+    [isReadOnly]="!characterSheet.isEditable"
+    (onValueChange)="updateProperty($event, 'name')"
+  ></arm-input>
+  <button *ngIf="hasRoadInfo" class="info-btn" type="button" (click)="openInfo()" title="Info del camino">
+    <mat-icon>info_outline</mat-icon>
+  </button>
+</div>
+
 <arm-circle-input
   [circleAmount]="10"
   [value]="characterSheet.advantages.road.level"
-  (onValueChange)="updateValueFromProperty($event, 'level')"
+  (onValueChange)="updateProperty($event, 'level')"
 ></arm-circle-input>
+
 <div class="aura">
   <arm-input
     [label]="'sheet.advantages.road.aura.title'"
     [value]="characterSheet.advantages.road.aura.type"
     [isReadOnly]="!characterSheet.isEditable"
-    (onValueChange)="updateValueFromProperty($event, 'aura.type')"
+    (onValueChange)="updateProperty($event, 'aura.type')"
   ></arm-input>
   <arm-input
     [value]="characterSheet.advantages.road.aura.value"
     [isReadOnly]="!characterSheet.isEditable"
-    (onValueChange)="updateValueFromProperty($event, 'aura.value')"
+    (onValueChange)="updateProperty($event, 'aura.value')"
   ></arm-input>
 </div>
-

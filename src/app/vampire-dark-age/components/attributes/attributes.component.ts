@@ -1,14 +1,13 @@
-import { VampireDarkAgesSheet } from 'src/app/vampire-dark-age/model/vampire-dark-ages/VampireDarkAgesSheet';
-import { Attributes } from '../../model/vampire-dark-ages/attributes/Attributes';
-import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
-import { CharacterSheetStoreService } from '../../services/character-sheet-store.service';
+import { Component, Input, OnInit } from '@angular/core';
+import * as _ from 'lodash';
+import { VampireDarkAgesSheetStoreService } from 'src/app/shared/services/vampire-dark-ages-sheet-store.service';
 
 @Component({
   selector: 'arm-attributes',
   templateUrl: './attributes.component.html',
   styleUrls: ['./attributes.component.scss']
 })
-export class AttributesComponent {
+export class AttributesComponent implements OnInit {
   @Input()
   characterSheet: any;
 
@@ -16,8 +15,12 @@ export class AttributesComponent {
   mentalPath: string = 'attributes.mental';
   physicalPath: string = 'attributes.physical';
 
-  constructor(private characterSheetStoreService: CharacterSheetStoreService) {
-    this.characterSheet = this.characterSheetStoreService.getCharacterSheet();
+  constructor(private sheetStore: VampireDarkAgesSheetStoreService) {}
+
+  ngOnInit(): void {
+    this.sheetStore.selectVampireDASheet().subscribe(sheet => {
+      this.characterSheet = sheet;
+    })
   }
 
   updateSocialValueProperty(value: number, propertyName: string) {
@@ -37,8 +40,10 @@ export class AttributesComponent {
 
   private updateValueFromProperty(value: number, completePath: string): void {
     const routesSegments = completePath.split('.');
-    this.characterSheet[routesSegments[0]][routesSegments[1]][routesSegments[2]] = value;
-    this.characterSheetStoreService.updateCharacterSheet(this.characterSheet);
+    let sheetClone = _.cloneDeep(this.characterSheet);
+    _.set(sheetClone, completePath, value);
+    // this.characterSheet[routesSegments[0]][routesSegments[1]][routesSegments[2]] = value;
+    this.sheetStore.loadVampireDASheet(this.characterSheet);
   }
 }
 

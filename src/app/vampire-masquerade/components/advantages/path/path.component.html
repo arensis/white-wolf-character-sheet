@@ -1,0 +1,34 @@
+<h2 class="sub-category">
+  <span>{{ 'sheet.advantages.path.title' | translate }}</span>
+</h2>
+
+<div class="path-name-row">
+  <arm-input
+    [value]="characterSheet.advantages.path.name | vtmCreationLabel: 'path'"
+    [isReadOnly]="!characterSheet.isEditable"
+    (onValueChange)="updateProperty($event, 'name')"
+  ></arm-input>
+  <button *ngIf="hasRoadInfo" class="info-btn" type="button" (click)="openInfo()">
+    <mat-icon>info_outline</mat-icon>
+  </button>
+</div>
+
+<arm-circle-input
+  [circleAmount]="10"
+  [value]="characterSheet.advantages.path.level"
+  (onValueChange)="updateProperty($event, 'level')"
+></arm-circle-input>
+
+<div class="bearing">
+  <arm-input
+    [label]="'sheet.advantages.path.bearing.title'"
+    [value]="characterSheet.advantages.path.bearing.type"
+    [isReadOnly]="!characterSheet.isEditable"
+    (onValueChange)="updateProperty($event, 'bearing.type')"
+  ></arm-input>
+  <arm-input
+    [value]="characterSheet.advantages.path.bearing.value"
+    [isReadOnly]="!characterSheet.isEditable"
+    (onValueChange)="updateProperty($event, 'bearing.value')"
+  ></arm-input>
+</div>

@@ -1,0 +1,9 @@
+<span class="dots" [class.disabled]="disabled">
+  <span
+    *ngFor="let dot of dots"
+    class="dot"
+    [class.filled]="dot < value"
+    [class.freebie]="isFreebie(dot)"
+    (click)="onClick(dot)"
+  ></span>
+</span>

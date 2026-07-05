@@ -1,19 +1,45 @@
-<h2 class="sub-category">
-  <span>{{ 'sheet.disciplines.mortis.paths' | translate }}</span>
-</h2>
-<arm-circle-input
-  *ngFor="let path of characterSheet.disciplines.mortis.paths; index as i; trackBy: trackByFn"
-  [showCheckbox]="true"
-  [circleAmount]="8"
-  [label]="path.name"
-  [value]="path.level"
-  [isPermanent]="false"
-  [isEditable]="characterSheet.isEditable"
-  (onDelete)="deleteCustomProperty(i)"
-  (onValueChange)="updateValueFromCustomProperty($event, i)"
-></arm-circle-input>
-<arm-add-custom-property-button
-  [isEditable]="characterSheet.isEditable"
-  [propertyType]="propertyType"
-  [customPropertyList]="characterSheet.disciplines.mortis.paths"
-></arm-add-custom-property-button>
+<h2 class="sub-category"><span>{{ 'sheet.disciplines.mortis.paths' | translate }}</span></h2>
+<p class="magic-note faded" *ngIf="mortisLevel === 0">Sube Mortis para activar sendas.</p>
+<div class="magic-path-item" *ngFor="let path of knownPaths">
+  <button
+    class="primary-toggle"
+    [class.is-primary]="isPrimary(path.name)"
+    [disabled]="!characterSheet.isEditable || mortisLevel === 0"
+    (click)="setPrimary(path.name)"
+    type="button"
+    title="Senda primaria"
+  >★</button>
+  <arm-circle-input
+    [circleAmount]="5"
+    [label]="path.name"
+    [value]="getPathLevel(path.name)"
+    [isEditable]="!isPrimary(path.name) && !!characterSheet.isEditable && mortisLevel > 0"
+    (onValueChange)="setLevel(path.name, $event)"
+  ></arm-circle-input>
+  <button class="link-icon" type="button" (click)="discipline.openPathInfo(path)">
+    <mat-icon>info_outline</mat-icon>
+  </button>
+</div>
+
+<h2 class="sub-category"><span>{{ 'sheet.disciplines.mortis.rituals' | translate }}</span></h2>
+<p class="magic-note faded" *ngIf="availableRituals.length === 0 && mortisLevel === 0">
+  Sube Mortis para desbloquear rituales.
+</p>
+<p class="magic-note faded" *ngIf="availableRituals.length === 0 && mortisLevel > 0">
+  No hay rituales disponibles para este nivel.
+</p>
+<div class="ritual-item" *ngFor="let ritual of availableRituals">
+  <label class="ritual-label">
+    <input
+      type="checkbox"
+      [checked]="isRitualSelected(ritual.name)"
+      [disabled]="!characterSheet.isEditable"
+      (change)="toggleRitual(ritual)"
+    />
+    <span class="ritual-name">{{ ritual.name }}</span>
+    <span class="ritual-level">Niv. {{ ritual.level }}</span>
+  </label>
+  <button class="link-icon" type="button" (click)="discipline.openRitualInfo(ritual)">
+    <mat-icon>info_outline</mat-icon>
+  </button>
+</div>

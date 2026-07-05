@@ -1,0 +1,51 @@
+<div class="road-dialog">
+  <h1 mat-dialog-title>{{ road.latin || road.nickname }}</h1>
+
+  <div mat-dialog-content class="road-body">
+    <p class="road-nickname" *ngIf="road.latin">« {{ road.nickname }} »</p>
+    <p class="road-description">{{ road.description }}</p>
+
+    <div class="road-meta">
+      <div class="meta-item">
+        <span class="meta-label">Virtudes:</span>
+        <span>{{ road.virtues }}</span>
+      </div>
+      <div class="meta-item">
+        <span class="meta-label">Aura:</span>
+        <span>{{ road.aura }}</span>
+      </div>
+    </div>
+
+    <span class="section-label">Ética</span>
+    <ul class="road-list">
+      <li *ngFor="let item of road.ethics">{{ item }}</li>
+    </ul>
+
+    <span class="section-label">Senderos</span>
+    <ul class="road-list">
+      <li *ngFor="let s of road.senderos"><strong>{{ s.name }}:</strong> {{ s.text }}</li>
+    </ul>
+
+    <span class="section-label">{{ road.sinsTitle }}</span>
+    <table class="sins-table">
+      <thead>
+        <tr>
+          <th>Puntuación</th>
+          <th>Pecado</th>
+          <th>Razón</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let sin of road.sins">
+          <td class="sin-score">{{ sin.score }}</td>
+          <td>{{ sin.sin }}</td>
+          <td class="sin-reason">{{ sin.reason }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div mat-dialog-actions align="end">
+    <button mat-button (click)="dialogRef.close()">Cerrar</button>
+  </div>
+</div>

@@ -1,0 +1,227 @@
+// Shared layout used by every creation step. Imported per-component.
+@import '../../../../styles/responsive/breakpoints';
+
+.step {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+
+  h2 {
+    margin: 0;
+  }
+
+  h3 {
+    margin: 8px 0 0;
+  }
+
+  .hint {
+    margin: 0;
+    opacity: 0.75;
+    font-style: italic;
+  }
+}
+
+.field-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 12px;
+
+  label {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+
+    input {
+      padding: 6px 8px;
+      border: 1px solid currentColor;
+      background: transparent;
+      color: inherit;
+      border-radius: 4px;
+    }
+  }
+}
+
+.group-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-family: 'Section font', serif;
+  font-size: 1.15rem;
+  margin-top: 8px;
+}
+
+.rec-star {
+  font-size: 16px;
+  width: 16px;
+  height: 16px;
+  color: #d4a02a;
+  vertical-align: middle;
+}
+
+.step h2,
+.step h3 {
+  font-family: 'Titles font', serif;
+  font-weight: normal;
+}
+
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 6px 0;
+}
+
+.chip {
+  padding: 6px 12px;
+  border: 1px solid currentColor;
+  border-radius: 16px;
+  background: transparent;
+  color: inherit;
+  cursor: pointer;
+  font: inherit;
+
+  // Selected: dark accent fill with white text so it stays readable in both
+  // the light and dark themes.
+  &.selected {
+    background: #b8302a;
+    border-color: #b8302a;
+    color: #fff;
+  }
+}
+
+// Help text shown under a field title.
+.field-hint {
+  font-size: 0.78rem;
+  opacity: 0.7;
+  font-style: italic;
+  margin: 0;
+}
+
+// A label paired with an info icon.
+.label-with-info {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.link-icon {
+  display: inline-flex;
+  align-items: center;
+  padding: 0;
+  border: none;
+  background: transparent;
+  color: inherit;
+  cursor: pointer;
+  opacity: 0.7;
+
+  &:hover {
+    opacity: 1;
+  }
+
+  mat-icon {
+    font-size: 18px;
+    width: 18px;
+    height: 18px;
+  }
+}
+
+.specialty-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  max-width: 360px;
+  margin: -4px 0 8px;
+}
+
+.specialty-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 3px 10px;
+  border: 1px dashed currentColor;
+  border-radius: 14px;
+  background: transparent;
+  color: inherit;
+  cursor: pointer;
+  font: inherit;
+  font-size: 0.85rem;
+
+  mat-icon {
+    font-size: 16px;
+    width: 16px;
+    height: 16px;
+    color: #c22626;
+  }
+}
+
+// Inline description panel shown when a clan / road is selected.
+.description-panel {
+  padding: 10px 12px;
+  border-left: 3px solid #b8302a;
+  background: rgba(184, 48, 42, 0.08);
+  border-radius: 4px;
+  line-height: 1.4;
+}
+
+// Trait rows with a label, dots and a remaining-points counter.
+.pool {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: bold;
+
+  &.depleted {
+    opacity: 0.6;
+  }
+
+  &.over {
+    color: #c0392b;
+  }
+}
+
+.trait-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  max-width: 360px;
+
+  .trait-label {
+    font-family: 'Property names font', serif;
+    font-size: 1.2rem;
+    line-height: 1.2;
+  }
+
+  @include xs {
+    max-width: none;
+  }
+}
+
+@include xs {
+  .field-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .chip {
+    padding: 5px 10px;
+    font-size: 0.85rem;
+  }
+
+  .priority-group {
+    padding: 10px;
+  }
+}
+
+.priority-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: 12px;
+  border: 1px solid currentColor;
+  border-radius: 8px;
+}
+
+.priority-buttons {
+  display: flex;
+  gap: 6px;
+}

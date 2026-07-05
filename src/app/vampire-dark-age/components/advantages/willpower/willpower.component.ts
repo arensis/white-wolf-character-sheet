@@ -1,16 +1,20 @@
-import { PropertyManagement } from 'src/app/shared/model/PropertyManagement';
-import { Component, Input, OnChanges, SimpleChanges } from '@angular/core';
-import { VampireDarkAgesSheet } from 'src/app/vampire-dark-age/model/vampire-dark-ages/VampireDarkAgesSheet';
+import { PropertyManagement } from 'src/app/shared/components/PropertyManagement';
+import { Component, OnChanges, SimpleChanges } from '@angular/core';
+import { VampireDarkAgesSheetStoreService } from 'src/app/shared/services/vampire-dark-ages-sheet-store.service';
 
 @Component({
   selector: 'arm-willpower',
   templateUrl: './willpower.component.html',
   styleUrls: ['./willpower.component.scss']
 })
-export class WillpowerComponent extends PropertyManagement implements OnChanges{
+export class WillpowerComponent extends PropertyManagement {
   propertiesMainPath: string = 'advantages.willpower';
 
-  ngOnChanges(changes: SimpleChanges): void {
+  constructor(vampireDASheetStoreService: VampireDarkAgesSheetStoreService) {
+    super(vampireDASheetStoreService)
+  }
 
+  updateProperty(event: any, propertyName: string): void {
+    this.updateValueFromProperty(event, propertyName, this.vampireDASheetStoreService.loadVampireDASheet);
   }
 }

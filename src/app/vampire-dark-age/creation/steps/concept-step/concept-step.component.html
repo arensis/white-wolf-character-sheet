@@ -1,0 +1,187 @@
+<section class="step">
+  <h2>{{ 'creation.concept.title' | translate }}</h2>
+  <p class="hint">{{ 'creation.concept.hint' | translate }}</p>
+
+  <div class="field-grid">
+    <label>
+      <span>{{ 'creation.concept.name' | translate }}</span>
+      <input type="text" [(ngModel)]="state.draft.playerData.info.name" />
+    </label>
+    <label>
+      <span>{{ 'creation.concept.player' | translate }}</span>
+      <input type="text" [(ngModel)]="state.draft.playerData.info.player" />
+    </label>
+    <label>
+      <span>{{ 'creation.concept.concept' | translate }}</span>
+      <p class="field-hint">{{ 'creation.fields.conceptHint' | translate }}</p>
+      <input type="text" [(ngModel)]="state.draft.playerData.concept.concept" />
+    </label>
+    <label>
+      <span>{{ 'creation.concept.nature' | translate }}</span>
+      <p class="field-hint">{{ 'creation.fields.natureHint' | translate }}</p>
+      <select [(ngModel)]="state.draft.playerData.background.nature">
+        <option value="">—</option>
+        <option *ngFor="let a of archetypes" [value]="a">
+          {{ 'creation.archetypeNames.' + a | translate }} — {{ 'creation.archetypes.' + a | translate }}
+        </option>
+      </select>
+    </label>
+    <label>
+      <span>{{ 'creation.concept.demeanor' | translate }}</span>
+      <p class="field-hint">{{ 'creation.fields.demeanorHint' | translate }}</p>
+      <select [(ngModel)]="state.draft.playerData.background.demeanor">
+        <option value="">—</option>
+        <option *ngFor="let a of archetypes" [value]="a">
+          {{ 'creation.archetypeNames.' + a | translate }} — {{ 'creation.archetypes.' + a | translate }}
+        </option>
+      </select>
+    </label>
+  </div>
+
+  <h3>{{ 'creation.concept.clan' | translate }}</h3>
+  <div class="group">
+    <span class="group-label">{{ 'creation.clanTypes.high' | translate }}</span>
+    <p class="clan-type-description">{{ 'creation.clanTypes.highDescription' | translate }}</p>
+    <div class="chips">
+      <button
+        *ngFor="let clan of highClans"
+        class="chip"
+        [class.selected]="state.clanId === clan.id"
+        (click)="selectClan(clan.id)"
+      >
+        {{ 'creation.clans.' + clan.id | translate }}
+      </button>
+    </div>
+    <span class="group-label">{{ 'creation.clanTypes.low' | translate }}</span>
+    <p class="clan-type-description">{{ 'creation.clanTypes.lowDescription' | translate }}</p>
+    <div class="chips">
+      <button
+        *ngFor="let clan of lowClans"
+        class="chip"
+        [class.selected]="state.clanId === clan.id"
+        (click)="selectClan(clan.id)"
+      >
+        {{ 'creation.clans.' + clan.id | translate }}
+      </button>
+    </div>
+    <div class="chips">
+      <button
+        class="chip"
+        [class.selected]="state.clanId === caitiff.id"
+        (click)="selectClan(caitiff.id)"
+      >
+        {{ 'creation.clans.' + caitiff.id | translate }}
+      </button>
+    </div>
+  </div>
+
+  <div class="description-panel clan-panel" *ngIf="state.clanId">
+    <p class="clan-summary">{{ 'creation.descriptions.clans.' + state.clanId | translate }}</p>
+
+    <ul class="clan-detail-list">
+      <li>
+        <strong>{{ 'creation.clanDetail.appearance' | translate }}:</strong>
+        {{ 'creation.descriptions.clanDetails.' + state.clanId + '.appearance' | translate }}
+      </li>
+      <li>
+        <strong>{{ 'creation.clanDetail.stereotypes' | translate }}:</strong>
+        {{ 'creation.descriptions.clanDetails.' + state.clanId + '.stereotypes' | translate }}
+      </li>
+      <li>
+        <strong>{{ 'creation.clanDetail.organization' | translate }}:</strong>
+        {{ 'creation.descriptions.clanDetails.' + state.clanId + '.organization' | translate }}
+      </li>
+    </ul>
+
+    <div class="clan-section">
+      <span class="group-label">{{ 'creation.clanDetail.creationHints' | translate }}</span>
+      <p>{{ 'creation.descriptions.clanDetails.' + state.clanId + '.creationHints' | translate }}</p>
+    </div>
+
+    <div class="clan-section clan-weakness">
+      <span class="group-label">{{ 'creation.clanDetail.weakness' | translate }}</span>
+      <p>{{ 'creation.descriptions.clanDetails.' + state.clanId + '.weaknessDetail' | translate }}</p>
+    </div>
+  </div>
+
+  <div class="clan-disciplines" *ngIf="state.clanId">
+    <span class="group-label">{{ 'creation.concept.clanDisciplines' | translate }}</span>
+    <p *ngIf="state.clanDisciplineKeys.length === 0" class="hint">
+      {{ 'creation.concept.caitiffNote' | translate }}
+    </p>
+    <ul *ngIf="state.clanDisciplineKeys.length > 0">
+      <li *ngFor="let key of state.clanDisciplineKeys">
+        <span class="label-with-info">
+          {{ 'creation.disciplines.' + key | translate }}
+          <button type="button" class="link-icon" (click)="discipline.open(key)" aria-label="info">
+            <mat-icon>info_outline</mat-icon>
+          </button>
+        </span>
+      </li>
+    </ul>
+  </div>
+
+  <h3>{{ 'creation.concept.path' | translate }}</h3>
+  <p class="field-hint">{{ 'creation.concept.pathHint' | translate }}</p>
+  <div class="chips">
+    <button
+      *ngFor="let path of paths"
+      class="chip road-chip"
+      [class.selected]="state.pathId === path.id"
+      [class.recommended]="isRecommendedRoad(path.id)"
+      (click)="state.pathId = path.id"
+    >
+      <mat-icon *ngIf="isRecommendedRoad(path.id)" class="rec-star">star</mat-icon>
+      {{ 'creation.paths.' + path.id | translate }}
+    </button>
+  </div>
+  <p class="rec-note" *ngIf="(state.clan?.recommendedRoads?.length || 0) > 0">
+    <mat-icon class="rec-star">star</mat-icon>
+    {{ 'creation.concept.recommendedByClan' | translate }}
+  </p>
+  <div class="description-panel road-panel" *ngIf="roadContent as road">
+    <p class="road-latin">{{ road.latin }}</p>
+    <p>{{ road.description }}</p>
+
+    <div class="road-meta">
+      <span><strong>{{ 'creation.road.nickname' | translate }}:</strong> {{ road.nickname }}</span>
+      <span><strong>{{ 'creation.road.virtues' | translate }}:</strong> {{ road.virtues }}</span>
+      <span><strong>{{ 'creation.road.aura' | translate }}:</strong> {{ road.aura }}</span>
+    </div>
+
+    <span class="group-label">{{ 'creation.road.ethics' | translate }}</span>
+    <ul class="road-list">
+      <li *ngFor="let item of road.ethics">{{ item }}</li>
+    </ul>
+
+    <span class="group-label">{{ 'creation.road.senderos' | translate }}</span>
+    <ul class="road-list">
+      <li *ngFor="let s of road.senderos"><strong>{{ s.name }}:</strong> {{ s.text }}</li>
+    </ul>
+
+    <span class="group-label">{{ road.sinsTitle }}</span>
+    <table class="sins-table">
+      <thead>
+        <tr>
+          <th>{{ 'creation.road.sinScore' | translate }}</th>
+          <th>{{ 'creation.road.sinSin' | translate }}</th>
+          <th>{{ 'creation.road.sinReason' | translate }}</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let sin of road.sins">
+          <td class="sin-score">{{ sin.score }}</td>
+          <td>{{ sin.sin }}</td>
+          <td class="sin-reason">{{ sin.reason }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h3>{{ 'creation.generation.label' | translate }}</h3>
+  <p class="field-hint">{{ 'creation.generation.hint' | translate }}</p>
+  <div class="generation-line">
+    <span class="gen-badge">{{ state.generation }}ª</span>
+    <span>{{ 'creation.generation.bloodPool' | translate }}: {{ state.generationInfo.bloodPool }}</span>
+  </div>
+</section>

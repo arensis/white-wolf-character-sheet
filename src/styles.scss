@@ -26,32 +26,16 @@ header {
   width: 100%;
   z-index: 1;
 
+  // Por debajo de 640px los iconos no caben bien: menú hamburguesa.
+  // A partir de 640px, botonera de iconos y sin hamburguesa.
   mat-toolbar {
-    @include xs {
+    @media (max-width: 639px) {
       .header-buttons {
         display: none;
       }
     }
 
-    @include sm {
-      .menu-button {
-        display: none;
-      }
-    }
-
-    @include md {
-      .menu-button {
-        display: none;
-      }
-    }
-
-    @include lg {
-      .menu-button {
-        display: none;
-      }
-    }
-
-    @include xl {
+    @media (min-width: 640px) {
       .menu-button {
         display: none;
       }
@@ -195,6 +179,7 @@ main {
   align-items: center;
   justify-content: center;
   font-family: "Section font";
+  margin-top: 2rem;
 
   @include xs {
     justify-content: center;
@@ -297,7 +282,7 @@ main {
 .disciplines-container, .equipment-container, .notes-container {
   display: grid;
   grid-template-columns: repeat(6, 1fr);
-  grid-gap: 5vw;
+  grid-gap: 2vw;
   grid-auto-rows: minmax(100px, auto);
 }
 
@@ -341,7 +326,8 @@ main {
 .character-info, .character-background, .character-concept,
 .physical, .social, .mental,
 .talents, .skills, .knowledges,
-.backgrounds-experience, .road-willpower-bloodpool, .virtues-health-weakness,
+.backgrounds, .road-willpower-bloodpool, .virtues-health,
+.experience-column, .weakness-column,
 .advantages-languages, .advantages-merits, .advantages-flaws,
 .disciplines-first-column, .disciplines-second-column, .disciplines-third-column,
 .gear-carried, .combat-table, .notes {
@@ -425,7 +411,7 @@ main {
 }
 
 
-.talents, .backgrounds-experience, .advantages-languages, .disciplines-first-column {
+.talents, .backgrounds, .advantages-languages, .disciplines-first-column {
   @extend .column;
   @include md {
     grid-column: 1 / 4;
@@ -451,13 +437,39 @@ main {
   }
 }
 
-.knowledges, .virtues-health-weakness, .advantages-flaws, .disciplines-third-column {
+.knowledges, .virtues-health, .advantages-flaws, .disciplines-third-column {
   @extend .column;
   @include md {
     grid-column: 1 / 7;
   }
   @include lg {
     grid-column: 1 / 7;
+  }
+  @include xl {
+    grid-column: 5 / 7;
+  }
+}
+
+.experience-column {
+  @extend .column;
+  @include md {
+    grid-column: 1 / 4;
+  }
+  @include lg {
+    grid-column: 1 / 4;
+  }
+  @include xl {
+    grid-column: 1 / 5;
+  }
+}
+
+.weakness-column {
+  @extend .column;
+  @include md {
+    grid-column: 4 / 7;
+  }
+  @include lg {
+    grid-column: 4 / 7;
   }
   @include xl {
     grid-column: 5 / 7;

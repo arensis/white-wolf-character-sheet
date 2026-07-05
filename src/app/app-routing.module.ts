@@ -1,11 +1,16 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { StoreModule } from '@ngrx/store';
+import { HomeComponent } from './home/home.component';
 
 const routes: Routes = [
   {
     path: '',
-    redirectTo: '/vampire-dark-ages',
+    component: HomeComponent,
     pathMatch: 'full'
+  },
+  { path: 'vampire-the-masquerade',
+    loadChildren: () => import('./vampire-masquerade/vampire-masquerade.module').then(m => m.VampireMasqueradeModule)
   },
   { path: 'vampire-dark-ages',
     loadChildren: () => import('./vampire-dark-age/vampire-dark-age.module').then(m => m.VampireDarkAgeModule)
@@ -13,7 +18,10 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [
+    RouterModule.forRoot(routes),
+    StoreModule.forRoot({}),
+  ],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }

@@ -1,0 +1,30 @@
+<arm-header
+ [characterSheet]="characterSheet"
+ [gameName]="'VAMPIRE_MASQUERADE'"
+ [isEditable]="characterSheet.isEditable"
+ (onClearSheet)="clearSheet()"
+ (onUploadSheet)="uploadSheet($event)"
+ (onToggleLockEdition)="toggleLockEdition()"
+></arm-header>
+<main>
+  <div class="sheet-container">
+    <div class="main-title">
+      <span>{{ 'vtm-sheet-title.start' | translate }}</span>
+      <div>
+        <span>{{ 'vtm-sheet-title.middle-top' | translate }}</span>
+        <span>{{ 'vtm-sheet-title.middle-bottom' | translate }}</span>
+      </div>
+      <span>{{ 'vtm-sheet-title.end' | translate }}</span>
+    </div>
+    <arm-player-data [characterSheet]="characterSheet"></arm-player-data>
+    <arm-attributes [characterSheet]="characterSheet"></arm-attributes>
+    <arm-abilities [characterSheet]="characterSheet"></arm-abilities>
+    <arm-advantages [characterSheet]="characterSheet"></arm-advantages>
+    <arm-other-advantages [characterSheet]="characterSheet"></arm-other-advantages>
+    <arm-disciplines [characterSheet]="characterSheet"></arm-disciplines>
+    <!-- Sección de equipo oculta temporalmente -->
+    <!-- <arm-equipment [characterSheet]="characterSheet"></arm-equipment> -->
+    <arm-notes [characterSheet]="characterSheet"></arm-notes>
+  </div>
+</main>
+<arm-footer></arm-footer>

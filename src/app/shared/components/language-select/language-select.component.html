@@ -6,9 +6,9 @@
 </a>
 <mat-menu #languageMenu="matMenu">
   <button mat-menu-item (click)="valueChange('es')">
-    ES
+    {{ 'spanish' | translate }}
   </button>
   <button mat-menu-item (click)="valueChange('en')">
-    EN
+    {{ 'english' | translate }}
   </button>
 </mat-menu>

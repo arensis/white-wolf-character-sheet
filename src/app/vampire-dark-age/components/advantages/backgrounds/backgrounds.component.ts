@@ -1,6 +1,7 @@
-import { CustomPropertyManagement } from 'src/app/shared/model/CustomPropertyManagement';
+import { CustomPropertyManagement } from 'src/app/shared/components/CustomPropertyManagement';
 import { Component } from '@angular/core';
-import { CharacterSheetStoreService } from 'src/app/vampire-dark-age/services/character-sheet-store.service';
+import { VampireDarkAgesSheetStoreService } from 'src/app/shared/services/vampire-dark-ages-sheet-store.service';
+import { BackgroundService } from 'src/app/vampire-dark-age/creation/services/background.service';
 
 @Component({
   selector: 'arm-backgrounds',
@@ -12,8 +13,23 @@ export class BackgroundsComponent extends CustomPropertyManagement {
   customPropertyType: string = 'customBackgrounds';
   propertiesMainPath: string = 'advantages.backgrounds'
 
-  constructor(characterSheetStoreService: CharacterSheetStoreService) {
-    super(characterSheetStoreService);
+  constructor(
+    vampireDASheetStoreService: VampireDarkAgesSheetStoreService,
+    public background: BackgroundService,
+  ) {
+    super(vampireDASheetStoreService);
     this.valuePropertyName = 'level';
+  }
+
+  updateProperty(event: any, propertyName: string): void {
+    this.updateValueFromProperty(event, propertyName, this.vampireDASheetStoreService.loadVampireDASheet);
+  }
+
+  updateCustomProperty(event: number, index: number) {
+    this.updateValueFromCustomProperty(event, index, this.vampireDASheetStoreService.loadVampireDASheet);
+  }
+
+  deleteEntireCustomProperty(index: number) {
+    this.deleteCustomProperty(index, this.vampireDASheetStoreService.loadVampireDASheet);
   }
 }

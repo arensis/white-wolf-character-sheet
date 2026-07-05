@@ -1,0 +1,10 @@
+export { PathComponent } from './path/path.component';
+export { WeaknessComponent } from './weakness/weakness.component';
+export { HealthComponent } from './health/health.component';
+export { WillpowerComponent } from './willpower/willpower.component';
+export { VirtuesComponent } from './virtues/virtues.component';
+export { ExperienceComponent } from './experience/experience.component';
+export { BloodPoolComponent } from './blood-pool/blood-pool.component';
+export { BackgroundsComponent } from './backgrounds/backgrounds.component';
+export { AdvantagesComponent } from './advantages.component';
+export * from './other-advantages';

@@ -3,72 +3,102 @@
   <arm-circle-input
     [circleAmount]="8"
     [label]="'sheet.abilities.skills.melee'"
+    [specialties]="characterSheet.specialties"
+    [experiences]="characterSheet.experiences"
+    (onSpecialtyClick)="specialty.showChosenFor($event, characterSheet.specialties, characterSheet.experiences)"
     [value]="characterSheet.abilities.skills.melee"
     [isEditable]="characterSheet.isEditable"
-    (onValueChange)="updateValueFromProperty($event, 'melee')"
+    (onValueChange)="updateProperty($event, 'melee')"
   ></arm-circle-input>
   <arm-circle-input
     [circleAmount]="8"
     [label]="'sheet.abilities.skills.commerce'"
+    [specialties]="characterSheet.specialties"
+    [experiences]="characterSheet.experiences"
+    (onSpecialtyClick)="specialty.showChosenFor($event, characterSheet.specialties, characterSheet.experiences)"
     [value]="characterSheet.abilities.skills.commerce"
     [isEditable]="characterSheet.isEditable"
-    (onValueChange)="updateValueFromProperty($event, 'commerce')"
+    (onValueChange)="updateProperty($event, 'commerce')"
   ></arm-circle-input>
   <arm-circle-input
     [circleAmount]="8"
     [label]="'sheet.abilities.skills.ride'"
+    [specialties]="characterSheet.specialties"
+    [experiences]="characterSheet.experiences"
+    (onSpecialtyClick)="specialty.showChosenFor($event, characterSheet.specialties, characterSheet.experiences)"
     [value]="characterSheet.abilities.skills.ride"
     [isEditable]="characterSheet.isEditable"
-    (onValueChange)="updateValueFromProperty($event, 'ride')"
+    (onValueChange)="updateProperty($event, 'ride')"
   ></arm-circle-input>
   <arm-circle-input
     [circleAmount]="8"
     [label]="'sheet.abilities.skills.etiquette'"
+    [specialties]="characterSheet.specialties"
+    [experiences]="characterSheet.experiences"
+    (onSpecialtyClick)="specialty.showChosenFor($event, characterSheet.specialties, characterSheet.experiences)"
     [value]="characterSheet.abilities.skills.etiquette"
     [isEditable]="characterSheet.isEditable"
-    (onValueChange)="updateValueFromProperty($event, 'etiquette')"
+    (onValueChange)="updateProperty($event, 'etiquette')"
   ></arm-circle-input>
   <arm-circle-input
     [circleAmount]="8"
     [label]="'sheet.abilities.skills.performance'"
+    [specialties]="characterSheet.specialties"
+    [experiences]="characterSheet.experiences"
+    (onSpecialtyClick)="specialty.showChosenFor($event, characterSheet.specialties, characterSheet.experiences)"
     [value]="characterSheet.abilities.skills.performance"
     [isEditable]="characterSheet.isEditable"
-    (onValueChange)="updateValueFromProperty($event, 'performance')"
+    (onValueChange)="updateProperty($event, 'performance')"
   ></arm-circle-input>
   <arm-circle-input
     [circleAmount]="8"
     [label]="'sheet.abilities.skills.crafts'"
+    [specialties]="characterSheet.specialties"
+    [experiences]="characterSheet.experiences"
+    (onSpecialtyClick)="specialty.showChosenFor($event, characterSheet.specialties, characterSheet.experiences)"
     [value]="characterSheet.abilities.skills.crafts"
     [isEditable]="characterSheet.isEditable"
-    (onValueChange)="updateValueFromProperty($event, 'crafts')"
+    (onValueChange)="updateProperty($event, 'crafts')"
   ></arm-circle-input>
   <arm-circle-input
     [circleAmount]="8"
     [label]="'sheet.abilities.skills.stealth'"
+    [specialties]="characterSheet.specialties"
+    [experiences]="characterSheet.experiences"
+    (onSpecialtyClick)="specialty.showChosenFor($event, characterSheet.specialties, characterSheet.experiences)"
     [value]="characterSheet.abilities.skills.stealth"
     [isEditable]="characterSheet.isEditable"
-    (onValueChange)="updateValueFromProperty($event, 'stealth')"
+    (onValueChange)="updateProperty($event, 'stealth')"
   ></arm-circle-input>
   <arm-circle-input
     [circleAmount]="8"
     [label]="'sheet.abilities.skills.survival'"
+    [specialties]="characterSheet.specialties"
+    [experiences]="characterSheet.experiences"
+    (onSpecialtyClick)="specialty.showChosenFor($event, characterSheet.specialties, characterSheet.experiences)"
     [value]="characterSheet.abilities.skills.survival"
     [isEditable]="characterSheet.isEditable"
-    (onValueChange)="updateValueFromProperty($event, 'survival')"
+    (onValueChange)="updateProperty($event, 'survival')"
   ></arm-circle-input>
   <arm-circle-input
     [circleAmount]="8"
     [label]="'sheet.abilities.skills.animalKen'"
+    [specialties]="characterSheet.specialties"
+    [experiences]="characterSheet.experiences"
+    (onSpecialtyClick)="specialty.showChosenFor($event, characterSheet.specialties, characterSheet.experiences)"
     [value]="characterSheet.abilities.skills.animalKen"
     [isEditable]="characterSheet.isEditable"
-    (onValueChange)="updateValueFromProperty($event, 'animalKen')"
+    (onValueChange)="updateProperty($event, 'animalKen')"
   ></arm-circle-input>
   <arm-circle-input
     [circleAmount]="8"
     [label]="'sheet.abilities.skills.archery'"
+    [specialties]="characterSheet.specialties"
+    [experiences]="characterSheet.experiences"
+    (onSpecialtyClick)="specialty.showChosenFor($event, characterSheet.specialties, characterSheet.experiences)"
     [value]="characterSheet.abilities.skills.archery"
     [isEditable]="characterSheet.isEditable"
-    (onValueChange)="updateValueFromProperty($event, 'archery')"
+    (onValueChange)="updateProperty($event, 'archery')"
   ></arm-circle-input>
   <arm-circle-input
     *ngFor="let skill of characterSheet.abilities.skills.customSkills; index as i; trackBy: trackByFn"
@@ -77,12 +107,12 @@
     [label]="skill.name"
     [value]="skill.level"
     [isEditable]="characterSheet.isEditable"
-    (onDelete)="deleteCustomProperty(i)"
-    (onValueChange)="updateValueFromCustomProperty($event, i)"
+    (onDelete)="deleteEntireCustomProperty(i)"
+    (onValueChange)="updateCustomProperty($event, i)"
   ></arm-circle-input>
   <arm-add-custom-property-button
+  (nameAdded)="addItemToCustomProperties($event)"
     [isEditable]="characterSheet.isEditable"
     [propertyType]="propertyType"
-    [customPropertyList]="characterSheet.abilities.skills.customSkills"
   ></arm-add-custom-property-button>
 </div>

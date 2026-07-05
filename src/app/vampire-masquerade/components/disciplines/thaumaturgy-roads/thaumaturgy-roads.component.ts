@@ -1,0 +1,103 @@
+import { Component } from '@angular/core';
+import * as _ from 'lodash';
+import { VtmPropertyManagement } from 'src/app/vampire-masquerade/shared-base/VtmPropertyManagement';
+import { VampireMasqueradeSheetStoreService } from 'src/app/vampire-masquerade/services/vampire-masquerade-sheet-store.service';
+import { getDisciplineContent, DisciplinePathInfo, DisciplineRitual } from 'src/app/vampire-masquerade/creation/data/disciplines-content.data';
+import { DisciplineService } from 'src/app/vampire-masquerade/creation/services/discipline.service';
+
+@Component({
+  selector: 'arm-thaumaturgy-roads',
+  templateUrl: './thaumaturgy-roads.component.html',
+  styleUrls: ['./thaumaturgy-roads.component.scss']
+})
+export class ThaumaturgyRoadsComponent extends VtmPropertyManagement {
+  propertiesMainPath = 'disciplines.thaumaturgy';
+
+  constructor(
+    vampireVTMSheetStoreService: VampireMasqueradeSheetStoreService,
+    public discipline: DisciplineService,
+  ) {
+    super(vampireVTMSheetStoreService);
+  }
+
+  get knownPaths(): DisciplinePathInfo[] {
+    return getDisciplineContent('thaumaturgy')?.paths ?? [];
+  }
+
+  get knownRituals(): DisciplineRitual[] {
+    return getDisciplineContent('thaumaturgy')?.rituals ?? [];
+  }
+
+  get ritualsNote(): string {
+    return getDisciplineContent('thaumaturgy')?.ritualsNote ?? '';
+  }
+
+  get thaumaturgyLevel(): number {
+    return this.characterSheet?.disciplines?.thaumaturgy?.level ?? 0;
+  }
+
+  get maxSecondaryLevel(): number {
+    return Math.max(0, this.thaumaturgyLevel - 1);
+  }
+
+  get availableRituals(): DisciplineRitual[] {
+    return this.knownRituals.filter(r => r.level <= this.thaumaturgyLevel);
+  }
+
+  getPathLevel(name: string): number {
+    const path = this.characterSheet?.disciplines?.thaumaturgy?.paths?.find((p: any) => p.name === name);
+    if (!path) return 0;
+    return (path as any).inBlood ? this.thaumaturgyLevel : path.level;
+  }
+
+  isPrimary(name: string): boolean {
+    return !!(this.characterSheet?.disciplines?.thaumaturgy?.paths?.find((p: any) => p.name === name && p.inBlood));
+  }
+
+  setPrimary(name: string): void {
+    const sheet = _.cloneDeep(this.characterSheet);
+    (sheet.disciplines.thaumaturgy.paths as any[]).forEach((p: any) => { p.inBlood = false; });
+    let path: any = (sheet.disciplines.thaumaturgy.paths as any[]).find((p: any) => p.name === name);
+    if (!path) {
+      path = { name, level: this.thaumaturgyLevel, inBlood: true };
+      (sheet.disciplines.thaumaturgy.paths as any[]).push(path);
+    } else {
+      path.inBlood = true;
+      path.level = this.thaumaturgyLevel;
+    }
+    this.vampireVTMSheetStoreService.loadVampireVTMSheet(sheet);
+  }
+
+  setLevel(name: string, level: number): void {
+    const capped = Math.min(level, this.maxSecondaryLevel);
+    const sheet = _.cloneDeep(this.characterSheet);
+    const paths: any[] = sheet.disciplines.thaumaturgy.paths as any[];
+    const idx = paths.findIndex((p: any) => p.name === name && !p.inBlood);
+    if (capped === 0) {
+      if (idx >= 0) paths.splice(idx, 1);
+    } else {
+      if (idx >= 0) {
+        paths[idx].level = capped;
+      } else {
+        paths.push({ name, level: capped, inBlood: false });
+      }
+    }
+    this.vampireVTMSheetStoreService.loadVampireVTMSheet(sheet);
+  }
+
+  isRitualSelected(name: string): boolean {
+    return !!(this.characterSheet?.disciplines?.thaumaturgy?.rituals?.some((r: any) => r.name === name));
+  }
+
+  toggleRitual(ritual: DisciplineRitual): void {
+    const sheet = _.cloneDeep(this.characterSheet);
+    const rituals: any[] = sheet.disciplines.thaumaturgy.rituals as any[];
+    const idx = rituals.findIndex((r: any) => r.name === ritual.name);
+    if (idx >= 0) {
+      rituals.splice(idx, 1);
+    } else {
+      rituals.push({ name: ritual.name, level: ritual.level });
+    }
+    this.vampireVTMSheetStoreService.loadVampireVTMSheet(sheet);
+  }
+}

@@ -1,0 +1,26 @@
+<div class="home-page">
+  <div class="home-toolbar">
+    <arm-language-select></arm-language-select>
+    <button mat-icon-button (click)="toggleThemeMode()">
+      <mat-icon>{{ darkMode ? 'dark_mode' : 'light_mode' }}</mat-icon>
+    </button>
+  </div>
+
+  <main class="home-content">
+    <h1 class="home-title">{{ 'home.title' | translate }}</h1>
+    <p class="home-subtitle">{{ 'home.subtitle' | translate }}</p>
+
+    <div class="game-cards">
+      <button *ngFor="let game of games" class="game-card" (click)="open(game)">
+        <span class="game-name">{{ 'game-title.' + game.id | translate }}</span>
+        <span class="game-tagline">{{ game.taglineKey | translate }}</span>
+        <span class="game-open">
+          {{ 'home.open' | translate }}
+          <mat-icon>arrow_forward</mat-icon>
+        </span>
+      </button>
+    </div>
+  </main>
+
+  <arm-footer></arm-footer>
+</div>

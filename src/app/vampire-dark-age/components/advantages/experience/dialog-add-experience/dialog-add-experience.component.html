@@ -1,0 +1,25 @@
+<h2 mat-dialog-title class="dialog-title">Registrar gasto</h2>
+
+<mat-dialog-content>
+  <div class="dialog-fields">
+    <mat-form-field appearance="outline" class="field-pts">
+      <mat-label>Puntos</mat-label>
+      <input matInput type="number" min="1" [(ngModel)]="entry.points" [ngModelOptions]="{standalone: true}" />
+    </mat-form-field>
+
+    <mat-form-field appearance="outline" class="field-date">
+      <mat-label>Fecha</mat-label>
+      <input matInput type="date" [(ngModel)]="entry.date" [ngModelOptions]="{standalone: true}" />
+    </mat-form-field>
+
+    <mat-form-field appearance="outline" class="field-field">
+      <mat-label>Campo subido</mat-label>
+      <input matInput placeholder="Ej: Fuerza, Potencia..." [(ngModel)]="entry.field" [ngModelOptions]="{standalone: true}" />
+    </mat-form-field>
+  </div>
+</mat-dialog-content>
+
+<mat-dialog-actions align="end">
+  <button mat-button (click)="cancel()">Cancelar</button>
+  <button mat-raised-button color="warn" [disabled]="!isValid" (click)="confirm()">Añadir</button>
+</mat-dialog-actions>

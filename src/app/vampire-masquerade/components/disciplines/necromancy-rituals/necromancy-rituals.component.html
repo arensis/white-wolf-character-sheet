@@ -1,0 +1,18 @@
+<h2 class="sub-category">
+  <span>{{ 'sheet.disciplines.necromancy.rituals' | translate }}</span>
+</h2>
+<arm-circle-input
+  *ngFor="let ritual of characterSheet.disciplines.necromancy.rituals; index as i; trackBy: trackByFn"
+  [circleAmount]="necromancyLevel || 1"
+  [label]="ritual.name"
+  [value]="ritual.level"
+  [isPermanent]="false"
+  [isEditable]="characterSheet.isEditable"
+  (onDelete)="deleteEntireCustomProperty(i)"
+  (onValueChange)="updateCustomProperty($event, i)"
+></arm-circle-input>
+<arm-add-custom-property-button
+  (nameAdded)="addItemToCustomProperties($event)"
+  [isEditable]="characterSheet.isEditable"
+  [propertyType]="propertyType"
+></arm-add-custom-property-button>

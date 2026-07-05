@@ -1,13 +1,14 @@
-import { VampireDarkAgesSheet } from 'src/app/vampire-dark-age/model/vampire-dark-ages/VampireDarkAgesSheet';
-import { Component, Input } from '@angular/core';
-import { CharacterSheetStoreService } from '../../services/character-sheet-store.service';
+import { VampireDarkAgesSheetStoreService } from './../../../shared/services/vampire-dark-ages-sheet-store.service';
+import { Component, Input, OnInit } from '@angular/core';
+import { ClanService } from 'src/app/vampire-dark-age/creation/services/clan.service';
+import * as _ from 'lodash';
 
 @Component({
   selector: 'arm-player-data',
   templateUrl: './player-data.component.html',
   styleUrls: ['./player-data.component.scss']
 })
-export class PlayerDataComponent {
+export class PlayerDataComponent implements OnInit {
   @Input()
   characterSheet: any;
 
@@ -15,8 +16,15 @@ export class PlayerDataComponent {
   infoPath: string = 'playerData.info';
   conceptPath: string = 'playerData.concept';
 
-  constructor(private characterSheetStoreService: CharacterSheetStoreService) {
-    this.characterSheet = this.characterSheetStoreService.getCharacterSheet();
+  constructor(
+    private sheetStore: VampireDarkAgesSheetStoreService,
+    public clanInfo: ClanService,
+  ) {}
+
+  ngOnInit(): void {
+    this.sheetStore.selectVampireDASheet().subscribe(sheet => {
+      this.characterSheet = sheet;
+    })
   }
 
   updateBackgroundProperty(event: any, propertyName: string): void {
@@ -35,8 +43,9 @@ export class PlayerDataComponent {
   }
 
   private updateValueFromProperty(event: any, routePath: string) {
-    const routeSegments = routePath.split('.');
-    this.characterSheet[routeSegments[0]][routeSegments[1]][routeSegments[2]] = event;
-    this.characterSheetStoreService.updateCharacterSheet(this.characterSheet);
+    let characterSheet = _.cloneDeep(this.characterSheet);
+    _.set(characterSheet, routePath, event);
+
+    this.sheetStore.loadVampireDASheet(characterSheet);
   }
 }

@@ -1,4 +1,484 @@
 {
+  "creation": {
+    "steps": {
+      "concept": "Concepto",
+      "attributes": "Atributos",
+      "abilities": "Habilidades",
+      "advantages": "Ventajas",
+      "finishing": "Toques finales"
+    },
+    "nav": {
+      "back": "Atrás",
+      "next": "Siguiente",
+      "finish": "Crear ficha"
+    },
+    "priority": {
+      "primary": "Primaria",
+      "secondary": "Secundaria",
+      "tertiary": "Terciaria"
+    },
+    "concept": {
+      "title": "Paso uno: Concepto",
+      "hint": "Elige clan, camino, naturaleza y conducta. El clan marca tus disciplinas de sangre.",
+      "name": "Nombre",
+      "player": "Jugador",
+      "concept": "Concepto",
+      "nature": "Naturaleza",
+      "demeanor": "Conducta",
+      "clan": "Clan",
+      "clanDisciplines": "Disciplinas de clan (marcadas en sangre)",
+      "caitiffNote": "Los Caitiff no tienen disciplinas de clan: pueden adquirir cualquiera con aprobación del Narrador.",
+      "path": "Camino",
+      "pathHint": "El Camino es el código moral que tu personaje sigue para mantener a raya a la Bestia. Define qué considera pecado y cómo conserva su humanidad o convicción (no es obligatorio seguir el recomendado por el clan).",
+      "recommendedByClan": "Recomendado por el clan"
+    },
+    "clanDetail": {
+      "appearance": "Apariencia",
+      "stereotypes": "Estereotipos",
+      "organization": "Organización",
+      "creationHints": "Creación del personaje",
+      "weakness": "Debilidad"
+    },
+    "clanWeakness": {
+      "brujah": "Mayor dificultad para resistir el frenesí (la furia de la Bestia).",
+      "cappadocian": "Aspecto cadavérico que delata su naturaleza no muerta (Apariencia reducida).",
+      "lasombra": "No proyecta reflejo en espejos ni superficies pulidas.",
+      "toreador": "Puede quedar embelesado y paralizado ante algo de gran belleza.",
+      "tzimisce": "Debe descansar rodeado de tierra de un lugar importante para él.",
+      "ventrue": "Sólo puede alimentarse de un tipo concreto y restringido de presa.",
+      "assamite": "No puede beber impunemente la sangre de otros Cainitas.",
+      "gangrel": "Al caer en frenesí gana rasgos animales que pueden volverse permanentes.",
+      "malkavian": "Sufre una forma de locura incurable elegida en la creación.",
+      "nosferatu": "Apariencia monstruosa (Apariencia 0); no puede pasar por humano.",
+      "ravnos": "Sujeto a un vicio o compulsión particular que debe satisfacer.",
+      "setite": "La luz intensa, sobre todo la solar, le daña más que a otros Cainitas.",
+      "tremere": "Su sangre crea lazos de sangre con inusitada rapidez.",
+      "caitiff": "Sin debilidad de clan."
+    },
+    "clanTypes": {
+      "high": "Altos Clanes",
+      "highDescription": "Las seis líneas de sangre que han aceptado e integrado el orden feudal Cainita. Componen la clase dirigente de la sociedad vampírica medieval: príncipes, vasallos y señores que participan activamente en las relaciones de poder feudales, sirviendo a príncipes o gobernando dominios propios.",
+      "low": "Bajos Clanes",
+      "lowDescription": "Aquellos que no participan plenamente en el sistema feudal. No son necesariamente seguidores, sino diferentes: muchos de sus miembros sobreviven dentro del feudalismo pero rara vez ascienden a posiciones de poder. En la nomenclatura feudal se les llama «los caídos», pues se cree que de algún modo han perdido la gracia de sus superiores de sangre alta."
+    },
+    "clans": {
+      "brujah": "Brujah",
+      "cappadocian": "Capadocio",
+      "lasombra": "Lasombra",
+      "toreador": "Toreador",
+      "tzimisce": "Tzimisce",
+      "ventrue": "Ventrue",
+      "assamite": "Assamita",
+      "gangrel": "Gangrel",
+      "malkavian": "Malkavian",
+      "nosferatu": "Nosferatu",
+      "ravnos": "Ravnos",
+      "setite": "Seguidores de Set",
+      "tremere": "Tremere",
+      "caitiff": "Caitiff (sin clan)"
+    },
+    "paths": {
+      "humanity": "Humanidad",
+      "beast": "Camino de la Bestia",
+      "heaven": "Camino del Cielo",
+      "sin": "Camino del Pecado",
+      "kings": "Camino de los Reyes"
+    },
+    "disciplines": {
+      "animalism": "Animalismo",
+      "auspex": "Auspex",
+      "celerity": "Celeridad",
+      "chimerstry": "Quimerismo",
+      "dementation": "Demencia",
+      "dominate": "Dominación",
+      "fortitude": "Fortaleza",
+      "mortis": "Mortis",
+      "obfuscate": "Ofuscación",
+      "obtenebration": "Obtenebración",
+      "potence": "Potencia",
+      "presence": "Presencia",
+      "protean": "Protean",
+      "quietus": "Quietus",
+      "serpentis": "Serpentis",
+      "thaumaturgy": "Taumaturgia",
+      "vicissitude": "Vicisitud"
+    },
+    "attributes": {
+      "title": "Paso dos: Atributos",
+      "hint": "Asigna prioridad a cada categoría. Empiezas con un punto en cada atributo y repartes 7/5/3."
+    },
+    "attributeGroups": {
+      "physical": "Físicos",
+      "social": "Sociales",
+      "mental": "Mentales"
+    },
+    "attributeNames": {
+      "strength": "Fuerza",
+      "dexterity": "Destreza",
+      "stamina": "Resistencia",
+      "charisma": "Carisma",
+      "manipulation": "Manipulación",
+      "appearance": "Apariencia",
+      "perception": "Percepción",
+      "intelligence": "Inteligencia",
+      "wits": "Astucia"
+    },
+    "abilities": {
+      "title": "Paso tres: Habilidades",
+      "hint": "Asigna prioridad y reparte 13/9/5. Ninguna habilidad puede superar 3 puntos en esta fase."
+    },
+    "abilityGroups": {
+      "talents": "Talentos",
+      "skills": "Técnicas",
+      "knowledges": "Conocimientos"
+    },
+    "abilityNames": {
+      "alertness": "Alerta",
+      "athletics": "Atletismo",
+      "brawl": "Pelea",
+      "dodge": "Esquivar",
+      "emptahy": "Empatía",
+      "expression": "Expresión",
+      "intimidation": "Intimidación",
+      "leadership": "Liderazgo",
+      "legerdemain": "Prestidigitación",
+      "subterfuge": "Subterfugio",
+      "animalKen": "Trato con animales",
+      "archery": "Arquería",
+      "commerce": "Comercio",
+      "crafts": "Artesanía",
+      "etiquette": "Etiqueta",
+      "melee": "Pelea con armas",
+      "performance": "Interpretación",
+      "ride": "Montar",
+      "stealth": "Sigilo",
+      "survival": "Supervivencia",
+      "academics": "Academicismo",
+      "hearthWisdom": "Sabiduría popular",
+      "investigation": "Investigación",
+      "law": "Leyes",
+      "linguistics": "Lingüística",
+      "medicine": "Medicina",
+      "occult": "Ocultismo",
+      "politics": "Política",
+      "seneschal": "Senescal",
+      "theology": "Teología"
+    },
+    "advantages": {
+      "title": "Paso cuatro: Ventajas",
+      "disciplines": "Disciplinas (4)",
+      "backgrounds": "Trasfondos (5)",
+      "virtues": "Virtudes (7)",
+      "caitiffDisciplines": "Como Caitiff, gastarás tus disciplinas con puntos gratuitos en el paso final."
+    },
+    "backgrounds": {
+      "allies": "Aliados",
+      "contacts": "Contactos",
+      "domain": "Dominio",
+      "generation": "Generación",
+      "alternateIdentity": "Identidad Alternativa",
+      "blackHandMembership": "Mano Negra",
+      "herd": "Rebaño",
+      "fame": "Fama",
+      "rituals": "Rituales",
+      "influence": "Influencia",
+      "mentor": "Mentor",
+      "resources": "Recursos",
+      "retainers": "Criados",
+      "status": "Estatus"
+    },
+    "virtues": {
+      "conscience": "Conciencia",
+      "conviction": "Convicción",
+      "selfControl": "Autocontrol",
+      "instinct": "Instinto",
+      "courage": "Coraje"
+    },
+    "finishing": {
+      "title": "Paso cinco: Toques finales",
+      "hint": "Gasta 15 puntos gratuitos. Coste por punto entre paréntesis. El Camino y la Fuerza de Voluntad ya se calcularon a partir de tus virtudes.",
+      "freebies": "Puntos gratuitos",
+      "road": "Camino",
+      "willpower": "Fuerza de Voluntad",
+      "freebieLegend": "Los círculos resaltados muestran los puntos comprados con puntos gratuitos.",
+      "meritsFlawsTitle": "Méritos y Defectos",
+      "meritsFlawsHint": "Selecciona los méritos que deseas (cuestan puntos gratuitos) y los defectos que aceptas (devuelven puntos gratuitos). La reserva total se actualiza en tiempo real."
+    },
+    "info": "Más información",
+    "generation": {
+      "label": "Generación",
+      "hint": "Cuán lejos de Caín estás. Por defecto la 12ª; cada punto de Trasfondo Generación la reduce y aumenta tu reserva de sangre.",
+      "result": "Generación resultante",
+      "bloodPool": "Reserva de sangre"
+    },
+    "fields": {
+      "conceptHint": "Una frase que resume quién era tu personaje y su papel (p. ej. «caballero caído», «monje erudito»).",
+      "natureHint": "Quién es tu personaje en realidad, su verdadero yo. Determina cuándo recupera Fuerza de Voluntad.",
+      "demeanorHint": "La cara que tu personaje muestra al mundo, que puede diferir de su Naturaleza."
+    },
+    "road": {
+      "nickname": "Remoquete",
+      "virtues": "Virtudes del Camino",
+      "aura": "Aura",
+      "ethics": "Ética del Camino",
+      "senderos": "Senderos",
+      "sinScore": "Puntuación",
+      "sinSin": "Pecado mínimo",
+      "sinReason": "Razón"
+    },
+    "specialtiesLabel": "Especialidad (atributos de 4+)",
+    "specialtyWhat": "Una especialidad otorga un dado adicional en las tiradas que la impliquen. Se compran con puntos gratuitos (1 cada una; máx. 3 por habilidad). Sólo se aplica una especialidad por tirada y no se combinan dos.",
+    "specialtyChoose": "Elegir especialidad",
+    "specialtyList": "Especialidades sugeridas",
+    "dialog": {
+      "paths": "Sendas",
+      "rituals": "Rituales",
+      "howItWorks": "Cómo funciona",
+      "choosePath": "Elegir senda primaria",
+      "chooseRitual": "Elegir ritual inicial",
+      "close": "Cerrar"
+    },
+    "magic": {
+      "path": "Senda",
+      "ritual": "Ritual",
+      "choosePath": "Elegir senda",
+      "chooseRitual": "Elegir ritual"
+    },
+    "specialties": {
+      "strength": "Ejemplos: Férrea, Potente, Vigorosa.",
+      "dexterity": "Ejemplos: Ágil, Veloz, Precisa.",
+      "stamina": "Ejemplos: Resistente, Incansable, Robusta.",
+      "charisma": "Ejemplos: Carismático, Elocuente, Magnético.",
+      "manipulation": "Ejemplos: Persuasivo, Astuto, Seductor.",
+      "appearance": "Ejemplos: Imponente, Seductora, Inocente.",
+      "perception": "Ejemplos: Atenta, Intuitiva, Perspicaz.",
+      "intelligence": "Ejemplos: Analítica, Creativa, Memoriosa.",
+      "wits": "Ejemplos: Rápida, Ingeniosa, Serena bajo presión."
+    },
+    "archetypeNames": {
+      "architect": "Arquitecto",
+      "autocrat": "Autócrata",
+      "bonVivant": "Bon Vivant",
+      "bravo": "Bravucón",
+      "caregiver": "Cuidador",
+      "celebrant": "Celebrante",
+      "conformist": "Conformista",
+      "conniver": "Intrigante",
+      "defender": "Defensor",
+      "fanatic": "Fanático",
+      "gallant": "Galán",
+      "judge": "Juez",
+      "loner": "Solitario",
+      "martyr": "Mártir",
+      "pedagogue": "Pedagogo",
+      "penitent": "Penitente",
+      "rebel": "Rebelde",
+      "rogue": "Pícaro",
+      "survivor": "Superviviente",
+      "traditionalist": "Tradicionalista",
+      "trickster": "Bromista",
+      "visionary": "Visionario"
+    },
+    "archetypes": {
+      "architect": "Construyes algo duradero que te sobreviva.",
+      "autocrat": "Fuiste creado para mandar.",
+      "bonVivant": "La existencia está para disfrutarla.",
+      "bravo": "La fuerza y la intimidación lo resuelven todo.",
+      "caregiver": "Proteges y cuidas de los demás.",
+      "celebrant": "Buscas el placer en todas las cosas.",
+      "conformist": "Sigues a quien lidera; el grupo es lo primero.",
+      "conniver": "Consigues lo que quieres engañando a otros.",
+      "defender": "Haces guardia sobre todo lo que te importa.",
+      "fanatic": "Una causa lo justifica todo.",
+      "gallant": "Vives para el aplauso y la admiración.",
+      "judge": "Alguien debe decidir y tomar las decisiones difíciles.",
+      "loner": "Te bastas a ti mismo.",
+      "martyr": "Te sacrificas por un bien mayor.",
+      "pedagogue": "El mundo necesita enseñanza.",
+      "penitent": "Eres un pecador que busca enmendarse.",
+      "rebel": "El orden del mundo es corrupto y hay que desafiarlo.",
+      "rogue": "Sólo cuidas de ti mismo y de los tuyos.",
+      "survivor": "Cuando suene la trompeta del Juicio, estarás presente.",
+      "traditionalist": "Las viejas costumbres son las mejores.",
+      "trickster": "La vida es absurda: ríe y haz reír.",
+      "visionary": "Ves más allá de lo que otros conciben."
+    },
+    "descriptions": {
+      "clans": {
+        "brujah": "En la Edad Oscura los Brujah son cruzados orgullosos y coléricos: guerreros-filósofos que unen el ideal y la espada. Descienden de un linaje de reyes-eruditos y sueñan con una sociedad perfecta, aunque su pasión los hace propensos al frenesí. Valoran por igual el conocimiento y la fuerza, y muchos lideran rebeliones contra los antiguos. Debilidad: les cuesta más resistir la furia de la Bestia.",
+        "cappadocian": "Los Capadocios son fríos y eruditos estudiosos de la muerte, fascinados por el más allá y los secretos de las almas. Mediante su arte de Mortis comulgan con los muertos y exploran lo que aguarda tras la tumba. Suelen ser pálidos, cadavéricos y reservados, más interesados en el saber que en el poder mundano. Debilidad: su aspecto cadavérico delata su naturaleza no muerta.",
+        "lasombra": "Manipuladores ricos y decadentes, los Lasombra (Magisters) gobiernan desde las sombras y desprecian la debilidad. Dominan la oscuridad mediante Obtenebración y ascienden por intriga, traición y ambición despiadada. Se ven como depredadores natos destinados a mandar sobre mortales y Cainitas por igual. Debilidad: no proyectan reflejo en espejos ni superficies pulidas.",
+        "toreador": "Depredadores sociales consumados, los Toreador adoran el arte, la belleza y la pasión humana. Refinados y seductores, se mueven con gracia por las cortes y a menudo quedan prendados de la perfección. Combinan encanto sincero y manipulación, y desprecian la tosquedad. Debilidad: pueden quedar embelesados, paralizados ante algo de gran belleza.",
+        "tzimisce": "Señores inhumanos de los bosques y montañas del este, los Tzimisce son voivodas territoriales y crueles. Esculpen carne y hueso —propios y ajenos— mediante Vicisitud, y exigen rígida hospitalidad y lealtad. Antiguos y orgullosos, se consideran superiores a toda otra criatura. Debilidad: deben descansar rodeados de tierra de un lugar importante para ellos.",
+        "ventrue": "Ambiciosos forjadores de imperios, los Ventrue (Patricios) se ven como los nobles gobernantes de la progenie de Caín. Caballeros y señores feudales, asumen el peso del mando y se preparan para la batalla final. Disciplinados y arrogantes, valoran el honor, el linaje y el poder. Debilidad: sólo pueden alimentarse de un tipo concreto y restringido de presa.",
+        "assamite": "Guardianes y jueces de la sangre de Caín, los Assamitas (Hijos de Haqim) son temidos asesinos y eruditos de Oriente. Persiguen la diablerie de otros vampiros, creyendo que purifican la sangre, y se dividen en guerreros, visires y hechiceros. Debilidad: su maldición les impide beber impunemente la sangre de otros Cainitas.",
+        "gangrel": "Forasteros salvajes y vagabundos, los Gangrel viven cerca de la naturaleza y de la Bestia. Sobreviven en los caminos y yermos, cambian de forma mediante Protean y se hallan más a gusto entre fieras que en las cortes. Independientes y resistentes, desprecian la política cainita. Debilidad: al caer en frenesí ganan rasgos animales que pueden volverse permanentes.",
+        "malkavian": "Atemorizadores visionarios y oráculos, los Malkavian están todos malditos con la locura. Su demencia les concede atisbos de verdades ocultas y profecías inquietantes. Pueden parecer cualquier cosa, de mendigos a profetas, pero todos cargan con una mente rota. Debilidad: sufren una forma de locura incurable elegida en la creación.",
+        "nosferatu": "Deformes penitentes y monstruos al acecho, los Nosferatu fueron desfigurados por la maldición de Caín. Ocultos en cloacas y ruinas, son maestros del sigilo (Ofuscación) y los mejores recolectores de información. Bajo su horrible aspecto a menudo guardan lealtad y honor. Debilidad: su apariencia monstruosa les impide pasar por humanos.",
+        "ravnos": "Vagabundos independientes y corruptores, los Ravnos recorren el mundo siguiendo sus propios códigos. Maestros de la ilusión (Quimerismo), engañan y embaucan a quienes se cruzan en su camino, y rara vez echan raíces. Debilidad: cada uno está sujeto a un vicio o compulsión particular que debe satisfacer.",
+        "setite": "Descendientes de un dios oscuro, los Seguidores de Set se dedican a tentar y corromper para —según ellos— liberar a otros de la tiranía. Trafican con secretos, vicios y favores, tejiendo redes de dependencia mientras aguardan el retorno de Set. Debilidad: la luz intensa, y sobre todo la solar, les daña más que a otros Cainitas.",
+        "tremere": "Innovadores usurpadores, los Tremere eran magos mortales que robaron la inmortalidad y forjaron su propia magia de sangre, la Taumaturgia. Jóvenes como clan pero ambiciosos y de rígida jerarquía, son temidos y odiados por los demás. Debilidad: su sangre crea lazos de sangre con inusitada rapidez, atándolos con facilidad.",
+        "caitiff": "Los Caitiff carecen de clan y de linaje claro: hijos del caos, despreciados por la sociedad cainita. No heredan disciplinas de clan ni una debilidad concreta y eligen libremente qué poderes desarrollar (con aprobación del Narrador). Su libertad es también su estigma: los antiguos los miran con desdén."
+      },
+      "clanDetails": {
+        "brujah": {
+          "appearance": "Fuertes, bien constituidos e imponentes, tendiendo al ideal atlético más que a la belleza transitoria. Las mujeres son impactantes más que bellas. Visten con pulcritud extrema siguiendo la moda local, como si la perfección del atuendo pudiera ayudar en su búsqueda de la perfección del mundo.",
+          "stereotypes": "Ven a los Altos Clanes como egoístas que solo favorecen su propio provecho. Algunos Bajos Clanes aportan ideas nuevas que merecen atención. Consideran a los Lasombra la encarnación de todos los males. Respetan con cautela a los Malkavian. Ven a los Toreador como incapaces de hacer más que distraerse, y a los Ventrue como incapaces de hacer otra cosa que afianzar el orden establecido.",
+          "organization": "Desorganizados por sus múltiples ideales. Sire y chiquillo permanecen juntos unos años en enseñanza y entrenamiento; luego el chiquillo parte a seguir su propia causa. En ciudades importantes celebran grandes concilios periódicos que con frecuencia acaban en debate circular o conflicto abierto.",
+          "creationHints": "Atributos Físicos o Mentales como grupo primario (los miembros más jóvenes tienden a Físicos); los Sociales casi siempre en tercer lugar. Equilibrio entre Habilidades marciales y Conocimientos. Caminos más comunes: Humanidad, Cielo o Reyes.",
+          "weaknessDetail": "La dificultad de la tirada para resistir el frenesí es siempre dos más que el número listado, reflejando la maldición de Caín sobre el primero en cometer diablerie."
+        },
+        "cappadocian": {
+          "appearance": "Palidez morbosa y cuerpos demacrados que no pueden disimular del todo. Visten según su posición: hábitos de monjes, túnicas de chambelán o incluso andrajos de enterrador. Muchos intentan ocultar su apariencia cadavérica, aunque en algunos casos no es tan pronunciada.",
+          "stereotypes": "Su puesto entre los Altos Clanes les parece una imposición, no una elección. Ven con desprecio a los Bajos Clanes. Critican a los Brujah por olvidar la primera mitad de su papel de filósofos-reyes. Ven a los Tzimisce como crueles que buscan misterios solo de la carne trascendente. Consideran a los Ventrue arrogantes pero caudillos necesarios.",
+          "organization": "Aparentemente solitarios, pero su naturaleza inquisitiva les lleva a mantener correspondencia. Forman fraternidades de estudiosos o cuadrillas de investigación. Sin jerarquía formal (aunque la mayoría respeta a los sacerdotes de Erciyes). Cada Ladrón de Tumbas gestiona sus propias necesidades sociales.",
+          "creationHints": "Atributos Mentales y Conocimientos como primarios. Conceptos, Naturalezas y Comportamientos tendentes a la introspección. Trasfondos orientados a la autosuficiencia o al buen nombre entre pares. Caminos del Cielo o de los Pecados; los más morbosos siguen el Camino de los Huesos.",
+          "weaknessDetail": "Su piel aparece fría y cadavérica sin importar cuánta vitae ingiera; nunca muestra el «rubor de la vida». Esta condición se agrava con la edad. La dificultad de cualquier tirada Social (con atributo Social) aumenta en uno."
+        },
+        "lasombra": {
+          "appearance": "Casi exclusivamente de familias nobles, con rasgos delicados y aristocráticos, piel oscura o aceitunada, vestidos con las ropas más lujosas que la riqueza pueda proporcionar. Los vinculados a órdenes religiosas pueden vestir de forma sencilla acorde a su estado.",
+          "stereotypes": "Ven a los otros Altos Clanes como pretendientes a su trono. A los Bajos Clanes como seguidores que deben conocer su lugar. Usan a los Ravnos como herramienta y los dejan caer en su propia trampa. Ven a los Tzimisce como «el epítome del noble salvaje», aunque recargados en la parte salvaje. Compiten siempre con los Ventrue teutónicos, intentando llevar siempre la delantera.",
+          "organization": "Jerárquica, con posición determinada por combinación de edad, linaje y logros. Los Amici Noctis («Amigos de la Noche») son el consejo secreto gobernante, responsables de organizar las Cortes de Sangre (método de jurisprudencia por el que se puede reclamar el derecho a cometer Amaranto). Gran parte de la política se negocia en privado entre un solo Lasombra y sus visitantes o aliados.",
+          "creationHints": "Atributos Mentales y Talentos como más apreciados. Naturalezas que favorecen la ambición o la astucia (Autócrata, Pedagogo) son las más comunes. Trasfondos: Influencia y Recursos; Dominio o Mentor (rara vez ambos). Caminos del Cielo o de los Reyes; algunos muy dedicados siguen el austero Camino de la Noche.",
+          "weaknessDetail": "No pueden ser vistos en espejos ni otras superficies reflectantes (estanques de agua en calma, azogue). Además, como criaturas de las tinieblas, sufren un nivel adicional de daño agravado por cualquier exposición a la luz solar."
+        },
+        "toreador": {
+          "appearance": "Visten con las mejores ropas de los mejores artesanos locales, tomadas las medidas de noche. En conjunto son tan bellos como sus ropas, aunque esa belleza puede reflejar los valores estéticos de una era pasada o tierra extranjera querida por su sire.",
+          "stereotypes": "Se sienten superiores a los otros Altos Clanes, que no supieron aprender la lección de Arikel. Desprecian a los Bajos Clanes en general. Respetan a los Brujah por su entrega intelectual, pero lamentan su falta de concentración. Ven a los Lasombra como adversarios peligrosos y amigos dignos. Consideran a los Nosferatu útiles pero repugnantes. Compiten con los Ventrue y nunca revelan que son sus enemigos.",
+          "organization": "Mantienen contacto regular con compañeros de clan en su vecindad, aunque los encuentros son más campos de batalla sociales e intelectuales que reuniones amistosas. Las más influyentes son las Cortes del Amor en Francia, antes simples reuniones sociales, ahora estructura de gobierno para los dominios vampíricos.",
+          "creationHints": "Atributos y Habilidades Sociales por encima de todo; algunos escogen Conocimientos como grupo primario de Habilidades. Trasfondos: Dominio, Criados, Rebaño y Recursos son muy comunes. Caminos de la Humanidad y de los Reyes.",
+          "weaknessDetail": "Cuando se encuentran ante música, una obra de arte o incluso una idea que cumpla sus criterios, quedan fascinados en un ensueño que puede durar horas. Se permite una tirada refleja de Autocontrol o Instinto (dif. 6) para resistirlo; si falla, el personaje permanece absorto hasta el final de la escena o hasta que el objeto desaparezca, sin poder ni defenderse. Un ataque permite una nueva tirada."
+        },
+        "tzimisce": {
+          "appearance": "Raramente normales. Descendientes de crianza Aparecida o modificados por Vicisitud: increíblemente bellos o pavorosamente horribles, con muy poco entre medias. Los implicados en el conflicto con los Tremere tienden a modificaciones marciales y utilitarias. Los adeptos del culto al cambio se deforman en la forma que mejor exprese a su dios interior. Los ancianos se inclinan hacia modificaciones que inspiren temor reverencial o miedo.",
+          "stereotypes": "No tienen iguales: solo los que codician lo que poseen y los que conocen su lugar. Respetan a los Gangrel como feroces y despiadados cazadores salvajes, prefiriéndoles a los Tremere o a los Ventrue. Odian a los Tremere con absoluta determinación: «Mátalos. A todos». Ven a los Ventrue como una amenaza mayor a largo plazo que los Tremere mismos.",
+          "organization": "Jerárquicos pero de naturaleza familiar y casi tribal, no feudal. La mayoría de las familias consisten en un sire y su progenie, conectadas con muchas otras. El anciano recibe gran respeto como centro natural del hogar mientras sus chiquillos compiten ferozmente por su reconocimiento y afecto. Las familias rivales mantienen venganzas durante siglos con protocolos sociales extremadamente complejos.",
+          "creationHints": "Originarios de Europa oriental (desde paganos bálticos hasta monjes griegos). Atributos Mentales como primarios. Trasfondo más común: Dominio; también Mentor (sire y familia inmediata), Criados (subordinados Aparecidos o ghouls esculpidos), Rebaño y Recursos. Camino de los Reyes muy popular; también aspectos del Camino del Cielo. Pocos siguen el Camino de la Humanidad; algunos el oscuro Camino de la Metamorfosis.",
+          "weaknessDetail": "Cuando descansan, deben rodearse con al menos dos puñados de tierra de un lugar importante para ellos en vida (habitualmente su país natal o tierra de su tumba). Sin ello, la reserva de dados se reduce a la mitad cada noche, continuando hasta que todas las acciones emplean un solo dado. Ocho horas de descanso entre esa tierra niegan la penalización."
+        },
+        "ventrue": {
+          "appearance": "Ya sean mercaderes o príncipes, visten impecablemente de acuerdo con su posición. Una elegancia imponente ayuda a crear la apariencia de un caudillo. Portan habitualmente las armas y armaduras que prueban que están dispuestos a defender sus tierras.",
+          "stereotypes": "La nobleza no está solo en la sangre, sino también en las obras. Los Bajos Clanes tienen un papel mientras permanezcan en su lugar. Ven a los Brujah como guerreros dignos de ser dirigidos. Ven a los Lasombra como maestros de la intriga y rivales muy peligrosos: tiempos de espadas, no de palabras. Respetan a los Toreador más de lo que su reputación de «meros artesanos» sugiere. Vigilan de cerca a los Tzimisce.",
+          "organization": "Creen firmemente en el feudalismo Cainita y se organizan según él. Juramentos de lealtad (a veces respaldados con sangre) son comunes entre Ventrue de distinto rango. Algunos se unen a órdenes de caballería de los Condenados; la mayor es la Orden de la Cruz Negra, oculta dentro de los Caballeros Teutónicos.",
+          "creationHints": "Atributos Físicos como primarios en el más marcial de los clanes, pero Sociales y Conocimientos también son importantes para el liderazgo. Trasfondos: Aliados y Criados (hermanos de armas), Dominio y Recursos (tierras). Camino de los Reyes como el más popular.",
+          "weaknessDetail": "Solo pueden beber la vitae de un tipo concreto de mortales (sacerdotes, no cristianos, vírgenes, ingleses, etc.) elegido en la creación del personaje. Aunque pueden beber físicamente de otros, no obtienen sustento. Esta limitación no se extiende a la sangre de otros vampiros."
+        },
+        "assamite": {
+          "appearance": "Gran mayoría de ascendencia del Oriente Medio, aunque con variedad entre las tres castas. Único rasgo físico distintivo: su semblante se oscurece con la edad en lugar de palidecer; un antiguo puede ser reconocido por el tono de ébano y ligeramente lustroso de su piel.",
+          "stereotypes": "Acusan a los Altos Clanes de propiciar las Cruzadas con sus manos manchadas de sangre. Consideran que los Bajos Clanes (ellos mismos, los Nosferatu y los Gangrel en particular) poseen más honor que quienes los califican así. Ven a los Lasombra musulmanes con respeto y a los Ventrue como adversarios a los que ahora pueden enfrentarse en el campo de batalla.",
+          "organization": "Muy intrincada gracias a los poderes de comunicación de los hechiceros. «El Viejo de la Montaña» (el chiquillo más antiguo de Haqim que no esté en letargo) dirige el clan desde el Trono Negro en Alamut; actualmente el hechicero Sha'hiri. Tres castas con sus propios líderes (los du'at): el Califa Jamal al frente de los guerreros, Tegyrus a los visires (que antaño cabalgó con Alejandro Magno) y Amr al-Ashrad a los hechiceros.",
+          "creationHints": "Guerreros: Atributos Físicos y Habilidades de combate. Hechiceros: Atributos y Conocimientos Mentales. Visires: mezcla ecléctica de Mental y Social. Muchos tienen al menos un círculo en Mentor (su sire) y uno o dos en Generación. Caminos del Cielo, Reyes y Humanidad son populares; los más tradicionales siguen el secreto Camino de la Sangre.",
+          "weaknessDetail": "Guerreros: cualquier habilidad sobrenatural para detectar el Amaranto los identifica como diabolistas incluso si nunca han probado otra sangre; algunos también sufren Demencia de Sangre. Hechiceros: los intentos místicos para detectar uso de magia en ellos se hacen con -2 de dificultad y se consideran de dos niveles más altos. Visires: cada uno tiene un trastorno de obsesión/compulsión asociado a su habilidad más elevada; cuando está activo, su aura revela su verdadera Naturaleza y objeto de obsesión a quien use Visión del Alma con éxito."
+        },
+        "gangrel": {
+          "appearance": "Desarrollan rasgos animales tras el Abrazo y los portan con orgullo como signos de sus habilidades de supervivencia. La ropa, cuando la llevan, es práctica y sencilla. Su apariencia tiende a reflejar la de los humanos entre los que han cazado, pero con un toque más salvaje.",
+          "stereotypes": "Desprecian a los Altos Clanes como criaturas que creen que murallas y costumbres mortales los pondrán a salvo de la ley del depredador. Ven a los Malkavian como profetas atormentados que hablan con voces de dioses (escúchalos, pero a distancia segura). Respetan a los Nosferatu. Odian a los Ravnos como hijos de Churka, su mayor enemigo mítico. Respetan a los Tzimisce por comprender el territorio y el gobierno de los fuertes.",
+          "organization": "Sin estructura formal: un sistema aproximado de posición basada en relatos de hechos y reputación. Sire y chiquillo a menudo mantienen contacto infrecuente una vez terminado el adiestramiento. Ocasionalmente grupos determinan caudillos regionales (posición informal). Aún más raras son las jaurías: partidas de guerra Gangrel reunidas para afrontar una amenaza concreta.",
+          "creationHints": "Atributos Físicos como elección primaria; Sociales casi siempre en último lugar. Muchos tienen Naturaleza y Comportamiento idénticos (no les gusta el encubrimiento). Talentos y Habilidades de supervivencia antes que Conocimientos. Los que habitan en tierras salvajes desarrollan Protean primero. El Camino de la Bestia es el más típico, aunque pueden seguir casi cualquier otro.",
+          "weaknessDetail": "Cada vez que un Gangrel entra en frenesí, gana un rasgo animal (brazos peludos, ojos de gato, grandes colmillos, etc.). Por cada cinco rasgos animales adquiridos, uno de sus Atributos Sociales baja un punto permanentemente."
+        },
+        "malkavian": {
+          "appearance": "Abarcan cualquier clase social, raza o descripción, pues el Abrazo se ofrece a cualquiera con una pizca de locura o intuición: desde un vidente salvaje en las afueras de una aldea hasta una comadrona local. No hay apariencia «típica» Malkavian.",
+          "stereotypes": "Ven a los Altos Clanes intentando imponer orden y fracasando a cada momento, preguntándose quiénes son los auténticos locos. Los Bajos Clanes están más cerca de los dones de su sangre. Envidian a los Gangrel su comunión con la Bestia. Se frustran con los Lasombra atrapados en sus propias telarañas. Ven a los Tremere como ciegos de propósito y dedicados a permanecer ciegos.",
+          "organization": "Antaño pertenecían a órdenes secretas que enseñaban las revelaciones arcanas de su sangre. Hoy estas órdenes son pocas y ocultas bajo capas de cultos mortales. La mayoría existen libres de jerarquía, unidos solo por una difusa afinidad de clan. Recurren al camino y a la cuadrilla para mantener el control de sus mentes mercuriales.",
+          "creationHints": "Grupo fluido con gran disparidad de perspectivas. La mayoría poseen Atributos Mentales elevados y habilidad con Talentos, aunque algunos son diestros en Sociales. Trasfondos variables; Posición es rara. El Camino del Cielo es el más popular, aunque hay Malkavian en todos los caminos.",
+          "weaknessDetail": "Todos los Malkavian poseen automáticamente un trastorno mental (elegido en la creación del personaje) que nunca pueden superar, ni siquiera gastando Fuerza de Voluntad."
+        },
+        "nosferatu": {
+          "appearance": "Absoluta fealdad en múltiples formas: cuerpos retorcidos, miembros deformes, piel correosa, diviesos purulentos o heridas siempre abiertas. Algunas deformidades pasan de sire a chiquillo, creando familias distintivas. La mayoría se cubre de pies a cabeza con túnicas bastas similares a las de los leprosos mortales.",
+          "stereotypes": "Ven a los Altos Clanes como orgullosos que acaban suplicando en el barro cuando necesitan información. Conocen el valor de los Bajos Clanes mejor que ellos mismos. Reconocen en los Lasombra buenos clientes de información. Se ríen de los Toreador: ¿cómo olvidan que su presa saldría corriendo al ver la auténtica naturaleza de su señor? Ven a los Tremere como aspirantes que no saben lo que es ser vampiro. Admiran que los Tzimisce comprendan lo que son.",
+          "organization": "Sorprendentemente sociales entre ellos, pues son los únicos que no los juzgan por su apariencia. Se reúnen en pequeños grupos e intercambian libremente información. Los religiosos del clan mantienen contactos con otros de credo similar para animarse mutuamente.",
+          "creationHints": "Atributos Mentales dominantes en la mayor parte del clan, aunque existen guerreros y matones con Físicos como primarios. La mayoría valora Conocimientos por encima de Talentos o Técnicas. Contactos son bastante comunes; Aliados y Criados son excepcionalmente raros. Caminos del Cielo, del Pecado y de la Bestia. El Camino de la Humanidad es prácticamente inexistente.",
+          "weaknessDetail": "Todos los Nosferatu quedan deformados y horribles para el resto de sus no vidas. Su Apariencia tiene un valor automático de 0 que no puede mejorarse por ningún medio (pierden incluso el punto automático que todo personaje recibe en Atributos). Todas las tiradas que impliquen Apariencia fallan automáticamente."
+        },
+        "ravnos": {
+          "appearance": "Los que no ocultan sus lazos de clan visten para subrayar su naturaleza exótica: ropas de origen mediterráneo o indio con brillantes morados, azules y dorados en patrones holgados y menos restrictivos que la nobleza europea. Los que se disfrazan como otro clan visten según su papel adoptado.",
+          "stereotypes": "Ven a los Altos Clanes como potencialmente valiosos si aprendieran a confiar, aunque construyen ilusiones en torno a ellos más grandes que cualquier cosa que los Ravnos puedan ofrecer. Consideran nimia la distinción entre Altos y Bajos Clanes. Odian a los Gangrel por la ancestral enemistad de sus dioses. Saben que los Toreador en privado son codiciosos de lo que ofrecen. Desconfían de los Ventrue pese a rumores de tratos.",
+          "organization": "Fluida y poco convencional, como errantes que son. La única regla sagrada: «Protege a la Familia». Las jati (castas) funcionan como familia extensa: unidas por sangre, con filosofías similares, ofreciéndose protección y ayuda mutua en viajes e intercambio de información. La respuesta ante el daño a un miembro de la jati puede ser lenta pero devastadora para el agresor.",
+          "creationHints": "Atributos Sociales generalmente primarios; Talentos a menudo como grupo principal de Habilidades. Trasfondos: Aliados y Mentor (miembros de la jati), Contactos y Recursos (comerciantes y mercancías). El Camino de la Humanidad es el más extendido; los más tradicionales y peligrosos siguen el Camino de la Paradoja.",
+          "weaknessDetail": "La Bestia de los Ravnos empuja hacia pecados refinados. Todo Ravnos es adicto a un vicio o pecado elegido en la creación (orgullo, avaricia, lujuria, robo, etc.). Cuando se halla en posición de satisfacerlo, debe hacerlo a menos que tenga éxito en una tirada de Autocontrol o Instinto (dif. 6). Incluso con éxito, oye a la Bestia susurrando."
+        },
+        "setite": {
+          "appearance": "Mayoría de ascendencia africana o de Oriente Medio, marcados como extranjeros en Europa. Practican cicatrices rituales nubias (cenizas en cortes). En público visten como mercaderes; en privado, túnicas neo-egipcias de lino con cuerpos afeitados. Los Desheru (europeos, a menudo pelirrojos) pueden pasar más fácilmente por Cainitas de otros clanes.",
+          "stereotypes": "Ven a los Altos Clanes como herramientas útiles que deben ser seducidas con sus propios deseos ocultos. Algunos Bajos Clanes muestran notable voluntad que Set podría tocar. Ven a los Assamitas como aliados de conveniencia contra los francos. A los Capadocios como eventualmente necesitados de sus servicios cuando sus libros ya no bastan. A los Gangrel como furia loable pero sin plan. A los Ventrue como equivalentes opuestos de los Assamitas.",
+          "organization": "Favorecen las antiguas prácticas sacerdotales egipcias. Cada templo dirigido por un Superintendente y Primer Profeta de Set; luego Segundo, Tercero y (raramente) Cuarto Profetas. En la práctica actual, pequeños cultos secretos con el Setita jefe como Primer Profeta. Los Desheru son menos rigurosos y ritualistas, a menudo simplemente reuniendo esclavos que les sigan.",
+          "creationHints": "Atributos Sociales y Conocimientos primarios. Comercio es Habilidad común; algunos también tienen Habilidades marciales. Trasfondos fundamentales: Criados y Rebaño (su caravana), Recursos significativos; también Contactos, Influencia y Mentor. Los más ortodoxos siguen el secreto Camino de la Serpiente; otros los Caminos de la Bestia, los Reyes o el Pecado.",
+          "weaknessDetail": "Mayor susceptibilidad a la luz solar, siguiendo el odio de Set por el dominio diurno de Osiris y Horus. La exposición al sol les inflige el doble de niveles de daño agravado que causaría a otros vampiros."
+        },
+        "tremere": {
+          "appearance": "La mayoría viste túnicas académicas de tela resistente con guardarropa deliberadamente escaso (el lujo individual se considera frívolo). Los que actúan como enlaces diplomáticos pueden vestir desde llamativas túnicas de hechicero hasta sedas y armiños de la nobleza. Provienen principalmente de las tierras germanas y eslavas.",
+          "stereotypes": "Necesitan protección de los Altos Clanes y a su vez son necesarios por ellos; eso es lo que los mantiene vivos. Los Bajos Clanes los odian anticipando su ascenso, y aún más que sus señores. Ven a los Tzimisce como un enemigo que ahora los conoce lo bastante como para estar de acuerdo en que son peligrosos. Tiemblan ante la posibilidad de que Saulot no estuviera solo.",
+          "organization": "Los Siete (los segundos de Tremere) formalizan la antigua jerarquía de la Casa en la «Pirámide»: siete aprendices bajo cada regente de capilla, siete regentes bajo cada señor regional, siete señores bajo cada uno de los Siete, y estos bajo el Gran Tremere en Ceoris (Alta Capilla en los Alpes de Transilvania). Ascender requiere proezas tanto místicas como mundanas. La desobediencia abierta se castiga con la muerte.",
+          "creationHints": "Atributos Mentales y Conocimientos como primarios. La mayoría sigue el Camino de la Humanidad (o en ocasiones el Camino del Pecado); ignorantes o recelosos de las alternativas. El Trasfondo individual más común es Mentor; las capillas pueden disfrutar de cuantiosos Trasfondos comunes.",
+          "weaknessDetail": "Todo nuevo acólito debe someterse a un juramento de sangre parcial bebiendo de la vitae combinada de los Siete, lo que da a sus superiores -1 a la dificultad para Dominación sobre compañeros de clan de menor rango. Además, cada Tremere debe entregar un frasco de su propia sangre a su superior, haciéndolos objetivo potencial de tenebrosos ritos de castigo taumatúrgico."
+        },
+        "caitiff": {
+          "appearance": "Sin apariencia típica. Al carecer de sire de linaje conocido, los Caitiff pueden ser de cualquier origen, clase o aspecto.",
+          "stereotypes": "Son despreciados por casi todos los clanes como vástagos sin linaje. Los Altos Clanes los ignoran; los Bajos Clanes los miran con lástima cuando no con desprecio. Para sobrevivir, muchos aprenden a moverse entre las grietas del sistema feudal.",
+          "organization": "Sin estructura ni clan que los agrupe. Cada Caitiff se organiza por su cuenta, buscando patrones, cuadrillas o simplemente la supervivencia solitaria.",
+          "creationHints": "Pueden elegir cualquier grupo de Atributos o Habilidades como primario según el concepto. Sin recomendaciones de clan en cuanto a disciplinas o caminos: todo es libre con aprobación del Narrador.",
+          "weaknessDetail": "Los Caitiff no tienen debilidad de clan propia, pero su falta de linaje los convierte en parias sociales. Además, carecen de disciplinas «en sangre», por lo que todas las disciplinas les cuestan como si fueran de fuera de clan."
+        }
+      },
+      "paths": {
+        "humanity": "Lealtad a las virtudes de los vivos: conservar la compasión y el autocontrol humanos frente a la Bestia.",
+        "beast": "Aceptación de la Bestia y cultivo del instinto: abrazar la depredación como naturaleza propia.",
+        "heaven": "Sometimiento a la voluntad del Cielo pese a la condenación personal: servir a un propósito divino.",
+        "sin": "Indulgencia en el vicio como destino y naturaleza: abrazar el pecado sin remordimiento.",
+        "kings": "Búsqueda disciplinada de la excelencia y el poder: gobernar con autocontrol y convicción."
+      },
+      "disciplines": {
+        "animalism": "Comunión con la Bestia: comunicarse con animales y dominar instintos.",
+        "auspex": "Percepción sobrenatural: sentidos agudizados, lectura del aura y telepatía.",
+        "celerity": "Velocidad sobrehumana de movimiento y reacción.",
+        "chimerstry": "Ilusiones y engaños que confunden los sentidos (Ravnos).",
+        "dementation": "Transmitir la locura malkaviana a otras mentes.",
+        "dominate": "Imponer la voluntad sobre la mente de otros mediante la mirada.",
+        "fortitude": "Resistencia sobrenatural al daño físico.",
+        "mortis": "El arte capadocio de tratar con la muerte y los cadáveres.",
+        "obfuscate": "Ocultarse y disfrazarse, pasando desapercibido.",
+        "obtenebration": "Controlar las sombras y la oscuridad (Lasombra).",
+        "potence": "Fuerza física inhumana.",
+        "presence": "Atraer, inspirar o aterrar las emociones de otros.",
+        "protean": "Adoptar formas animales, garras y fundirse con la tierra (Gangrel).",
+        "quietus": "El arte silencioso del asesinato y la sangre venenosa (Assamita).",
+        "serpentis": "Los poderes serpentinos de los Seguidores de Set.",
+        "thaumaturgy": "Magia de sangre de los Tremere, con sendas y rituales.",
+        "vicissitude": "Esculpir la carne propia y ajena (Tzimisce)."
+      },
+      "backgrounds": {
+        "allies": "Individuos de confianza que comparten tu causa.",
+        "contacts": "Fuentes de información en distintos ámbitos.",
+        "domain": "Espacio sobre el que te alimentas y gobiernas.",
+        "generation": "Cuán cercano a Caín estás: reduce tu generación y aumenta tu poder de sangre.",
+        "herd": "Grupo de mortales del que te alimentas con regularidad.",
+        "influence": "Grado en que tus deseos cuentan en la sociedad mortal.",
+        "mentor": "Un vampiro mayor que te guía y protege.",
+        "resources": "Riqueza, ingresos y propiedades a tu disposición.",
+        "retainers": "Sirvientes leales, vivos o ghouls.",
+        "status": "Tu posición y reputación dentro de la sociedad Cainita."
+      },
+      "virtues": {
+        "conscience": "Capacidad de sentir culpa y distinguir el bien del mal según las normas sociales. Resiste la degeneración.",
+        "conviction": "Brújula moral profundamente personal, a menudo inhumana, que sustituye a la Conciencia en caminos oscuros.",
+        "selfControl": "Capacidad de dominar la Bestia y evitar caer en el frenesí.",
+        "instinct": "En lugar de reprimir la Bestia, canalizar su pasión y dirigirla.",
+        "courage": "Temple para enfrentarse al miedo, al fuego y a la luz del sol."
+      }
+    },
+    "specialtyChosenTitle": "Especialidades",
+    "experienceChoose": "Campos de experiencia",
+    "experienceChosenTitle": "Experiencia",
+    "experienceWhat": "Un campo de experiencia otorga un dado adicional (la primera es gratis; las demás cuestan 1 punto gratuito). Puedes tener tantos como tu nivel en la habilidad. Sólo se aplica uno por tirada, pero puede combinarse con una especialidad (máx. +2 dados).",
+    "languages": {
+      "title": "Idiomas",
+      "hint": "Todo personaje conoce un idioma nativo gratis. La habilidad de Lingüística otorga idiomas adicionales (1/2/4/8/16 según sus puntos).",
+      "native": "Idioma nativo (gratis)",
+      "none": "Sin puntos en Lingüística no obtienes idiomas adicionales."
+    }
+  },
+  "spanish": "Español",
+  "english": "Inglés",
   "vampire-eo-title": "Vampiro: Edad Oscura",
   "vampire-eo-reduced-title": "Vampiro: EO",
   "vampire-sheet-title": {
@@ -8,12 +488,14 @@
     "middle-bottom": "VAMPIRO"
   },
   "menu-buttons": {
+    "create-sheet": "Crear personaje",
     "reset-sheet": "Reiniciar ficha",
     "upload-sheet": "Subir copia",
-    "download-sheet": "Descargar copia"
+    "download-sheet": "Descargar copia",
+    "change-game": "Cambiar de juego"
   },
   "custom-property-button": {
-    "title" : "Propiedad personalizada",
+    "title": "Propiedad personalizada",
     "required": "El campo es obligatorio",
     "add": "Añadir",
     "cancel": "Cancelar",
@@ -66,7 +548,8 @@
       "background": {
         "nature": "Naturaleza",
         "demeanor": "Conducta",
-        "clan": "Clan"
+        "clan": "Clan",
+        "sect": "Secta"
       },
       "concept": {
         "generation": "Generación",
@@ -108,7 +591,9 @@
         "intimidation": "Intimidación",
         "leadership": "Liderazgo",
         "legerdemain": "Prestidigitación",
-        "subterfuge": "Subterfugio"
+        "subterfuge": "Subterfugio",
+        "awareness": "Consciencia",
+        "streetwise": "Callejeo"
       },
       "skills": {
         "title": "Técnicas",
@@ -121,7 +606,10 @@
         "performance": "Interpretación",
         "ride": "Equitación",
         "stealth": "Sigilo",
-        "survival": "Supervivencia"
+        "survival": "Supervivencia",
+        "drive": "Conducir",
+        "firearms": "Armas de Fuego",
+        "larceny": "Latrocinio"
       },
       "knowledges": {
         "title": "Conocimientos",
@@ -134,7 +622,11 @@
         "occult": "Ocultismo",
         "politics": "Política",
         "seneschal": "Senescal",
-        "theology": "Teología"
+        "theology": "Teología",
+        "computer": "Informática",
+        "finance": "Finanzas",
+        "science": "Ciencias",
+        "technology": "Tecnología"
       }
     },
     "advantages": {
@@ -150,14 +642,17 @@
         "mentor": "Mentor",
         "resources": "Recursos",
         "retainers": "Criados",
-        "status": "Posición"
+        "status": "Posición",
+        "alternateIdentity": "Identidad Alternativa",
+        "fame": "Fama",
+        "blackHandMembership": "Mano Negra",
+        "rituals": "Rituales"
       },
       "virtues": {
         "title": "Virtudes",
         "conscienceConviction": "Conciencia/Convicción",
         "selfControlInstint": "Autocontrol/Instinto",
         "courage": "Coraje"
-
       },
       "road": {
         "title": "Camino",
@@ -200,6 +695,12 @@
       },
       "flaws": {
         "title": "Defectos"
+      },
+      "path": {
+        "title": "Humanidad/Senda",
+        "bearing": {
+          "title": "Porte"
+        }
       }
     },
     "disciplines": {
@@ -228,7 +729,12 @@
         "paths": "Sendas Taumaturgia",
         "rituals": "Rituales de Taumaturgia"
       },
-      "vicissitude": "Visicitud"
+      "vicissitude": "Visicitud",
+      "necromancy": {
+        "title": "Nigromancia",
+        "paths": "Sendas de Nigromancia",
+        "rituals": "Rituales de Nigromancia"
+      }
     },
     "equipment": {
       "title": "Equipo",
@@ -238,6 +744,467 @@
     },
     "notes": {
       "title": "Notas"
+    }
+  },
+  "creationVtm": {
+    "clans": {
+      "assamite": "Assamita",
+      "brujah": "Brujah",
+      "gangrel": "Gangrel",
+      "giovanni": "Giovanni",
+      "lasombra": "Lasombra",
+      "malkavian": "Malkavian",
+      "nosferatu": "Nosferatu",
+      "ravnos": "Ravnos",
+      "followersOfSet": "Seguidores de Set",
+      "toreador": "Toreador",
+      "tremere": "Tremere",
+      "tzimisce": "Tzimisce",
+      "ventrue": "Ventrue",
+      "caitiff": "Caitiff"
+    },
+    "clanWeakness": {
+      "assamite": "Beber sangre de otros vástagos le causa un nivel de daño letal no absorbible por punto; la diablerie le inflige daño agravado.",
+      "brujah": "Dificultad +2 en las tiradas para resistir o controlar el frenesí, y no puede gastar Fuerza de Voluntad para evitarlo.",
+      "gangrel": "Cada frenesí le deja un rasgo animal temporal a criterio del Narrador.",
+      "giovanni": "Su Beso duplica el daño en los mortales, que sufren una agonía atroz al ser mordidos.",
+      "lasombra": "No proyecta reflejo en espejos, agua ni superficies pulidas.",
+      "malkavian": "Sufre un trastorno mental permanente e incurable; puede mitigarlo una escena gastando Fuerza de Voluntad.",
+      "nosferatu": "Apariencia 0 permanente: las tiradas sociales basadas en ella fracasan o son extremadamente difíciles.",
+      "ravnos": "Tiene un vicio característico; ante la ocasión de caer en él debe superar Autocontrol/Instinto (dif. 6) o sucumbir.",
+      "followersOfSet": "La luz le daña especialmente: +2 niveles de daño por luz solar y -1 dado a sus reservas bajo luces intensas.",
+      "toreador": "Ante algo de gran belleza debe superar Autocontrol/Instinto (dif. 6) o quedar fascinado el resto de la escena.",
+      "tremere": "Queda vinculado por sangre con solo dos tragos de sangre de otro vampiro (el primero cuenta como dos).",
+      "tzimisce": "Debe descansar rodeado de al menos dos puñados de su tierra natal; cada noche sin ella reduce sus reservas a la mitad de forma acumulativa.",
+      "ventrue": "Solo le alimenta un tipo concreto de sangre mortal, elegido al crear el personaje; el resto no aumenta su reserva.",
+      "caitiff": "Sin disciplinas de clan propias: puede aprender cualquiera, pero toda disciplina le cuesta puntuación actual ×6 en experiencia."
+    },
+    "paths": {
+      "humanity": "Humanidad",
+      "honorableAccord": "Senda del Acuerdo Honorable",
+      "caine": "Senda de Caín",
+      "cathari": "Senda de los Cátaros",
+      "feralHeart": "Senda del Corazón Salvaje",
+      "bones": "Senda de los Huesos",
+      "lilith": "Senda de Lilith",
+      "metamorphosis": "Senda de la Metamorfosis",
+      "night": "Senda de la Noche",
+      "paradox": "Senda de la Paradoja",
+      "powerInnerVoice": "Senda del Poder y la Voz Interior",
+      "blood": "Senda de la Sangre",
+      "typhon": "Senda de Tifón"
+    },
+    "clanTypes": {
+      "camarilla": "Camarilla",
+      "camarillaDescription": "La secta que sostiene la Mascarada: los siete clanes fundadores y su sociedad de príncipes, primogénitos y neonatos.",
+      "sabbat": "Sabbat",
+      "sabbatDescription": "La Espada de Caín: clanes y manadas que rechazan la Mascarada humana y abrazan su condición de monstruos.",
+      "independent": "Clanes Independientes",
+      "independentDescription": "Clanes que no juran lealtad a ninguna secta y persiguen sus propias agendas ancestrales."
+    },
+    "clanDetail": {
+      "sect": "Secta",
+      "appearance": "Apariencia",
+      "haven": "Refugio",
+      "background": "Trasfondo",
+      "creationHints": "Creación del personaje",
+      "weakness": "Debilidad"
+    },
+    "path": {
+      "nickname": "Apodo",
+      "virtues": "Virtudes de la Senda",
+      "aura": "Porte",
+      "ethics": "Ética de la Senda",
+      "senderos": "Variantes",
+      "sinScore": "Puntuación",
+      "sinSin": "Pecado mínimo",
+      "sinReason": "Razón"
+    },
+    "finishing": {
+      "path": "Humanidad/Senda"
+    },
+    "disciplines": {
+      "animalism": "Animalismo",
+      "auspex": "Auspex",
+      "celerity": "Celeridad",
+      "chimerstry": "Quimerismo",
+      "dementation": "Dementación",
+      "dominate": "Dominación",
+      "fortitude": "Fortaleza",
+      "necromancy": "Nigromancia",
+      "obfuscate": "Ofuscación",
+      "obtenebration": "Obtenebración",
+      "potence": "Potencia",
+      "presence": "Presencia",
+      "protean": "Protean",
+      "quietus": "Extinción",
+      "serpentis": "Serpentis",
+      "thaumaturgy": "Taumaturgia",
+      "vicissitude": "Vicisitud"
+    },
+    "abilityNames": {
+      "alertness": "Alerta",
+      "athletics": "Atletismo",
+      "awareness": "Consciencia",
+      "brawl": "Pelea",
+      "emptahy": "Empatía",
+      "expression": "Expresión",
+      "intimidation": "Intimidación",
+      "leadership": "Liderazgo",
+      "streetwise": "Callejeo",
+      "subterfuge": "Subterfugio",
+      "animalKen": "Trato con Animales",
+      "crafts": "Artesanía",
+      "drive": "Conducir",
+      "etiquette": "Etiqueta",
+      "firearms": "Armas de Fuego",
+      "larceny": "Latrocinio",
+      "melee": "Pelea con Armas",
+      "performance": "Interpretación",
+      "stealth": "Sigilo",
+      "survival": "Supervivencia",
+      "academics": "Academicismo",
+      "computer": "Informática",
+      "finance": "Finanzas",
+      "investigation": "Investigación",
+      "law": "Leyes",
+      "medicine": "Medicina",
+      "occult": "Ocultismo",
+      "politics": "Política",
+      "science": "Ciencias",
+      "technology": "Tecnología"
+    },
+    "archetypeNames": {
+      "architect": "Arquitecto",
+      "autocrat": "Autócrata",
+      "bonVivant": "Hedonista",
+      "bravo": "Bravucón",
+      "capitalist": "Capitalista",
+      "caregiver": "Protector",
+      "celebrant": "Celebrante",
+      "chameleon": "Camaleón",
+      "child": "Niño",
+      "competitor": "Competidor",
+      "conformist": "Conformista",
+      "conniver": "Confabulador",
+      "creepShow": "Repulsivo",
+      "curmudgeon": "Hosco",
+      "gallant": "Gallardo",
+      "deviant": "Depravado",
+      "director": "Director",
+      "enigma": "Enigma",
+      "eyeOfTheStorm": "Ojo de la Tormenta",
+      "fanatic": "Fanático",
+      "guru": "Gurú",
+      "idealist": "Idealista",
+      "judge": "Juez",
+      "loner": "Solitario",
+      "martyr": "Mártir",
+      "masochist": "Masoquista",
+      "monster": "Monstruo",
+      "pedagogue": "Pedagogo",
+      "penitent": "Penitente",
+      "perfectionist": "Perfeccionista",
+      "rebel": "Rebelde",
+      "rogue": "Bellaco",
+      "sadist": "Sádico",
+      "scientist": "Científico",
+      "sociopath": "Sociópata",
+      "soldier": "Soldado",
+      "survivor": "Superviviente",
+      "thrillSeeker": "Ansioso de Emociones",
+      "traditionalist": "Tradicionalista",
+      "trickster": "Truhán",
+      "visionary": "Visionario",
+      "dilettante": "Diletante"
+    },
+    "archetypes": {
+      "architect": "Construyes algo que te sobreviva.",
+      "autocrat": "Necesitas llevar las riendas.",
+      "bonVivant": "La no-vida está para disfrutarla.",
+      "bravo": "La fuerza resuelve tus discusiones.",
+      "capitalist": "Todo tiene un precio, y tú lo pones.",
+      "caregiver": "Cuidar de otros da sentido a tu existencia.",
+      "celebrant": "Tu causa te llena de alegría.",
+      "chameleon": "Encajas en cualquier ambiente.",
+      "child": "Buscas quien cuide de ti.",
+      "competitor": "Solo vale ser el mejor.",
+      "conformist": "Sigues la corriente y apoyas.",
+      "conniver": "Los demás existen para servirte.",
+      "creepShow": "Disfrutas asqueando a los demás.",
+      "curmudgeon": "A todo le encuentras defectos.",
+      "gallant": "Eres el espectáculo.",
+      "deviant": "Las normas son para el rebaño.",
+      "director": "Ordenas el caos a tu alrededor.",
+      "enigma": "Nadie termina de entenderte, y así te gusta.",
+      "eyeOfTheStorm": "El caos te rodea sin tocarte.",
+      "fanatic": "Solo la causa importa.",
+      "guru": "Los demás buscan tu guía espiritual.",
+      "idealist": "Crees en algo más grande que tú.",
+      "judge": "Tu criterio mejora las cosas.",
+      "loner": "Vas por tu propio camino.",
+      "martyr": "Sufres por un bien mayor.",
+      "masochist": "El dolor te recuerda que existes.",
+      "monster": "Estás condenado: actúa como tal.",
+      "pedagogue": "Salvas a otros con el conocimiento.",
+      "penitent": "Tu existencia es una culpa que expiar.",
+      "perfectionist": "Nada alcanza nunca tu listón.",
+      "rebel": "No aceptas las reglas de nadie.",
+      "rogue": "Todo gira en torno a ti.",
+      "sadist": "Existes para causar dolor.",
+      "scientist": "Todo es un problema que resolver.",
+      "sociopath": "Los inferiores sobran.",
+      "soldier": "Cumples órdenes, a tu manera.",
+      "survivor": "Nada consigue acabar contigo.",
+      "thrillSeeker": "Vives para la adrenalina.",
+      "traditionalist": "Lo probado es lo correcto.",
+      "trickster": "La risa amansa el dolor.",
+      "visionary": "Hay algo más allá de todo esto.",
+      "dilettante": "Todo gira en torno a tu nueva pasión."
+    },
+    "descriptions": {
+      "clans": {
+        "assamite": "Asesinos y jueces de la Estirpe, guardianes de una tradición guerrera y mística con sede en Alamut.",
+        "brujah": "Rebeldes apasionados e idealistas caídos; su ira es tan legendaria como sus causas.",
+        "gangrel": "Nómadas afines a la Bestia y a los parajes salvajes; más cómodos entre lobos que en el Elíseo.",
+        "giovanni": "Un clan-familia de nigromantes incestuosos que comercia con dinero, sangre y almas.",
+        "lasombra": "Señores de las sombras y guías del Sabbat; primero se sirven a sí mismos, después a la oscuridad.",
+        "malkavian": "Un clan fracturado por la locura, cuya demencia esconde una lucidez inquietante.",
+        "nosferatu": "Deformes y marginados, dominan los subsuelos y el mercado de secretos.",
+        "ravnos": "Embusteros errantes, maestros de la ilusión, marcados por los prejuicios de la Estirpe.",
+        "followersOfSet": "Serpientes guardianas de secretos oscuros que tientan y corrompen al servicio de Set.",
+        "toreador": "Esteta y sensual, el clan de los artistas atrapados entre la belleza y el estancamiento.",
+        "tremere": "Hechiceros de la Sangre organizados en una pirámide férrea; temidos y desconfiados.",
+        "tzimisce": "Nobles caídos de Europa del Este, escultores de carne al servicio del Sabbat.",
+        "ventrue": "La aristocracia de la Estirpe: sostienen las Tradiciones y la Mascarada... y sus propios intereses.",
+        "caitiff": "Vampiros sin clan reconocible, sin herencia común y a menudo despreciados por el resto."
+      },
+      "disciplines": {
+        "animalism": "Afinidad y dominio sobrenaturales sobre los animales y la Bestia.",
+        "auspex": "Percepción extrasensorial: sentidos agudizados, auras y telepatía.",
+        "celerity": "Velocidad y reflejos sobrehumanos.",
+        "chimerstry": "Creación de ilusiones y alucinaciones.",
+        "dementation": "Inocular y canalizar la locura.",
+        "dominate": "Control mental mediante la mirada y la voz.",
+        "fortitude": "Resistencia sobrenatural, incluso al fuego y al sol.",
+        "necromancy": "Hechicería de la muerte: fantasmas, cadáveres y el Inframundo.",
+        "obfuscate": "Permanecer oculto e inadvertido incluso a plena vista.",
+        "obtenebration": "Control sobrenatural de las sombras.",
+        "potence": "Fuerza física sobrenatural.",
+        "presence": "Atraer, fascinar y dominar emociones de multitudes.",
+        "protean": "Cambio de forma: garras, tierra, bestia y niebla.",
+        "quietus": "El arte silencioso del asesinato mediante la sangre.",
+        "serpentis": "Los poderes reptilianos de la Serpiente.",
+        "thaumaturgy": "La hechicería de la Sangre de los Tremere.",
+        "vicissitude": "El arte de esculpir carne y hueso."
+      },
+      "backgrounds": {
+        "allies": "Mortales que te ayudan de forma activa y voluntaria.",
+        "alternateIdentity": "Una identidad falsa con documentación e historia propias.",
+        "blackHandMembership": "(Sabbat) Pertenencia a la Mano Negra.",
+        "contacts": "Fuentes de información en la sociedad mortal.",
+        "domain": "Territorio de caza reconocido por la Estirpe.",
+        "fame": "Notoriedad entre los mortales.",
+        "generation": "La potencia de tu Sangre: cuanto más alta, más cerca de Caín.",
+        "herd": "Recipientes de los que alimentarte con seguridad.",
+        "influence": "Peso político y social en la comunidad mortal.",
+        "mentor": "Un Vástago que te aconseja y respalda.",
+        "resources": "Dinero, propiedades e ingresos.",
+        "retainers": "Sirvientes leales: ghouls o mortales condicionados.",
+        "rituals": "(Sabbat) Conocimiento de las Ritae de la secta.",
+        "status": "Tu posición en la sociedad de tu secta."
+      },
+      "clanDetails": {
+        "brujah": {
+          "summary": "Antaño filósofos-reyes de una civilización perdida, los Brujah son hoy rebeldes apasionados que luchan cada noche por sus causas. Cada uno arde con un ideal —justicia, libertad, venganza o cambio— y pocos aceptan la autoridad sin cuestionarla. Su pasión es su mayor fuerza y también su condena: ningún clan cae en el frenesí con tanta facilidad.",
+          "sect": "Camarilla, aunque a regañadientes: muchos simpatizan con el Movimiento Anarquista y los antitribu Brujah forman una parte feroz del Sabbat.",
+          "appearance": "No hay un aspecto único: punks callejeros, académicos con chaqueta de tweed, activistas, moteros o matones. Su ropa y actitud suelen proclamar desafío a la autoridad o afiliación a su causa.",
+          "haven": "Donde puedan: pisos okupados, almacenes compartidos, sótanos cerca de universidades o de la vida nocturna. Los más organizados mantienen refugios comunales que sirven de punto de reunión para su facción.",
+          "background": "Abrazan a mortales de convicciones intensas: activistas, filósofos, agitadores, delincuentes idealistas o cualquiera con fuego en el corazón. Un Brujah rara vez Abraza por capricho: busca a alguien que comparta su causa.",
+          "creationHints": "Atributos Físicos o Mentales como primarios; Talentos suele ser el grupo principal de Habilidades (Pelea, Intimidación, Callejeo). Trasfondos: Aliados, Contactos y Estatus entre los anarquistas. Virtudes: conviene no descuidar el Autocontrol, pues su debilidad castiga la ira."
+        },
+        "gangrel": {
+          "summary": "Nómadas y supervivientes, los Gangrel están más cerca de la Bestia que ningún otro clan. Evitan las trampas de la sociedad —mortal o vampírica— y confían en el instinto, la resistencia y la tierra que pisan. Son los mejores supervivientes de la estirpe: donde otros vampiros perecerían, un Gangrel prospera.",
+          "sect": "Nominalmente Camarilla, pero su lealtad es tibia: muchos vagan como independientes de hecho y el Sabbat cuenta con sus propios antitribu rurales y urbanos.",
+          "appearance": "Prácticos hasta el extremo: ropa resistente, botas gastadas, nada que estorbe. Muchos exhiben rasgos animales ganados en frenesíes pasados —ojos de lobo, uñas como garras— que les dan un aire salvaje inconfundible.",
+          "haven": "Rara vez tienen uno fijo. La tierra misma es su refugio: parques, bosques, descampados. Los que se asientan eligen lugares defendibles y siempre conocen tres salidas.",
+          "background": "Solitarios, cazadores, supervivencialistas, moteros, vagabundos: gente que ya vivía al margen. El Abrazo Gangrel es a menudo una prueba: el sire abandona al neonato para que aprenda solo, y solo regresa si el childe sobrevive.",
+          "creationHints": "Atributos Físicos como primarios; Talentos y Técnicas de supervivencia (Alerta, Atletismo, Supervivencia, Pelea). Trasfondos: pocos y prácticos; Generación o Rebaño según el concepto. Virtudes: un Coraje alto es casi tradición del clan."
+        },
+        "malkavian": {
+          "summary": "El Abrazo Malkavian rompe la mente y, a cambio, a veces regala una visión que nadie más alcanza. Locos, profetas, bufones y oráculos, los Malkavian ven patrones donde otros solo ven ruido, y su famosa Red de la Locura susurra secretos de un extremo a otro del clan. Subestimarlos es el último error de muchos.",
+          "sect": "Camarilla; sus antitribu del Sabbat, que conservan la antigua disciplina de Demencia, inquietan incluso a sus propios aliados.",
+          "appearance": "Cualquiera. Un Malkavian puede vestir un traje impecable, una bata de hospital o un disfraz de payaso, y el conjunto siempre transmite que algo no encaja del todo.",
+          "haven": "Tan variados como sus mentes: áticos meticulosamente ordenados, hospitales abandonados, madrigueras llenas de recortes de periódico unidos con hilo rojo. El refugio suele reflejar —o alimentar— su locura particular.",
+          "background": "Abrazan a quienes ya han mirado el abismo: pacientes psiquiátricos, visionarios, artistas obsesivos, veteranos rotos o genios incomprendidos. A veces el elegido parece perfectamente normal… hasta después del Abrazo.",
+          "creationHints": "Cualquier grupo de Atributos puede ser primario según el concepto; los Mentales son los más habituales, con Percepción alta y Talentos como Alerta o Empatía. Trasfondos: Contactos insospechados. Recuerda: todo Malkavian comienza con un trastorno incurable elegido en la creación."
+        },
+        "nosferatu": {
+          "summary": "El Abrazo Nosferatu es una condena: deforma el cuerpo hasta lo monstruoso y expulsa a la víctima de la sociedad mortal para siempre. A cambio, el clan ha convertido las cloacas y los túneles en su reino, y la información en su moneda. Nadie sabe más de lo que ocurre en una ciudad que sus Ratas de Alcantarilla.",
+          "sect": "Camarilla; sus antitribu del Sabbat mantienen lazos discretos con el resto del clan, pues los Nosferatu cuidan de los suyos por encima de las sectas.",
+          "appearance": "Horrores sin excepción: pieles leprosas, cuerpos retorcidos, rostros que provocan gritos. Se cubren con capuchas, harapos o abrigos amplios, y dominan Ofuscación para caminar entre los mortales.",
+          "haven": "Bajo tierra: alcantarillas, túneles de metro abandonados, criptas y madrigueras excavadas durante décadas. Sus guaridas comunales están protegidas con trampas y rutas secretas que solo el clan conoce.",
+          "background": "Algunos sires eligen a marginados que ya conocían la crueldad del mundo; otros Abrazan como castigo a los vanidosos y hermosos. Sea como sea, el neonato pierde su vida anterior por completo.",
+          "creationHints": "Atributos Físicos o Mentales como primarios (la Apariencia es 0 y no puede mejorarse). Habilidades: Sigilo, Alerta, Callejeo e Investigación. Trasfondos: Contactos y Aliados son el alma del clan; su red de información no tiene rival."
+        },
+        "toreador": {
+          "summary": "Los Toreador son los amantes eternos del arte y la belleza, vampiros que persiguen la pasión estética con la misma sed con que otros persiguen sangre. Mecenas, artistas y seductores, dominan la alta sociedad mortal y la política de salón de la Camarilla. Su maldición es la misma que su don: sentir demasiado.",
+          "sect": "Camarilla, donde ejercen una influencia social enorme; sus antitribu del Sabbat pervierten la belleza en crueldad refinada.",
+          "appearance": "Impecables. Visten a la última o cultivan un estilo personal inconfundible, y muchos fueron elegidos precisamente por su belleza. Un Toreador desaliñado es casi una contradicción.",
+          "haven": "Elegantes y urbanos: áticos, galerías, estudios de artista. Llenos de arte, música e invitados interesantes; el refugio de un Toreador es también su escenario.",
+          "background": "Artistas, modelos, músicos, actores, mecenas y musas: cualquiera que encarne la belleza o la cree. Algunos Abrazan a genios para \"preservarlos\"; otros, simplemente, coleccionan personas hermosas.",
+          "creationHints": "Atributos Sociales como primarios. Habilidades: Expresión, Interpretación, Etiqueta, Empatía y Conocimientos artísticos. Trasfondos: Recursos, Fama, Rebaño y Criados abundan. Virtudes equilibradas: su debilidad los deja fascinados ante la belleza en los peores momentos."
+        },
+        "tremere": {
+          "summary": "Nacidos de un ritual que robó la inmortalidad a otro clan, los Tremere son los brujos de la estirpe: una pirámide jerárquica de magos de la sangre unida por juramentos y vigilancia mutua. Su Taumaturgia les da un poder que ningún otro clan iguala, y su organización, una eficacia que todos envidian y temen.",
+          "sect": "Camarilla, de la que son pilar fundamental; el clan persigue sin piedad a sus escasos desertores y antitribu.",
+          "appearance": "Discretos y profesionales: trajes sobrios, estilo académico, nada que llame la atención innecesariamente. La verdadera ostentación Tremere se reserva para los rituales tras puertas cerradas.",
+          "haven": "La capilla: el refugio-fortaleza comunal del clan en cada ciudad, protegido por salvaguardas místicas. Los neonatos suelen residir en ella bajo la mirada de sus superiores.",
+          "background": "Ocultistas, académicos, estudiantes de lo arcano, gente con voluntad férrea y hambre de conocimiento. El clan estudia a sus candidatos durante años: el Abrazo Tremere nunca es casual.",
+          "creationHints": "Atributos Mentales como primarios; Conocimientos (Ocultismo, Academicismo, Investigación) al frente. Trasfondos: Mentor y Estatus dentro de la pirámide. Recuerda que todo neonato bebe la sangre de los Siete: comienza parcialmente vinculado al clan."
+        },
+        "ventrue": {
+          "summary": "Los Ventrue se consideran los reyes legítimos de la estirpe: dirigieron la Camarilla desde su fundación y cargan con el peso —y el privilegio— del liderazgo. Banqueros, políticos y aristócratas en vida, gobiernan las ciudades con dinero, influencia y una etiqueta impecable. El poder, dicen, no es un premio: es una responsabilidad.",
+          "sect": "Camarilla, su columna vertebral y su principal fuente de príncipes; los antitribu del Sabbat se ven a sí mismos como caballeros cruzados.",
+          "appearance": "Elegancia conservadora: trajes caros, joyería discreta, porte de presidente de consejo. Un Ventrue viste como el poder que representa.",
+          "haven": "Lujosos y seguros: áticos corporativos, mansiones históricas, clubes privados. Siempre con seguridad profesional, mortal o de otro tipo.",
+          "background": "Ejecutivos, financieros, políticos, militares de alto rango, viejas familias. El clan Abraza a quienes ya saben mandar; el linaje importa, y cada sire responde de su childe ante el clan.",
+          "creationHints": "Atributos Sociales o Mentales como primarios. Conocimientos: Finanzas, Leyes, Política. Trasfondos: Recursos, Influencia, Criados y Estatus en abundancia; pocos clanes empiezan con tantos apoyos. Elige con cuidado su restricción de alimentación: solo un tipo de sangre les sustenta."
+        },
+        "lasombra": {
+          "summary": "Amos de las sombras y señores del Sabbat, los Lasombra abrazan la oscuridad en lo literal y en lo figurado. Aristócratas depredadores convencidos de que el poder pertenece a quien lo toma, moldean la Obtenebración abisal como otros moldean la política. Diablerizaron a su propio Antediluviano y no se arrepienten.",
+          "sect": "Sabbat, del que son la columna dirigente junto a los Tzimisce; los escasos Lasombra que sirven a la Camarilla son cazados como traidores.",
+          "appearance": "Aristocráticos: rasgos mediterráneos elegantes, ropa oscura de corte impecable. Cultivan una presencia dominante que no necesita alzar la voz… y ningún espejo los delata.",
+          "haven": "Mansiones sombrías, criptas de iglesias, propiedades familiares heredadas de su vida mortal. Prefieren lugares con historia y peso, decorados con un gusto severo.",
+          "background": "Nobleza, clero, familias de poder antiguo: los Lasombra Abrazan a depredadores natos con ambición y voluntad. Muchos mantienen lazos retorcidos con sus familias mortales durante generaciones.",
+          "creationHints": "Atributos Sociales o Mentales como primarios. Habilidades: Liderazgo, Intimidación, Subterfugio. Trasfondos: Estatus en el Sabbat, Recursos, Criados. Muchos siguen Sendas de Iluminación (como la Senda de la Noche o la del Poder y la Voz Interior) en lugar de Humanidad."
+        },
+        "tzimisce": {
+          "summary": "Los Demonios moldean la carne y el hueso como arcilla, y se moldean a sí mismos en busca de la trascendencia. Señores del Viejo Continente, eruditos crueles y anfitriones exquisitos, los Tzimisce fundaron el Sabbat para no arrodillarse jamás ante nadie. Su cortesía es legendaria; su ira, peor.",
+          "sect": "Sabbat, su alma ideológica y espiritual; un Tzimisce leal a la Camarilla es una contradicción casi inexistente.",
+          "appearance": "Los que dominan Vicisitud se esculpen a sí mismos: belleza sobrenatural, formas monstruosas o ambas según la ocasión. Los más tradicionales visten con la severidad de la vieja nobleza europea.",
+          "haven": "Fincas ancestrales, monasterios ruinosos, mansiones victorianas: siempre con tierra de su lugar natal, sin la cual no descansan. El refugio de un Tzimisce es su dominio soberano, y las visitas se rigen por leyes de hospitalidad sagradas.",
+          "background": "Familias del Viejo Mundo, eruditos, cirujanos, ocultistas… y sus propios revenants: familias de ghouls criadas durante siglos como ganado selecto.",
+          "creationHints": "Atributos Mentales como primarios. Conocimientos: Ocultismo, Medicina, Ciencia. Trasfondos: Dominio, Criados (szlachta y revenants), Recursos. La Senda de la Metamorfosis es su camino filosófico más característico; pocos conservan la Humanidad."
+        },
+        "assamite": {
+          "summary": "Desde la fortaleza de Alamut, el Clan de los Asesinos ha juzgado y ejecutado a los vampiros que considera indignos, cobrando su precio en sangre. Divididos en castas de guerreros, hechiceros y visires, los Assamitas siguen las enseñanzas de Haqim y desconfían de las sectas occidentales. Rota la maldición Tremere que envenenaba su sangre, vuelven a cobrar en vitae.",
+          "sect": "Independientes; venden sus servicios como asesinos a cualquier secta, aunque algunos antitribu sirven al Sabbat y unos pocos se han acercado a la Camarilla.",
+          "appearance": "Mayoría de origen medio-oriental, aunque las tres castas Abrazan por todo el mundo. Su piel se oscurece con la edad; los ancianos son de un ébano lustroso. Visten con discreción funcional: un asesino no llama la atención.",
+          "haven": "Refugios seguros, discretos y fáciles de abandonar; los más devotos peregrinan a Alamut, la fortaleza madre de las montañas. Un Assamita nunca duerme donde trabaja.",
+          "background": "Guerreros, soldados y artistas marciales para la casta guerrera; académicos y estrategas para los visires; místicos y eruditos de lo oculto para los hechiceros. El clan busca disciplina, fe y letalidad.",
+          "creationHints": "Guerreros: Físicos primarios y Habilidades de combate. Hechiceros: Mentales y Conocimientos (Ocultismo). Visires: Mentales o Sociales. Trasfondos: Generación, Mentor y Estatus del clan. Cuidado con su debilidad moderna: la vitae de otros vampiros les resulta adictiva."
+        },
+        "followersOfSet": {
+          "summary": "Los Seguidores de Set son sacerdotes de un dios oscuro y mercaderes de todo vicio imaginable. Corrompen porque creen: cada alma que degradan es un paso hacia el despertar de Set y la liberación de las cadenas del mundo. Bajo su sonrisa servicial siempre hay un anzuelo.",
+          "sect": "Independientes por doctrina: las sectas ajenas son rebaños de dioses falsos. Colaboran con cualquiera… al precio adecuado.",
+          "appearance": "Encantadores y exóticos; muchos cultivan una estética egipcia en privado. En público visten lo que su papel requiera: traficante, gurú, empresario nocturno o sacerdote.",
+          "haven": "Templos ocultos bajo sus negocios: clubes nocturnos, fumaderos, casas de empeño. Cuanto más profundo y oscuro, mejor: la luz les daña más que a ningún otro clan.",
+          "background": "Cultistas, traficantes, contrabandistas, proxenetas, predicadores caídos: gente que ya vivía del deseo ajeno. El clan también Abraza a conversos fervientes de su fe.",
+          "creationHints": "Atributos Sociales como primarios. Talentos: Subterfugio, Empatía, Callejeo. Trasfondos: Contactos, Rebaño, Criados y Recursos (sus redes de vicio proporcionan todos ellos). Recuerda su debilidad: el sol y la luz intensa los castigan el doble."
+        },
+        "giovanni": {
+          "summary": "Clan, familia y empresa criminal a la vez, los Giovanni compraron su inmortalidad con la diablerie de un Antediluviano y la pagaron con una maldición. Nigromantes y banqueros, mueven dinero y muertos con la misma frialdad contable. La familia lo es todo; los de fuera son recursos.",
+          "sect": "Independientes; la Promesa de 1528 les garantiza la neutralidad de la Camarilla mientras no causen problemas… y saben explotarla al máximo.",
+          "appearance": "Trajes caros y modales de banquero veneciano. Casi todos comparten los rasgos de la familia mortal Giovanni o de sus ramas aliadas (Milliner, Pisanob, Putanesca).",
+          "haven": "Mansiones familiares, mausoleos, oficinas de la Loggia. Venecia sigue siendo el corazón del clan, y todo Giovanni tiene allí un rincón que le espera.",
+          "background": "Se Abraza casi exclusivamente dentro de la familia mortal y sus ramas: el candidato es observado desde la cuna y educado en los negocios y en los muertos. Abrazar fuera de la sangre está prohibido.",
+          "creationHints": "Atributos Mentales o Sociales como primarios. Conocimientos: Finanzas, Ocultismo, Leyes. Trasfondos: Recursos, Aliados (la familia), Influencia y Criados. Su debilidad: su Beso causa un dolor atroz en lugar de éxtasis, y alimentarse de mortales inflige daño adicional."
+        },
+        "ravnos": {
+          "summary": "Marcados como ladrones y embusteros por el resto de la estirpe, los Ravnos convierten el prejuicio en arma: nadie espera nada de ellos hasta que es demasiado tarde. Maestros de la ilusión gracias a Quimerismo, vagan en familias extensas y ponen a prueba la realidad —y la paciencia— de todo el que se cruza en su camino.",
+          "sect": "Independientes; los pocos antitribu del Sabbat son vistos por el resto del clan como una vergüenza de familia.",
+          "appearance": "Muchos descienden de linajes rom o indios, aunque el clan Abraza por todo el mundo. Visten práctico para el camino, con toques vistosos cuando conviene al engaño.",
+          "haven": "El camino mismo: caravanas, vehículos, moteles, campamentos temporales. Un Ravnos asentado es un Ravnos vulnerable, y el clan lo sabe desde antiguo.",
+          "background": "Familias viajeras, timadores, artistas ambulantes, contrabandistas. El Abrazo suele quedar dentro de la familia extensa o recaer en quienes demuestran ingenio para vivir del cuento.",
+          "creationHints": "Atributos Sociales o Físicos como primarios. Talentos: Subterfugio, Latrocinio, Callejeo. Trasfondos: Aliados y Contactos (la kumpania, la familia). Elige bien el vicio de creación: la debilidad Ravnos obliga a satisfacerlo cuando surge la ocasión."
+        },
+        "caitiff": {
+          "summary": "Sin clan, sin linaje y sin sitio en la mesa, los Caitiff son los huérfanos de la estirpe. Algunos fueron abandonados por sus sires; otros nacieron con la sangre demasiado diluida para mostrar clan alguno. Libres de debilidades heredadas y de tradiciones, pagan esa libertad con el desprecio de todos.",
+          "sect": "Ninguna los reclama: la Camarilla los tolera como ciudadanos de segunda, el Sabbat los recluta como carne de cañón y muchos acaban entre los anarquistas.",
+          "appearance": "Cualquiera: el Abrazo Caitiff no distingue clase, origen ni estilo. Muchos aprenden rápido a no destacar.",
+          "haven": "Lo que puedan conseguir y defender: pisos baratos, sótanos, refugios prestados. Sin clan que los respalde, cada noche es suya y solo suya.",
+          "background": "Abrazos accidentales, childer abandonados, vástagos de sangre débil de las generaciones 14ª y 15ª. Cada Caitiff tiene una historia de supervivencia que contar.",
+          "creationHints": "Elige libremente los grupos de Atributos y Habilidades según el concepto. Puede escoger tres disciplinas cualesquiera, pero todas cuestan como de fuera de clan. Trasfondos: el Estatus está casi vetado; Aliados y Contactos valen oro."
+        }
+      },
+      "sects": {
+        "camarilla": {
+          "summary": "La Torre de Marfil: la mayor secta de la estirpe, nacida para proteger a los vampiros de la humanidad tras las hogueras de la Inquisición. Su ley suprema es la Mascarada: los mortales no deben saber jamás que los vampiros existen.",
+          "history": "Fundada en 1493 en la Convención de Thorns, que puso fin a la Revuelta Anarquista y a los peores años de la Inquisición. Siete clanes la constituyeron —Brujah, Gangrel, Malkavian, Nosferatu, Toreador, Tremere y Ventrue— bajo la premisa de que solo el secreto garantiza la supervivencia. Se proclama la sociedad de todos los vampiros, la reclamen o no, y niega oficialmente la existencia de los Antediluvianos y de la Gehenna.",
+          "practices": "Cada ciudad la gobierna un Príncipe apoyado (y vigilado) por la Primogenitura, el consejo de ancianos de cada clan. Las Seis Tradiciones son su ley: Mascarada, Dominio, Progenie, Rendición de Cuentas, Hospitalidad y Destrucción. Las arpías dictan el estatus en el Elíseo —terreno neutral donde la violencia está prohibida—, el Sheriff impone la ley y el Azote patrulla las fronteras del dominio.",
+          "conclaves": "El Círculo Interior se reúne en Venecia cada trece años para fijar el rumbo de la secta y nombrar a los Justicar, los jueces supremos de cada clan. Estos, con sus Arcontes, convocan cónclaves: grandes asambleas donde se juzgan crímenes contra la secta, se deponen príncipes y cualquier vástago puede exigir justicia. Un cónclave es lo más parecido a un parlamento que tiene la estirpe.",
+          "rituals": "Sus ritos son sociales y políticos: la presentación ante el Príncipe al llegar a un dominio, la petición de permiso para crear progenie, las cortes del Elíseo y los salones donde se teje el estatus. La Caza de Sangre (Lextalionis) es su rito más temido: la condena pública que convierte a un vástago en presa legítima de toda la ciudad."
+        },
+        "sabbat": {
+          "summary": "La Espada de Caín: la secta monstruosa que rechaza fingirse humana. Los vampiros son depredadores por derecho, y el Sabbat existe para liberarlos del yugo de los Antediluvianos y prepararse para la Gehenna.",
+          "history": "Nació de la Revuelta Anarquista del siglo XV, cuando los vástagos jóvenes se alzaron contra sus ancianos: los Lasombra y los Tzimisce proclaman haber diablerizado a sus propios fundadores y rechazaron la paz de Thorns. Aquellos anarquistas irredentos se convirtieron en el Sabbat. Tras siglos de guerras civiles internas y cruzadas contra ciudades de la Camarilla, se consolidó como su gran enemiga.",
+          "practices": "Su unidad básica es la manada, ligada por la Vaulderie: un rito en el que todos mezclan su sangre en un cáliz y beben, sustituyendo el vínculo de sangre por el Vinculum de lealtad mutua. Desprecian la Humanidad: la mayoría sigue Sendas de Iluminación. La jerarquía —Regente, cardenales, arzobispos, obispos, sacerdotes y ductus— se legitima con la fuerza y el fervor.",
+          "conclaves": "Los concilios de la secta ratifican al Regente y declaran las Cruzadas: asaltos coordinados para arrebatar ciudades a la Camarilla. Las fiestas mayores reúnen a manadas enteras: el Palla Grande, gran baile de máscaras donde la sangre corre sin disimulo, y el Festivo dello Estinto, la fiesta de los muertos. Las disputas de liderazgo se zanjan en la Monomacia, duelo ritual a muerte.",
+          "rituals": "Es una secta profundamente ritualista: ritae auctoritas comunes a toda la secta e ignoblis ritae propios de cada manada. Los Ritos de Creación entierran al recién Abrazado para que desentierre su monstruosidad; el Festín de Sangre, la Danza del Fuego —saltar las llamas para probar el valor— y los Juegos de Instinto endurecen a las manadas frente al miedo y la Bestia."
+        },
+        "anarchs": {
+          "summary": "El Movimiento Anarquista: vástagos que rechazan la tiranía de los ancianos sin abrazar la monstruosidad del Sabbat. Quieren dominios gobernados por el mérito y no por la edad; la Mascarada les parece sensata… aunque los príncipes no.",
+          "history": "Herederos de la Revuelta Anarquista original, firmaron la paz de Thorns como anarquistas indultados dentro de la Camarilla. El resentimiento estalló de nuevo en 1944 con la revuelta de Los Ángeles: el príncipe cayó y nació el Estado Libre Anarquista de California, la prueba de que otra sociedad vampírica es posible. Desde entonces el Movimiento crece y mengua al ritmo de las purgas de los príncipes.",
+          "practices": "Sustituyen a los príncipes por Barones, que gobiernan por carisma y pactos entre bandas. Defienden la Mascarada por pura supervivencia y castigan a quien la rompe, pero desprecian el resto del protocolo de la Torre de Marfil. Sus dominios son más igualitarios y también más caóticos: la política anarquista se hace en garajes, clubes y azoteas, no en salones.",
+          "conclaves": "Nada de cónclaves formales: asambleas de barones, consejos de banda y pactos sellados con apretones de manos y amenazas veladas. El Statu Quo de Los Ángeles fue su intento más serio de gobierno colectivo. Cuando la amenaza es grande —el Sabbat, un príncipe vengativo—, las baronías saben unirse… durante un tiempo.",
+          "rituals": "Pocos y prácticos: juramentos de banda, ritos de admisión informales y la memoria compartida de la Revuelta. Su verdadero ritual es la asamblea: discutir, votar y volver a discutir, algo impensable en las cortes de los ancianos."
+        },
+        "independents": {
+          "summary": "Los clanes independientes no juran lealtad a secta alguna: Assamitas, Seguidores de Set, Giovanni y Ravnos persiguen agendas propias más antiguas que la Camarilla y el Sabbat. A ellos se suman los Autarkis, vástagos sueltos que rechazan toda bandera.",
+          "history": "Cuando las sectas se formaron en el siglo XV, estos clanes ya tenían milenios de historia y no vieron motivo para arrodillarse. Los Assamitas pactaron tributos tras el asedio de Alamut; los Giovanni compraron su neutralidad con la Promesa de 1528; los Setitas y los Ravnos simplemente ignoraron unas guerras que no eran suyas. Cada clan es, en la práctica, su propia secta.",
+          "practices": "Cada clan se gobierna a sí mismo: las castas de Alamut bajo el Anciano de la Montaña, los templos setitas con sus jerarquías sacerdotales, la familia-empresa Giovanni desde Venecia y las jati Ravnos dispersas por los caminos. Tratan con la Camarilla y el Sabbat como potencias extranjeras: embajadas, contratos y traiciones según convenga.",
+          "conclaves": "No hay asambleas comunes entre los independientes: cada clan tiene las suyas. Los Assamitas responden ante los du'at de Alamut, los Setitas ante sus sumos sacerdotes, los Giovanni ante el consejo familiar de la Loggia, y los Ravnos resuelven las disputas dentro de la jati o entre familias.",
+          "rituals": "Cada clan conserva ritos propios: la sangre de tributo y los juramentos de contrato assamitas, los misterios ofidios y las iniciaciones setitas, los banquetes y nigromancias familiares de los Giovanni y los códigos de hospitalidad y deuda de los Ravnos."
+        }
+      }
+    },
+    "sects": {
+      "camarilla": "Camarilla",
+      "sabbat": "Sabbat",
+      "anarchs": "Anarquistas",
+      "independents": "Independientes"
+    },
+    "sectDetail": {
+      "history": "Historia",
+      "practices": "Prácticas",
+      "conclaves": "Cónclaves y asambleas",
+      "rituals": "Ritos y rituales"
+    },
+    "abilityDetail": {
+      "specialties": "Especialidades"
+    },
+    "specialtyWhat": "Una especialidad es una subcategoría en la que destacas (p. ej. Fuerza → \"levantar pesos\" o Interpretación → \"canto\"). Solo puede elegirse en Atributos o Habilidades de 4 o más, es gratuita y hay una por rasgo. En las tiradas que cubra, cada 10 cuenta como dos éxitos en lugar de uno.",
+    "archetypeDetail": {
+      "willpower": "Recupera Fuerza de Voluntad"
+    },
+    "languages": {
+      "nativeHint": "Tu personaje habla su idioma nativo gratis. Los idiomas adicionales se eligen en Toques Finales (Mérito Idioma).",
+      "meritHint": "El Mérito Idioma incluye tu primer idioma; cada idioma adicional cuesta 1 punto gratuito más.",
+      "needMerit": "Los idiomas adicionales se eligen con el Mérito «Idioma»: selecciónalo abajo, en Méritos y Defectos, para que aparezca la lista."
+    }
+  },
+  "game-title": {
+    "VAMPIRE_DARK_AGES": "Vampiro: Edad Oscura",
+    "VAMPIRE_MASQUERADE": "Vampiro: La Mascarada"
+  },
+  "game-reduced-title": {
+    "VAMPIRE_DARK_AGES": "Vampiro: EO",
+    "VAMPIRE_MASQUERADE": "Vampiro: LM"
+  },
+  "vtm-sheet-title": {
+    "start": "V",
+    "middle-top": "ampir",
+    "end": "O",
+    "middle-bottom": "LA MASCARADA"
+  },
+  "home": {
+    "title": "Hojas de Personaje",
+    "subtitle": "Elige tu juego",
+    "open": "Abrir ficha",
+    "taglines": {
+      "VAMPIRE_DARK_AGES": "Intriga y horror en el Medievo Oscuro",
+      "VAMPIRE_MASQUERADE": "Noches modernas bajo la Mascarada"
     }
   }
 }

@@ -3,6 +3,16 @@
   <span *ngIf="hasLabel()" class="circle-input-label">
     {{ label | translate }}
   </span>
+  <button
+    *ngIf="extrasCount"
+    type="button"
+    class="specialty-badge"
+    aria-label="specialty"
+    (click)="specialtyClick($event)"
+  >
+    <mat-icon>star</mat-icon>
+    <span *ngIf="extrasCount > 1" class="specialty-count">{{ extrasCount }}</span>
+  </button>
   <div *ngIf="hasLabel()" class="line"></div>
   <div class="circle-input-values">
     <ng-container *ngFor="let item of circleArray; index as i; trackBy: trackByFn">

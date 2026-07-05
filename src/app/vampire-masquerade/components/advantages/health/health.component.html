@@ -1,0 +1,47 @@
+<h2 class="sub-category">
+  <span>{{ 'sheet.advantages.health.title' | translate }}</span>
+</h2>
+<div class="health-container">
+  <arm-damage-item
+    [name]="'sheet.advantages.health.bruised'"
+    [penalty]="characterSheet.advantages.health.bruised.penalty"
+    [value]="characterSheet.advantages.health.bruised.value"
+    (onValueChange)="updateProperty($event.toString(), 'bruised.value')"
+  ></arm-damage-item>
+  <arm-damage-item
+    [name]="'sheet.advantages.health.hurt'"
+    [penalty]="characterSheet.advantages.health.hurt.penalty"
+    [value]="characterSheet.advantages.health.hurt.value"
+    (onValueChange)="updateProperty($event.toString(), 'hurt.value')"
+  ></arm-damage-item>
+  <arm-damage-item
+    [name]="'sheet.advantages.health.injured'"
+    [penalty]="characterSheet.advantages.health.injured.penalty"
+    [value]="characterSheet.advantages.health.injured.value"
+    (onValueChange)="updateProperty($event.toString(), 'injured.value')"
+  ></arm-damage-item>
+  <arm-damage-item
+    [name]="'sheet.advantages.health.wounded'"
+    [penalty]="characterSheet.advantages.health.wounded.penalty"
+    [value]="characterSheet.advantages.health.wounded.value"
+    (onValueChange)="updateProperty($event.toString(), 'wounded.value')"
+  ></arm-damage-item>
+  <arm-damage-item
+    [name]="'sheet.advantages.health.mauled'"
+    [penalty]="characterSheet.advantages.health.mauled.penalty"
+    [value]="characterSheet.advantages.health.mauled.value"
+    (onValueChange)="updateProperty($event.toString(), 'mauled.value')"
+  ></arm-damage-item>
+  <arm-damage-item
+    [name]="'sheet.advantages.health.crippled'"
+    [penalty]="characterSheet.advantages.health.crippled.penalty"
+    [value]="characterSheet.advantages.health.crippled.value"
+    (onValueChange)="updateProperty($event.toString(), 'crippled.value')"
+  ></arm-damage-item>
+  <arm-damage-item
+    [name]="'sheet.advantages.health.incapacitated'"
+    [penalty]="characterSheet.advantages.health.incapacitated.penalty"
+    [value]="characterSheet.advantages.health.incapacitated.value"
+    (onValueChange)="updateProperty($event.toString(), 'incapacitated.value')"
+  ></arm-damage-item>
+</div>

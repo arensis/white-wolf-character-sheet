@@ -14,4 +14,12 @@ export interface VampireDarkAgesSheet extends DarkAgesSheet {
   disciplines: VampireDADisciplines;
   gear: VampireDAGear;
   isEditable: boolean;
+  /** Chosen specialty names per ability member (up to 3; set by the creator). */
+  specialties?: Record<string, string[]>;
+  /** Chosen experience fields per generic ability (set by the creator). */
+  experiences?: Record<string, string[]>;
+  /** Merits and flaws selected during creation. */
+  meritsFlaws?: { id: string; name: string; type: string; cost: number }[];
+  /** Free-form notes as a ProseMirror JSON doc (never raw HTML). */
+  notes?: Record<string, any> | null;
 }

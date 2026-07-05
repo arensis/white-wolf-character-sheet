@@ -51,6 +51,30 @@
   line-height: 23px;
 }
 
+.specialty-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 1px;
+  padding: 0;
+  margin-left: 3px;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  color: #d4a02a;
+
+  mat-icon {
+    font-size: 16px;
+    width: 16px;
+    height: 16px;
+  }
+
+  .specialty-count {
+    font-size: 0.75rem;
+    font-weight: bold;
+    line-height: 1;
+  }
+}
+
 .circle.filled.temporal {
   background-color: #ffe500;
 }

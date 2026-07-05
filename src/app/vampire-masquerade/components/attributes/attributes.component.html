@@ -1,0 +1,77 @@
+<div class="attributes-section">
+    <div class="abilities-image-section">
+    <img src="assets/images/vampire-dark-ages/sections/sheetSectionSeparator.png">
+    <h1>{{ 'sheet.attributes.title' | translate }}</h1>
+  </div>
+  <div class="attributes-container">
+    <div class="physical">
+      <h2 class="sub-title">{{ 'sheet.attributes.physical.title' | translate }}</h2>
+      <div class="attribute-row" *ngFor="let member of physicalMembers">
+        <arm-circle-input
+          [circleAmount]="8"
+          [label]="'sheet.attributes.physical.' + member"
+          [value]="$any(characterSheet.attributes.physical)[member]"
+          [specialties]="characterSheet.specialties"
+          (onSpecialtyClick)="specialty.showChosenFor($event, characterSheet.specialties)"
+          [isEditable]="characterSheet.isEditable"
+          (onValueChange)="updatePhysicalValueProperty($event, member)"
+          [minValue]="1"
+        ></arm-circle-input>
+        <button
+          *ngIf="attribute.has(member)"
+          class="info-btn"
+          type="button"
+          (click)="attribute.open('sheet.attributes.physical.' + member, member)"
+        >
+          <mat-icon>info_outline</mat-icon>
+        </button>
+      </div>
+    </div>
+    <div class="social">
+      <h2 class="sub-title">{{ 'sheet.attributes.social.title' | translate }}</h2>
+      <div class="attribute-row" *ngFor="let member of socialMembers">
+        <arm-circle-input
+          [circleAmount]="8"
+          [label]="'sheet.attributes.social.' + member"
+          [value]="$any(characterSheet.attributes.social)[member]"
+          [specialties]="characterSheet.specialties"
+          (onSpecialtyClick)="specialty.showChosenFor($event, characterSheet.specialties)"
+          [isEditable]="characterSheet.isEditable"
+          (onValueChange)="updateSocialValueProperty($event, member)"
+          [minValue]="1"
+        ></arm-circle-input>
+        <button
+          *ngIf="attribute.has(member)"
+          class="info-btn"
+          type="button"
+          (click)="attribute.open('sheet.attributes.social.' + member, member)"
+        >
+          <mat-icon>info_outline</mat-icon>
+        </button>
+      </div>
+    </div>
+    <div class="mental">
+      <h2 class="sub-title">{{ 'sheet.attributes.mental.title' | translate }}</h2>
+      <div class="attribute-row" *ngFor="let member of mentalMembers">
+        <arm-circle-input
+          [circleAmount]="8"
+          [label]="'sheet.attributes.mental.' + member"
+          [value]="$any(characterSheet.attributes.mental)[member]"
+          [specialties]="characterSheet.specialties"
+          (onSpecialtyClick)="specialty.showChosenFor($event, characterSheet.specialties)"
+          [isEditable]="characterSheet.isEditable"
+          (onValueChange)="updateMentalValueProperty($event, member)"
+          [minValue]="1"
+        ></arm-circle-input>
+        <button
+          *ngIf="attribute.has(member)"
+          class="info-btn"
+          type="button"
+          (click)="attribute.open('sheet.attributes.mental.' + member, member)"
+        >
+          <mat-icon>info_outline</mat-icon>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

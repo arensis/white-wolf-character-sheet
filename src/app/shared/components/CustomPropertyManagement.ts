@@ -22,13 +22,25 @@ export abstract class CustomPropertyManagement extends PropertyManagement {
     return index;
   }
 
+  dispatchSheet(): void {
+    this.vampireDASheetStoreService.loadVampireDASheet(_.cloneDeep(this.characterSheet));
+  }
+
+  addItemToCustomProperties(name: string): void {
+    const propertyPath = [this.propertiesMainPath, ...this.customPropertyType.split('.')].join('.');
+    const sheet = _.cloneDeep(this.characterSheet);
+    const arr = _.get(sheet, propertyPath) as any[];
+    if (arr) {
+      arr.push({ name, level: 0 });
+    }
+    this.vampireDASheetStoreService.loadVampireDASheet(sheet);
+  }
+
   deleteCustomProperty(index: number, dispatchCallback: (sheet: any) => void): void {
     const propertyPath = [this.propertiesMainPath, ...this.customPropertyType.split('.')].join('.');
-    const customProperties = _.get(this.characterSheet, propertyPath) as CustomProperty[];
-    customProperties.splice(index, 1);
     let characterSheet = _.cloneDeep(this.characterSheet);
-    _.set(characterSheet, propertyPath, customProperties);
-
+    const customProperties = _.get(characterSheet, propertyPath) as CustomProperty[];
+    customProperties.splice(index, 1);
     dispatchCallback(characterSheet);
   }
 

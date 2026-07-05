@@ -1,79 +1,35 @@
 <h2 class="sub-category">
   <span>{{ 'sheet.advantages.backgrounds.title' | translate }}</span>
 </h2>
+
+<ng-container *ngFor="let key of ['allies','contacts','retainers','domain','generation','influence','mentor','status','herd','resources']">
+  <div class="background-row">
+    <arm-circle-input
+      [circleAmount]="8"
+      [label]="'sheet.advantages.backgrounds.' + key"
+      [value]="$any(characterSheet.advantages.backgrounds)[key]"
+      [isEditable]="characterSheet.isEditable"
+      (onValueChange)="updateProperty($event, key)"
+    ></arm-circle-input>
+    <button class="info-btn" type="button" (click)="background.open(key)">
+      <mat-icon>info_outline</mat-icon>
+    </button>
+  </div>
+</ng-container>
+
 <arm-circle-input
+  *ngFor="let bg of characterSheet.advantages.backgrounds.customBackgrounds; index as i; trackBy: trackByFn"
   [circleAmount]="8"
-  [label]="'sheet.advantages.backgrounds.allies'"
-  [value]="characterSheet.advantages.backgrounds.allies"
-  (onValueChange)="updateProperty($event, 'allies')"
-></arm-circle-input>
-<arm-circle-input
-  [circleAmount]="8"
-  [label]="'sheet.advantages.backgrounds.contacts'"
-  [value]="characterSheet.advantages.backgrounds.contacts"
-  (onValueChange)="updateProperty($event, 'contacts')"
-></arm-circle-input>
-<arm-circle-input
-  [circleAmount]="8"
-  [label]="'sheet.advantages.backgrounds.retainers'"
-  [value]="characterSheet.advantages.backgrounds.retainers"
-  (onValueChange)="updateProperty($event, 'retainers')"
-></arm-circle-input>
-<arm-circle-input
-  [circleAmount]="8"
-  [label]="'sheet.advantages.backgrounds.domain'"
-  [value]="characterSheet.advantages.backgrounds.domain"
-  (onValueChange)="updateProperty($event, 'domain')"
-></arm-circle-input>
-<arm-circle-input
-  [circleAmount]="8"
-  [label]="'sheet.advantages.backgrounds.generation'"
-  [value]="characterSheet.advantages.backgrounds.generation"
-  (onValueChange)="updateProperty($event, 'generation')"
-></arm-circle-input>
-<arm-circle-input
-  [circleAmount]="8"
-  [label]="'sheet.advantages.backgrounds.influence'"
-  [value]="characterSheet.advantages.backgrounds.influence"
-  (onValueChange)="updateProperty($event, 'influence')"
-></arm-circle-input>
-<arm-circle-input
-  [circleAmount]="8"
-  [label]="'sheet.advantages.backgrounds.mentor'"
-  [value]="characterSheet.advantages.backgrounds.mentor"
-  (onValueChange)="updateProperty($event, 'mentor')"
-></arm-circle-input>
-<arm-circle-input
-  [circleAmount]="8"
-  [label]="'sheet.advantages.backgrounds.status'"
-  [value]="characterSheet.advantages.backgrounds.status"
-  (onValueChange)="updateProperty($event, 'status')"
-></arm-circle-input>
-<arm-circle-input
-  [circleAmount]="8"
-  [label]="'sheet.advantages.backgrounds.herd'"
-  [value]="characterSheet.advantages.backgrounds.herd"
-  (onValueChange)="updateProperty($event, 'herd')"
-></arm-circle-input>
-<arm-circle-input
-  [circleAmount]="8"
-  [label]="'sheet.advantages.backgrounds.resources'"
-  [value]="characterSheet.advantages.backgrounds.resources"
-  (onValueChange)="updateProperty($event, 'resources')"
-></arm-circle-input>
-<arm-circle-input
-  *ngFor="let background of characterSheet.advantages.backgrounds.customBackgrounds; index as i; trackBy: trackByFn"
-  [circleAmount]="8"
-  [label]="background.name"
-  [value]="background.level"
+  [label]="bg.name"
+  [value]="bg.level"
   [isPermanent]="false"
   [isEditable]="characterSheet.isEditable"
   (onDelete)="deleteEntireCustomProperty(i)"
   (onValueChange)="updateCustomProperty($event, i)"
 ></arm-circle-input>
+
 <arm-add-custom-property-button
+  (nameAdded)="addItemToCustomProperties($event)"
   [isEditable]="characterSheet.isEditable"
   [propertyType]="propertyType"
-  [customPropertyList]="characterSheet.advantages.backgrounds.customBackgrounds"
 ></arm-add-custom-property-button>
-

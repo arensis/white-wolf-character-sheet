@@ -24,4 +24,8 @@ export class MortisRitualsComponent extends CustomPropertyManagement {
   updateCustomProperty(event: number, index: number) {
     this.updateValueFromCustomProperty(event, index, this.vampireDASheetStoreService.loadVampireDASheet);
   }
+
+  get mortisLevel(): number {
+    return this.characterSheet?.disciplines?.mortis?.level ?? 0;
+  }
 }

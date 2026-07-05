@@ -1,0 +1,35 @@
+<h2 class="sub-category">
+  <span>{{ 'sheet.advantages.backgrounds.title' | translate }}</span>
+</h2>
+
+<ng-container *ngFor="let key of ['allies','alternateIdentity','contacts','domain','fame','generation','herd','influence','mentor','resources','retainers','status','blackHandMembership','rituals']">
+  <div class="background-row">
+    <arm-circle-input
+      [circleAmount]="8"
+      [label]="'sheet.advantages.backgrounds.' + key"
+      [value]="$any(characterSheet.advantages.backgrounds)[key]"
+      [isEditable]="characterSheet.isEditable"
+      (onValueChange)="updateProperty($event, key)"
+    ></arm-circle-input>
+    <button class="info-btn" type="button" (click)="background.open(key)">
+      <mat-icon>info_outline</mat-icon>
+    </button>
+  </div>
+</ng-container>
+
+<arm-circle-input
+  *ngFor="let bg of characterSheet.advantages.backgrounds.customBackgrounds; index as i; trackBy: trackByFn"
+  [circleAmount]="8"
+  [label]="bg.name"
+  [value]="bg.level"
+  [isPermanent]="false"
+  [isEditable]="characterSheet.isEditable"
+  (onDelete)="deleteEntireCustomProperty(i)"
+  (onValueChange)="updateCustomProperty($event, i)"
+></arm-circle-input>
+
+<arm-add-custom-property-button
+  (nameAdded)="addItemToCustomProperties($event)"
+  [isEditable]="characterSheet.isEditable"
+  [propertyType]="propertyType"
+></arm-add-custom-property-button>

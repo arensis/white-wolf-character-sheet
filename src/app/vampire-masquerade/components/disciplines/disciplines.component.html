@@ -1,0 +1,37 @@
+<div class="disciplines-section">
+  <div class="disciplines-image-section">
+    <img src="assets/images/vampire-dark-ages/sections/sheetSectionSeparator.png">
+    <h1>{{ 'sheet.disciplines.title' | translate }}</h1>
+  </div>
+
+  <div class="disciplines-container">
+    <div class="disciplines-column" *ngFor="let column of disciplineColumns">
+      <div class="discipline-row" *ngFor="let key of column">
+        <arm-circle-input
+          [showCheckbox]="true"
+          [circleAmount]="8"
+          [label]="labelKey(key)"
+          [value]="$any(characterSheet.disciplines)[key].level"
+          [checkboxValue]="$any(characterSheet.disciplines)[key].inBlood"
+          [isEditable]="characterSheet.isEditable"
+          (onValueChange)="updateProperty($event, key + '.level')"
+          (onCheckboxValueChange)="updateCheckboxProperty($event, key + '.inBlood')"
+        ></arm-circle-input>
+        <button class="info-btn" type="button" (click)="discipline.open(key)">
+          <mat-icon>info_outline</mat-icon>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <hr>
+
+  <div class="magic-section">
+    <div class="magic-col">
+      <arm-thaumaturgy-roads [characterSheet]="characterSheet"></arm-thaumaturgy-roads>
+    </div>
+    <div class="magic-col">
+      <arm-necromancy-roads [characterSheet]="characterSheet"></arm-necromancy-roads>
+    </div>
+  </div>
+</div>

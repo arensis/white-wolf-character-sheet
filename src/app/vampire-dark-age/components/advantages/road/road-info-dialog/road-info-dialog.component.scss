@@ -1,0 +1,89 @@
+.road-dialog {
+  min-width: 320px;
+}
+
+.road-body {
+  max-height: 65vh;
+  overflow-y: auto;
+}
+
+.road-nickname {
+  font-style: italic;
+  opacity: 0.7;
+  margin: 0 0 10px;
+  font-size: 0.95rem;
+}
+
+.road-description {
+  margin-bottom: 12px;
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+.road-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin-bottom: 12px;
+  padding: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 4px;
+  font-size: 0.85rem;
+}
+
+.meta-label {
+  font-weight: bold;
+  margin-right: 4px;
+}
+
+.section-label {
+  display: block;
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  opacity: 0.5;
+  margin: 12px 0 6px;
+}
+
+.road-list {
+  margin: 0 0 8px;
+  padding-left: 16px;
+  font-size: 0.85rem;
+  line-height: 1.6;
+}
+
+.sins-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.8rem;
+  margin-top: 4px;
+
+  th {
+    text-align: left;
+    opacity: 0.5;
+    font-size: 0.68rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    padding: 4px 6px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+  }
+
+  td {
+    padding: 5px 6px;
+    vertical-align: top;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+    line-height: 1.4;
+  }
+}
+
+.sin-score {
+  text-align: center;
+  font-weight: bold;
+  width: 40px;
+  opacity: 0.8;
+}
+
+.sin-reason {
+  opacity: 0.6;
+  font-style: italic;
+}

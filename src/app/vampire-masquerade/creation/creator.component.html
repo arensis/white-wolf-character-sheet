@@ -1,0 +1,44 @@
+<div class="creator">
+  <ol class="stepbar">
+    <li
+      *ngFor="let step of steps; let i = index"
+      class="stepbar-item"
+      [class.active]="i === currentIndex"
+      [class.done]="state.isStepComplete(step) && i !== currentIndex"
+      (click)="goTo(i)"
+    >
+      <span class="step-index">{{ i + 1 }}</span>
+      <span class="step-name">{{ 'creation.steps.' + step | translate }}</span>
+    </li>
+  </ol>
+
+  <div class="step-host" [ngSwitch]="currentStep">
+    <arm-concept-step *ngSwitchCase="'concept'"></arm-concept-step>
+    <arm-attributes-step *ngSwitchCase="'attributes'"></arm-attributes-step>
+    <arm-abilities-step *ngSwitchCase="'abilities'"></arm-abilities-step>
+    <arm-advantages-step *ngSwitchCase="'advantages'"></arm-advantages-step>
+    <arm-finishing-step *ngSwitchCase="'finishing'"></arm-finishing-step>
+  </div>
+
+  <div class="nav">
+    <button class="nav-button" (click)="back()" [disabled]="currentIndex === 0">
+      {{ 'creation.nav.back' | translate }}
+    </button>
+    <button
+      *ngIf="!isLastStep"
+      class="nav-button primary"
+      (click)="next()"
+      [disabled]="!canAdvance"
+    >
+      {{ 'creation.nav.next' | translate }}
+    </button>
+    <button
+      *ngIf="isLastStep"
+      class="nav-button primary"
+      (click)="finish()"
+      [disabled]="!canAdvance"
+    >
+      {{ 'creation.nav.finish' | translate }}
+    </button>
+  </div>
+</div>

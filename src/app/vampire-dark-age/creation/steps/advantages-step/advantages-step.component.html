@@ -1,0 +1,136 @@
+<section class="step">
+  <h2>{{ 'creation.advantages.title' | translate }}</h2>
+
+  <div class="columns">
+    <!-- Disciplines -->
+    <div class="priority-group">
+      <div class="group-head">
+        <span class="group-label">{{ 'creation.advantages.disciplines' | translate }}</span>
+        <span class="pool" [class.depleted]="state.disciplineRemaining() === 0">
+          {{ state.disciplineRemaining() }}
+        </span>
+      </div>
+      <p *ngIf="state.clanDisciplineKeys.length === 0" class="hint">
+        {{ 'creation.advantages.caitiffDisciplines' | translate }}
+      </p>
+      <ng-container *ngFor="let key of state.clanDisciplineKeys">
+        <div class="trait-row">
+          <span class="label-with-info">
+            <span class="trait-label">{{ 'creation.disciplines.' + key | translate }}</span>
+            <button type="button" class="link-icon" (click)="discipline.open(key)" aria-label="info">
+              <mat-icon>info_outline</mat-icon>
+            </button>
+          </span>
+          <arm-creation-dots
+            [value]="state.getDiscipline(key)"
+            (valueChange)="state.setDiscipline(key, $event)"
+          ></arm-creation-dots>
+        </div>
+
+        <!-- Magic disciplines (Thaumaturgy/Mortis): pick a primary path and ritual. -->
+        <div class="magic-picks" *ngIf="key === state.magicDisciplineKey && state.getDiscipline(key) >= 1">
+          <button type="button" class="specialty-button" (click)="discipline.chooseSenda(key)">
+            <mat-icon>auto_stories</mat-icon>
+            <span>{{ state.magicPath || ('creation.magic.choosePath' | translate) }}</span>
+          </button>
+          <button type="button" class="specialty-button" (click)="discipline.chooseRitual(key)">
+            <mat-icon>menu_book</mat-icon>
+            <span>{{ state.magicRitual || ('creation.magic.chooseRitual' | translate) }}</span>
+          </button>
+        </div>
+      </ng-container>
+    </div>
+
+    <!-- Backgrounds -->
+    <div class="priority-group">
+      <div class="group-head">
+        <span class="group-label">{{ 'creation.advantages.backgrounds' | translate }}</span>
+        <span class="pool" [class.depleted]="state.backgroundRemaining() === 0">
+          {{ state.backgroundRemaining() }}
+        </span>
+      </div>
+      <div class="trait-row" *ngFor="let key of backgrounds">
+        <span class="label-with-info">
+          <span class="trait-label">{{ 'creation.backgrounds.' + key | translate }}</span>
+          <mat-icon *ngIf="state.isRecommendedBackground(key)" class="rec-star" title="{{ 'creation.concept.recommendedByClan' | translate }}">star</mat-icon>
+          <button type="button" class="link-icon" (click)="background.open(key)" aria-label="info">
+            <mat-icon>info_outline</mat-icon>
+          </button>
+        </span>
+        <arm-creation-dots
+          [value]="state.getBackground(key)"
+          (valueChange)="state.setBackground(key, $event)"
+        ></arm-creation-dots>
+      </div>
+      <div class="generation-summary">
+        <span class="gen-badge">{{ state.generation }}ª</span>
+        <span>{{ 'creation.generation.bloodPool' | translate }}: {{ state.generationInfo.bloodPool }}</span>
+      </div>
+    </div>
+
+    <!-- Virtues -->
+    <div class="priority-group">
+      <div class="group-head">
+        <span class="group-label">{{ 'creation.advantages.virtues' | translate }}</span>
+        <span class="pool" [class.depleted]="state.virtueRemaining() === 0">
+          {{ state.virtueRemaining() }}
+        </span>
+      </div>
+      <div class="trait-row" *ngFor="let virtue of virtues">
+        <span class="label-with-info">
+          <span class="trait-label">{{ 'creation.virtues.' + virtue.virtueId | translate }}</span>
+          <arm-info-icon
+            [heading]="'creation.virtues.' + virtue.virtueId | translate"
+            [text]="'creation.descriptions.virtues.' + virtue.virtueId | translate"
+          ></arm-info-icon>
+        </span>
+        <arm-creation-dots
+          [value]="state.getVirtue(virtue.key)"
+          (valueChange)="state.setVirtue(virtue.key, $event)"
+        ></arm-creation-dots>
+      </div>
+    </div>
+  </div>
+
+  <!-- Languages (from Linguistics) -->
+  <div class="languages">
+    <div class="group-head">
+      <span class="group-label">{{ 'creation.languages.title' | translate }}</span>
+      <span class="pool" [class.depleted]="state.languageRemaining() === 0">
+        {{ state.selectedLanguages.length }} / {{ state.languageAllowance() }}
+      </span>
+    </div>
+    <p class="field-hint">{{ 'creation.languages.hint' | translate }}</p>
+
+    <label class="native-language">
+      <span>{{ 'creation.languages.native' | translate }}</span>
+      <input type="text" [(ngModel)]="state.nativeLanguage" />
+    </label>
+
+    <p class="field-hint" *ngIf="state.languageAllowance() === 0">
+      {{ 'creation.languages.none' | translate }}
+    </p>
+
+    <div class="language-grid" *ngIf="state.languageAllowance() > 0">
+      <div class="language-continent" *ngFor="let group of languageGroups">
+        <span class="continent-label">{{ group.continent }}</span>
+        <label
+          class="language-item"
+          *ngFor="let lang of group.languages"
+          [class.disabled]="!state.isLanguageSelected(lang.id) && state.languageRemaining() === 0"
+        >
+          <input
+            type="checkbox"
+            [checked]="state.isLanguageSelected(lang.id)"
+            [disabled]="!state.isLanguageSelected(lang.id) && state.languageRemaining() === 0"
+            (change)="state.toggleLanguage(lang.id)"
+          />
+          <span class="language-text">
+            <strong>{{ lang.name }}</strong>
+            <span class="language-use">{{ lang.text }}</span>
+          </span>
+        </label>
+      </div>
+    </div>
+  </div>
+</section>

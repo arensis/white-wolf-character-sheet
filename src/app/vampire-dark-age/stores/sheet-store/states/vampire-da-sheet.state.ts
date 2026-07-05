@@ -19,7 +19,8 @@ export const initialState: VampireDASheetState = adapter.getInitialState({
     background: {
       nature: "",
       demeanor: "",
-      clan: ""
+      clan: "",
+      weakness: ""
     },
     concept: {
       generation: 12,
@@ -122,7 +123,8 @@ export const initialState: VampireDASheetState = adapter.getInitialState({
     },
     experience: {
       total: 0,
-      current: 0
+      current: 0,
+      entries: []
     },
     health: {
       bruised: {

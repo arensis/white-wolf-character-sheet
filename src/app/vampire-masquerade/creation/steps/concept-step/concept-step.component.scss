@@ -1,0 +1,181 @@
+@import '../step.shared';
+
+select {
+  padding: 6px 8px;
+  border: 1px solid currentColor;
+  background: transparent;
+  color: inherit;
+  border-radius: 4px;
+  font: inherit;
+
+  option {
+    color: #000;
+  }
+}
+
+.clan-type-description {
+  margin: 4px 0 8px;
+  font-size: 0.88rem;
+  opacity: 0.8;
+  line-height: 1.4;
+}
+
+.clan-panel {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  .clan-summary {
+    margin: 0;
+    line-height: 1.5;
+  }
+
+  .clan-detail-list {
+    margin: 0;
+    padding-left: 18px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    font-size: 0.9rem;
+    line-height: 1.4;
+  }
+
+  .clan-section {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+
+    p {
+      margin: 0;
+      font-size: 0.9rem;
+      line-height: 1.4;
+    }
+  }
+
+  .clan-weakness p {
+    color: #b8302a;
+  }
+}
+
+.clan-disciplines {
+  ul {
+    margin: 4px 0 0;
+    padding-left: 20px;
+  }
+}
+
+.road-panel {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+
+  p {
+    margin: 0;
+  }
+
+  .road-latin {
+    font-family: 'Section font', serif;
+    font-size: 1.1rem;
+    opacity: 0.85;
+  }
+
+  .road-meta {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    font-size: 0.9rem;
+  }
+
+  .road-list {
+    margin: 0;
+    padding-left: 18px;
+
+    li {
+      margin-bottom: 2px;
+      line-height: 1.35;
+    }
+  }
+}
+
+.sins-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.85rem;
+
+  th,
+  td {
+    border: 1px solid rgba(128, 128, 128, 0.35);
+    padding: 4px 6px;
+    text-align: left;
+    vertical-align: top;
+  }
+
+  th {
+    font-family: 'Section font', serif;
+    font-weight: normal;
+  }
+
+  .sin-score {
+    text-align: center;
+    font-weight: bold;
+    color: #b8302a;
+    width: 2.5rem;
+  }
+
+  .sin-reason {
+    font-style: italic;
+    opacity: 0.85;
+  }
+
+  @include xs {
+    font-size: 0.78rem;
+
+    th,
+    td {
+      padding: 3px 4px;
+    }
+  }
+}
+
+.road-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+
+  &.recommended:not(.selected) {
+    border-color: #d4a02a;
+  }
+}
+
+.rec-star {
+  font-size: 16px;
+  width: 16px;
+  height: 16px;
+  color: #d4a02a;
+}
+
+.rec-note {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  margin: 2px 0 0;
+  font-size: 0.8rem;
+  opacity: 0.85;
+}
+
+.generation-line {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.gen-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 40px;
+  padding: 4px 10px;
+  border: 1px solid currentColor;
+  border-radius: 16px;
+  font-weight: bold;
+}

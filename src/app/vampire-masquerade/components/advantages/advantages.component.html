@@ -1,0 +1,28 @@
+<div class="abilities-image-section">
+  <img src="assets/images/vampire-dark-ages/sections/sheetSectionSeparator.png">
+  <h1>{{ 'sheet.advantages.title' | translate }}</h1>
+</div>
+<div class="advantages-container">
+  <div class="backgrounds">
+    <arm-backgrounds [characterSheet]="characterSheet"></arm-backgrounds>
+  </div>
+
+  <div class="road-willpower-bloodpool">
+    <arm-path [characterSheet]="characterSheet"></arm-path>
+    <arm-willpower [characterSheet]="characterSheet"></arm-willpower>
+    <arm-blood-pool [characterSheet]="characterSheet"></arm-blood-pool>
+  </div>
+
+  <div class="virtues-health">
+    <arm-virtues [characterSheet]="characterSheet"></arm-virtues>
+    <arm-health [characterSheet]="characterSheet"></arm-health>
+  </div>
+
+  <div class="experience-column">
+    <arm-experience [characterSheet]="characterSheet"></arm-experience>
+  </div>
+
+  <div class="weakness-column">
+    <arm-weakness [characterSheet]="characterSheet"></arm-weakness>
+  </div>
+</div>

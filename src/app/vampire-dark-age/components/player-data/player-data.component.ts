@@ -1,5 +1,6 @@
 import { VampireDarkAgesSheetStoreService } from './../../../shared/services/vampire-dark-ages-sheet-store.service';
 import { Component, Input, OnInit } from '@angular/core';
+import { ClanService } from 'src/app/vampire-dark-age/creation/services/clan.service';
 import * as _ from 'lodash';
 
 @Component({
@@ -15,7 +16,10 @@ export class PlayerDataComponent implements OnInit {
   infoPath: string = 'playerData.info';
   conceptPath: string = 'playerData.concept';
 
-  constructor(private sheetStore: VampireDarkAgesSheetStoreService) {}
+  constructor(
+    private sheetStore: VampireDarkAgesSheetStoreService,
+    public clanInfo: ClanService,
+  ) {}
 
   ngOnInit(): void {
     this.sheetStore.selectVampireDASheet().subscribe(sheet => {

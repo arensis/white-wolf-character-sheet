@@ -1,20 +1,26 @@
-import { VampireDarkAgesSheetStoreService } from './../../services/vampire-dark-ages-sheet-store.service';
 import { TranslateService } from '@ngx-translate/core';
 import { StyleManagerService } from './../../services/style-manager.service';
 import { SafeUrl } from '@angular/platform-browser';
 import { DownloadFile } from './../../model/DownloadFile';
-import { Component, EventEmitter, Input, Output, OnInit, OnChanges } from '@angular/core';
+import { Component, EventEmitter, Input, Output, OnChanges } from '@angular/core';
+import { Router } from '@angular/router';
 import { DomSanitizer } from '@angular/platform-browser';
-import { VampireDarkAgesSheet } from 'src/app/vampire-dark-age/model/dark-ages-sheet/vampire-dark-ages/VampireDarkAgesSheet';
+import { Sheet } from 'src/app/shared/model/sheet/Sheet';
+
+/** Route of each game's character creator, keyed by the gameName input. */
+const CREATOR_ROUTES: Record<string, string> = {
+  VAMPIRE_DARK_AGES: '/vampire-dark-ages/create',
+  VAMPIRE_MASQUERADE: '/vampire-the-masquerade/create',
+};
 
 @Component({
   selector: 'arm-header',
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.scss']
 })
-export class HeaderComponent implements OnChanges, OnInit{
+export class HeaderComponent implements OnChanges {
   @Input()
-  characterSheet!: VampireDarkAgesSheet;
+  characterSheet!: Sheet;
   @Input()
   gameName: string;
   @Input()
@@ -30,16 +36,13 @@ export class HeaderComponent implements OnChanges, OnInit{
   darkMode = this.styleManagerService.isDark
   downloadFile: DownloadFile;
 
-  constructor(private sanitizer: DomSanitizer, private styleManagerService: StyleManagerService, private translate: TranslateService, private sheetStoreService: VampireDarkAgesSheetStoreService) {
+  constructor(private sanitizer: DomSanitizer, private styleManagerService: StyleManagerService, private translate: TranslateService, private router: Router) {
     this.downloadFile = {} as DownloadFile;
     this.gameName = '';
   }
 
-  ngOnInit(): void {
-    this.sheetStoreService.selectVampireDASheet().subscribe((sheet: VampireDarkAgesSheet) => {
-      console.log('mierda');
-      this.characterSheet = sheet;
-    })
+  get hasCreator(): boolean {
+    return !!CREATOR_ROUTES[this.gameName];
   }
 
   ngOnChanges() {
@@ -56,6 +59,17 @@ export class HeaderComponent implements OnChanges, OnInit{
 
   toggleLockEdition(): void {
     this.onToggleLockEdition.emit();
+  }
+
+  goHome(): void {
+    this.router.navigate(['/']);
+  }
+
+  goToCreator(): void {
+    const route = CREATOR_ROUTES[this.gameName];
+    if (route) {
+      this.router.navigate([route]);
+    }
   }
 
   changeThemMode(): void {

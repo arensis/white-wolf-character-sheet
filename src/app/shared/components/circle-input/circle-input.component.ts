@@ -26,7 +26,14 @@ export class CircleInputComponent implements OnInit, OnChanges {
   isPermanent: boolean = true;
   @Input()
   isEditable: boolean = true;
+  /** Optional maps of ability member -> chosen specialty / experience names. */
+  @Input()
+  specialties?: Record<string, string[]>;
+  @Input()
+  experiences?: Record<string, string[]>;
 
+  @Output()
+  onSpecialtyClick = new EventEmitter<string>();
   @Output()
   onCheckboxValueChange = new EventEmitter<boolean>();
   @Output()
@@ -62,6 +69,24 @@ export class CircleInputComponent implements OnInit, OnChanges {
 
   hasLabel(): boolean {
     return isNotBlankOrEmpty(this.label);
+  }
+
+  /** Member name derived from the i18n label key (last segment). */
+  get specialtyMember(): string {
+    return this.label ? this.label.split('.').pop() ?? '' : '';
+  }
+
+  get extrasCount(): number {
+    const specs = this.specialties?.[this.specialtyMember]?.length ?? 0;
+    const exps = this.experiences?.[this.specialtyMember]?.length ?? 0;
+    return specs + exps;
+  }
+
+  specialtyClick(event: MouseEvent): void {
+    event.stopPropagation();
+    if (this.extrasCount) {
+      this.onSpecialtyClick.emit(this.specialtyMember);
+    }
   }
 
   deleteProperty(): void {

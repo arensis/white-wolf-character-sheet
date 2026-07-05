@@ -1,6 +1,7 @@
 import { CustomPropertyManagement } from 'src/app/shared/components/CustomPropertyManagement';
 import { Component } from '@angular/core';
 import { VampireDarkAgesSheetStoreService } from 'src/app/shared/services/vampire-dark-ages-sheet-store.service';
+import { BackgroundService } from 'src/app/vampire-dark-age/creation/services/background.service';
 
 @Component({
   selector: 'arm-backgrounds',
@@ -12,7 +13,10 @@ export class BackgroundsComponent extends CustomPropertyManagement {
   customPropertyType: string = 'customBackgrounds';
   propertiesMainPath: string = 'advantages.backgrounds'
 
-  constructor(vampireDASheetStoreService: VampireDarkAgesSheetStoreService) {
+  constructor(
+    vampireDASheetStoreService: VampireDarkAgesSheetStoreService,
+    public background: BackgroundService,
+  ) {
     super(vampireDASheetStoreService);
     this.valuePropertyName = 'level';
   }

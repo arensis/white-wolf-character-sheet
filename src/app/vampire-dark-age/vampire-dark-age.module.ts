@@ -2,6 +2,7 @@ import { VampireDASheetStoreModule } from './stores/sheet-store/vampire-da-sheet
 import { NotesComponent } from './components/notes/notes.component';
 import { TranslateModule } from '@ngx-translate/core';
 import { NgModule } from '@angular/core';
+import { NgxEditorModule } from 'ngx-editor';
 import { CommonModule } from '@angular/common';
 
 import { VampireDarkAgeRoutingModule } from './vampire-dark-age-routing.module';
@@ -14,6 +15,11 @@ import * as AdvantageComponents from './components/advantages';
 import * as DisciplineComponents from './components/disciplines';
 import * as EquipementComponents from './components/equipment'
 import * as OtherAdvantages from './components/advantages/other-advantages';
+import { DialogAddMeritFlawComponent } from './components/advantages/other-advantages/components/dialog-add-merit-flaw/dialog-add-merit-flaw.component';
+import { DialogAddLanguageComponent } from './components/advantages/other-advantages/components/dialog-add-language/dialog-add-language.component';
+import { RoadInfoDialogComponent } from './components/advantages/road/road-info-dialog/road-info-dialog.component';
+import { DialogAddExperienceComponent } from './components/advantages/experience/dialog-add-experience/dialog-add-experience.component';
+import * as CreationComponents from './creation';
 
 
 @NgModule({
@@ -43,6 +49,10 @@ import * as OtherAdvantages from './components/advantages/other-advantages';
     OtherAdvantages.LanguagesComponent,
     OtherAdvantages.MeritsComponent,
     OtherAdvantages.OtherAdvantagesComponent,
+    DialogAddMeritFlawComponent,
+    DialogAddLanguageComponent,
+    RoadInfoDialogComponent,
+    DialogAddExperienceComponent,
 
     DisciplineComponents.DisciplinesComponent,
     DisciplineComponents.MortisRitualsComponent,
@@ -55,14 +65,34 @@ import * as OtherAdvantages from './components/advantages/other-advantages';
     EquipementComponents.TravelEquipmentComponent,
     EquipementComponents.WeaponsComponent,
 
-    NotesComponent
+    NotesComponent,
+
+    CreationComponents.CreatorComponent,
+    CreationComponents.CreationDotsComponent,
+    CreationComponents.InfoIconComponent,
+    CreationComponents.InfoDialogComponent,
+    CreationComponents.ConceptStepComponent,
+    CreationComponents.AttributesStepComponent,
+    CreationComponents.AbilitiesStepComponent,
+    CreationComponents.AdvantagesStepComponent,
+    CreationComponents.FinishingStepComponent,
+    CreationComponents.CreationLabelPipe
   ],
   imports: [
     CommonModule,
     VampireDarkAgeRoutingModule,
     VampireDASheetStoreModule,
     SharedModule,
-    TranslateModule
+    TranslateModule,
+    NgxEditorModule
+  ],
+  providers: [
+    CreationComponents.CreationStateService,
+    CreationComponents.CreationDialogService,
+    CreationComponents.SpecialtyService,
+    CreationComponents.DisciplineService,
+    CreationComponents.BackgroundService,
+    CreationComponents.ClanService
   ]
 })
 export class VampireDarkAgeModule { }

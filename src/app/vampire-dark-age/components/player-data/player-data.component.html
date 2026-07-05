@@ -22,22 +22,31 @@
   <div class="character-background">
     <arm-input
       [label]="'sheet.player-data.background.nature'"
-      [value]="characterSheet.playerData.background.nature"
+      [value]="characterSheet.playerData.background.nature | creationLabel: 'archetype'"
       [isReadOnly]="!characterSheet.isEditable"
       (onValueChange)="updateBackgroundProperty($event, 'nature')"
     ></arm-input>
     <arm-input
       [label]="'sheet.player-data.background.demeanor'"
-      [value]="characterSheet.playerData.background.demeanor"
+      [value]="characterSheet.playerData.background.demeanor | creationLabel: 'archetype'"
       [isReadOnly]="!characterSheet.isEditable"
       (onValueChange)="updateBackgroundProperty($event, 'demeanor')"
     ></arm-input>
-    <arm-input
-      [label]="'sheet.player-data.background.clan'"
-      [value]="characterSheet.playerData.background.clan"
-      [isReadOnly]="!characterSheet.isEditable"
-      (onValueChange)="updateBackgroundProperty($event, 'clan')"
-    ></arm-input>
+    <div class="field-with-info">
+      <arm-input
+        [label]="'sheet.player-data.background.clan'"
+        [value]="characterSheet.playerData.background.clan | creationLabel: 'clan'"
+        [isReadOnly]="!characterSheet.isEditable"
+        (onValueChange)="updateBackgroundProperty($event, 'clan')"
+      ></arm-input>
+      <button
+        *ngIf="clanInfo.has(characterSheet.playerData.background.clan)"
+        class="info-btn" type="button"
+        (click)="clanInfo.open(characterSheet.playerData.background.clan)"
+      >
+        <mat-icon>info_outline</mat-icon>
+      </button>
+    </div>
   </div>
   <div class="character-concept">
     <arm-input

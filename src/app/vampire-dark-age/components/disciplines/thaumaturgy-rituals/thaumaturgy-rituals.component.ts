@@ -24,4 +24,8 @@ export class ThaumaturgyRitualsComponent extends CustomPropertyManagement{
   updateCustomProperty(event: number, index: number) {
     this.updateValueFromCustomProperty(event, index, this.vampireDASheetStoreService.loadVampireDASheet);
   }
+
+  get thaumaturgyLevel(): number {
+    return this.characterSheet?.disciplines?.thaumaturgy?.level ?? 0;
+  }
 }

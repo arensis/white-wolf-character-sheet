@@ -1,0 +1,39 @@
+<section class="step">
+  <h2>{{ 'creation.abilities.title' | translate }}</h2>
+  <p class="hint">{{ 'creation.abilities.hint' | translate }}</p>
+
+  <div class="columns">
+    <div class="priority-group" *ngFor="let group of groups">
+      <div class="group-head">
+        <span class="group-label">
+          {{ 'creation.abilityGroups.' + group.id | translate }}
+          <mat-icon *ngIf="state.isRecommendedAbilityGroup(group.id)" class="rec-star" title="{{ 'creation.concept.recommendedByClan' | translate }}">star</mat-icon>
+        </span>
+        <span class="pool" [class.depleted]="state.abilityRemaining(group.id) === 0">
+          {{ state.abilityRemaining(group.id) }} / {{ state.abilityPool(group.id) }}
+        </span>
+      </div>
+
+      <div class="priority-buttons">
+        <button
+          *ngFor="let priority of priorities"
+          class="chip"
+          [class.selected]="state.abilityPriority[group.id] === priority"
+          (click)="setPriority(group.id, priority)"
+        >
+          {{ 'creation.priority.' + priority | translate }}
+        </button>
+      </div>
+
+      <div class="trait-row" *ngFor="let member of group.members">
+        <span class="trait-label">{{ 'creationVtm.abilityNames.' + member | translate }}</span>
+        <arm-creation-dots
+          [value]="state.getAbility(group.id, member)"
+          [max]="maxDots"
+          [disabled]="state.abilityPriority[group.id] === null"
+          (valueChange)="state.setAbility(group.id, member, $event)"
+        ></arm-creation-dots>
+      </div>
+    </div>
+  </div>
+</section>

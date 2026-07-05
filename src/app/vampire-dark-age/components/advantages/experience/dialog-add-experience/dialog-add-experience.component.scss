@@ -1,0 +1,18 @@
+.dialog-title {
+  font-family: "Titles font", serif;
+  font-weight: 200;
+}
+
+.dialog-fields {
+  display: grid;
+  grid-template-columns: 90px 140px 1fr;
+  gap: 12px;
+  align-items: start;
+  padding-top: 8px;
+}
+
+.field-pts,
+.field-date,
+.field-field {
+  width: 100%;
+}

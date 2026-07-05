@@ -1,4 +1,478 @@
 {
+  "creation": {
+    "steps": {
+      "concept": "Concept",
+      "attributes": "Attributes",
+      "abilities": "Abilities",
+      "advantages": "Advantages",
+      "finishing": "Finishing touches"
+    },
+    "nav": {
+      "back": "Back",
+      "next": "Next",
+      "finish": "Create sheet"
+    },
+    "priority": {
+      "primary": "Primary",
+      "secondary": "Secondary",
+      "tertiary": "Tertiary"
+    },
+    "concept": {
+      "title": "Step one: Concept",
+      "hint": "Choose clan, road, nature and demeanor. Your clan marks your in-blood disciplines.",
+      "name": "Name",
+      "player": "Player",
+      "concept": "Concept",
+      "nature": "Nature",
+      "demeanor": "Demeanor",
+      "clan": "Clan",
+      "clanDisciplines": "Clan disciplines (in blood)",
+      "caitiffNote": "Caitiff have no clan disciplines: they may learn any with the Storyteller's approval.",
+      "path": "Road",
+      "pathHint": "A Road is the moral code your character follows to keep the Beast at bay. It defines what they consider a sin and how they preserve their humanity or conviction (you need not follow the clan's recommended one).",
+      "recommendedByClan": "Recommended by the clan"
+    },
+    "clanWeakness": {
+      "brujah": "Harder to resist frenzy (the Beast's fury).",
+      "cappadocian": "Corpse-like look betraying their undead nature (reduced Appearance).",
+      "lasombra": "Casts no reflection in mirrors or polished surfaces.",
+      "toreador": "Can be entranced, frozen before something of great beauty.",
+      "tzimisce": "Must rest surrounded by earth from a place important to them.",
+      "ventrue": "Can only feed on one narrow, specific kind of prey.",
+      "assamite": "Cannot drink other Cainites' blood with impunity.",
+      "gangrel": "Each frenzy grants animal features that can become permanent.",
+      "malkavian": "Suffers an incurable madness chosen at creation.",
+      "nosferatu": "Monstrous appearance (Appearance 0); cannot pass as human.",
+      "ravnos": "Bound to a particular vice or compulsion they must indulge.",
+      "setite": "Bright light, sunlight above all, harms them more than other Cainites.",
+      "tremere": "Their blood forms blood bonds unusually fast.",
+      "caitiff": "No clan weakness."
+    },
+    "clanTypes": {
+      "high": "High Clans",
+      "low": "Low Clans",
+      "highDescription": "The six bloodlines that have accepted and integrated the Cainite feudal order. They form the ruling class of medieval vampire society: princes, vassals and lords who take an active part in feudal power relations, serving princes or ruling domains of their own.",
+      "lowDescription": "Those who do not fully take part in the feudal system. They are not necessarily followers, merely different: many of their members survive within feudalism but rarely rise to positions of power. In feudal parlance they are called “the fallen”, as they are believed to have somehow lost the grace of their high-blooded betters."
+    },
+    "clans": {
+      "brujah": "Brujah",
+      "cappadocian": "Cappadocian",
+      "lasombra": "Lasombra",
+      "toreador": "Toreador",
+      "tzimisce": "Tzimisce",
+      "ventrue": "Ventrue",
+      "assamite": "Assamite",
+      "gangrel": "Gangrel",
+      "malkavian": "Malkavian",
+      "nosferatu": "Nosferatu",
+      "ravnos": "Ravnos",
+      "setite": "Followers of Set",
+      "tremere": "Tremere",
+      "caitiff": "Caitiff (clanless)"
+    },
+    "paths": {
+      "humanity": "Humanity",
+      "beast": "Road of the Beast",
+      "heaven": "Road of Heaven",
+      "sin": "Road of Sin",
+      "kings": "Road of Kings"
+    },
+    "disciplines": {
+      "animalism": "Animalism",
+      "auspex": "Auspex",
+      "celerity": "Celerity",
+      "chimerstry": "Chimerstry",
+      "dementation": "Dementation",
+      "dominate": "Dominate",
+      "fortitude": "Fortitude",
+      "mortis": "Mortis",
+      "obfuscate": "Obfuscate",
+      "obtenebration": "Obtenebration",
+      "potence": "Potence",
+      "presence": "Presence",
+      "protean": "Protean",
+      "quietus": "Quietus",
+      "serpentis": "Serpentis",
+      "thaumaturgy": "Thaumaturgy",
+      "vicissitude": "Vicissitude"
+    },
+    "attributes": {
+      "title": "Step two: Attributes",
+      "hint": "Set a priority per category. Each attribute starts at one dot; distribute 7/5/3."
+    },
+    "attributeGroups": {
+      "physical": "Physical",
+      "social": "Social",
+      "mental": "Mental"
+    },
+    "attributeNames": {
+      "strength": "Strength",
+      "dexterity": "Dexterity",
+      "stamina": "Stamina",
+      "charisma": "Charisma",
+      "manipulation": "Manipulation",
+      "appearance": "Appearance",
+      "perception": "Perception",
+      "intelligence": "Intelligence",
+      "wits": "Wits"
+    },
+    "abilities": {
+      "title": "Step three: Abilities",
+      "hint": "Set a priority and distribute 13/9/5. No ability may exceed 3 dots at this stage."
+    },
+    "abilityGroups": {
+      "talents": "Talents",
+      "skills": "Skills",
+      "knowledges": "Knowledges"
+    },
+    "abilityNames": {
+      "alertness": "Alertness",
+      "athletics": "Athletics",
+      "brawl": "Brawl",
+      "dodge": "Dodge",
+      "emptahy": "Empathy",
+      "expression": "Expression",
+      "intimidation": "Intimidation",
+      "leadership": "Leadership",
+      "legerdemain": "Legerdemain",
+      "subterfuge": "Subterfuge",
+      "animalKen": "Animal Ken",
+      "archery": "Archery",
+      "commerce": "Commerce",
+      "crafts": "Crafts",
+      "etiquette": "Etiquette",
+      "melee": "Melee",
+      "performance": "Performance",
+      "ride": "Ride",
+      "stealth": "Stealth",
+      "survival": "Survival",
+      "academics": "Academics",
+      "hearthWisdom": "Hearth Wisdom",
+      "investigation": "Investigation",
+      "law": "Law",
+      "linguistics": "Linguistics",
+      "medicine": "Medicine",
+      "occult": "Occult",
+      "politics": "Politics",
+      "seneschal": "Seneschal",
+      "theology": "Theology"
+    },
+    "advantages": {
+      "title": "Step four: Advantages",
+      "disciplines": "Disciplines (4)",
+      "backgrounds": "Backgrounds (5)",
+      "virtues": "Virtues (7)",
+      "caitiffDisciplines": "As a Caitiff, you will spend your disciplines with freebie points in the final step."
+    },
+    "backgrounds": {
+      "allies": "Allies",
+      "contacts": "Contacts",
+      "domain": "Domain",
+      "generation": "Generation",
+      "herd": "Herd",
+      "influence": "Influence",
+      "mentor": "Mentor",
+      "resources": "Resources",
+      "retainers": "Retainers",
+      "status": "Status"
+    },
+    "virtues": {
+      "conscience": "Conscience",
+      "conviction": "Conviction",
+      "selfControl": "Self-Control",
+      "instinct": "Instinct",
+      "courage": "Courage"
+    },
+    "finishing": {
+      "title": "Step five: Finishing touches",
+      "hint": "Spend 15 freebie points. Cost per dot in parentheses. Road and Willpower were already derived from your virtues.",
+      "freebies": "Freebie points",
+      "road": "Road",
+      "willpower": "Willpower",
+      "freebieLegend": "Highlighted dots show points bought with freebie points.",
+      "meritsFlawsTitle": "Merits & Flaws",
+      "meritsFlawsHint": "Pick the merits you want (they cost freebie points) and the flaws you accept (they give freebie points back). The total pool updates in real time."
+    },
+    "info": "More information",
+    "generation": {
+      "label": "Generation",
+      "hint": "How far from Caine you are. Default is 12th; each dot of the Generation background lowers it and raises your blood pool.",
+      "result": "Resulting generation",
+      "bloodPool": "Blood pool"
+    },
+    "fields": {
+      "conceptHint": "A phrase summarising who your character was and their role (e.g. \"fallen knight\", \"scholar monk\").",
+      "natureHint": "Who your character truly is. Determines when they regain Willpower.",
+      "demeanorHint": "The face your character shows the world, which may differ from their Nature."
+    },
+    "road": {
+      "nickname": "Nickname",
+      "virtues": "Road Virtues",
+      "aura": "Aura",
+      "ethics": "Road Ethics",
+      "senderos": "Sub-paths",
+      "sinScore": "Rating",
+      "sinSin": "Minimum sin",
+      "sinReason": "Reason"
+    },
+    "specialtiesLabel": "Specialty (attributes at 4+)",
+    "specialtyWhat": "A specialty grants one extra die on rolls it applies to. Bought with freebie points (1 each; max 3 per ability). Only one specialty applies per roll, and two never combine.",
+    "specialtyChoose": "Choose specialty",
+    "specialtyList": "Suggested specialties",
+    "dialog": {
+      "paths": "Paths",
+      "rituals": "Rituals",
+      "howItWorks": "How it works",
+      "choosePath": "Choose primary path",
+      "chooseRitual": "Choose starting ritual",
+      "close": "Close"
+    },
+    "magic": {
+      "path": "Path",
+      "ritual": "Ritual",
+      "choosePath": "Choose path",
+      "chooseRitual": "Choose ritual"
+    },
+    "specialties": {
+      "strength": "Examples: Iron, Powerful, Vigorous.",
+      "dexterity": "Examples: Agile, Swift, Precise.",
+      "stamina": "Examples: Resilient, Tireless, Tough.",
+      "charisma": "Examples: Charismatic, Eloquent, Magnetic.",
+      "manipulation": "Examples: Persuasive, Cunning, Seductive.",
+      "appearance": "Examples: Imposing, Seductive, Innocent.",
+      "perception": "Examples: Attentive, Intuitive, Perceptive.",
+      "intelligence": "Examples: Analytical, Creative, Retentive.",
+      "wits": "Examples: Quick, Witty, Cool under pressure."
+    },
+    "archetypeNames": {
+      "architect": "Architect",
+      "autocrat": "Autocrat",
+      "bonVivant": "Bon Vivant",
+      "bravo": "Bravo",
+      "caregiver": "Caregiver",
+      "celebrant": "Celebrant",
+      "conformist": "Conformist",
+      "conniver": "Conniver",
+      "defender": "Defender",
+      "fanatic": "Fanatic",
+      "gallant": "Gallant",
+      "judge": "Judge",
+      "loner": "Loner",
+      "martyr": "Martyr",
+      "pedagogue": "Pedagogue",
+      "penitent": "Penitent",
+      "rebel": "Rebel",
+      "rogue": "Rogue",
+      "survivor": "Survivor",
+      "traditionalist": "Traditionalist",
+      "trickster": "Trickster",
+      "visionary": "Visionary"
+    },
+    "archetypes": {
+      "architect": "You build something lasting that outlives you.",
+      "autocrat": "You were made to command.",
+      "bonVivant": "Existence is meant to be enjoyed.",
+      "bravo": "Strength and intimidation settle everything.",
+      "caregiver": "You protect and care for others.",
+      "celebrant": "You seek pleasure in all things.",
+      "conformist": "You follow the leader; the group comes first.",
+      "conniver": "You get what you want by deceiving others.",
+      "defender": "You stand guard over all you hold dear.",
+      "fanatic": "A cause justifies everything.",
+      "gallant": "You live for applause and admiration.",
+      "judge": "Someone must decide and make the hard calls.",
+      "loner": "You are enough for yourself.",
+      "martyr": "You sacrifice yourself for a greater good.",
+      "pedagogue": "The world needs teaching.",
+      "penitent": "You are a sinner seeking to atone.",
+      "rebel": "The world's order is corrupt and must be defied.",
+      "rogue": "You look out only for yourself and your own.",
+      "survivor": "When the trumpet of Judgement sounds, you'll be there.",
+      "traditionalist": "The old ways are the best ways.",
+      "trickster": "Life is absurd: laugh and make others laugh.",
+      "visionary": "You see beyond what others conceive."
+    },
+    "descriptions": {
+      "clans": {
+        "brujah": "In the Dark Ages the Brujah are proud, wrathful crusaders: warrior-philosophers who join the ideal to the sword. Descended from a line of scholar-kings, they dream of a perfect society, though their passion makes them prone to frenzy. They prize knowledge and strength alike, and many lead rebellions against the elders. Weakness: they find it harder to resist the Beast's fury.",
+        "cappadocian": "The Cappadocians are cold, learned scholars of death, fascinated by the afterlife and the secrets of souls. Through their art of Mortis they commune with the dead and explore what waits beyond the grave. Pale, corpse-like and reserved, they care more for knowledge than worldly power. Weakness: their cadaverous look betrays their undead nature.",
+        "lasombra": "Rich, decadent manipulators, the Lasombra (Magisters) rule from the shadows and despise weakness. They command darkness through Obtenebration and rise by intrigue, betrayal and ruthless ambition. They see themselves as born predators destined to rule mortals and Cainites alike. Weakness: they cast no reflection in mirrors or polished surfaces.",
+        "toreador": "Consummate social predators, the Toreador adore art, beauty and human passion. Refined and seductive, they move gracefully through courts and are often enthralled by perfection. They blend sincere charm with manipulation and despise crudeness. Weakness: they can be entranced, frozen before something of great beauty.",
+        "tzimisce": "Inhuman lords of the eastern forests and mountains, the Tzimisce are cruel, territorial voivodes. They sculpt flesh and bone — their own and others' — through Vicissitude, and demand rigid hospitality and loyalty. Ancient and proud, they deem themselves above all other creatures. Weakness: they must rest surrounded by earth from a place important to them.",
+        "ventrue": "Ambitious empire-builders, the Ventrue (Patricians) see themselves as the noble rulers of Caine's progeny. Knights and feudal lords, they take up the burden of command and prepare for the final battle. Disciplined and arrogant, they prize honour, lineage and power. Weakness: they can only feed on one narrow, specific kind of prey.",
+        "assamite": "Guardians and judges of Caine's blood, the Assamites (Children of Haqim) are feared assassins and scholars of the East. They hunt the diablerie of other vampires, believing they purify the blood, and split into warriors, viziers and sorcerers. Weakness: their curse stops them drinking other Cainites' blood with impunity.",
+        "gangrel": "Wild outsiders and wanderers, the Gangrel live close to nature and the Beast. They survive the roads and wastes, change shape through Protean and are more at ease among beasts than in courts. Independent and hardy, they scorn Cainite politics. Weakness: each frenzy grants animal features that can become permanent.",
+        "malkavian": "Frightening visionaries and oracles, the Malkavians are all cursed with madness. Their derangement grants glimpses of hidden truths and unsettling prophecy. They may seem anything from beggars to prophets, but all carry a broken mind. Weakness: they suffer an incurable madness chosen at creation.",
+        "nosferatu": "Deformed penitents and lurking monsters, the Nosferatu were disfigured by Caine's curse. Hidden in sewers and ruins, they are masters of stealth (Obfuscate) and the finest gatherers of information. Beneath their hideous form they often keep loyalty and honour. Weakness: their monstrous appearance prevents them passing as human.",
+        "ravnos": "Independent wanderers and corrupters, the Ravnos roam the world by their own codes. Masters of illusion (Chimerstry), they deceive and trick those they meet and rarely put down roots. Weakness: each is bound to a particular vice or compulsion they must indulge.",
+        "setite": "Descendants of a dark god, the Followers of Set devote themselves to tempting and corrupting — to free others from tyranny, as they tell it. They trade in secrets, vices and favours, weaving webs of dependence while awaiting Set's return. Weakness: bright light, sunlight above all, harms them more than other Cainites.",
+        "tremere": "Innovative usurpers, the Tremere were mortal mages who stole immortality and forged their own blood magic, Thaumaturgy. Young as a clan but ambitious and rigidly hierarchical, they are feared and hated by the rest. Weakness: their blood forms blood bonds with unusual speed, binding them easily.",
+        "caitiff": "The Caitiff have no clan or clear lineage: children of chaos, scorned by Cainite society. They inherit no clan disciplines and no set weakness, and freely choose which powers to develop (with the Storyteller's approval). Their freedom is also their stigma: elders look on them with contempt."
+      },
+      "paths": {
+        "humanity": "Loyalty to the virtues of the living: keeping human compassion and self-control against the Beast.",
+        "beast": "Acceptance of the Beast and cultivation of instinct: embracing predation as one's nature.",
+        "heaven": "Submission to the will of Heaven despite personal damnation: serving a divine purpose.",
+        "sin": "Indulgence in vice as destiny and nature: embracing sin without remorse.",
+        "kings": "Disciplined pursuit of excellence and power: ruling with self-control and conviction."
+      },
+      "disciplines": {
+        "animalism": "Communion with the Beast: speaking to animals and mastering instincts.",
+        "auspex": "Supernatural perception: heightened senses, aura reading and telepathy.",
+        "celerity": "Superhuman speed of movement and reaction.",
+        "chimerstry": "Illusions and deceptions that confound the senses (Ravnos).",
+        "dementation": "Inflicting Malkavian madness on other minds.",
+        "dominate": "Imposing your will on others' minds through your gaze.",
+        "fortitude": "Supernatural resistance to physical harm.",
+        "mortis": "The Cappadocian art of dealing with death and corpses.",
+        "obfuscate": "Hiding and disguising oneself, going unnoticed.",
+        "obtenebration": "Controlling shadows and darkness (Lasombra).",
+        "potence": "Inhuman physical strength.",
+        "presence": "Drawing, inspiring or terrifying the emotions of others.",
+        "protean": "Taking animal forms, claws and melding with the earth (Gangrel).",
+        "quietus": "The silent art of murder and venomous blood (Assamite).",
+        "serpentis": "The serpentine powers of the Followers of Set.",
+        "thaumaturgy": "Tremere blood magic, with paths and rituals.",
+        "vicissitude": "Sculpting one's own and others' flesh (Tzimisce)."
+      },
+      "backgrounds": {
+        "allies": "Trusted individuals who share your cause.",
+        "contacts": "Sources of information across different circles.",
+        "domain": "Territory you feed on and govern.",
+        "generation": "How close to Caine you are: lowers your generation and raises your blood power.",
+        "herd": "A group of mortals you feed on regularly.",
+        "influence": "The degree to which your wishes count in mortal society.",
+        "mentor": "An elder vampire who guides and protects you.",
+        "resources": "Wealth, income and property at your disposal.",
+        "retainers": "Loyal servants, living or ghouls.",
+        "status": "Your standing and reputation within Cainite society."
+      },
+      "virtues": {
+        "conscience": "The capacity to feel guilt and tell right from wrong by social norms. Resists degeneration.",
+        "conviction": "A deeply personal, often inhuman moral compass that replaces Conscience on dark roads.",
+        "selfControl": "The ability to master the Beast and avoid falling into frenzy.",
+        "instinct": "Rather than repressing the Beast, channelling its passion and directing it.",
+        "courage": "The mettle to face fear, fire and sunlight."
+      },
+      "clanDetails": {
+        "brujah": {
+          "appearance": "Strong, well built and imposing, tending toward the athletic ideal rather than fleeting beauty. The women are striking rather than beautiful. They dress with extreme neatness in the local fashion, as if perfection of attire could aid their quest for the perfection of the world.",
+          "stereotypes": "They see the High Clans as self-servers who favour only their own gain. Some Low Clans bring new ideas that deserve attention. They consider the Lasombra the embodiment of every evil. They warily respect the Malkavians. They see the Toreador as capable of nothing but distraction, and the Ventrue as capable of nothing but shoring up the established order.",
+          "organization": "Disorganized by their many ideals. Sire and childe stay together for a few years of teaching and training; then the childe departs to pursue their own cause. In major cities they hold great periodic councils that frequently end in circular debate or open conflict.",
+          "creationHints": "Physical or Mental Attributes as the primary group (younger members lean Physical); Social almost always third. A balance of martial Abilities and Knowledges. Most common Roads: Humanity, Heaven or Kings.",
+          "weaknessDetail": "The difficulty of rolls to resist frenzy is always two higher than the listed number, reflecting Caine's curse upon the first to commit diablerie."
+        },
+        "cappadocian": {
+          "appearance": "A morbid pallor and gaunt bodies they cannot entirely conceal. They dress according to their station: monks' habits, chamberlain's robes or even a gravedigger's rags. Many try to hide their cadaverous appearance, though in some cases it is less pronounced.",
+          "stereotypes": "Their place among the High Clans feels like an imposition, not a choice. They look down on the Low Clans. They criticize the Brujah for forgetting the first half of their role as philosopher-kings. They see the Tzimisce as cruel ones who seek mysteries only of transcendent flesh. They consider the Ventrue arrogant but necessary warlords.",
+          "organization": "Seemingly solitary, but their inquisitive nature drives them to keep up correspondence. They form scholarly fraternities or research cabals. No formal hierarchy (though most respect the priests of Erciyes). Each Graverobber manages their own social needs.",
+          "creationHints": "Mental Attributes and Knowledges as primaries. Concepts, Natures and Demeanors tending toward introspection. Backgrounds oriented to self-sufficiency or a good name among peers. Roads of Heaven or Sin; the more morbid follow the Road of Bones.",
+          "weaknessDetail": "Their skin looks cold and corpselike no matter how much vitae they drink; it never shows the “blush of life”. The condition worsens with age. The difficulty of any Social roll (using a Social Attribute) increases by one."
+        },
+        "lasombra": {
+          "appearance": "Almost exclusively of noble families, with delicate, aristocratic features, dark or olive skin, dressed in the most luxurious clothing wealth can provide. Those tied to religious orders may dress simply, as befits their station.",
+          "stereotypes": "They see the other High Clans as pretenders to their throne. The Low Clans are followers who must know their place. They use the Ravnos as tools and let them fall into their own trap. They see the Tzimisce as “the epitome of the savage noble”, though heavy on the savage part. They forever compete with the Teutonic Ventrue, always striving to stay ahead.",
+          "organization": "Hierarchical, with standing set by a combination of age, lineage and accomplishment. The Amici Noctis (“Friends of the Night”) are the secret ruling council, responsible for convening the Courts of Blood (a method of jurisprudence through which the right to commit Amaranth may be claimed). Much of clan politics is negotiated privately between a single Lasombra and their visitors or allies.",
+          "creationHints": "Mental Attributes and Talents are most prized. Natures favouring ambition or cunning (Autocrat, Pedagogue) are most common. Backgrounds: Influence and Resources; Domain or Mentor (rarely both). Roads of Heaven or Kings; a few of the most dedicated follow the austere Road of the Night.",
+          "weaknessDetail": "They cast no reflection in mirrors or other reflective surfaces (still pools of water, polished silver). Moreover, as creatures of darkness, they suffer an additional level of aggravated damage from any exposure to sunlight."
+        },
+        "toreador": {
+          "appearance": "They wear the finest clothes from the finest local artisans, fitted by night. On the whole they are as beautiful as their clothing, though that beauty may reflect the aesthetic values of a past era or a foreign land dear to their sire.",
+          "stereotypes": "They feel superior to the other High Clans, who failed to learn Arikel's lesson. They scorn the Low Clans in general. They respect the Brujah for their intellectual devotion but lament their lack of focus. They see the Lasombra as dangerous adversaries and worthy friends. They find the Nosferatu useful but repugnant. They compete with the Ventrue and never reveal that they are their enemies.",
+          "organization": "They keep regular contact with clanmates in their vicinity, though the gatherings are social and intellectual battlefields more than friendly reunions. Most influential are the Courts of Love in France, once mere social gatherings, now a governing structure for vampire domains.",
+          "creationHints": "Social Attributes and Abilities above all; some choose Knowledges as their primary Ability group. Backgrounds: Domain, Retainers, Herd and Resources are very common. Roads of Humanity and of Kings.",
+          "weaknessDetail": "When faced with music, a work of art or even an idea that meets their standards, they become entranced in a reverie that can last hours. A reflexive Self-Control or Instinct roll (diff. 6) is allowed to resist; on a failure the character remains absorbed until the end of the scene or until the object is gone, unable even to defend themselves. Being attacked allows a new roll."
+        },
+        "tzimisce": {
+          "appearance": "Rarely normal. Descended from Revenant stock or reshaped by Vicissitude: incredibly beautiful or dreadfully hideous, with very little in between. Those involved in the conflict with the Tremere favour martial, utilitarian modifications. Adepts of the cult of change deform themselves into whatever shape best expresses their inner god. Elders lean toward modifications that inspire awe or fear.",
+          "stereotypes": "They have no equals: only those who covet what they possess and those who know their place. They respect the Gangrel as fierce, ruthless wild hunters, preferring them to the Tremere or the Ventrue. They hate the Tremere with absolute determination: “Kill them. All of them.” They see the Ventrue as a greater long-term threat than the Tremere themselves.",
+          "organization": "Hierarchical yet familial and almost tribal in nature, not feudal. Most families consist of a sire and their progeny, connected to many others. The elder receives great respect as the natural centre of the household while their childer compete fiercely for recognition and affection. Rival families sustain vendettas for centuries under extremely complex social protocols.",
+          "creationHints": "Hailing from eastern Europe (from Baltic pagans to Greek monks). Mental Attributes as primaries. Most common Background: Domain; also Mentor (sire and immediate family), Retainers (Revenant subordinates or sculpted ghouls), Herd and Resources. The Road of Kings is very popular; aspects of the Road of Heaven as well. Few follow the Road of Humanity; some walk the dark Road of Metamorphosis.",
+          "weaknessDetail": "When resting, they must surround themselves with at least two handfuls of earth from a place important to them in life (usually their homeland or the soil of their grave). Without it, their dice pools are halved each night, continuing until every action uses a single die. Eight hours of rest amid that earth negates the penalty."
+        },
+        "ventrue": {
+          "appearance": "Whether merchants or princes, they dress impeccably according to their station. A commanding elegance helps create the look of a warlord. They routinely bear the arms and armour that prove they stand ready to defend their lands.",
+          "stereotypes": "Nobility lies not only in blood but also in deeds. The Low Clans have a role as long as they keep to their place. They see the Brujah as warriors worthy of being led. They see the Lasombra as masters of intrigue and most dangerous rivals: a time for swords, not words. They respect the Toreador more than their reputation as “mere artisans” suggests. They keep a close watch on the Tzimisce.",
+          "organization": "Firm believers in Cainite feudalism, they organize themselves accordingly. Oaths of fealty (sometimes sealed with blood) are common between Ventrue of different rank. Some join knightly orders of the Damned; the greatest is the Order of the Black Cross, hidden within the Teutonic Knights.",
+          "creationHints": "Physical Attributes as primaries in the most martial of clans, but Social and Knowledges also matter for leadership. Backgrounds: Allies and Retainers (brothers-in-arms), Domain and Resources (lands). The Road of Kings is the most popular.",
+          "weaknessDetail": "They can only drink the vitae of one particular type of mortal (priests, non-Christians, virgins, Englishmen, etc.) chosen at character creation. Though they can physically drink from others, they gain no sustenance. This limitation does not extend to the blood of other vampires."
+        },
+        "assamite": {
+          "appearance": "The great majority are of Middle Eastern descent, though the three castes show variety. Their one distinctive physical trait: their countenance darkens with age instead of paling; an elder can be recognized by the ebony, faintly lustrous tone of their skin.",
+          "stereotypes": "They accuse the High Clans of fostering the Crusades with their blood-stained hands. They hold that the Low Clans (themselves, the Nosferatu and the Gangrel in particular) possess more honour than those who so label them. They regard the Muslim Lasombra with respect and the Ventrue as adversaries they can now meet on the battlefield.",
+          "organization": "Highly intricate thanks to the sorcerers' powers of communication. “The Old Man of the Mountain” (the eldest childe of Haqim not in torpor) leads the clan from the Black Throne at Alamut; currently the sorcerer Sha'hiri. Three castes with their own leaders (the du'at): Caliph Jamal heads the warriors, Tegyrus the viziers (who once rode with Alexander the Great) and Amr al-Ashrad the sorcerers.",
+          "creationHints": "Warriors: Physical Attributes and combat Abilities. Sorcerers: Mental Attributes and Knowledges. Viziers: an eclectic mix of Mental and Social. Many have at least one dot of Mentor (their sire) and one or two of Generation. Roads of Heaven, Kings and Humanity are popular; the most traditional follow the secret Road of Blood.",
+          "weaknessDetail": "Warriors: any supernatural ability to detect Amaranth marks them as diablerists even if they have never tasted another's blood; some also suffer Blood Madness. Sorcerers: mystical attempts to detect magic use on them are made at -2 difficulty and register as two levels higher. Viziers: each has an obsession/compulsion derangement tied to their highest Ability; while it is active, their aura reveals their true Nature and object of obsession to anyone who successfully uses Soul Sight."
+        },
+        "gangrel": {
+          "appearance": "They develop animal features after the Embrace and wear them proudly as marks of their survival skills. Clothing, when worn at all, is practical and plain. Their look tends to mirror the humans they have hunted among, but with a wilder edge.",
+          "stereotypes": "They despise the High Clans as creatures who believe walls and mortal customs will keep them safe from the predator's law. They see the Malkavians as tormented prophets speaking with the voices of gods (listen to them, but from a safe distance). They respect the Nosferatu. They hate the Ravnos as children of Churka, their great mythic enemy. They respect the Tzimisce for understanding territory and the rule of the strong.",
+          "organization": "No formal structure: a rough system of standing based on tales of deeds and reputation. Sire and childe often keep only infrequent contact once training ends. Occasionally groups appoint regional warleaders (an informal position). Rarer still are the packs: Gangrel war parties gathered to face a specific threat.",
+          "creationHints": "Physical Attributes as the primary choice; Social almost always last. Many have identical Nature and Demeanor (they dislike pretence). Survival Talents and Skills before Knowledges. Those dwelling in the wilds develop Protean first. The Road of the Beast is the most typical, though they may follow nearly any other.",
+          "weaknessDetail": "Each time a Gangrel frenzies, they gain an animal feature (furry arms, cat's eyes, oversized fangs, etc.). For every five animal features acquired, one of their Social Attributes drops by one permanently."
+        },
+        "malkavian": {
+          "appearance": "They span every social class, race and description, for the Embrace is offered to anyone with a spark of madness or insight: from a wild seer on a village's outskirts to the local midwife. There is no “typical” Malkavian look.",
+          "stereotypes": "They watch the High Clans trying to impose order and failing at every turn, wondering who the true madmen are. The Low Clans stand closer to the gifts of their blood. They envy the Gangrel their communion with the Beast. They grow frustrated with the Lasombra caught in their own webs. They see the Tremere as blind with purpose and devoted to staying blind.",
+          "organization": "They once belonged to secret orders that taught the arcane revelations of their blood. Today those orders are few, hidden beneath layers of mortal cults. Most exist free of hierarchy, bound only by a diffuse clan affinity. They rely on road and coterie to keep their mercurial minds in check.",
+          "creationHints": "A fluid group with widely differing outlooks. Most possess high Mental Attributes and skill with Talents, though some excel in Social. Backgrounds vary; Status is rare. The Road of Heaven is most popular, though Malkavians walk every road.",
+          "weaknessDetail": "All Malkavians automatically possess a derangement (chosen at character creation) that they can never overcome, not even by spending Willpower."
+        },
+        "nosferatu": {
+          "appearance": "Utter ugliness in many forms: twisted bodies, deformed limbs, leathery skin, festering boils or ever-open wounds. Some deformities pass from sire to childe, creating distinctive families. Most cover themselves head to toe in coarse robes like those of mortal lepers.",
+          "stereotypes": "They see the High Clans as proud ones who end up begging in the mud when they need information. They know the worth of the Low Clans better than the Low Clans themselves. They recognize the Lasombra as good customers for information. They laugh at the Toreador: how do they forget that their prey would flee at the sight of their master's true nature? They see the Tremere as pretenders who do not know what being a vampire means. They admire that the Tzimisce understand what they are.",
+          "organization": "Surprisingly social among themselves, for they alone do not judge one another by appearance. They gather in small groups and trade information freely. The clan's religious members keep contact with others of similar creed for mutual encouragement.",
+          "creationHints": "Mental Attributes dominate most of the clan, though warriors and bruisers with Physical primaries exist. Most value Knowledges over Talents or Skills. Contacts are quite common; Allies and Retainers exceptionally rare. Roads of Heaven, Sin and the Beast. The Road of Humanity is practically nonexistent.",
+          "weaknessDetail": "All Nosferatu are rendered misshapen and hideous for the rest of their unlives. Their Appearance is automatically 0 and can never be improved by any means (they even lose the automatic dot every character receives in Attributes). All rolls involving Appearance fail automatically."
+        },
+        "ravnos": {
+          "appearance": "Those who do not hide their clan ties dress to underline their exotic nature: garments of Mediterranean or Indian origin in bright purples, blues and golds, in loose patterns less restrictive than European nobility's. Those who pass as another clan dress to fit their adopted role.",
+          "stereotypes": "They see the High Clans as potentially valuable if they ever learned to trust, though they build illusions around themselves grander than anything the Ravnos could offer. They find the distinction between High and Low Clans trifling. They hate the Gangrel for the ancient enmity of their gods. They know the Toreador privately covet what they offer. They distrust the Ventrue despite rumours of dealings.",
+          "organization": "Fluid and unconventional, as befits wanderers. The one sacred rule: “Protect the Family”. The jati (castes) work as extended family: bound by blood, sharing similar philosophies, offering each other protection, aid on journeys and exchange of information. The response to harm done to a jati member may be slow, but it is devastating for the offender.",
+          "creationHints": "Social Attributes generally primary; Talents often the main Ability group. Backgrounds: Allies and Mentor (jati members), Contacts and Resources (merchants and goods). The Road of Humanity is the most widespread; the most traditional and dangerous follow the Road of Paradox.",
+          "weaknessDetail": "The Ravnos Beast urges them toward refined sins. Every Ravnos is addicted to a vice or sin chosen at creation (pride, greed, lust, theft, etc.). When positioned to indulge it, they must do so unless they succeed on a Self-Control or Instinct roll (diff. 6). Even on a success, they hear the Beast whispering."
+        },
+        "setite": {
+          "appearance": "Mostly of African or Middle Eastern descent, marked as foreigners in Europe. They practise Nubian ritual scarring (ash rubbed into cuts). In public they dress as merchants; in private, neo-Egyptian linen robes over shaven bodies. The Desheru (Europeans, often red-haired) can more easily pass as Cainites of other clans.",
+          "stereotypes": "They see the High Clans as useful tools to be seduced with their own hidden desires. Some Low Clans show remarkable will that Set might touch. They see the Assamites as allies of convenience against the Franks. The Cappadocians will eventually need their services when their books no longer suffice. The Gangrel show laudable fury but no plan. The Ventrue are the opposite counterparts of the Assamites.",
+          "organization": "They favour the old Egyptian priestly practices. Each temple is led by an Overseer and First Prophet of Set; then Second, Third and (rarely) Fourth Prophets. In current practice, small secret cults with the senior Setite as First Prophet. The Desheru are less rigorous and ritualistic, often simply gathering slaves to follow them.",
+          "creationHints": "Social Attributes and Knowledges primary. Commerce is a common Ability; some also keep martial Abilities. Essential Backgrounds: Retainers and Herd (their caravan), significant Resources; also Contacts, Influence and Mentor. The most orthodox follow the secret Road of the Serpent; others the Roads of the Beast, Kings or Sin.",
+          "weaknessDetail": "Greater susceptibility to sunlight, following Set's hatred of Osiris and Horus's daylight dominion. Exposure to the sun inflicts twice the levels of aggravated damage it would cause other vampires."
+        },
+        "tremere": {
+          "appearance": "Most wear scholarly robes of sturdy cloth with a deliberately spare wardrobe (individual luxury is deemed frivolous). Those acting as diplomatic liaisons may dress in anything from flamboyant sorcerer's robes to the silks and ermine of nobility. They hail mainly from the German and Slavic lands.",
+          "stereotypes": "They need the High Clans' protection and are in turn needed by them; that is what keeps them alive. The Low Clans hate them in anticipation of their rise, even more than they hate their masters. They see the Tzimisce as an enemy that now knows them well enough to agree they are dangerous. They tremble at the possibility that Saulot was not alone.",
+          "organization": "The Seven (Tremere's seconds) formalize the old hierarchy of the House in the “Pyramid”: seven apprentices under each chantry regent, seven regents under each regional lord, seven lords under each of the Seven, and these under Grand Tremere at Ceoris (the High Chantry in the Transylvanian Alps). Rising requires both mystical and mundane feats. Open disobedience is punished by death.",
+          "creationHints": "Mental Attributes and Knowledges as primaries. Most follow the Road of Humanity (or occasionally the Road of Sin); ignorant or wary of the alternatives. The most common individual Background is Mentor; chantries may enjoy plentiful shared Backgrounds.",
+          "weaknessDetail": "Every new acolyte must undergo a partial blood oath by drinking the combined vitae of the Seven, giving their superiors -1 difficulty on Dominate against lower-ranked clanmates. In addition, each Tremere must surrender a vial of their own blood to their superior, making them a potential target of dark rites of thaumaturgical punishment."
+        },
+        "caitiff": {
+          "appearance": "No typical appearance. Lacking a sire of known lineage, Caitiff may be of any origin, class or look.",
+          "stereotypes": "They are scorned by nearly every clan as offspring without lineage. The High Clans ignore them; the Low Clans regard them with pity when not contempt. To survive, many learn to move through the cracks of the feudal system.",
+          "organization": "No structure and no clan to gather them. Each Caitiff fends for themselves, seeking patrons, coteries or simply solitary survival.",
+          "creationHints": "They may choose any Attribute or Ability group as primary to fit the concept. No clan recommendations for disciplines or roads: everything is open with the Storyteller's approval.",
+          "weaknessDetail": "Caitiff have no clan weakness of their own, but their lack of lineage makes them social pariahs. They also lack “in-blood” disciplines, so every discipline costs them as if out-of-clan."
+        }
+      }
+    },
+    "specialtyChosenTitle": "Specialties",
+    "experienceChoose": "Experience fields",
+    "experienceChosenTitle": "Experience",
+    "experienceWhat": "An experience field grants one extra die (the first is free; the rest cost 1 freebie). You may have as many as your dots in the ability. Only one applies per roll, but it can combine with a specialty (max +2 dice).",
+    "languages": {
+      "title": "Languages",
+      "hint": "Every character knows one native language for free. The Linguistics knowledge grants additional languages (1/2/4/8/16 by its dots).",
+      "native": "Native language (free)",
+      "none": "Without Linguistics dots you gain no additional languages."
+    },
+    "clanDetail": {
+      "appearance": "Appearance",
+      "stereotypes": "Stereotypes",
+      "organization": "Organization",
+      "creationHints": "Character creation",
+      "weakness": "Weakness"
+    }
+  },
   "spanish": "Spanish",
   "english": "English",
   "vampire-eo-title": "Vampire: Dark Ages",
@@ -10,12 +484,14 @@
     "middle-bottom": "VAMPIRE"
   },
   "menu-buttons": {
+    "create-sheet": "Create character",
     "reset-sheet": "Reset sheet",
     "upload-sheet": "Upload backup",
-    "download-sheet": "Download backup"
+    "download-sheet": "Download backup",
+    "change-game": "Change game"
   },
   "custom-property-button": {
-    "title" : "Custom property",
+    "title": "Custom property",
     "required": "Required field",
     "add": "Add",
     "cancel": "Cancel",
@@ -26,7 +502,9 @@
       "background": "Background name",
       "language": "Language name",
       "merit": "Merit name",
-      "flaw": "Flaw name"
+      "flaw": "Flaw name",
+      "path": "Path name",
+      "ritual": "Ritual name"
     },
     "talent": {
       "add": "Add talent"
@@ -48,6 +526,12 @@
     },
     "flaw": {
       "add": "Add flaw"
+    },
+    "path": {
+      "add": "Add path"
+    },
+    "ritual": {
+      "add": "Add ritual"
     }
   },
   "sheet": {
@@ -60,7 +544,8 @@
       "background": {
         "nature": "Nature",
         "demeanor": "Demeanor",
-        "clan": "Clan"
+        "clan": "Clan",
+        "sect": "Sect"
       },
       "concept": {
         "generation": "Generation",
@@ -102,7 +587,9 @@
         "intimidation": "Intimidation",
         "leadership": "Leadership",
         "legerdemain": "Legerdemain",
-        "subterfuge": "Subterfuge"
+        "subterfuge": "Subterfuge",
+        "awareness": "Awareness",
+        "streetwise": "Streetwise"
       },
       "skills": {
         "title": "Skills",
@@ -115,7 +602,10 @@
         "performance": "Performance",
         "ride": "Ride",
         "stealth": "Stealth",
-        "survival": "Survival"
+        "survival": "Survival",
+        "drive": "Drive",
+        "firearms": "Firearms",
+        "larceny": "Larceny"
       },
       "knowledges": {
         "title": "Knowledges",
@@ -128,7 +618,11 @@
         "occult": "Occult",
         "politics": "Politics",
         "seneschal": "Seneschal",
-        "theology": "Theology"
+        "theology": "Theology",
+        "computer": "Computer",
+        "finance": "Finance",
+        "science": "Science",
+        "technology": "Technology"
       }
     },
     "advantages": {
@@ -144,7 +638,11 @@
         "mentor": "Mentor",
         "resources": "Resources",
         "retainers": "Retainers",
-        "status": "Status"
+        "status": "Status",
+        "alternateIdentity": "Alternate Identity",
+        "fame": "Fame",
+        "blackHandMembership": "Black Hand Membership",
+        "rituals": "Rituals"
       },
       "virtues": {
         "title": "Virtues",
@@ -153,10 +651,10 @@
         "courage": "Courage"
       },
       "road": {
-        "title": "Road"
-      },
-      "aura": {
-        "title": "Aura"
+        "title": "Road",
+        "aura": {
+          "title": "Aura"
+        }
       },
       "willpower": {
         "title": "Willpower"
@@ -193,6 +691,12 @@
       },
       "flaws": {
         "title": "Flaws"
+      },
+      "path": {
+        "title": "Humanity/Path",
+        "bearing": {
+          "title": "Bearing"
+        }
       }
     },
     "disciplines": {
@@ -206,8 +710,8 @@
       "fortitude": "Fortitude",
       "mortis": {
         "title": "Mortis",
-        "roads": "Mortis roads",
-        "rituals": "Mortis rituals"
+        "rituals": "Mortis rituals",
+        "paths": "Mortis roads"
       },
       "obtenebration": "Obtenebration",
       "obfuscate": "Obfuscate",
@@ -218,10 +722,15 @@
       "serpentis": "Serpentis",
       "thaumaturgy": {
         "title": "Thaumaturgy",
-        "roads": "Thaumaturgy roads",
+        "paths": "Thaumaturgy paths",
         "rituals": "Thaumaturgy rituals"
       },
-      "vicissitude": "Vicissitude"
+      "vicissitude": "Vicissitude",
+      "necromancy": {
+        "title": "Necromancy",
+        "paths": "Necromancy paths",
+        "rituals": "Necromancy rituals"
+      }
     },
     "equipment": {
       "title": "Gear",
@@ -231,6 +740,467 @@
     },
     "notes": {
       "title": "Notes"
+    }
+  },
+  "creationVtm": {
+    "clans": {
+      "assamite": "Assamita",
+      "brujah": "Brujah",
+      "gangrel": "Gangrel",
+      "giovanni": "Giovanni",
+      "lasombra": "Lasombra",
+      "malkavian": "Malkavian",
+      "nosferatu": "Nosferatu",
+      "ravnos": "Ravnos",
+      "followersOfSet": "Followers of Set",
+      "toreador": "Toreador",
+      "tremere": "Tremere",
+      "tzimisce": "Tzimisce",
+      "ventrue": "Ventrue",
+      "caitiff": "Caitiff"
+    },
+    "clanWeakness": {
+      "assamite": "Drinking Kindred vitae inflicts one unsoakable level of lethal damage per point; diablerie deals aggravated damage.",
+      "brujah": "+2 difficulty on rolls to resist or control frenzy, and Willpower cannot be spent to avoid it.",
+      "gangrel": "Each frenzy leaves a temporary animal feature chosen by the Storyteller.",
+      "giovanni": "Their Kiss deals double damage to mortals, causing excruciating pain.",
+      "lasombra": "Casts no reflection in mirrors, water or polished surfaces.",
+      "malkavian": "Suffers a permanent, incurable derangement; spending Willpower quiets it for one scene.",
+      "nosferatu": "Appearance 0, forever: social rolls based on it fail or are extremely hard.",
+      "ravnos": "Has a signature vice; when tempted, must pass Self-Control/Instinct (diff. 6) or indulge it.",
+      "followersOfSet": "Bright light is harmful: +2 damage levels from sunlight and -1 die to pools under intense light.",
+      "toreador": "Facing true beauty, must pass Self-Control/Instinct (diff. 6) or stand entranced for the scene.",
+      "tremere": "Becomes blood bound after only two draughts of another vampire’s vitae (the first counts as two).",
+      "tzimisce": "Must rest near two handfuls of native soil; each night without it halves dice pools cumulatively.",
+      "ventrue": "Feeds only on one specific type of mortal blood, chosen at creation; other blood gives no sustenance.",
+      "caitiff": "No in-clan disciplines: may learn any, but every discipline costs current rating ×6 experience."
+    },
+    "paths": {
+      "humanity": "Humanity",
+      "honorableAccord": "Path of the Honorable Accord",
+      "caine": "Path of Caine",
+      "cathari": "Path of Cathari",
+      "feralHeart": "Path of the Feral Heart",
+      "bones": "Path of the Bones",
+      "lilith": "Path of Lilith",
+      "metamorphosis": "Path of Metamorphosis",
+      "night": "Path of Night",
+      "paradox": "Path of Paradox",
+      "powerInnerVoice": "Path of Power and the Inner Voice",
+      "blood": "Path of Blood",
+      "typhon": "Path of Typhon"
+    },
+    "clanTypes": {
+      "camarilla": "Camarilla",
+      "camarillaDescription": "The sect that upholds the Masquerade: the seven founding clans and their society of princes, primogen and neonates.",
+      "sabbat": "Sabbat",
+      "sabbatDescription": "The Sword of Caine: clans and packs that reject the human Masquerade and embrace their monstrous nature.",
+      "independent": "Independent Clans",
+      "independentDescription": "Clans sworn to no sect, pursuing their own ancient agendas."
+    },
+    "clanDetail": {
+      "sect": "Sect",
+      "appearance": "Appearance",
+      "haven": "Haven",
+      "background": "Background",
+      "creationHints": "Character creation",
+      "weakness": "Weakness"
+    },
+    "path": {
+      "nickname": "Nickname",
+      "virtues": "Path Virtues",
+      "aura": "Bearing",
+      "ethics": "Path Ethics",
+      "senderos": "Variants",
+      "sinScore": "Rating",
+      "sinSin": "Minimum sin",
+      "sinReason": "Rationale"
+    },
+    "finishing": {
+      "path": "Humanity/Path"
+    },
+    "disciplines": {
+      "animalism": "Animalism",
+      "auspex": "Auspex",
+      "celerity": "Celerity",
+      "chimerstry": "Chimerstry",
+      "dementation": "Dementation",
+      "dominate": "Dominate",
+      "fortitude": "Fortitude",
+      "necromancy": "Necromancy",
+      "obfuscate": "Obfuscate",
+      "obtenebration": "Obtenebration",
+      "potence": "Potence",
+      "presence": "Presence",
+      "protean": "Protean",
+      "quietus": "Quietus",
+      "serpentis": "Serpentis",
+      "thaumaturgy": "Thaumaturgy",
+      "vicissitude": "Vicissitude"
+    },
+    "abilityNames": {
+      "alertness": "Alertness",
+      "athletics": "Athletics",
+      "awareness": "Awareness",
+      "brawl": "Brawl",
+      "emptahy": "Empathy",
+      "expression": "Expression",
+      "intimidation": "Intimidation",
+      "leadership": "Leadership",
+      "streetwise": "Streetwise",
+      "subterfuge": "Subterfuge",
+      "animalKen": "Animal Ken",
+      "crafts": "Crafts",
+      "drive": "Drive",
+      "etiquette": "Etiquette",
+      "firearms": "Firearms",
+      "larceny": "Larceny",
+      "melee": "Melee",
+      "performance": "Performance",
+      "stealth": "Stealth",
+      "survival": "Survival",
+      "academics": "Academics",
+      "computer": "Computer",
+      "finance": "Finance",
+      "investigation": "Investigation",
+      "law": "Law",
+      "medicine": "Medicine",
+      "occult": "Occult",
+      "politics": "Politics",
+      "science": "Science",
+      "technology": "Technology"
+    },
+    "archetypeNames": {
+      "architect": "Architect",
+      "autocrat": "Autocrat",
+      "bonVivant": "Hedonist",
+      "bravo": "Bravo",
+      "capitalist": "Capitalist",
+      "caregiver": "Caregiver",
+      "celebrant": "Celebrant",
+      "chameleon": "Chameleon",
+      "child": "Child",
+      "competitor": "Competitor",
+      "conformist": "Conformist",
+      "conniver": "Conniver",
+      "creepShow": "Creep Show",
+      "curmudgeon": "Curmudgeon",
+      "gallant": "Gallant",
+      "deviant": "Deviant",
+      "director": "Director",
+      "enigma": "Enigma",
+      "eyeOfTheStorm": "Eye of the Storm",
+      "fanatic": "Fanatic",
+      "guru": "Guru",
+      "idealist": "Idealist",
+      "judge": "Judge",
+      "loner": "Loner",
+      "martyr": "Martyr",
+      "masochist": "Masochist",
+      "monster": "Monster",
+      "pedagogue": "Pedagogue",
+      "penitent": "Penitent",
+      "perfectionist": "Perfectionist",
+      "rebel": "Rebel",
+      "rogue": "Rogue",
+      "sadist": "Sadist",
+      "scientist": "Scientist",
+      "sociopath": "Sociopath",
+      "soldier": "Soldier",
+      "survivor": "Survivor",
+      "thrillSeeker": "Thrill-Seeker",
+      "traditionalist": "Traditionalist",
+      "trickster": "Trickster",
+      "visionary": "Visionary",
+      "dilettante": "Dilettante"
+    },
+    "archetypes": {
+      "architect": "You build something meant to outlast you.",
+      "autocrat": "You need to hold the reins.",
+      "bonVivant": "Unlife is there to be enjoyed.",
+      "bravo": "Force settles your arguments.",
+      "capitalist": "Everything has a price, and you set it.",
+      "caregiver": "Caring for others gives you purpose.",
+      "celebrant": "Your cause fills you with joy.",
+      "chameleon": "You blend into any scene.",
+      "child": "You look for someone to take care of you.",
+      "competitor": "Only being the best counts.",
+      "conformist": "You follow the current and support it.",
+      "conniver": "Others exist to serve your ends.",
+      "creepShow": "You enjoy disgusting people.",
+      "curmudgeon": "You find fault in everything.",
+      "gallant": "You are the show.",
+      "deviant": "Rules are for the herd.",
+      "director": "You bring order to the chaos around you.",
+      "enigma": "No one quite figures you out — as you like it.",
+      "eyeOfTheStorm": "Chaos surrounds you without touching you.",
+      "fanatic": "Only the cause matters.",
+      "guru": "Others seek your spiritual guidance.",
+      "idealist": "You believe in something greater than yourself.",
+      "judge": "Your judgment sets things right.",
+      "loner": "You walk your own road.",
+      "martyr": "You suffer for a greater good.",
+      "masochist": "Pain reminds you that you exist.",
+      "monster": "You are damned — act like it.",
+      "pedagogue": "You save others through knowledge.",
+      "penitent": "Your existence is a guilt to atone for.",
+      "perfectionist": "Nothing ever meets your bar.",
+      "rebel": "You accept no one’s rules.",
+      "rogue": "Everything revolves around you.",
+      "sadist": "You exist to inflict pain.",
+      "scientist": "Everything is a problem to solve.",
+      "sociopath": "The lesser are expendable.",
+      "soldier": "You follow orders — your way.",
+      "survivor": "Nothing manages to finish you.",
+      "thrillSeeker": "You live for the rush.",
+      "traditionalist": "The proven way is the right way.",
+      "trickster": "Laughter tames the pain.",
+      "visionary": "There is something beyond all this.",
+      "dilettante": "Your latest passion is everything."
+    },
+    "descriptions": {
+      "clans": {
+        "assamite": "Assassins and judges of the Kindred, heirs to a warrior-mystic tradition seated at Alamut.",
+        "brujah": "Passionate rebels and fallen idealists; their rage is as legendary as their causes.",
+        "gangrel": "Nomads close to the Beast and the wilds; happier among wolves than at Elysium.",
+        "giovanni": "An incestuous family-clan of necromancers trading in money, blood and souls.",
+        "lasombra": "Lords of shadow and guides of the Sabbat; serving themselves first, then the darkness.",
+        "malkavian": "A clan fractured by madness whose derangement hides unsettling insight.",
+        "nosferatu": "Deformed outcasts who rule the underbelly and the trade in secrets.",
+        "ravnos": "Wandering tricksters, masters of illusion, marked by Kindred prejudice.",
+        "followersOfSet": "Serpents keeping dark secrets, tempting and corrupting in Set’s service.",
+        "toreador": "Aesthetes and sensualists: artists caught between beauty and stagnation.",
+        "tremere": "Blood sorcerers bound in a rigid pyramid; feared and mistrusted.",
+        "tzimisce": "Fallen Eastern European nobles, flesh-sculptors serving the Sabbat.",
+        "ventrue": "The Kindred aristocracy: upholding the Traditions, the Masquerade... and their own interests.",
+        "caitiff": "Clanless vampires with no shared heritage, often scorned by the rest."
+      },
+      "disciplines": {
+        "animalism": "Supernatural affinity with and command over animals and the Beast.",
+        "auspex": "Extrasensory perception: heightened senses, auras and telepathy.",
+        "celerity": "Superhuman speed and reflexes.",
+        "chimerstry": "Crafting illusions and hallucinations.",
+        "dementation": "Instilling and channeling madness.",
+        "dominate": "Mind control through gaze and voice.",
+        "fortitude": "Supernatural resilience, even against fire and sunlight.",
+        "necromancy": "Death sorcery: ghosts, corpses and the Underworld.",
+        "obfuscate": "Remaining hidden and unnoticed even in plain sight.",
+        "obtenebration": "Supernatural control of shadow.",
+        "potence": "Supernatural physical might.",
+        "presence": "Attracting, entrancing and swaying crowds’ emotions.",
+        "protean": "Shapechanging: claws, earth-meld, beast and mist.",
+        "quietus": "The silent art of assassination through blood.",
+        "serpentis": "The reptilian powers of the Serpent.",
+        "thaumaturgy": "The blood sorcery of Clan Tremere.",
+        "vicissitude": "The art of sculpting flesh and bone."
+      },
+      "backgrounds": {
+        "allies": "Mortals who actively and willingly help you.",
+        "alternateIdentity": "A false identity with its own papers and history.",
+        "blackHandMembership": "(Sabbat) Membership in the Black Hand.",
+        "contacts": "Information sources across mortal society.",
+        "domain": "Hunting grounds recognized by the Kindred.",
+        "fame": "Notoriety among mortals.",
+        "generation": "The potency of your Blood: the higher, the closer to Caine.",
+        "herd": "Vessels you can feed from safely.",
+        "influence": "Political and social pull in the mortal community.",
+        "mentor": "A Kindred patron who advises and backs you.",
+        "resources": "Money, property and income.",
+        "retainers": "Loyal servants: ghouls or conditioned mortals.",
+        "rituals": "(Sabbat) Knowledge of the sect’s Ritae.",
+        "status": "Your standing in your sect’s society."
+      },
+      "clanDetails": {
+        "brujah": {
+          "summary": "Once the philosopher-kings of a lost civilization, the Brujah are now passionate rebels who fight night after night for their causes. Each one burns with an ideal — justice, freedom, vengeance or change — and few accept authority without questioning it. Their passion is their greatest strength and their curse: no clan falls to frenzy so easily.",
+          "sect": "Camarilla, though grudgingly: many sympathize with the Anarch Movement, and the Brujah antitribu form a ferocious arm of the Sabbat.",
+          "appearance": "There is no single look: street punks, tweed-jacketed academics, activists, bikers or bruisers. Their clothes and attitude usually proclaim defiance of authority or allegiance to their cause.",
+          "haven": "Wherever they can: squatted flats, shared warehouses, basements near universities or nightlife. The more organized keep communal havens that double as meeting points for their faction.",
+          "background": "They Embrace mortals of intense conviction: activists, philosophers, agitators, idealistic criminals or anyone with fire in their heart. A Brujah rarely Embraces on a whim: they look for someone who shares their cause.",
+          "creationHints": "Physical or Mental Attributes as primaries; Talents is usually the main Ability group (Brawl, Intimidation, Streetwise). Backgrounds: Allies, Contacts and Status among the anarchs. Virtues: do not neglect Self-Control — their weakness punishes anger."
+        },
+        "gangrel": {
+          "summary": "Nomads and survivors, the Gangrel are closer to the Beast than any other clan. They avoid the traps of society — mortal or vampiric — and trust in instinct, endurance and the land beneath their feet. They are the Kindred's finest survivors: where other vampires would perish, a Gangrel thrives.",
+          "sect": "Nominally Camarilla, but their loyalty is lukewarm: many roam as independents in all but name, and the Sabbat fields its own rural and urban antitribu.",
+          "appearance": "Practical to the extreme: sturdy clothes, worn boots, nothing that gets in the way. Many bear animal features earned in past frenzies — wolf's eyes, claw-like nails — that give them an unmistakably feral air.",
+          "haven": "Rarely a fixed one. The earth itself is their haven: parks, forests, wasteland. Those who settle choose defensible places and always know three ways out.",
+          "background": "Loners, hunters, survivalists, bikers, drifters: people who already lived on the margins. The Gangrel Embrace is often a trial: the sire abandons the fledgling to learn alone, returning only if the childe survives.",
+          "creationHints": "Physical Attributes as primaries; survival Talents and Skills (Alertness, Athletics, Survival, Brawl). Backgrounds: few and practical; Generation or Herd depending on the concept. Virtues: high Courage is practically a clan tradition."
+        },
+        "malkavian": {
+          "summary": "The Malkavian Embrace shatters the mind and, in exchange, sometimes grants an insight no one else can reach. Madmen, prophets, jesters and oracles, the Malkavians see patterns where others see only noise, and their famed Madness Network whispers secrets across the whole clan. Underestimating them is many a Kindred's last mistake.",
+          "sect": "Camarilla; their Sabbat antitribu, who retain the old discipline of Dementation, unsettle even their own allies.",
+          "appearance": "Anything. A Malkavian may wear an immaculate suit, a hospital gown or a clown costume, and the whole always conveys that something is slightly off.",
+          "haven": "As varied as their minds: meticulously ordered penthouses, abandoned hospitals, burrows full of newspaper clippings joined with red string. The haven usually reflects — or feeds — their particular madness.",
+          "background": "They Embrace those who have already stared into the abyss: psychiatric patients, visionaries, obsessive artists, broken veterans or misunderstood geniuses. Sometimes the chosen one seems perfectly normal… until after the Embrace.",
+          "creationHints": "Any Attribute group can be primary depending on the concept; Mental is most common, with high Perception and Talents like Alertness or Empathy. Backgrounds: unexpected Contacts. Remember: every Malkavian starts with an incurable derangement chosen at creation."
+        },
+        "nosferatu": {
+          "summary": "The Nosferatu Embrace is a sentence: it warps the body into something monstrous and casts the victim out of mortal society forever. In exchange, the clan has turned the sewers and tunnels into its kingdom, and information into its currency. No one knows more about what happens in a city than its Sewer Rats.",
+          "sect": "Camarilla; their Sabbat antitribu keep quiet ties with the rest of the clan, for the Nosferatu look after their own above any sect.",
+          "appearance": "Horrors without exception: leprous skin, twisted bodies, faces that draw screams. They cover themselves with hoods, rags or long coats, and master Obfuscate to walk among mortals.",
+          "haven": "Underground: sewers, abandoned subway tunnels, crypts and warrens dug out over decades. Their communal lairs are guarded with traps and secret routes only the clan knows.",
+          "background": "Some sires choose outcasts who already knew the world's cruelty; others Embrace the vain and beautiful as punishment. Either way, the fledgling loses their former life completely.",
+          "creationHints": "Physical or Mental Attributes as primaries (Appearance is 0 and can never improve). Abilities: Stealth, Alertness, Streetwise and Investigation. Backgrounds: Contacts and Allies are the clan's lifeblood; their information network has no rival."
+        },
+        "toreador": {
+          "summary": "The Toreador are the eternal lovers of art and beauty, vampires who chase aesthetic passion with the same thirst others chase blood. Patrons, artists and seducers, they dominate mortal high society and the salon politics of the Camarilla. Their curse is the same as their gift: they feel too much.",
+          "sect": "Camarilla, where they wield enormous social influence; their Sabbat antitribu twist beauty into refined cruelty.",
+          "appearance": "Impeccable. They dress in the latest fashion or cultivate an unmistakable personal style, and many were chosen precisely for their beauty. A dishevelled Toreador is almost a contradiction.",
+          "haven": "Elegant and urban: penthouses, galleries, artists' studios. Full of art, music and interesting guests; a Toreador's haven is also their stage.",
+          "background": "Artists, models, musicians, actors, patrons and muses: anyone who embodies beauty or creates it. Some Embrace geniuses to \"preserve\" them; others simply collect beautiful people.",
+          "creationHints": "Social Attributes as primaries. Abilities: Expression, Performance, Etiquette, Empathy and artistic Knowledges. Backgrounds: Resources, Fame, Herd and Retainers abound. Balanced Virtues: their weakness leaves them entranced by beauty at the worst possible moments."
+        },
+        "tremere": {
+          "summary": "Born of a ritual that stole immortality from another clan, the Tremere are the Kindred's warlocks: a hierarchical pyramid of blood mages bound by oaths and mutual surveillance. Their Thaumaturgy grants a power no other clan can match, and their organization an efficiency all envy and fear.",
+          "sect": "Camarilla, of which they are a fundamental pillar; the clan hunts its few deserters and antitribu without mercy.",
+          "appearance": "Discreet and professional: sober suits, an academic style, nothing that draws unnecessary attention. True Tremere ostentation is reserved for rituals behind closed doors.",
+          "haven": "The chantry: the clan's communal fortress-haven in each city, protected by mystic wards. Neonates usually reside there under the eyes of their superiors.",
+          "background": "Occultists, academics, students of the arcane, people with iron will and a hunger for knowledge. The clan studies its candidates for years: a Tremere Embrace is never casual.",
+          "creationHints": "Mental Attributes as primaries; Knowledges (Occult, Academics, Investigation) at the forefront. Backgrounds: Mentor and Status within the pyramid. Remember that every neonate drinks the blood of the Seven: they begin partially bound to the clan."
+        },
+        "ventrue": {
+          "summary": "The Ventrue consider themselves the rightful kings of the Kindred: they have led the Camarilla since its founding and bear the weight — and privilege — of leadership. Bankers, politicians and aristocrats in life, they rule cities with money, influence and impeccable etiquette. Power, they say, is not a prize: it is a responsibility.",
+          "sect": "Camarilla, its backbone and main source of princes; the Sabbat antitribu see themselves as crusader knights.",
+          "appearance": "Conservative elegance: expensive suits, discreet jewellery, the bearing of a board chairman. A Ventrue dresses like the power they represent.",
+          "haven": "Luxurious and secure: corporate penthouses, historic mansions, private clubs. Always with professional security, mortal or otherwise.",
+          "background": "Executives, financiers, politicians, high-ranking officers, old families. The clan Embraces those who already know how to command; lineage matters, and every sire answers for their childe before the clan.",
+          "creationHints": "Social or Mental Attributes as primaries. Knowledges: Finance, Law, Politics. Backgrounds: Resources, Influence, Retainers and Status in abundance; few clans start with so much support. Choose their feeding restriction carefully: only one type of blood sustains them."
+        },
+        "lasombra": {
+          "summary": "Masters of shadow and lords of the Sabbat, the Lasombra embrace darkness both literally and figuratively. Predatory aristocrats convinced that power belongs to whoever takes it, they shape the abyssal darkness of Obtenebration the way others shape politics. They diablerized their own Antediluvian and regret nothing.",
+          "sect": "Sabbat, of which they are the ruling pillar alongside the Tzimisce; the few Lasombra who serve the Camarilla are hunted as traitors.",
+          "appearance": "Aristocratic: elegant Mediterranean features, dark clothing of impeccable cut. They cultivate a commanding presence that never needs to raise its voice… and no mirror betrays them.",
+          "haven": "Shadowed manors, church crypts, family properties inherited from their mortal days. They prefer places with history and weight, decorated with severe taste.",
+          "background": "Nobility, clergy, families of old power: the Lasombra Embrace born predators with ambition and will. Many keep twisted ties to their mortal families for generations.",
+          "creationHints": "Social or Mental Attributes as primaries. Abilities: Leadership, Intimidation, Subterfuge. Backgrounds: Sabbat Status, Resources, Retainers. Many follow Paths of Enlightenment (such as the Path of Night or the Path of Power and the Inner Voice) instead of Humanity."
+        },
+        "tzimisce": {
+          "summary": "The Fiends mould flesh and bone like clay, and mould themselves in pursuit of transcendence. Lords of the Old Country, cruel scholars and exquisite hosts, the Tzimisce founded the Sabbat so they would never kneel to anyone again. Their courtesy is legendary; their wrath, worse.",
+          "sect": "Sabbat, its ideological and spiritual soul; a Tzimisce loyal to the Camarilla is a near-nonexistent contradiction.",
+          "appearance": "Those who master Vicissitude sculpt themselves: supernatural beauty, monstrous forms, or both as occasion demands. The more traditional dress with the severity of old European nobility.",
+          "haven": "Ancestral estates, ruined monasteries, Victorian mansions: always with soil from their birthplace, without which they cannot rest. A Tzimisce's haven is their sovereign domain, and visits are governed by sacred laws of hospitality.",
+          "background": "Old World families, scholars, surgeons, occultists… and their own revenants: ghoul families bred for centuries like prize livestock.",
+          "creationHints": "Mental Attributes as primaries. Knowledges: Occult, Medicine, Science. Backgrounds: Domain, Retainers (szlachta and revenants), Resources. The Path of Metamorphosis is their most characteristic philosophy; few retain Humanity."
+        },
+        "assamite": {
+          "summary": "From the fortress of Alamut, the Clan of Assassins has judged and executed the vampires it deems unworthy, collecting its price in blood. Divided into castes of warriors, sorcerers and viziers, the Assamites follow the teachings of Haqim and distrust the Western sects. With the Tremere curse that poisoned their blood now broken, they collect in vitae once more.",
+          "sect": "Independent; they sell their services as assassins to any sect, though some antitribu serve the Sabbat and a few have drawn close to the Camarilla.",
+          "appearance": "Mostly of Middle Eastern origin, though the three castes Embrace worldwide. Their skin darkens with age; elders are a lustrous ebony. They dress with functional discretion: an assassin does not draw attention.",
+          "haven": "Safe houses, discreet and easy to abandon; the most devout make pilgrimage to Alamut, the mother fortress in the mountains. An Assamite never sleeps where they work.",
+          "background": "Warriors, soldiers and martial artists for the warrior caste; academics and strategists for the viziers; mystics and scholars of the occult for the sorcerers. The clan looks for discipline, faith and lethality.",
+          "creationHints": "Warriors: Physical primaries and combat Abilities. Sorcerers: Mental and Knowledges (Occult). Viziers: Mental or Social. Backgrounds: Generation, Mentor and clan Status. Beware their modern weakness: the vitae of other vampires is addictive to them."
+        },
+        "followersOfSet": {
+          "summary": "The Followers of Set are priests of a dark god and merchants of every vice imaginable. They corrupt because they believe: every soul they degrade is a step towards Set's awakening and freedom from the world's chains. Beneath their obliging smile there is always a hook.",
+          "sect": "Independent by doctrine: other sects are herds of false gods. They will work with anyone… at the right price.",
+          "appearance": "Charming and exotic; many cultivate an Egyptian aesthetic in private. In public they wear whatever their role requires: dealer, guru, nightlife entrepreneur or priest.",
+          "haven": "Temples hidden beneath their businesses: nightclubs, dens, pawnshops. The deeper and darker the better: light harms them more than any other clan.",
+          "background": "Cultists, dealers, smugglers, pimps, fallen preachers: people who already lived off the desires of others. The clan also Embraces fervent converts to its faith.",
+          "creationHints": "Social Attributes as primaries. Talents: Subterfuge, Empathy, Streetwise. Backgrounds: Contacts, Herd, Retainers and Resources (their networks of vice supply them all). Remember their weakness: sunlight and bright light punish them twice over."
+        },
+        "giovanni": {
+          "summary": "Clan, family and criminal enterprise all at once, the Giovanni bought their immortality with the diablerie of an Antediluvian and paid for it with a curse. Necromancers and bankers, they move money and the dead with the same accountant's coldness. Family is everything; outsiders are resources.",
+          "sect": "Independent; the Promise of 1528 guarantees them the Camarilla's neutrality as long as they cause no trouble… and they know how to exploit it to the fullest.",
+          "appearance": "Expensive suits and the manners of a Venetian banker. Nearly all share the features of the mortal Giovanni family or its allied branches (Milliner, Pisanob, Putanesca).",
+          "haven": "Family mansions, mausoleums, the offices of the Loggia. Venice remains the heart of the clan, and every Giovanni has a corner waiting for them there.",
+          "background": "The Embrace stays almost exclusively within the mortal family and its branches: the candidate is watched from the cradle and schooled in business and the dead. Embracing outside the blood is forbidden.",
+          "creationHints": "Mental or Social Attributes as primaries. Knowledges: Finance, Occult, Law. Backgrounds: Resources, Allies (the family), Influence and Retainers. Their weakness: their Kiss causes excruciating pain instead of ecstasy, and feeding from mortals inflicts extra damage."
+        },
+        "ravnos": {
+          "summary": "Branded as thieves and liars by the rest of the Kindred, the Ravnos turn prejudice into a weapon: no one expects anything from them until it is too late. Masters of illusion through Chimerstry, they roam in extended families and put reality — and everyone's patience — to the test.",
+          "sect": "Independent; the few Sabbat antitribu are regarded by the rest of the clan as a family disgrace.",
+          "appearance": "Many descend from Rom or Indian lineages, though the clan Embraces all over the world. They dress practically for the road, with flashy touches when it serves the con.",
+          "haven": "The road itself: caravans, vehicles, motels, temporary camps. A settled Ravnos is a vulnerable Ravnos, and the clan has known it since ancient times.",
+          "background": "Travelling families, con artists, itinerant performers, smugglers. The Embrace usually stays within the extended family or falls to those who prove they can live by their wits.",
+          "creationHints": "Social or Physical Attributes as primaries. Talents: Subterfuge, Larceny, Streetwise. Backgrounds: Allies and Contacts (the kumpania, the family). Choose the creation vice carefully: the Ravnos weakness compels them to indulge it when the chance arises."
+        },
+        "caitiff": {
+          "summary": "Clanless, without lineage and without a seat at the table, the Caitiff are the orphans of the Kindred. Some were abandoned by their sires; others were born with blood too thin to show any clan at all. Free of inherited weaknesses and traditions, they pay for that freedom with everyone's contempt.",
+          "sect": "None claims them: the Camarilla tolerates them as second-class citizens, the Sabbat recruits them as cannon fodder, and many end up among the anarchs.",
+          "appearance": "Anyone: the Caitiff Embrace makes no distinction of class, origin or style. Most learn quickly not to stand out.",
+          "haven": "Whatever they can get and defend: cheap flats, basements, borrowed shelters. With no clan behind them, every night is theirs and theirs alone.",
+          "background": "Accidental Embraces, abandoned childer, thin-blooded scions of the 14th and 15th generations. Every Caitiff has a survival story to tell.",
+          "creationHints": "Choose Attribute and Ability groups freely to fit the concept. They may pick any three disciplines, but all cost as out-of-clan. Backgrounds: Status is nearly off-limits; Allies and Contacts are worth gold."
+        }
+      },
+      "sects": {
+        "camarilla": {
+          "summary": "The Ivory Tower: the largest sect of the Kindred, born to protect vampires from humanity after the bonfires of the Inquisition. Its supreme law is the Masquerade: mortals must never learn that vampires exist.",
+          "history": "Founded in 1493 at the Convention of Thorns, which ended the Anarch Revolt and the worst years of the Inquisition. Seven clans formed it — Brujah, Gangrel, Malkavian, Nosferatu, Toreador, Tremere and Ventrue — on the premise that only secrecy guarantees survival. It proclaims itself the society of all vampires, whether they claim it or not, and officially denies the existence of the Antediluvians and Gehenna.",
+          "practices": "Each city is ruled by a Prince supported (and watched) by the Primogen, the council of each clan's elders. The Six Traditions are its law: Masquerade, Domain, Progeny, Accounting, Hospitality and Destruction. Harpies dictate status in Elysium — neutral ground where violence is forbidden — while the Sheriff enforces the law and the Scourge patrols the domain's borders.",
+          "conclaves": "The Inner Circle meets in Venice every thirteen years to set the sect's course and appoint the Justicars, the supreme judges of each clan. They and their Archons convene conclaves: great assemblies where crimes against the sect are judged, princes are deposed and any Kindred may demand justice. A conclave is the closest thing the Kindred have to a parliament.",
+          "rituals": "Its rites are social and political: presentation to the Prince upon arriving in a domain, petitioning for permission to sire, the courts of Elysium and the salons where status is woven. The Blood Hunt (Lextalionis) is its most feared rite: the public sentence that turns a Kindred into legitimate prey for the whole city."
+        },
+        "sabbat": {
+          "summary": "The Sword of Caine: the monstrous sect that refuses to pretend to be human. Vampires are predators by right, and the Sabbat exists to free them from the yoke of the Antediluvians and prepare for Gehenna.",
+          "history": "It was born of the fifteenth-century Anarch Revolt, when young Kindred rose against their elders: the Lasombra and the Tzimisce claim to have diablerized their own founders and rejected the peace of Thorns. Those unrepentant anarchs became the Sabbat. After centuries of internal civil wars and crusades against Camarilla cities, it cemented itself as the Camarilla's great enemy.",
+          "practices": "Its basic unit is the pack, bound by the Vaulderie: a rite in which all mix their blood in a chalice and drink, replacing the blood bond with the Vinculum of mutual loyalty. They scorn Humanity: most follow Paths of Enlightenment. The hierarchy — Regent, cardinals, archbishops, bishops, priests and ductus — is legitimized by strength and fervour.",
+          "conclaves": "The sect's councils ratify the Regent and declare Crusades: coordinated assaults to wrest cities from the Camarilla. Its great feasts gather entire packs: the Palla Grande, a grand masquerade ball where blood flows openly, and the Festivo dello Estinto, the festival of the dead. Leadership disputes are settled by Monomacy, a ritual duel to the death.",
+          "rituals": "It is a deeply ritualistic sect: auctoritas ritae shared by the whole sect and ignoblis ritae unique to each pack. The Creation Rites bury the newly Embraced so they may dig up their own monstrosity; the Blood Feast, the Fire Dance — leaping the flames to prove courage — and the Games of Instinct harden the packs against fear and the Beast."
+        },
+        "anarchs": {
+          "summary": "The Anarch Movement: Kindred who reject the tyranny of the elders without embracing the monstrosity of the Sabbat. They want domains ruled by merit rather than age; the Masquerade seems sensible to them… the princes do not.",
+          "history": "Heirs of the original Anarch Revolt, they signed the peace of Thorns as pardoned anarchs within the Camarilla. Resentment erupted again in 1944 with the Los Angeles revolt: the prince fell and the Anarch Free State of California was born, proof that another vampire society is possible. Since then the Movement waxes and wanes to the rhythm of the princes' purges.",
+          "practices": "They replace princes with Barons, who rule through charisma and pacts between gangs. They defend the Masquerade out of sheer survival and punish whoever breaks it, but despise the rest of the Ivory Tower's protocol. Their domains are more egalitarian and also more chaotic: anarch politics happens in garages, clubs and rooftops, not salons.",
+          "conclaves": "No formal conclaves: assemblies of barons, gang councils and pacts sealed with handshakes and veiled threats. The Los Angeles Status Quo was their most serious attempt at collective government. When the threat is great — the Sabbat, a vengeful prince — the baronies know how to unite… for a while.",
+          "rituals": "Few and practical: gang oaths, informal admission rites and the shared memory of the Revolt. Their true ritual is the assembly: argue, vote and argue again — unthinkable in the courts of the elders."
+        },
+        "independents": {
+          "summary": "The independent clans swear loyalty to no sect: Assamites, Followers of Set, Giovanni and Ravnos pursue agendas of their own, older than the Camarilla and the Sabbat. Alongside them stand the Autarkis, lone Kindred who reject every banner.",
+          "history": "When the sects formed in the fifteenth century, these clans already had millennia of history and saw no reason to kneel. The Assamites negotiated tribute after the siege of Alamut; the Giovanni bought their neutrality with the Promise of 1528; the Setites and the Ravnos simply ignored wars that were not theirs. Each clan is, in practice, its own sect.",
+          "practices": "Each clan governs itself: the castes of Alamut under the Old Man of the Mountain, the Setite temples with their priestly hierarchies, the Giovanni family-business ruled from Venice and the Ravnos jati scattered along the roads. They deal with the Camarilla and the Sabbat as foreign powers: embassies, contracts and betrayals as convenient.",
+          "conclaves": "There are no common assemblies among the independents: each clan holds its own. The Assamites answer to the du'at of Alamut, the Setites to their high priests, the Giovanni to the family council of the Loggia, and the Ravnos settle disputes within the jati or between families.",
+          "rituals": "Each clan keeps its own rites: Assamite tribute blood and contract oaths, the ophidian mysteries and initiations of the Setites, the family banquets and necromancies of the Giovanni and the Ravnos codes of hospitality and debt."
+        }
+      }
+    },
+    "sects": {
+      "camarilla": "Camarilla",
+      "sabbat": "Sabbat",
+      "anarchs": "Anarchs",
+      "independents": "Independents"
+    },
+    "sectDetail": {
+      "history": "History",
+      "practices": "Practices",
+      "conclaves": "Conclaves & assemblies",
+      "rituals": "Rites & rituals"
+    },
+    "abilityDetail": {
+      "specialties": "Specialties"
+    },
+    "specialtyWhat": "A specialty is a subcategory you excel at (e.g. Strength → \"dead lifts\" or Performance → \"singing\"). It can only be chosen for Attributes or Abilities rated 4 or more, it is free, and there is one per trait. On rolls it covers, each 10 counts as two successes instead of one.",
+    "archetypeDetail": {
+      "willpower": "Regain Willpower"
+    },
+    "languages": {
+      "nativeHint": "Your character speaks their native language for free. Extra languages are chosen in Finishing Touches (Language Merit).",
+      "meritHint": "The Language Merit includes your first language; each additional language costs 1 more freebie point.",
+      "needMerit": "Extra languages come from the Language Merit: select it below, in Merits & Flaws, to reveal the list."
+    }
+  },
+  "game-title": {
+    "VAMPIRE_DARK_AGES": "Vampire: Dark Ages",
+    "VAMPIRE_MASQUERADE": "Vampire: The Masquerade"
+  },
+  "game-reduced-title": {
+    "VAMPIRE_DARK_AGES": "Vampire: DA",
+    "VAMPIRE_MASQUERADE": "Vampire: TM"
+  },
+  "vtm-sheet-title": {
+    "start": "V",
+    "middle-top": "ampir",
+    "end": "O",
+    "middle-bottom": "THE MASQUERADE"
+  },
+  "home": {
+    "title": "Character Sheets",
+    "subtitle": "Choose your game",
+    "open": "Open sheet",
+    "taglines": {
+      "VAMPIRE_DARK_AGES": "Intrigue and horror in the Dark Medieval",
+      "VAMPIRE_MASQUERADE": "Modern nights under the Masquerade"
     }
   }
 }

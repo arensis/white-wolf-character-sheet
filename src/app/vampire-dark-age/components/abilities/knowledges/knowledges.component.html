@@ -3,6 +3,9 @@
   <arm-circle-input
     [circleAmount]="8"
     [label]="'sheet.abilities.knowledges.academics'"
+    [specialties]="characterSheet.specialties"
+    [experiences]="characterSheet.experiences"
+    (onSpecialtyClick)="specialty.showChosenFor($event, characterSheet.specialties, characterSheet.experiences)"
     [value]="characterSheet.abilities.knowledges.academics"
     [isEditable]="characterSheet.isEditable"
     (onValueChange)="updateProperty($event, 'academics')"
@@ -10,6 +13,9 @@
   <arm-circle-input
     [circleAmount]="8"
     [label]="'sheet.abilities.knowledges.investigation'"
+    [specialties]="characterSheet.specialties"
+    [experiences]="characterSheet.experiences"
+    (onSpecialtyClick)="specialty.showChosenFor($event, characterSheet.specialties, characterSheet.experiences)"
     [value]="characterSheet.abilities.knowledges.investigation"
     [isEditable]="characterSheet.isEditable"
     (onValueChange)="updateProperty($event, 'investigation')"
@@ -17,6 +23,9 @@
   <arm-circle-input
     [circleAmount]="8"
     [label]="'sheet.abilities.knowledges.law'"
+    [specialties]="characterSheet.specialties"
+    [experiences]="characterSheet.experiences"
+    (onSpecialtyClick)="specialty.showChosenFor($event, characterSheet.specialties, characterSheet.experiences)"
     [value]="characterSheet.abilities.knowledges.law"
     [isEditable]="characterSheet.isEditable"
     (onValueChange)="updateProperty($event, 'law')"
@@ -24,6 +33,9 @@
   <arm-circle-input
     [circleAmount]="8"
     [label]="'sheet.abilities.knowledges.linguistics'"
+    [specialties]="characterSheet.specialties"
+    [experiences]="characterSheet.experiences"
+    (onSpecialtyClick)="specialty.showChosenFor($event, characterSheet.specialties, characterSheet.experiences)"
     [value]="characterSheet.abilities.knowledges.linguistics"
     [isEditable]="characterSheet.isEditable"
     (onValueChange)="updateProperty($event, 'linguistics')"
@@ -31,6 +43,9 @@
   <arm-circle-input
     [circleAmount]="8"
     [label]="'sheet.abilities.knowledges.medicine'"
+    [specialties]="characterSheet.specialties"
+    [experiences]="characterSheet.experiences"
+    (onSpecialtyClick)="specialty.showChosenFor($event, characterSheet.specialties, characterSheet.experiences)"
     [value]="characterSheet.abilities.knowledges.medicine"
     [isEditable]="characterSheet.isEditable"
     (onValueChange)="updateProperty($event, 'medicine')"
@@ -38,6 +53,9 @@
   <arm-circle-input
     [circleAmount]="8"
     [label]="'sheet.abilities.knowledges.occult'"
+    [specialties]="characterSheet.specialties"
+    [experiences]="characterSheet.experiences"
+    (onSpecialtyClick)="specialty.showChosenFor($event, characterSheet.specialties, characterSheet.experiences)"
     [value]="characterSheet.abilities.knowledges.occult"
     [isEditable]="characterSheet.isEditable"
     (onValueChange)="updateProperty($event, 'occult')"
@@ -45,6 +63,9 @@
   <arm-circle-input
     [circleAmount]="8"
     [label]="'sheet.abilities.knowledges.politics'"
+    [specialties]="characterSheet.specialties"
+    [experiences]="characterSheet.experiences"
+    (onSpecialtyClick)="specialty.showChosenFor($event, characterSheet.specialties, characterSheet.experiences)"
     [value]="characterSheet.abilities.knowledges.politics"
     [isEditable]="characterSheet.isEditable"
     (onValueChange)="updateProperty($event, 'politics')"
@@ -52,6 +73,9 @@
   <arm-circle-input
     [circleAmount]="8"
     [label]="'sheet.abilities.knowledges.hearthWisdom'"
+    [specialties]="characterSheet.specialties"
+    [experiences]="characterSheet.experiences"
+    (onSpecialtyClick)="specialty.showChosenFor($event, characterSheet.specialties, characterSheet.experiences)"
     [value]="characterSheet.abilities.knowledges.hearthWisdom"
     [isEditable]="characterSheet.isEditable"
     (onValueChange)="updateProperty($event, 'hearthWisdom')"
@@ -59,6 +83,9 @@
   <arm-circle-input
     [circleAmount]="8"
     [label]="'sheet.abilities.knowledges.seneschal'"
+    [specialties]="characterSheet.specialties"
+    [experiences]="characterSheet.experiences"
+    (onSpecialtyClick)="specialty.showChosenFor($event, characterSheet.specialties, characterSheet.experiences)"
     [value]="characterSheet.abilities.knowledges.seneschal"
     [isEditable]="characterSheet.isEditable"
     (onValueChange)="updateProperty($event, 'seneschal')"
@@ -66,6 +93,9 @@
   <arm-circle-input
     [circleAmount]="8"
     [label]="'sheet.abilities.knowledges.theology'"
+    [specialties]="characterSheet.specialties"
+    [experiences]="characterSheet.experiences"
+    (onSpecialtyClick)="specialty.showChosenFor($event, characterSheet.specialties, characterSheet.experiences)"
     [value]="characterSheet.abilities.knowledges.theology"
     [isEditable]="characterSheet.isEditable"
     (onValueChange)="updateProperty($event, 'theology')"
@@ -81,8 +111,8 @@
     (onValueChange)="updateCustomProperty($event, i)"
   ></arm-circle-input>
   <arm-add-custom-property-button
+  (nameAdded)="addItemToCustomProperties($event)"
     [isEditable]="characterSheet.isEditable"
     [propertyType]="propertyType"
-    [customPropertyList]="characterSheet.abilities.knowledges.customKnowledges"
   ></arm-add-custom-property-button>
 </div>

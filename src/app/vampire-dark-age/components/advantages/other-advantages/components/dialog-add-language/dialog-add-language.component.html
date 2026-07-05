@@ -1,0 +1,38 @@
+<div class="modal-container">
+  <h1 mat-dialog-title>Añadir Idioma</h1>
+
+  <div class="mode-toggle">
+    <button type="button" [class.active]="mode === 'list'" (click)="mode = 'list'">De la lista</button>
+    <button type="button" [class.active]="mode === 'custom'" (click)="mode = 'custom'">Personalizado</button>
+  </div>
+
+  <div mat-dialog-content class="dialog-body">
+
+    <ng-container *ngIf="mode === 'list'">
+      <div *ngFor="let group of groups" class="language-group">
+        <h3 class="group-heading">{{ group.continent }}</h3>
+        <div
+          *ngFor="let lang of group.languages"
+          class="list-item"
+          [class.is-selected]="selected?.id === lang.id"
+          (click)="select(lang)"
+        >
+          <span class="lang-name">{{ lang.name }}</span>
+        </div>
+      </div>
+    </ng-container>
+
+    <ng-container *ngIf="mode === 'custom'">
+      <mat-form-field appearance="fill" class="full-width">
+        <mat-label>Nombre del idioma</mat-label>
+        <input matInput [(ngModel)]="customName" [ngModelOptions]="{standalone: true}">
+      </mat-form-field>
+    </ng-container>
+
+  </div>
+
+  <div mat-dialog-actions align="end">
+    <button mat-button (click)="cancel()">Cancelar</button>
+    <button mat-button [disabled]="isConfirmDisabled" (click)="confirm()">Añadir</button>
+  </div>
+</div>

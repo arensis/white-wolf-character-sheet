@@ -1,0 +1,53 @@
+<div class="modal-container">
+  <h1 mat-dialog-title>
+    {{ data.type === 'merit' ? 'Añadir Mérito' : 'Añadir Defecto' }}
+  </h1>
+
+  <div class="mode-toggle">
+    <button type="button" [class.active]="mode === 'list'" (click)="mode = 'list'">De la lista</button>
+    <button type="button" [class.active]="mode === 'custom'" (click)="mode = 'custom'">Personalizado</button>
+  </div>
+
+  <div mat-dialog-content class="dialog-body">
+
+    <ng-container *ngIf="mode === 'list'">
+      <div *ngFor="let group of grouped" class="category-group">
+        <h3 class="category-heading">{{ group.label }}</h3>
+        <div
+          *ngFor="let item of group.items"
+          class="list-item"
+          [class.is-selected]="selected?.id === item.id"
+          (click)="select(item)"
+        >
+          <span class="item-name">{{ item.name }}</span>
+          <span class="item-cost">{{ item.cost }}pt</span>
+        </div>
+      </div>
+    </ng-container>
+
+    <ng-container *ngIf="mode === 'custom'">
+      <mat-form-field appearance="fill" class="full-width">
+        <mat-label>Nombre</mat-label>
+        <input matInput [(ngModel)]="customName" [ngModelOptions]="{standalone: true}">
+      </mat-form-field>
+
+      <mat-form-field appearance="fill" class="full-width">
+        <mat-label>Categoría</mat-label>
+        <mat-select [(ngModel)]="customCategory" [ngModelOptions]="{standalone: true}">
+          <mat-option *ngFor="let cat of categories" [value]="cat.id">{{ cat.label }}</mat-option>
+        </mat-select>
+      </mat-form-field>
+
+      <mat-form-field appearance="fill" class="full-width">
+        <mat-label>Puntos</mat-label>
+        <input matInput type="number" min="1" max="7" [(ngModel)]="customLevel" [ngModelOptions]="{standalone: true}">
+      </mat-form-field>
+    </ng-container>
+
+  </div>
+
+  <div mat-dialog-actions align="end">
+    <button mat-button (click)="cancel()">Cancelar</button>
+    <button mat-button [disabled]="isConfirmDisabled" (click)="confirm()">Añadir</button>
+  </div>
+</div>

@@ -16,6 +16,7 @@ export class VampireDarkAgesSheetBuilder extends BuilderTemplate<VampireDarkAges
       advantages: new VampireDAAdvantagesBuilder().build(),
       disciplines: new VampireDADisciplinesBuilder().build(),
       gear: new VampireDAGearBuilder().build(),
+      notes: null,
       isEditable: true,
     } as VampireDarkAgesSheet;
   }

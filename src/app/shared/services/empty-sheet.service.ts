@@ -17,7 +17,8 @@ export class EmptySheetService {
         background: {
           nature: "",
           demeanor: "",
-          clan: ""
+          clan: "",
+          weakness: ""
         },
         concept: {
           generation: 12,
@@ -120,7 +121,8 @@ export class EmptySheetService {
         },
         experience: {
           total: 0,
-          current: 0
+          current: 0,
+          entries: []
         },
         health: {
           bruised: {
@@ -275,6 +277,7 @@ export class EmptySheetService {
           protection: 0
         }
       },
+      notes: null,
       isEditable: true
     } as VampireDarkAgesSheet;
   }

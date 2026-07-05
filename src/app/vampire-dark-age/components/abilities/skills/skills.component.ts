@@ -1,6 +1,7 @@
 import { CustomPropertyManagement } from 'src/app/shared/components/CustomPropertyManagement';
 import { Component } from '@angular/core';
 import { VampireDarkAgesSheetStoreService } from 'src/app/shared/services/vampire-dark-ages-sheet-store.service';
+import { SpecialtyService } from '../../../creation/services/specialty.service';
 
 @Component({
   selector: 'arm-skills',
@@ -12,7 +13,10 @@ export class SkillsComponent extends CustomPropertyManagement {
   customPropertyType: string = 'customSkills';
   propertiesMainPath: string = 'abilities.skills';
 
-  constructor(vampireDASheetStoreService: VampireDarkAgesSheetStoreService) {
+  constructor(
+    vampireDASheetStoreService: VampireDarkAgesSheetStoreService,
+    public specialty: SpecialtyService
+  ) {
     super(vampireDASheetStoreService);
     this.valuePropertyName = 'level';
   }

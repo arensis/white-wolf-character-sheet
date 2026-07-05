@@ -1,0 +1,192 @@
+<section class="step">
+  <div class="step-head">
+    <h2>{{ 'creation.finishing.title' | translate }}</h2>
+    <span class="pool" [class.over]="state.freebieRemaining() < 0" [class.depleted]="state.freebieRemaining() === 0">
+      {{ 'creation.finishing.freebies' | translate }}: {{ state.freebieRemaining() }} / {{ state.freebiePool() }}
+    </span>
+  </div>
+  <p class="hint">{{ 'creation.finishing.hint' | translate }}</p>
+  <p class="legend"><span class="legend-dot"></span>{{ 'creation.finishing.freebieLegend' | translate }}</p>
+
+  <div class="columns">
+    <!-- Attributes -->
+    <div class="priority-group">
+      <span class="group-label">{{ 'creation.attributes.title' | translate }} ({{ costs.attribute }})</span>
+      <ng-container *ngFor="let group of attributeGroups">
+        <div class="trait-row" *ngFor="let member of group.members">
+          <span class="trait-label">{{ 'creation.attributeNames.' + member | translate }}</span>
+          <arm-creation-dots
+            [value]="state.getAttribute(group.id, member)"
+            [highlightFrom]="state.attributeBaseline(group.id, member)"
+            (valueChange)="state.setAttributeFreebie(group.id, member, $event)"
+          ></arm-creation-dots>
+        </div>
+      </ng-container>
+    </div>
+
+    <!-- Abilities -->
+    <div class="priority-group">
+      <span class="group-label">{{ 'creation.abilities.title' | translate }} ({{ costs.ability }})</span>
+      <ng-container *ngFor="let group of abilityGroups">
+        <ng-container *ngFor="let member of group.members">
+          <div class="trait-row">
+            <span class="trait-label">{{ 'creation.abilityNames.' + member | translate }}</span>
+            <arm-creation-dots
+              [value]="state.getAbility(group.id, member)"
+              [highlightFrom]="state.abilityBaseline(group.id, member)"
+              (valueChange)="state.setAbilityFreebie(group.id, member, $event)"
+            ></arm-creation-dots>
+          </div>
+          <div class="specialty-row" *ngIf="state.getAbility(group.id, member) >= 1">
+            <button type="button" class="specialty-button" (click)="specialty.manage(member)">
+              <mat-icon>star_outline</mat-icon>
+              <span *ngIf="state.getSpecialties(member).length === 0">
+                {{ 'creation.specialtyChoose' | translate }} ({{ costs.specialty }})
+              </span>
+              <span *ngIf="state.getSpecialties(member).length > 0">
+                {{ state.getSpecialties(member).join(', ') }}
+              </span>
+            </button>
+            <button
+              *ngIf="specialty.isGeneric(member)"
+              type="button"
+              class="specialty-button"
+              (click)="specialty.manageExperience(member)"
+            >
+              <mat-icon>workspace_premium</mat-icon>
+              <span *ngIf="state.getExperiences(member).length === 0">
+                {{ 'creation.experienceChoose' | translate }}
+              </span>
+              <span *ngIf="state.getExperiences(member).length > 0">
+                {{ state.getExperiences(member).join(', ') }}
+              </span>
+            </button>
+          </div>
+        </ng-container>
+      </ng-container>
+    </div>
+
+    <div class="side-column">
+      <!-- Disciplines -->
+      <div class="priority-group" *ngIf="state.clanDisciplineKeys.length > 0">
+        <span class="group-label">{{ 'creation.advantages.disciplines' | translate }} ({{ costs.discipline }})</span>
+        <div class="trait-row" *ngFor="let key of state.clanDisciplineKeys">
+          <span class="trait-label">{{ 'creation.disciplines.' + key | translate }}</span>
+          <arm-creation-dots
+            [value]="state.getDiscipline(key)"
+            [highlightFrom]="state.disciplineBaseline(key)"
+            (valueChange)="state.setDisciplineFreebie(key, $event)"
+          ></arm-creation-dots>
+        </div>
+      </div>
+
+      <!-- Backgrounds -->
+      <div class="priority-group">
+        <span class="group-label">{{ 'creation.advantages.backgrounds' | translate }} ({{ costs.background }})</span>
+        <div class="trait-row" *ngFor="let key of backgrounds">
+          <span class="trait-label">{{ 'creation.backgrounds.' + key | translate }}</span>
+          <arm-creation-dots
+            [value]="state.getBackground(key)"
+            [highlightFrom]="state.backgroundBaseline(key)"
+            (valueChange)="state.setBackgroundFreebie(key, $event)"
+          ></arm-creation-dots>
+        </div>
+      </div>
+
+      <!-- Virtues / Road / Willpower -->
+      <div class="priority-group">
+        <span class="group-label">{{ 'creation.advantages.virtues' | translate }} ({{ costs.virtue }})</span>
+        <div class="trait-row" *ngFor="let virtue of virtues">
+          <span class="trait-label">{{ 'creation.virtues.' + virtue.virtueId | translate }}</span>
+          <arm-creation-dots
+            [value]="state.getVirtue(virtue.key)"
+            [highlightFrom]="state.virtueBaseline(virtue.key)"
+            (valueChange)="state.setVirtueFreebie(virtue.key, $event)"
+          ></arm-creation-dots>
+        </div>
+        <div class="trait-row">
+          <span class="trait-label">{{ 'creation.finishing.road' | translate }} ({{ costs.road }})</span>
+          <arm-creation-dots
+            [max]="10"
+            [value]="state.draft.advantages.road.level"
+            [highlightFrom]="state.roadBaseline"
+            (valueChange)="state.setRoadFreebie($event)"
+          ></arm-creation-dots>
+        </div>
+        <div class="trait-row">
+          <span class="trait-label">{{ 'creation.finishing.willpower' | translate }} ({{ costs.willpower }})</span>
+          <arm-creation-dots
+            [max]="10"
+            [value]="state.draft.advantages.willpower.permanent"
+            [highlightFrom]="state.willpowerBaseline"
+            (valueChange)="state.setWillpowerFreebie($event)"
+          ></arm-creation-dots>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Languages (visible when Linguistics > 0 at this point) -->
+  <div class="languages-section" *ngIf="state.linguisticsDots > 0">
+    <div class="group-head">
+      <span class="group-label">{{ 'creation.languages.title' | translate }}</span>
+      <span class="pool" [class.depleted]="state.languageRemaining() === 0">
+        {{ state.selectedLanguages.length }} / {{ state.languageAllowance() }}
+      </span>
+    </div>
+    <p class="field-hint">{{ 'creation.languages.hint' | translate }}</p>
+    <div class="language-grid">
+      <div class="language-continent" *ngFor="let group of languageGroups">
+        <span class="continent-label">{{ group.continent }}</span>
+        <label
+          class="language-item"
+          *ngFor="let lang of group.languages"
+          [class.disabled]="!state.isLanguageSelected(lang.id) && state.languageRemaining() === 0"
+        >
+          <input
+            type="checkbox"
+            [checked]="state.isLanguageSelected(lang.id)"
+            [disabled]="!state.isLanguageSelected(lang.id) && state.languageRemaining() === 0"
+            (change)="state.toggleLanguage(lang.id)"
+          />
+          <span class="language-text">
+            <strong>{{ lang.name }}</strong>
+          </span>
+        </label>
+      </div>
+    </div>
+  </div>
+
+  <!-- Méritos y Defectos -->
+  <div class="merits-flaws-section">
+    <h3>{{ 'creation.finishing.meritsFlawsTitle' | translate }}</h3>
+    <p class="hint">{{ 'creation.finishing.meritsFlawsHint' | translate }}</p>
+
+    <div class="mf-categories">
+      <div class="mf-category" *ngFor="let cat of meritFlawCategories">
+        <span class="group-label">{{ cat.label }}</span>
+        <p class="field-hint mf-cat-desc">{{ cat.description }}</p>
+
+        <div
+          *ngFor="let entry of entriesByCategory(cat.id)"
+          class="mf-entry"
+          [class.mf-merit]="entry.type === 'merit'"
+          [class.mf-flaw]="entry.type === 'flaw'"
+          [class.mf-selected]="state.isMeritFlawSelected(entry.id)"
+          (click)="state.toggleMeritFlaw(entry.id)"
+          role="button"
+          [attr.aria-pressed]="state.isMeritFlawSelected(entry.id)"
+        >
+          <div class="mf-header">
+            <span class="mf-name">{{ entry.name }}</span>
+            <span class="mf-cost" [class.mf-cost-merit]="entry.type === 'merit'" [class.mf-cost-flaw]="entry.type === 'flaw'">
+              {{ meritCostLabel(entry) }}
+            </span>
+          </div>
+          <p class="mf-desc">{{ entry.description }}</p>
+          <p class="mf-note" *ngIf="entry.note">⚠ {{ entry.note }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

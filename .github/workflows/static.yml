@@ -41,10 +41,7 @@ jobs:
       - name: Creating clean public folder and configuration
         run: |
           mkdir -p public
-          # Copiamos los archivos compilados por Angular 13 a la carpeta pública
-          cp -r dist/white-wolf-character-sheet/* ./public/
-
-          # Generamos el archivo CNAME dinámicamente para mantener tu dominio personalizado
+          cp -r docs/. ./public/
           echo "vampire-da-sheet.alfonsomadrid.net" > ./public/CNAME
 
       - name: Upload artifact

@@ -20,9 +20,5 @@ Construye el proyecto para el entorno de producción. La construcción de los ar
 
 ## Desplegar en Github Pages
 
-Para poder efectuar el despliegue en Github Pages se ha configurado una rama que contendrá el fuente `gh-pages`. Para poder publicar en la rama se ha instalado la librería [angular-cli-ghpages](https://github.com/angular-schule/angular-cli-ghpages) para facilitar la publicación y se ha configurado ciertos parámetros para el entorno de producción en el fichero angular.json. Para poder efectuar un despliegue basta con situarse en la rama main y ejecutar el comando: 
-
-  ```bash
-  npm run deploy
-  ```
+Automatizado por github workflows `.github/workflows/static.yml`. Cada vez que se haga un push sobre la rama main se ejecutará un despliegue. Además se habilitó el despliegue manual a través de actions.
 

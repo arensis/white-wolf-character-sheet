@@ -1,0 +1,57 @@
+# Simple workflow for deploying static content to GitHub Pages
+name: Deploy static content to Pages
+
+on:
+  push:
+    branches: ["main"]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Pages
+        uses: actions/configure-pages@v5
+
+      - name: Use Node.js v16 (Requerido para Angular 13)
+        uses: actions/setup-node@v4
+        with:
+          node-version: 16
+
+      - name: Install dependencies and Build
+        run: |
+          npm ci
+          npm run build
+
+      - name: Creating clean public folder and configuration
+        run: |
+          mkdir -p public
+          # Copiamos los archivos compilados por Angular 13 a la carpeta pública
+          cp -r dist/white-wolf-character-sheet/* ./public/
+
+          # Generamos el archivo CNAME dinámicamente para mantener tu dominio personalizado
+          echo "vampire-da-sheet.alfonsomadrid.net" > ./public/CNAME
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: './public'
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

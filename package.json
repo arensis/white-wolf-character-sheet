@@ -6,8 +6,7 @@
     "start": "ng serve",
     "build": "ng build --configuration production",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test",
-    "deploy": "npm i && ng deploy --cname=vampire-da-sheet.alfonsomadrid.net"
+    "test": "ng test"
   },
   "private": true,
   "overrides": {
@@ -42,7 +41,6 @@
     "@types/jasmine": "~3.10.0",
     "@types/lodash": "^4.14.179",
     "@types/node": "^12.11.1",
-    "angular-cli-ghpages": "^1.0.0",
     "jasmine-core": "~4.0.0",
     "karma": "~6.3.0",
     "karma-chrome-launcher": "~3.1.0",
